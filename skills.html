@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Crystalfall: Skills</title>
+     <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/skill/skill.css" />
+</head>
+<body>
+
+
+    <div class="siteHeader">
+		<a class="brand" href="home.html" aria-label="Home">
+		  <img class="brandLogo" src="img/logo.png" alt="logo" />
+		  <span class="brandText">CrystalFall.fun</span>
+		</a>
+
+		<nav class="siteNav" aria-label="Main navigation">
+		  <a href="./talent-tree.html">Talent Tree</a>
+		  <a class="is-active" href="./skills.html">Skills</a>
+		  <a href="./maps-act-1.html">Maps</a>
+		  <a href="./quests.html">Quests</a>
+		</nav>
+		
+		<button class="burgerBtn" type="button"
+				aria-label="Open menu"
+				aria-controls="mobileNav"
+				aria-expanded="false">
+		  <span class="burgerIcon" aria-hidden="true"></span>
+		</button>
+		
+	  </div>
+	  
+	  <div class="navOverlay" id="mobileNav" hidden>
+		  <div class="navPanel" role="dialog" aria-modal="true" aria-label="Menu">
+			<button class="navClose" type="button" aria-label="Close menu">✕</button>
+
+			<nav class="navMobile" aria-label="Main navigation (mobile)">
+			  <a href="./talent-tree.html">Talent Tree</a>
+			  <a class="is-active" href="./skills.html">Skills</a>
+			  <a href="./maps/act-1/map.html">Maps</a>
+			  <a href="./quests.html">Quests</a>
+			</nav>
+		  </div>
+		</div>
+
+
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>Skills</h1>
+      </div>
+      <div class="toolbar">
+        <input id="q" class="input" type="search" placeholder="Search by title or description…" />
+        <select id="cat">
+          <option value="">All tags</option>
+        </select>
+        <select id="sort">
+          <option value="sort_asc">Sorting: by order</option>
+          <option value="name_asc">Sort: A → Z</option>
+          <option value="name_desc">Sort by: Z → A</option>
+        </select>
+        <div id="count" class="count">0</div>
+      </div>
+    </header>
+
+    <section class="table" aria-label="List of skills">
+      <div class="thead">
+        <div class="th">Icon</div>
+        <div class="th">Description</div>
+      </div>
+      <div id="rows"></div>
+    </section>
+  </div>
+
+  <script src="./js/skill/skill.data.js"></script>
+  <script src="./js/skill/skill.page.js"></script>
+    <script>
+  (() => {
+    const burger = document.querySelector('.burgerBtn');
+    const overlay = document.querySelector('.navOverlay');
+    const panel = overlay?.querySelector('.navPanel');
+    const closeBtn = overlay?.querySelector('.navClose');
+
+    if (!burger || !overlay || !panel || !closeBtn) return;
+
+    const openMenu = () => {
+      overlay.hidden = false;
+      document.body.classList.add('nav-open');
+      burger.setAttribute('aria-expanded', 'true');
+      closeBtn.focus();
+    };
+
+    const closeMenu = () => {
+      overlay.hidden = true;
+      document.body.classList.remove('nav-open');
+      burger.setAttribute('aria-expanded', 'false');
+      burger.focus();
+    };
+
+    burger.addEventListener('click', openMenu);
+    closeBtn.addEventListener('click', closeMenu);
+
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) closeMenu();
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !overlay.hidden) closeMenu();
+    });
+  })();
+  </script>
+</body>
+</html>

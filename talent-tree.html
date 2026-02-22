@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Crystalfall: Talent Tree</title>
+	<link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/talent/quest.css" />
+  <link rel="stylesheet" href="./css/talent/styles.css" />
+</head>
+<body>
+
+    <div class="siteHeader">
+		<a class="brand" href="home.html" aria-label="Home">
+		  <img class="brandLogo" src="img/logo.png" alt="logo" />
+		  <span class="brandText">CrystalFall.fun</span>
+		</a>
+
+		<nav class="siteNav" aria-label="Main navigation">
+		  <a class="is-active" href="./talent-tree.html">Talent Tree</a>
+		  <a href="./skills.html">Skills</a>
+		  <a href="./maps-act-1.html">Maps</a>
+		  <a href="./quests.html">Quests</a>
+		</nav>
+		
+		<button class="burgerBtn" type="button"
+				aria-label="Open menu"
+				aria-controls="mobileNav"
+				aria-expanded="false">
+		  <span class="burgerIcon" aria-hidden="true"></span>
+		</button>
+		
+	  </div>
+	  
+	  <div class="navOverlay" id="mobileNav" hidden>
+		  <div class="navPanel" role="dialog" aria-modal="true" aria-label="Menu">
+			<button class="navClose" type="button" aria-label="Close menu">✕</button>
+
+			<nav class="navMobile" aria-label="Main navigation (mobile)">
+			  <a class="is-active" href="./talent-tree.html">Talent Tree</a>
+			  <a href="./skills.html">Skills</a>
+			  <a href="./maps/act-1/map.html">Maps</a>
+			  <a href="./quests.html">Quests</a>
+			</nav>
+		  </div>
+		</div>
+
+  <div id="wrap">
+    <canvas id="c"></canvas>
+
+    <div id="sheetBackdrop" aria-hidden="true"></div>
+    <div id="tooltip" role="tooltip" aria-hidden="true">
+      <div class="t-title"></div>
+      <div class="t-desc"></div>
+    </div>
+
+    <div class="hud">
+      <div class="pill">
+        <button id="reset">Reset</button>
+      </div>
+      <div class="pill">
+        <span class="muted" id="stats">nodes: — • connections: —</span>
+      </div>
+    </div>
+
+    <!-- Mobile: slide-out drawer for active bonuses -->
+    <div id="activeBackdrop" aria-hidden="true"></div>
+    <button id="activeToggle" type="button" aria-label="Open active bonuses" aria-expanded="false">
+      ☰ <span>Bonuses</span>
+    </button>
+
+    <div id="activePanel" role="region" aria-label="Active bonuses">
+      <h3>Active bonuses</h3>
+      <div class="muted" id="activeSummary">There are no activated nodes yet.</div>
+      <div id="activeList" class="muted" style="margin-top:6px; display:none;"></div>
+    </div>
+
+    <div id="panel" class="bottom-sheet" role="dialog" aria-label="Node Information">
+      <h3 id="ptitle">Select a node</h3>
+
+      <div id="sheetHeader" class="sheet-header">
+        <div id="sheetHandle" class="sheet-handle" aria-hidden="true"></div>
+        <div class="sheet-titlebar">
+          <h3 id="ptitleMobile">Select a node</h3>
+        </div>
+      </div>
+
+      <div id="sheetContent" class="sheet-content">
+        <div class="muted" id="pdesc">Click on a node to get info. Wheel/pinch to zoom. Drag to move.</div>
+        <div class="row" id="pactions" style="display:none;">
+          <span class="muted" id="pmeta"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/talent/skilltree.data.js"></script>
+  <script src="./js/talent/app.js"></script>
+  <script>
+(() => {
+  const burger = document.querySelector('.burgerBtn');
+  const overlay = document.querySelector('.navOverlay');
+  const panel = overlay?.querySelector('.navPanel');
+  const closeBtn = overlay?.querySelector('.navClose');
+
+  if (!burger || !overlay || !panel || !closeBtn) return;
+
+  const openMenu = () => {
+    overlay.hidden = false;
+    document.body.classList.add('nav-open');
+    burger.setAttribute('aria-expanded', 'true');
+    closeBtn.focus();
+  };
+
+  const closeMenu = () => {
+    overlay.hidden = true;
+    document.body.classList.remove('nav-open');
+    burger.setAttribute('aria-expanded', 'false');
+    burger.focus();
+  };
+
+  burger.addEventListener('click', openMenu);
+  closeBtn.addEventListener('click', closeMenu);
+
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) closeMenu();
+  });
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !overlay.hidden) closeMenu();
+  });
+})();
+</script>
+</body>
+</html>

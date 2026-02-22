@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Crystalfall: Maps</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  	<link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="./maps/styles.css" />
+</head>
+<body>
+
+    <div class="siteHeader">
+		<a class="brand" href="home.html" aria-label="Home">
+		  <img class="brandLogo" src="img/logo.png" alt="logo" />
+		  <span class="brandText">CrystalFall.fun</span>
+		</a>
+
+		<nav class="siteNav" aria-label="Main navigation">
+		  <a href="./talent-tree.html">Talent Tree</a>
+		  <a href="./skills.html">Skills</a>
+		  <a class="is-active" href="./maps-act-1.html">Maps</a>
+		  <a href="./quests.html">Quests</a>
+		</nav>
+		
+		<button class="burgerBtn" type="button"
+				aria-label="Open menu"
+				aria-controls="mobileNav"
+				aria-expanded="false">
+		  <span class="burgerIcon" aria-hidden="true"></span>
+		</button>
+		
+	  </div>
+	  
+	  <div class="navOverlay" id="mobileNav" hidden>
+		  <div class="navPanel" role="dialog" aria-modal="true" aria-label="Menu">
+			<button class="navClose" type="button" aria-label="Close menu">✕</button>
+
+			<nav class="navMobile" aria-label="Main navigation (mobile)">
+			  <a href="./talent-tree.html">Talent Tree</a>
+			  <a href="./skills.html">Skills</a>
+			  <a class="is-active" href="./maps-act-1.html">Maps</a>
+			  <a href="./quests.html">Quests</a>
+			</nav>
+		  </div>
+		</div>
+
+  <div id="app">
+    <aside id="sidebar">
+      <h1 class="title">Maps</h1>
+      <p class="subtitle">Select a dungeon.</p>
+
+      <div class="group">
+        <div class="map-select" id="mapSelect">
+          <div class="map-select-btn" id="mapSelectBtn">
+            <span id="currentMapTitle">—</span>
+            <span class="chev">▼</span>
+          </div>
+
+          <div class="map-select-list" id="mapSelectList"></div>
+        </div>
+      </div>
+
+      <h1 class="title">Markers</h1>
+      <p class="subtitle">ON/OFF markers. Dungeon lets you navigate maps.</p>
+
+      <div class="group" id="markerToggles"></div>
+    </aside>
+
+    <div id="map"></div>
+  </div>
+
+  <script src="./maps/scripts/leaflet.js"></script>
+  <script src="./maps/scripts/game-markers.js"></script>
+  <script src="./maps/app.js" defer></script>
+  <script>
+(() => {
+  const burger = document.querySelector('.burgerBtn');
+  const overlay = document.querySelector('.navOverlay');
+  const panel = overlay?.querySelector('.navPanel');
+  const closeBtn = overlay?.querySelector('.navClose');
+
+  if (!burger || !overlay || !panel || !closeBtn) return;
+
+  const openMenu = () => {
+    overlay.hidden = false;
+    document.body.classList.add('nav-open');
+    burger.setAttribute('aria-expanded', 'true');
+    closeBtn.focus();
+  };
+
+  const closeMenu = () => {
+    overlay.hidden = true;
+    document.body.classList.remove('nav-open');
+    burger.setAttribute('aria-expanded', 'false');
+    burger.focus();
+  };
+
+  burger.addEventListener('click', openMenu);
+  closeBtn.addEventListener('click', closeMenu);
+
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) closeMenu();
+  });
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !overlay.hidden) closeMenu();
+  });
+})();
+</script>
+</body>
+</html>
