@@ -154,3 +154,40 @@
   .topTitle{flex-direction:column; align-items:flex-start}
   .skillName{font-size:26px}
 }
+
+
+/* Reward links inside flavor */
+.flavor {
+  margin-top: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  color: #e8e0d4; /* как основной текст */
+  font-size: 15px;
+}
+
+/* сами ссылки */
+.flavor a {
+  display: inline-flex;
+  align-items: center;
+  color: #4bd6ff;            /* твой акцент (он уже используется в заголовках шагов) */
+  font-weight: 700;
+  text-decoration: none;
+
+  transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
+}
+
+.flavor a:hover {
+  border-color: rgba(75, 214, 255, 0.55);
+  transform: translateY(-1px);
+}
+
+.flavor a:active {
+  transform: translateY(0);
+}
+
+.flavor a:focus-visible {
+  outline: 2px solid rgba(75, 214, 255, 0.65);
+  outline-offset: 2px;
+}
