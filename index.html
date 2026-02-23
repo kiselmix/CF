@@ -3,63 +3,269 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Crystalfall</title>
-    	<link rel="icon" href="./img/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="./css/quest/quest.css" />
+  <title>Crystalfall: Home</title>
+  <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+
+  <!-- Reuse existing header / base styles -->
+  <link rel="stylesheet" href="./css/skill/skill.css" />
+
+  <style>
+    :root { color-scheme: dark; }
+
+    .homeWrap{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 22px 16px 40px;
+    }
+
+    .hero{
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 16px;
+      align-items: start;
+      margin-top: 12px;
+    }
+
+    .heroCard{
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(0,0,0,.25);
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: 0 10px 24px rgba(0,0,0,.25);
+    }
+
+    .hero h1{ margin: 0 0 6px; font-size: 32px; line-height: 1.15; }
+    .muted{ opacity: .82; }
+
+    .ctaRow{ display:flex; gap:10px; flex-wrap: wrap; margin-top: 12px; }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.06);
+      color: inherit;
+      text-decoration:none;
+      font-weight: 600;
+    }
+    .btn:hover{ background: rgba(255,255,255,.10); }
+
+    .kpi{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .kpiBox{
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.04);
+      border-radius: 12px;
+      padding: 10px;
+    }
+    .kpiVal{ font-size: 18px; font-weight: 800; }
+    .kpiLbl{ font-size: 12px; opacity: .8; }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .card{
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(0,0,0,.22);
+      border-radius: 14px;
+      padding: 14px;
+      box-shadow: 0 10px 24px rgba(0,0,0,.18);
+    }
+
+    .cardTitle{
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .badge{
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+      opacity: .9;
+      white-space: nowrap;
+    }
+
+    .card h2{ font-size: 18px; margin: 0; }
+    .card p{ margin: 8px 0 0; opacity: .88; }
+
+    .card ul{ margin: 10px 0 0; padding-left: 18px; }
+    .card li{ margin: 6px 0; opacity: .88; }
+
+    .card .btn{ margin-top: 12px; width: 100%; }
+
+    .divider{ height: 1px; background: rgba(255,255,255,.08); margin: 18px 0; }
+
+    .footer{ opacity: .7; font-size: 12px; margin-top: 20px; }
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .hero{ grid-template-columns: 1fr; }
+      .grid{ grid-template-columns: 1fr; }
+      .kpi{ grid-template-columns: 1fr 1fr; }
+    }
+  </style>
 </head>
 <body>
 
-    <div class="siteHeader">
-		<a class="brand" href="home.html" aria-label="Home">
-		  <img class="brandLogo" src="img/logo.png" alt="logo" />
-		  <span class="brandText">CrystalFall.fun</span>
-		</a>
+  <div class="siteHeader">
+    <a class="brand" href="index.html" aria-label="Home">
+      <img class="brandLogo" src="img/logo.png" alt="logo" />
+      <span class="brandText">CrystalFall.fun</span>
+    </a>
 
-		<nav class="siteNav" aria-label="Main navigation">
-		  <a href="./talent-tree.html">Talent Tree</a>
-		  <a href="./skills.html">Skills</a>
-		  <a href="./maps-act-1.html">Maps</a>
-		  <a href="./quests.html">Quests</a>
-		  <a href="./fusing.html">Fusing</a>
-		</nav>
-		
-		<button class="burgerBtn" type="button"
-				aria-label="Open menu"
-				aria-controls="mobileNav"
-				aria-expanded="false">
-		  <span class="burgerIcon" aria-hidden="true"></span>
-		</button>
-		
-	  </div>
+    <nav class="siteNav" aria-label="Main navigation">
+      <a href="./talent-tree.html">Talent Tree</a>
+      <a href="./skills.html">Skills</a>
+      <a href="./maps-act-1.html">Maps</a>
+      <a href="./quests.html">Quests</a>
+      <a href="./fusing.html">Fusing</a>
+    </nav>
 
-	  <div class="navOverlay" id="mobileNav" hidden>
-		  <div class="navPanel" role="dialog" aria-modal="true" aria-label="Menu">
-			<button class="navClose" type="button" aria-label="Close menu">✕</button>
-
-			<nav class="navMobile" aria-label="Main navigation (mobile)">
-			  <a href="./talent-tree.html">Talent Tree</a>
-			  <a href="./skills.html">Skills</a>
-			  <a href="./maps/act-1/map.html">Maps</a>
-			  <a href="./quests.html">Quests</a>
-			  <a href="./fusing.html">Fusing</a>
-			</nav>
-		  </div>
-		</div>
-
-
-
-  <div class="wrap">
-
-	  
-    <header>
-      <div>
-        <h1>Quests</h1>
-      </div>
-    </header>
-
+    <button class="burgerBtn" type="button"
+      aria-label="Open menu"
+      aria-controls="mobileNav"
+      aria-expanded="false">
+      <span class="burgerIcon" aria-hidden="true"></span>
+    </button>
   </div>
 
+  <div class="navOverlay" id="mobileNav" hidden>
+    <div class="navPanel" role="dialog" aria-modal="true" aria-label="Menu">
+      <button class="navClose" type="button" aria-label="Close menu">✕</button>
 
+      <nav class="navMobile" aria-label="Main navigation (mobile)">
+        <a href="./talent-tree.html">Talent Tree</a>
+        <a href="./skills.html">Skills</a>
+        <a href="./maps-act-1.html">Maps</a>
+        <a href="./quests.html">Quests</a>
+        <a href="./fusing.html">Fusing</a>
+      </nav>
+    </div>
+  </div>
+
+  <main class="homeWrap">
+
+    <section class="hero">
+      <div class="heroCard">
+        <h1>CrystalFall.fun</h1>
+        <div class="muted">
+          A quick-reference companion for <b><a href="https://crystalfall.com/">Crystalfall</a></b>: skill list, quest tracker, interactive maps,
+          fusing recipes, and a talent tree explorer.
+        </div>
+      </div>
+
+      
+    </section>
+
+    <section class="grid" aria-label="Pages overview">
+
+      <article class="card">
+        <div class="cardTitle">
+          <h2>Talent Tree</h2>
+          <span class="badge">Interactive</span>
+        </div>
+        <p>Explore the build tree: zoom/pan, click nodes to read effects, track activated bonuses.</p>
+        <ul>
+          <li>Click nodes to open details.</li>
+          <li>Zoom (wheel/pinch) and drag to navigate.</li>
+          <li>See active bonuses.</li>
+        </ul>
+        <a class="btn" href="./talent-tree.html">Go to Talent Tree</a>
+      </article>
+
+      <article class="card">
+        <div class="cardTitle">
+          <h2>Skills</h2>
+          <span class="badge">Search + filters</span>
+        </div>
+        <p>Find skills fast and compare descriptions.</p>
+        <ul>
+          <li>Find skills fast , study descriptions, and see how it works.</li>
+          <li>Filter by tags.</li>
+          <li>Sort by order or alphabet.</li>
+        </ul>
+        <a class="btn" href="./skills.html">Go to Skills</a>
+      </article>
+
+      <article class="card">
+        <div class="cardTitle">
+          <h2>Maps</h2>
+          <span class="badge">Interactive</span>
+        </div>
+        <p>Interactive maps with markers and dungeon navigation.</p>
+        <ul>
+          <li>Select a dungeon/map from the dropdown.</li>
+          <li>Toggle marker layers ON/OFF.</li>
+          <li>Pan + zoom to plan routes.</li>
+        </ul>
+        <a class="btn" href="./maps-act-1.html">Go to Maps</a>
+      </article>
+
+      <article class="card">
+        <div class="cardTitle">
+          <h2>Quests</h2>
+          <span class="badge">Tracker</span>
+        </div>
+        <p>Browse quest list and quickly locate what to do next.</p>
+        <ul>
+          <li>Search by title or description.</li>
+          <li>Filter by tags.</li>
+          <li>Sort by order or A→Z.</li>
+        </ul>
+        <a class="btn" href="./quests.html">Go to Quests</a>
+      </article>
+
+      <article class="card">
+        <div class="cardTitle">
+          <h2>Fusing</h2>
+          <span class="badge">Recipes</span>
+        </div>
+        <p>Click an item to see its formula and jump through component chains.</p>
+        <ul>
+          <li>Hover items to see tooltips.</li>
+          <li>Click components to jump-select.</li>
+          <li>Check level/requirements.</li>
+        </ul>
+        <a class="btn" href="./fusing.html">Go to Fusing</a>
+      </article>
+
+      <article class="card">
+        <div class="cardTitle">
+          <h2>Help and Suggestion</h2>
+          <span class="badge">Support</span>
+        </div>
+        <p>Your feedback helps us build a better product. Reach out if you have:</p>
+        <ul>
+          <li>Ideas or feature suggestions</li>
+          <li>Found a bug</li>
+          <li>Need help or have questions</li>
+        </ul>
+        <a class="btn" href="https://t.me/kiselmix69">Contact</a>
+      </article>
+
+    </section>
+
+    <div class="footer">
+      CrystalFall.fun • fan-made helper pages • v0.1.1
+    </div>
+
+  </main>
 
   <script>
   (() => {
