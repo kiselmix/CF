@@ -74,7 +74,7 @@
 
           <div class="grid">
             <div>
-              ${t.flavor ? `<div class="flavor">${escapeHTML(t.flavor)}</div>` : ''}
+              ${t.flavor ? `<div class="flavor">${t.flavor}</div>` : ''}
               ${t.description ? `<div class="desc" style="margin-top:10px; font-size:15px; color:#e8e0d4">${escapeHTML(t.description)}</div>` : ''}
             </div>
           </div>

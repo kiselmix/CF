@@ -5,9 +5,13 @@ window.quest = [
     tags: ["Act 1"],
     description:
       "Finally light, and freedom! Now where is the civilization in this forsaken place, if there is any.. First clue might be the rat standing over there with seemingly civil manners, he might know something..",
-    flavor:
-      "Reward: ",
-	steps: [
+    flavor: `
+	Reward:
+	<a href="https://crystalfall.fun/skill.html?id=Warp">Warp</a> /
+	<a href="https://crystalfall.fun/skill.html?id=Sweep">Sweep</a> /
+	<a href="https://crystalfall.fun/skill.html?id=Aether-Rain">Aether Rain</a>
+	`,
+steps: [
       {
         title: "Step 1 — Talk to the escaped-prisoner",
         images: [
@@ -37,7 +41,7 @@ window.quest = [
     description:
       "Want to leave Prison Island? If you help free my client from Shadowgate Prison, you'll have a place on my ship. To break in, you'll need my Breach Engine, which has been stolen by raiders. I tracked them to Putrid Lake, but I dare not enter the Rat Burrow.",
      flavor:
-      "Reward: ",
+      "Reward: 1 Talent Point; Spell Crest",
 	steps: [
       {
         title: "Step 1 — Go to Putrid Lake",
@@ -69,7 +73,7 @@ window.quest = [
     description:
       "I've caught a transmission from the Rock Shelter in the Cliffs. You'll find the Breach Jack there. There should be a Tinkerbox somewhere in the Rugged Plains.",
      flavor:
-      "Reward: ",
+      "Reward: 1 Talent Point; 5 skill key",
 	steps: [
       {
         title: "Step 1 — Find Breach Jack in The Cliffs",
@@ -106,7 +110,7 @@ window.quest = [
     description:
       "A monstrous spider haunts the mountains, trapping the unwary in its web. End the creature before it claims more lives.",
     flavor:
-      "Reward: ",
+      "Reward: 1 Talent Point",
 	steps: [
       {
         title: "Step 1 — Go to Weaver's Nest",
@@ -132,8 +136,12 @@ window.quest = [
     tags: ["Act 1"],
     description:
       "Time to free my client from Shadowgate Prison. Look for the entrance in the Outer Court beyond the Rugged Plains. Good luck.",
-    flavor:
-      "Reward: ",
+	flavor: `
+	Reward:
+	<a href="https://crystalfall.fun/skill.html?id=Lightning-Quake">Lightning Quake</a> /
+	<a href="https://crystalfall.fun/skill.html?id=Aether-Walk">Aether Walk</a> /
+	<a href="https://crystalfall.fun/skill.html?id=Ice-Shards">Ice Shards</a>
+	`,
 	steps: [
       {
         title: "Step 1 — Enter Shadowgate Prison",
