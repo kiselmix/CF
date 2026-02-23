@@ -684,7 +684,7 @@
       const empty = document.createElement('div');
       empty.className = "small";
       empty.style.color = "var(--muted)";
-      empty.textContent = "This item is a base component and is not assembled from other items (demo).";
+      empty.textContent = "This item is a base component and is not assembled from other items.";
       recipeEl.appendChild(empty);
       return;
     }
