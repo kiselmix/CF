@@ -133,6 +133,34 @@ window.skill = [
 	},
     sort: 50,
   },
+    {
+    id: "Fervor",
+    name: "Fervor",
+    icon: "img/skill/Fervor.png",
+    tags: ["Spell", "Aura", "AoE"],
+    type: "Skill",
+    description: "Increases aether regeneration while active.",
+    stats: {
+      skillLevel: 4,
+      cost: "Aether 50",
+      aoeRadius: 3.8,
+      boostDuration: 4,
+      impairmentDuration: 5,
+      range: 500,
+      itemLevel: 16,
+      requirements: "Level 15",
+    },
+    effects: [
+      "You and Allies gain Regenerate +2(-1-2)/s Aether per second",
+      "You and Allies gain 5% increased Aether Regeneration per 1 Skill Level",
+      "37% decreased Skill Resource Cost",
+      "You and Allies gain 10% increased Loot Rarity",
+    ],
+    video: {
+    },
+    sort: 55,
+  },
+  
   {
     id: "Piercing-Shot",
     name: "Piercing Shot",
@@ -520,5 +548,31 @@ window.skill = [
 	  src: "img/skill/Shield-Rush.mp4",
 	},
     sort: 200,
+  },
+  {
+    id: "Vigor",
+    name: "Vigor",
+    icon: "img/skill/Vigor.png",
+    tags: ["Spell", "Aura", "AoE"],
+    type: "Skill",
+    description: "Increases life regeneration while active.",
+    stats: {
+      skillLevel: 4,
+      cost: "Aether 50",
+      aoeRadius: 3.4,
+      boostDuration: 5,
+      impairmentDuration: 5,
+      range: 500,
+      requirements: "Level 15",
+    },
+    effects: [
+      "You and Allies gain Regenerate +3/s Life per second",
+      "You and Allies gain 5% increased Life Regeneration per 1 Skill Level",
+      "You and Allies gain Regenerate +4/s Life per second",
+      "You and Allies gain 9% increased Damage against Enemies on Full Life",
+    ],
+    video: {
+    },
+    sort: 220,
   },
 ];
