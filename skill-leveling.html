@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Crystalfall: Skill leveling</title>
+ 
+   <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/skill-leveling/skill-leveling.css" />
+   <link rel="stylesheet" href="./css/skill-leveling/skill.css" />
+</head>
+<body>
+
+  <div class="siteHeader">
+    <a class="brand" href="https://crystalfall.fun/" aria-label="Home">
+      <img class="brandLogo" src="img/logo.png" alt="logo" />
+      <span class="brandText">CrystalFall.fun</span>
+    </a>
+
+    <nav class="siteNav" aria-label="Main navigation">
+      <a href="./talent-tree.html">Talent Tree</a>
+      <a href="./skills.html">Skills</a>
+	  <a class="is-active" href="./skill-leveling.html">Skill leveling</a>
+      <a href="./maps-act-1.html">Maps</a>
+      <a href="./quests.html">Quests</a>
+      <a href="./fusing.html">Fusing</a>
+    </nav>
+
+    <button class="burgerBtn" type="button"
+      aria-label="Open menu"
+      aria-controls="mobileNav"
+      aria-expanded="false">
+      <span class="burgerIcon" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  <div class="navOverlay" id="mobileNav" hidden>
+    <div class="navPanel" role="dialog" aria-modal="true" aria-label="Menu">
+      <button class="navClose" type="button" aria-label="Close menu">✕</button>
+
+      <nav class="navMobile" aria-label="Main navigation (mobile)">
+        <a href="./talent-tree.html">Talent Tree</a>
+        <a href="./skills.html">Skills</a>
+		 <a class="is-active" href="./skill-leveling.html">Skill leveling</a>
+        <a href="./maps-act-1.html">Maps</a>
+        <a href="./quests.html">Quests</a>
+        <a href="./fusing.html">Fusing</a>
+      </nav>
+    </div>
+  </div>
+
+
+
+
+  <div class="pageWrap">
+
+
+  <div class="app">
+    <div class="treeWrap" id="tree">
+      <div class="stage" id="stage">
+        <svg class="lines" id="lines"></svg>
+        <div class="nodes" id="nodes"></div>
+        <div class="lineButtons" id="lineButtons"></div>
+      </div>
+      <div class="legend">Select a skill. Select a rarity. Upgrade the skill by clicking on nodes. Insert Crest into the node.</div>
+    </div>
+
+    <aside class="side" aria-label="Description">
+      <div class="controls">
+        <div class="field">
+          <label for="skillSelect">Skill</label>
+          <select id="skillSelect"></select>
+        </div>
+        <div class="field">
+          <label for="raritySelect">Rarity</label>
+          <select id="raritySelect">
+            <option value="common">Common</option>
+            <option value="rare">Rare</option>
+            <option value="legendary">Legendary</option>
+                      <option value="mythic">Mythic</option>
+</select>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="skillHeader">
+          <div class="skillIcon"><img id="skillIconImg" alt="" /></div>
+          <div class="skillMeta">
+            <div class="skillName" id="skillName">—</div>
+            <div class="skillTags">
+              <span class="pill" id="skillRarityPill">—</span>
+              <span class="pill" id="skillIdPill">—</span>
+            </div>
+          </div>
+        </div>
+        <div class="hint" style="margin-top:10px">
+          Hover over a node — a tooltip with its description will appear. Select node = "level up."
+        </div>
+      </div>
+	  
+      <div class="card" id="glitchCard">
+        <div class="nodeTitle" style="margin:0 0 10px">Crest</div>
+        <div class="hint" style="margin:0 0 10px">
+          Drag the Crest to an available node.
+        </div>
+        <div class="glitches" id="glitchList" aria-label="List of Crest"></div>
+      </div>	  
+
+      <div class="card" id="upgradedCard" aria-label="Selected nodes">
+        <div class="nodeTitle" style="margin:0 0 10px">Selected nodes <span class="upBadge" id="upgradedCount">0</span></div>
+        <div class="upgradedList" id="upgradedList"></div>
+        <div class="upEmpty" id="upgradedEmpty" style="display:none;margin-top:4px">
+          There are no selected nodes yet.
+        </div>
+      </div>
+
+
+
+
+    </aside>
+  </div>
+  </div>
+
+
+  <div class="tooltip" id="tooltip" role="tooltip" aria-hidden="true">
+    <div class="t-title" id="tooltipTitle"></div>
+    <div class="t-desc" id="tooltipDesc"></div>
+  </div>
+
+<script src="./js/skill-leveling/skill-db.js"></script>
+<script src="./js/skill-leveling/glitch-db.js"></script>
+  <script src="./js/skill-leveling/skill-leveling.js"></script>
+
+<script>
+(() => {
+  const burger = document.querySelector('.burgerBtn');
+  const overlay = document.querySelector('.navOverlay');
+  const panel = overlay?.querySelector('.navPanel');
+  const closeBtn = overlay?.querySelector('.navClose');
+
+  if (!burger || !overlay || !panel || !closeBtn) return;
+
+  const openMenu = () => {
+    overlay.hidden = false;
+    document.body.classList.add('nav-open');
+    burger.setAttribute('aria-expanded', 'true');
+    closeBtn.focus();
+  };
+
+  const closeMenu = () => {
+    overlay.hidden = true;
+    document.body.classList.remove('nav-open');
+    burger.setAttribute('aria-expanded', 'false');
+    burger.focus();
+  };
+
+  burger.addEventListener('click', openMenu);
+  closeBtn.addEventListener('click', closeMenu);
+
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) closeMenu();
+  });
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !overlay.hidden) closeMenu();
+  });
+})();
+</script>
+
+</body>
+</html>
