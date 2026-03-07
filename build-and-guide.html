@@ -1,10 +1,21 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Crystalfall Build & Guide — отправка на модерацию</title>
-  <meta name="description" content="Страница для отправки билдов и гайдов Crystalfall на модерацию." />
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+  <title>Crystalfall Build Creator – Submit Builds & Guides | CrystalFall.fun</title>
+  <meta name="description" content="Create and submit your Crystalfall build. Choose skills, import talent tree and share your build guide with the community on CrystalFall.fun." />
+  <link rel="canonical" href="https://crystalfall.fun/build-and-guide">
+  <meta property="og:title" content="Crystalfall Builds & Guides – Submit Your Build">
+<meta property="og:description" content="Create and submit your Crystalfall build. Import talent tree, choose skills and share your guide with the community.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://crystalfall.fun/build-and-guide">
+<meta property="og:image" content="https://crystalfall.fun/img/build-guide-banner.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Crystalfall Builds & Guides – Submit Your Build">
+<meta name="twitter:description" content="Create and submit your Crystalfall build and guide.">
+<meta name="twitter:image" content="https://crystalfall.fun/img/build-guide-banner.png">
   <style>
     :root {
       --bg: #07111c;
@@ -27,11 +38,14 @@
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
     * { box-sizing: border-box; }
-    html, body { margin: 0; background:
+    html, body { margin: 0; scroll-behavior:smooth; background:
       radial-gradient(circle at top, rgba(88,164,255,.18), transparent 34%),
       linear-gradient(180deg, #08111c 0%, #09131f 50%, #06101a 100%);
       color: var(--text);
     }
+	#form-start{
+  scroll-margin-top:90px;
+}
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
     img { max-width: 100%; display: block; }
@@ -132,9 +146,11 @@
       border-color: rgba(255,127,127,.16);
       color: #ffe3e3;
     }
-    .hero-side {
-      display: grid; gap: 14px;
-    }
+    .hero-side{
+ display:flex;
+  align-items:flex-end;
+  margin-bottom:-30px;
+}
     .mini-card {
       padding: 18px; border-radius: 18px;
       background: rgba(255,255,255,.035);
@@ -238,11 +254,23 @@
       border: 1px solid rgba(143,173,214,.16);
     }
     .skill-actions { display: flex; gap: 8px; }
-    .small-btn {
-      min-height: 36px; padding: 0 12px; border-radius: 12px; border: 1px solid rgba(143,173,214,.18);
-      background: rgba(255,255,255,.03); color: var(--text); cursor: pointer; font-weight: 700;
-    }
-    .small-btn:hover { border-color: rgba(98,208,255,.45); }
+.small-btn {
+  min-height: 36px;
+  padding: 0 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(143,173,214,.18);
+  background: rgba(255,255,255,.03);
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+}
+    .small-btn:hover { border-color: rgba(98,208,255,.45); text-decoration: none;}
     .small-btn.is-selected { background: rgba(98,208,255,.12); border-color: rgba(98,208,255,.5); }
     .empty {
       border: 1px dashed rgba(143,173,214,.28);
@@ -293,13 +321,93 @@
       .wrap { width: min(calc(100% - 20px), var(--max)); }
       .nav { display: none; }
     }
+	.file-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 44px;
+  padding: 0 16px;
+
+  border-radius: 12px;
+  border: 1px solid rgba(143,173,214,.18);
+  background: rgba(255,255,255,.03);
+
+  color: var(--text);
+  font-weight: 700;
+  cursor: pointer;
+
+  transition: 0.18s ease;
+}
+
+.file-btn:hover {
+  border-color: rgba(98,208,255,.45);
+  background: rgba(98,208,255,.08);
+}
+.hero-image{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+
+.guide-steps{
+  margin-top:20px;
+
+
+
+}
+
+.guide-steps h2{
+  margin-bottom:12px;
+  color:#dff5ff;
+}
+
+.guide-steps ul{
+  margin:0;
+  padding-left:18px;
+}
+
+.guide-steps li{
+  margin-bottom:6px;
+  color:#c7d5ea;
+}
+
+
+.tree-buttons{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  min-width:260px;
+}
+
+
+.tree-buttons a{
+  grid-column:1 / -1;
+}
+
+
+.full-btn{
+  width:100%;
+}
   </style>
+		  <script type="application/ld+json">
+		{
+		 "@context": "https://schema.org",
+		 "@type": "WebPage",
+		 "name": "Crystalfall Build Creator",
+		 "description": "Create and submit your Crystalfall build and guide",
+		 "url": "https://crystalfall.fun/build-and-guide",
+		 "inLanguage": "en"
+		}
+		</script>
 </head>
 <body>
   <header class="topbar">
     <div class="wrap topbar-inner">
       <a class="brand" href="/">CrystalFall.fun</a>
-      <nav class="nav" aria-label="Основная навигация">
+      <nav class="nav" aria-label="Main navigation">
         <a href="/talent-tree">Talent Tree</a>
         <a href="/skills">Skills</a>
         <a href="/skill-leveling">Skill leveling</a>
@@ -317,30 +425,29 @@
         <div class="hero-grid">
           <div>
             <div class="eyebrow">Build &amp; Guide • moderation</div>
-            <h1>Страница отправки билдов и гайдов на публикацию</h1>
+            <h1>Crystalfall Build Creator – Submit Your Build and Guide</h1>
             <p>
-              Пользователь собирает билд в одном месте: импортирует прокаченное дерево, выбирает до 6 скиллов
-              и прикладывает изображения экипировки. На выходе формируется единая заявка для модерации.
+              Use the CrystalFall build creator to assemble your character build.
+				Import your talent tree, choose up to six skills and attach gear screenshots.
             </p>
+			<br>
+			<div class="guide-steps">
+				<h2>How to Submit a Build</h2>
+
+				<ul>
+				<li>Import your talent tree</li>
+				<li>Select your main skills</li>
+				<li>Add equipment screenshots</li>
+				<li>Describe your build strategy</li>
+				</ul>
+			</div>
             <div class="hero-actions">
-              <a class="button" href="#form-start">Заполнить билд</a>
-              <button class="ghost" type="button" id="generateJsonTop">Собрать JSON</button>
-            </div>
+              <a class="button" href="#form-start">Create a build or guide</a>
+                          </div>
           </div>
-          <div class="hero-side">
-            <div class="mini-card">
-              <h3>Что работает сразу</h3>
-              <p>Фронтенд полностью клиентский: выбор скиллов, импорт дерева из localStorage, вложения картинок, генерация JSON и черновика письма модератору.</p>
-            </div>
-            <div class="mini-card">
-              <h3>Что нужно для реальной модерации</h3>
-              <p>Нужен backend или внешний приёмщик заявок. Пока страница готовит данные и открывает канал отправки.</p>
-            </div>
-            <div class="mini-card">
-              <h3>Интеграция с текущим сайтом</h3>
-              <p>Страница использует публичный датасет skills и может забирать сохранённое дерево из /talent-tree.</p>
-            </div>
-          </div>
+			<div class="hero-side">
+			  <img class="hero-image" src="./img/build-guide-banner.png" alt="Crystalfall build creator and guide submission">
+			</div>
         </div>
       </div>
     </section>
@@ -350,26 +457,25 @@
         <article class="panel">
           <div class="panel-head">
             <div>
-              <div class="step-title"><span class="step-badge">0</span> Информация о гайде</div>
-              <p>Метаданные карточки, которые увидит модератор и потом публикация.</p>
-            </div>
+              <div class="step-title"><span class="step-badge">1</span> Information about a build or guide</div>
+              </div>
           </div>
           <div class="panel-body">
             <div class="grid-2">
               <label class="field">
-                <span class="label">Название билда</span>
-                <input id="buildTitle" type="text" placeholder="Например: Mythic Ranger AoE Farm Build" />
+                <span class="label">Build or Guide name</span>
+                <input id="buildTitle" type="text" placeholder="For example: Mythic Ranger AoE Farm Build" />
               </label>
               <label class="field">
-                <span class="label">Имя автора / ник</span>
-                <input id="authorName" type="text" placeholder="kiselmix / Nickname" />
+                <span class="label">Author's name / Nickname</span>
+                <input id="authorName" type="text" placeholder="kiselmix" />
               </label>
               <label class="field">
-                <span class="label">Контакт для обратной связи</span>
+                <span class="label">Contact information</span>
                 <input id="authorContact" type="text" placeholder="Telegram / Discord / email" />
               </label>
               <label class="field">
-                <span class="label">Категория</span>
+                <span class="label">Category</span>
                 <select id="buildType">
                   <option value="build">Build</option>
                   <option value="guide">Guide</option>
@@ -379,13 +485,13 @@
             </div>
             <div style="height:16px"></div>
             <label class="field-block">
-              <span class="label">Краткое описание</span>
-              <textarea id="buildDescription" placeholder="Что это за билд, под какой контент, в чём сильные и слабые стороны."></textarea>
+              <span class="label">Brief description</span>
+              <textarea id="buildDescription" placeholder="Type of character, attack range type, strengths and weaknesses."></textarea>
             </label>
             <div style="height:16px"></div>
             <label class="field-block">
-              <span class="label">Пошаговый гайд / комментарии для модератора</span>
-              <textarea id="guideText" placeholder="Любые пояснения: ротация, приоритет статов, советы по шмоту, альтернативы, важные замечания."></textarea>
+              <span class="label">Step-by-step guide / comments for the moderator</span>
+              <textarea id="guideText" placeholder="Any clarifications: rotation, stat priority, item tips, alternatives, important notes."></textarea>
             </label>
           </div>
         </article>
@@ -393,46 +499,51 @@
         <article class="panel">
           <div class="panel-head">
             <div>
-              <div class="step-title"><span class="step-badge">1</span> Прокаченное дерево</div>
-              <p>Можно импортировать текущий билд из localStorage страницы talent-tree на том же домене или вставить JSON вручную.</p>
+              <div class="step-title"><span class="step-badge">2</span> Talent Tree leveling </div>
+              <p>Import upgraded nodes from the page <a href="/talent-tree" target="_blank" rel="noreferrer">Talent Tree</a>. Maximum 100 nodes.</p>
             </div>
             <div class="toolbar">
-              <a class="soft" href="/talent-tree" target="_blank" rel="noreferrer">Открыть Talent Tree</a>
-              <button class="ghost" type="button" id="importTreeBtn">Импортировать мой билд</button>
-              <button class="danger" type="button" id="clearTreeBtn">Очистить</button>
+				<div class="toolbar tree-buttons">
+				  <a class="soft full-btn" href="/talent-tree" target="_blank" rel="noreferrer">
+					Open Talent Tree
+				  </a>
+
+				  <button class="ghost full-btn" type="button" id="importTreeBtn">
+					Import
+				  </button>
+
+				  <button class="danger full-btn" type="button" id="clearTreeBtn">
+					Clear
+				  </button>
+				</div>
             </div>
           </div>
           <div class="panel-body">
             <div class="summary-grid">
-              <div class="stat"><strong id="treeNodeCount">0</strong><span>активных нод</span></div>
-              <div class="stat"><strong id="treeStartNode">—</strong><span>стартовый класс / node id</span></div>
-              <div class="stat"><strong id="treeValidStatus">Нет</strong><span>импортировано из localStorage</span></div>
+              <div class="stat"><strong id="treeNodeCount">0</strong><span>active nodes</span></div>
+              <div class="stat"><strong id="treeStartNode">—</strong><span>starting class</span></div>
+              <div class="stat"><strong id="treeValidStatus">Нет</strong><span>imported</span></div>
             </div>
             <div style="height:16px"></div>
-            <label class="field-block">
-              <span class="label">Tree JSON</span>
-              <textarea id="treeJson" placeholder='Например: {"unlocked":["n1","a2"],"startId":"n1"}'></textarea>
-              <span class="hint">Ожидается формат из talent-tree: unlocked + startId. Страница сама покажет краткую сводку.</span>
-            </label>
+			<textarea id="treeJson" hidden></textarea>
           </div>
         </article>
 
         <article class="panel">
           <div class="panel-head">
             <div>
-              <div class="step-title"><span class="step-badge">2</span> Выбранные скиллы (до 6)</div>
-              <p>Список подгружается из текущего skill.data.js. Поиск работает по названию, описанию и тегам.</p>
+              <div class="step-title"><span class="step-badge">3</span> Selected skills</div>
+              <p>You can select from 1 to 6 skills.</p>
             </div>
             <div class="toolbar">
               <label class="field" style="min-width:260px">
-                <span class="label">Поиск</span>
+                <span class="label">Search</span>
                 <input id="skillSearch" type="search" placeholder="Fire, movement, melee, shield..." />
               </label>
             </div>
           </div>
           <div class="panel-body">
-            <div class="status" id="skillsLoadStatus">Загрузка скиллов…</div>
-            <div style="height:16px"></div>
+           <div style="height:16px"></div>
             <div class="selected-list" id="selectedSkills"></div>
             <div style="height:16px"></div>
             <div class="skill-grid" id="skillGrid"></div>
@@ -444,22 +555,38 @@
         <article class="panel">
           <div class="panel-head">
             <div>
-              <div class="step-title"><span class="step-badge">3</span> Опционально: оружие и броня картинкой</div>
-              <p>Можно прикрепить несколько изображений для оружия и брони. Они не уходят на сервер автоматически и попадут в собранный JSON как массив base64 preview.</p>
+              <div class="step-title"><span class="step-badge">4</span> Optional: weapons and armor picture</div>
+              <p>You can attach multiple images for weapons and armor.</p>
             </div>
           </div>
           <div class="panel-body">
             <div class="upload-grid">
               <div class="upload-box">
-                <div class="label">Оружие</div>
-                <input id="weaponImage" type="file" accept="image/*" multiple />
-                <div id="weaponPreview" class="preview">Превью оружия</div>
+                <div class="label">Weapon</div>
+                <label class="file-btn">
+				  Select files
+				  <input id="weaponImage" type="file" accept="image/*" multiple hidden>
+				</label>
+                <div id="weaponPreview" class="preview">Weapon preview</div>
               </div>
               <div class="upload-box">
-                <div class="label">Броня</div>
-                <input id="armorImage" type="file" accept="image/*" multiple />
-                <div id="armorPreview" class="preview">Превью брони</div>
+                <div class="label">Armor</div>
+                <label class="file-btn">
+				  Select files
+				  <input id="armorImage" type="file" accept="image/*" multiple hidden>
+				</label>
+                <div id="armorPreview" class="preview">Armor preview</div>
               </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-body">
+            <div id="sendStatus" class="status warn">After checking the form, click "Submit".</div>
+            <div style="height:16px"></div>
+            <div class="toolbar">
+              <button class="button" type="button" id="submitToModerator">Submit</button>
             </div>
           </div>
         </article>
@@ -470,58 +597,18 @@
           <article class="panel">
             <div class="panel-head">
               <div>
-                <h2>Проверка заявки</h2>
-                <p>Быстрый pre-submit checklist для модерации.</p>
+                <h2>Application verification</h2>
               </div>
             </div>
             <div class="panel-body">
               <div id="validationBox" class="note-list"></div>
             </div>
           </article>
-
-          <article class="panel">
-            <div class="panel-head">
-              <div>
-                <h2>JSON заявки</h2>
-                <p>Готовый payload для backend, email, Google Form, Telegram-бота или GitHub Issue.</p>
-              </div>
-            </div>
-            <div class="panel-body">
-              <div class="toolbar">
-                <button class="button" type="button" id="generateJson">Собрать JSON</button>
-                <button class="ghost" type="button" id="copyJson">Скопировать</button>
-                <button class="ghost" type="button" id="downloadJson">Скачать .json</button>
-              </div>
-              <div style="height:16px"></div>
-              <pre id="jsonOutput" class="code-output">Нажмите «Собрать JSON».</pre>
-            </div>
-          </article>
-
-          <article class="panel">
-            <div class="panel-head">
-              <div>
-                <h2>Отправка на модерацию</h2>
-                <p>В демо-версии можно открыть черновик письма модератору.</p>
-              </div>
-            </div>
-            <div class="panel-body">
-              <div id="sendStatus" class="status warn">Реальная отправка потребует backend. Сейчас доступна подготовка данных и mailto-черновик.</div>
-              <div style="height:16px"></div>
-              <label class="field">
-                <span class="label">Email модератора</span>
-                <input id="moderatorEmail" type="email" placeholder="moderation@example.com" />
-              </label>
-              <div style="height:16px"></div>
-              <div class="toolbar">
-                <button class="button" type="button" id="openMailDraft">Открыть письмо</button>
-              </div>
-            </div>
-          </article>
         </div>
       </aside>
     </div>
 
-    <div class="footer">CrystalFall.fun • build submission draft page</div>
+    <div class="footer">CrystalFall.fun • fan-made helper pages • v0.1.3</div>
   </main>
 
   <script src="./js/skill/skill.data.js"></script>
@@ -533,6 +620,7 @@
         'skilltree_progress',
         'talent_tree_progress'
       ];
+      const WORKER_ENDPOINT_STORAGE_KEY = 'build_guide_worker_endpoint';
 
       const state = {
         skills: [],
@@ -565,15 +653,15 @@
         weaponPreview: document.getElementById('weaponPreview'),
         armorPreview: document.getElementById('armorPreview'),
         validationBox: document.getElementById('validationBox'),
-        jsonOutput: document.getElementById('jsonOutput'),
-        generateJson: document.getElementById('generateJson'),
-        generateJsonTop: document.getElementById('generateJsonTop'),
-        copyJson: document.getElementById('copyJson'),
-        downloadJson: document.getElementById('downloadJson'),
-        moderatorEmail: document.getElementById('moderatorEmail'),
-        openMailDraft: document.getElementById('openMailDraft'),
+        submitToModerator: document.getElementById('submitToModerator'),
         sendStatus: document.getElementById('sendStatus')
       };
+	  
+	  const CLASS_MAP = {
+	  n1: "Technomancer",
+	  n2: "Knight",
+	  n3: "Rogue",
+	};
 
       function escapeHtml(value) {
         return String(value ?? '')
@@ -624,8 +712,9 @@
       function renderTreeSummary() {
         const tree = state.tree;
         el.treeNodeCount.textContent = String(tree?.unlocked?.length || 0);
-        el.treeStartNode.textContent = tree?.startId || '—';
-        el.treeValidStatus.textContent = tree ? 'Да' : 'Нет';
+        const startId = tree?.startId;
+		el.treeStartNode.textContent = CLASS_MAP[startId] || startId || '—';
+        el.treeValidStatus.textContent = tree ? 'Yes' : 'No';
       }
 
       function importTreeFromLocalStorage() {
@@ -643,12 +732,12 @@
           el.treeJson.value = '';
           state.tree = null;
           renderTreeSummary();
-          alert('Сохранённый билд дерева не найден в localStorage. Сначала откройте /talent-tree и отметьте ноды.');
+          alert('The saved tree build was not found. First, open /talent-tree and select the nodes.');
           return;
         }
         const parsed = safeJsonParse(raw);
         if (!parsed || typeof parsed !== 'object') {
-          alert(`Не удалось распарсить localStorage по ключу ${usedKey}.`);
+          alert(`Failed to parse the tree by key ${usedKey}.`);
           return;
         }
         el.treeJson.value = JSON.stringify(parsed, null, 2);
@@ -671,12 +760,12 @@
         });
 
         if (!state.skills.length) {
-          el.skillGrid.innerHTML = '<div class="empty">Не удалось загрузить skill.data.js. Проверьте, что путь ./js/skill/skill.data.js существует и выставляет window.skill.</div>';
+          el.skillGrid.innerHTML = '<div class="empty">Failed to load skills.</div>';
           return;
         }
 
         if (!list.length) {
-          el.skillGrid.innerHTML = '<div class="empty">По вашему запросу скиллы не найдены.</div>';
+          el.skillGrid.innerHTML = '<div class="empty">No skills were found matching your request.</div>';
           return;
         }
 
@@ -694,9 +783,9 @@
                 <div class="skill-meta">${tags}</div>
                 <div class="skill-actions">
                   <button class="small-btn ${isSelected ? 'is-selected' : ''}" type="button" data-skill-toggle="${escapeHtml(skill.id)}">
-                    ${isSelected ? 'Убрать' : 'Выбрать'}
+                    ${isSelected ? 'Remove' : 'Choose'}
                   </button>
-                  <a class="small-btn" href="/skills/${slug}" target="_blank" rel="noreferrer">Открыть</a>
+                  <a class="small-btn" href="/skills/${slug}" target="_blank" rel="noreferrer">Open</a>
                 </div>
               </div>
             </article>
@@ -710,7 +799,7 @@
           state.selectedSkills.splice(index, 1);
         } else {
           if (state.selectedSkills.length >= MAX_SKILLS) {
-            alert(`Можно выбрать максимум ${MAX_SKILLS} скиллов.`);
+            alert(`You can choose a maximum of ${MAX_SKILLS} skills.`);
             return;
           }
           state.selectedSkills.push(skillId);
@@ -722,7 +811,7 @@
 
       function renderSelectedSkills() {
         if (!state.selectedSkills.length) {
-          el.selectedSkills.innerHTML = '<div class="empty">Пока не выбрано ни одного скилла.</div>';
+          el.selectedSkills.innerHTML = '<div class="empty">No skills have been selected yet.</div>';
           return;
         }
         const selectedObjects = state.selectedSkills
@@ -731,7 +820,7 @@
         el.selectedSkills.innerHTML = selectedObjects.map((skill, index) => `
           <span class="chip">
             ${index + 1}. ${escapeHtml(skill.name)}
-            <button type="button" data-skill-toggle="${escapeHtml(skill.id)}" aria-label="Удалить ${escapeHtml(skill.name)}">×</button>
+            <button type="button" data-skill-toggle="${escapeHtml(skill.id)}" aria-label="Delete ${escapeHtml(skill.name)}">×</button>
           </span>
         `).join('');
       }
@@ -765,7 +854,7 @@
         const target = type === 'weaponImage' ? el.weaponPreview : el.armorPreview;
         const images = Array.isArray(state[type]) ? state[type] : [];
         if (!images.length) {
-          target.innerHTML = type === 'weaponImage' ? 'Превью оружия' : 'Превью брони';
+          target.innerHTML = type === 'weaponImage' ? 'Weapon preview' : 'Armor preview';
           return;
         }
         target.innerHTML = `
@@ -831,38 +920,38 @@
         const checks = [
           {
             ok: Boolean(el.buildTitle.value.trim()),
-            title: 'Есть название билда',
-            text: 'Заголовок нужен для модерации и SEO карточки.'
+            title: 'Add build name',
+            text: 'A clear and concise name'
           },
           {
             ok: Boolean(el.authorName.value.trim()),
-            title: 'Указан автор',
-            text: 'Контакт поможет уточнить спорные детали до публикации.'
+            title: 'The author is indicated',
+            text: 'Contact will help clarify controversial details before publication.'
           },
           {
             ok: Boolean(el.buildDescription.value.trim()),
-            title: 'Есть описание',
-            text: 'Минимум один внятный абзац о том, для чего билд нужен.'
+            title: 'Add description',
+            text: 'At least one clear paragraph about what the build is needed for.'
           },
           {
             ok: Boolean(state.tree && Array.isArray(state.tree.unlocked) && state.tree.unlocked.length),
-            title: 'Добавлено дерево',
-            text: 'Шаг 1 обязателен по вашему ТЗ.'
+            title: 'Add Talent Tree',
+            text: 'Level up the Talent Tree and import'
           },
           {
             ok: state.selectedSkills.length > 0,
-            title: 'Выбран хотя бы 1 скилл',
-            text: 'Можно выбрать до 6 скиллов.'
+            title: 'Select skills',
+            text: 'You can select from 1 to 6 skills.'
           },
           {
             ok: state.selectedSkills.length <= MAX_SKILLS,
-            title: `Не больше ${MAX_SKILLS} скиллов`,
-            text: 'Лимит соблюдается автоматически на фронте.'
+            title: `No more than ${MAX_SKILLS} skills`,
+            
           },
           {
             ok: true,
-            title: 'Оружие и броня опциональны',
-            text: 'Изображения можно приложить позже, это не блокирует отправку.'
+            title: 'Add weapons and armor',
+            text: 'Attach images of your equipment with specifications.'
           }
         ];
 
@@ -874,66 +963,50 @@
         `).join('');
       }
 
-      function renderJson() {
-        buildPayload();
-        el.jsonOutput.textContent = state.json || 'Не удалось собрать JSON.';
-        renderValidation();
-      }
-
-      async function copyJson() {
-        if (!state.json) renderJson();
-        if (!state.json) return;
-        try {
-          await navigator.clipboard.writeText(state.json);
-          el.sendStatus.className = 'status good';
-          el.sendStatus.textContent = 'JSON скопирован в буфер обмена.';
-        } catch {
-          el.sendStatus.className = 'status warn';
-          el.sendStatus.textContent = 'Не удалось скопировать автоматически. Возьмите JSON из блока вручную.';
-        }
-      }
-
-      function downloadJson() {
-        if (!state.json) renderJson();
-        if (!state.json) return;
-        const blob = new Blob([state.json], { type: 'application/json;charset=utf-8' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = `${slugify(el.buildTitle.value || 'build-submission')}.json`;
-        document.body.appendChild(a);
-        a.click();
-        a.remove();
-        URL.revokeObjectURL(url);
-      }
-
-      function openMailDraft() {
-        const email = el.moderatorEmail.value.trim();
-        if (!email) {
+      async function submitToModerator() {
+        parseTreeJson();
+        if (!isReadyToSubmit()) {
+          renderValidation();
           el.sendStatus.className = 'status danger';
-          el.sendStatus.textContent = 'Укажите email модератора.';
+          el.sendStatus.textContent = 'Your application is not ready to be submitted. Please check the required fields on the right.';
           return;
         }
+
+        const endpoint = el.workerEndpoint.value.trim();
+        if (!endpoint) {
+          el.sendStatus.className = 'status danger';
+          el.sendStatus.textContent = 'Please specify URL Cloudflare Worker.';
+          return;
+        }
+
         const payload = buildPayload();
-        const subject = encodeURIComponent(`[Build submission] ${payload.title || 'Без названия'}`);
-        const body = encodeURIComponent([
-          `Название: ${payload.title || '—'}`,
-          `Автор: ${payload.author.name || '—'}`,
-          `Контакт: ${payload.author.contact || '—'}`,
-          `Тип: ${payload.type}`,
-          `Скиллы: ${payload.skills.map((s) => s.name).join(', ') || '—'}`,
-          `Дерево: ${payload.talentTree?.unlocked?.length || 0} нод`,
-          '',
-          'Описание:',
-          payload.description || '—',
-          '',
-          'Guide text:',
-          payload.guideText || '—',
-          '',
-          'JSON:',
-          state.json || JSON.stringify(payload, null, 2)
-        ].join('\n'));
-        window.location.href = `mailto:${encodeURIComponent(email)}?subject=${subject}&body=${body}`;
+        el.sendStatus.className = 'status warn';
+        el.sendStatus.textContent = 'Submitting a request...';
+        el.submitToModerator.disabled = true;
+
+        try {
+          const response = await fetch(endpoint, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+
+          const raw = await response.text();
+          let data = null;
+          try { data = raw ? JSON.parse(raw) : null; } catch { data = { raw }; }
+
+          if (!response.ok || !data?.ok) {
+            throw new Error(data?.error || data?.message || `HTTP ${response.status}`);
+          }
+
+          el.sendStatus.className = 'status good';
+          el.sendStatus.textContent = data?.message || 'The request has been sent to the moderator.';
+        } catch (error) {
+          el.sendStatus.className = 'status danger';
+          el.sendStatus.textContent = `Sending error: ${error.message || error}`;
+        } finally {
+          el.submitToModerator.disabled = false;
+        }
       }
 
       function attachEvents() {
@@ -946,8 +1019,7 @@
           el.buildDescription,
           el.guideText,
           el.treeJson,
-          el.skillSearch,
-          el.moderatorEmail
+          el.skillSearch
         ].forEach((node) => node.addEventListener('input', () => {
           if (node === el.treeJson) parseTreeJson();
           if (node === el.skillSearch) renderSkillGrid();
@@ -956,11 +1028,7 @@
 
         el.importTreeBtn.addEventListener('click', importTreeFromLocalStorage);
         el.clearTreeBtn.addEventListener('click', clearTree);
-        el.generateJson.addEventListener('click', renderJson);
-        el.generateJsonTop.addEventListener('click', renderJson);
-        el.copyJson.addEventListener('click', copyJson);
-        el.downloadJson.addEventListener('click', downloadJson);
-        el.openMailDraft.addEventListener('click', openMailDraft);
+        el.submitToModerator.addEventListener('click', submitToModerator);
 
         el.weaponImage.addEventListener('change', async (event) => {
           await handleImageUpload('weaponImage', event.target.files);
@@ -991,13 +1059,6 @@
 
       function init() {
         state.skills = getSkillsFromGlobal();
-        if (state.skills.length) {
-          el.skillsLoadStatus.className = 'status good';
-          el.skillsLoadStatus.textContent = `Скиллы загружены: ${state.skills.length}.`;
-        } else {
-          el.skillsLoadStatus.className = 'status danger';
-          el.skillsLoadStatus.textContent = 'Скиллы не загрузились. Проверьте подключение ./js/skill/skill.data.js.';
-        }
         parseTreeJson();
         renderTreeSummary();
         renderSkillGrid();
