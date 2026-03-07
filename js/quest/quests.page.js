@@ -1,21 +1,23 @@
-// skill.page.js
+// quests.page.js
 (function () {
   const skill = Array.isArray(window.quest) ? window.quest.slice() : [];
 
   const rowsEl = document.getElementById("rows");
   const qEl = document.getElementById("q");
-  const tagEl = document.getElementById("cat"); // фильтр по tags (и type)
+  const tagEl = document.getElementById("cat");
   const sortEl = document.getElementById("sort");
   const countEl = document.getElementById("count");
 
-  // Теги в select (собираем из t.tags + t.type)
+  const slugify = (value) => String(value || '').trim().toLowerCase();
+  const getQuestUrl = (item) => `quests/${encodeURIComponent(slugify(item.id))}.html`;
+
   const allTags = [];
   for (const t of skill) {
     if (t.type && String(t.type) !== "Skill") allTags.push(t.type);
     if (Array.isArray(t.tags)) allTags.push(...t.tags);
   }
   const tags = [...new Set(allTags.filter(Boolean))].sort((a, b) =>
-    String(a).localeCompare(String(b), "ru")
+    String(a).localeCompare(String(b), "en")
   );
 
   for (const tg of tags) {
@@ -39,28 +41,25 @@
       .concat(
         t.type && String(t.type) !== "Skill"
           ? [
-              `<span class="badge badge--clickable" data-tag="${escapeAttr(
-                t.type && String(t.type) !== "Skill"
-              )}">${escapeHTML(t.type)}</span>`,
+              `<span class="badge badge--clickable" data-tag="${escapeAttr(t.type)}">${escapeHTML(t.type)}</span>`,
             ]
           : []
       )
       .concat(
         (t.tags || []).map(
-          (x) =>
-            `<span class="badge badge--clickable" data-tag="${escapeAttr(
-              x
-            )}">${escapeHTML(x)}</span>`
+          (x) => `<span class="badge badge--clickable" data-tag="${escapeAttr(x)}">${escapeHTML(x)}</span>`
         )
       )
       .join("");
 
+    const url = getQuestUrl(t);
+
     return `
-	<div class="row" data-id="${escapeAttr(t.id)}">
-	  <div class="cell">
+    <div class="row" data-id="${escapeAttr(t.id)}" data-url="${escapeAttr(url)}">
+      <div class="cell">
           <div class="meta">
             <div class="titleline">
-              <span class="name">${escapeHTML(t.name)}</span>
+              <a class="name" href="${escapeAttr(url)}">${escapeHTML(t.name)}</a>
               <span class="badges">${badges}</span>
             </div>
             <div class="desc">${escapeHTML(t.description || "")}</div>
@@ -90,10 +89,10 @@
     const arr = list.slice();
     switch (mode) {
       case "name_asc":
-        arr.sort((a, b) => (a.name || "").localeCompare(b.name || "", "ru"));
+        arr.sort((a, b) => (a.name || "").localeCompare(b.name || "", "en"));
         break;
       case "name_desc":
-        arr.sort((a, b) => (b.name || "").localeCompare(a.name || "", "ru"));
+        arr.sort((a, b) => (b.name || "").localeCompare(a.name || "", "en"));
         break;
       case "sort_asc":
       default:
@@ -104,7 +103,6 @@
   }
 
   function highlightActiveBadges(selectedTag) {
-    // подсветка активного тега на бейджах
     if (selectedTag) {
       for (const b of rowsEl.querySelectorAll(".badge--clickable")) {
         const isActive = b.getAttribute("data-tag") === selectedTag;
@@ -134,20 +132,16 @@
 
     countEl.textContent = `${filtered.length} / ${skill.length}`;
 
-    // делаем строки фокусируемыми (для клавиатуры)
     for (const el of rowsEl.querySelectorAll(".row")) {
       el.tabIndex = 0;
       el.setAttribute("role", "link");
       el.setAttribute(
         "aria-label",
-        `Открыть талант: ${el.querySelector(".name")?.textContent || ""}`
+        `Open quest: ${el.querySelector(".name")?.textContent || ""}`
       );
     }
   }
 
-  // Делегирование кликов:
-  // - клик по badge -> включить фильтр
-  // - клик по row -> открыть страницу таланта
   rowsEl.addEventListener("click", (e) => {
     const badge = e.target.closest?.(".badge--clickable");
     if (badge) {
@@ -155,33 +149,32 @@
       e.stopPropagation();
       const tag = badge.getAttribute("data-tag");
       if (tag) {
-        // повторный клик по активному тегу -> сброс фильтра
         tagEl.value = (tagEl.value === tag) ? "" : tag;
         render();
       }
       return;
     }
 
+    const directLink = e.target.closest?.('a');
+    if (directLink) return;
+
     const row = e.target.closest?.(".row");
     if (!row) return;
-    const id = row.getAttribute("data-id");
-    if (!id) return;
-    window.location.href = `quest.html?id=${encodeURIComponent(id)}`;
+    const url = row.getAttribute("data-url");
+    if (!url) return;
+    window.location.href = url;
   });
 
-  // Доступность: Enter/Space по выделенной строке
   rowsEl.addEventListener("keydown", (e) => {
     const row = e.target.closest?.(".row");
     if (!row) return;
     if (e.key !== "Enter" && e.key !== " ") return;
 
-    // Если фокус на badge и нажали Enter/Space — тоже включаем фильтр
     const badge = e.target.closest?.(".badge--clickable");
     if (badge) {
       e.preventDefault();
       const tag = badge.getAttribute("data-tag");
       if (tag) {
-        // повторное нажатие по активному тегу -> сброс фильтра
         tagEl.value = (tagEl.value === tag) ? "" : tag;
         render();
       }
@@ -189,9 +182,9 @@
     }
 
     e.preventDefault();
-    const id = row.getAttribute("data-id");
-    if (!id) return;
-    window.location.href = `quest.html?id=${encodeURIComponent(id)}`;
+    const url = row.getAttribute("data-url");
+    if (!url) return;
+    window.location.href = url;
   });
 
   qEl.addEventListener("input", render);

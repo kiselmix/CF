@@ -27,7 +27,7 @@
       const images = Array.isArray(s.images) ? s.images : [];
       const imgsHTML = images.map(src => `
         <div class="responsive" style="margin-top:10px">
-          <img src="${escapeAttr(src)}" alt="${escapeAttr(s.title || 'Step')}" style="width:100%; height:100%; object-fit:cover; display:block;">
+          <img src="${escapeAttr(src)}" alt="${escapeAttr(t.name + ' ' + s.title)}" style="width:100%; height:100%; object-fit:cover; display:block;">
         </div>
       `).join('');
 
@@ -53,7 +53,7 @@
       return;
     }
 
-    document.title = `${t.name} — Quests`;
+    document.title = `${t.name} Quest Guide – Crystalfall | CrystalFall.fun`;
 
     const tags = [].concat(t.tags || []);
 
