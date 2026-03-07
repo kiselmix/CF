@@ -14,6 +14,9 @@
   const root = document.getElementById("questNavBlock");
   if (!root) return;
 
+  const questUrl = (slug) => `/quests/${slug}`;
+  const questsListUrl = `/quests`;
+
   let html = '<div class="moreQuests">';
 
   if (prev || next) {
@@ -22,18 +25,18 @@
 
     if (prev) {
       html += `
-      <a class="moreQuestCard" href="../${prev.slug}">
-        <span class="mqName">← ${prev.title}</span>
-        <span class="mqType">Previous quest</span>
-      </a>`;
+        <a class="moreQuestCard" href="${questUrl(prev.slug)}">
+          <span class="mqName">← ${prev.title}</span>
+          <span class="mqType">Previous quest</span>
+        </a>`;
     }
 
     if (next) {
       html += `
-      <a class="moreQuestCard" href="../${next.slug}">
-        <span class="mqName">${next.title} →</span>
-        <span class="mqType">Next quest</span>
-      </a>`;
+        <a class="moreQuestCard" href="${questUrl(next.slug)}">
+          <span class="mqName">${next.title} →</span>
+          <span class="mqType">Next quest</span>
+        </a>`;
     }
 
     html += `</div>`;
@@ -48,7 +51,7 @@
 
   more.forEach(q => {
     html += `
-      <a class="moreQuestCard" href="../${q.slug}">
+      <a class="moreQuestCard" href="${questUrl(q.slug)}">
         <span class="mqName">${q.title}</span>
         <span class="mqType">Quest guide</span>
       </a>
@@ -59,7 +62,7 @@
 
   html += `
     <div style="margin-top:12px">
-      <a class="moreQuestCard" href="../">
+      <a class="moreQuestCard" href="${questsListUrl}">
         <span class="mqName">All quests</span>
         <span class="mqType">View full list</span>
       </a>
