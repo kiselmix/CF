@@ -9,7 +9,7 @@
   const countEl = document.getElementById("count");
 
   const slugify = (value) => String(value || '').trim().toLowerCase();
-  const getQuestUrl = (item) => `quests/${encodeURIComponent(slugify(item.id))}.html`;
+  const getQuestUrl = (item) => `quests/${encodeURIComponent(slugify(item.id))}/`;
 
   const allTags = [];
   for (const t of skill) {
