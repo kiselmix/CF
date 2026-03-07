@@ -248,19 +248,6 @@
       border: 1px dashed rgba(143,173,214,.28);
       border-radius: 18px; padding: 18px; color: var(--muted); background: rgba(255,255,255,.02);
     }
-    .skill-level-card {
-      border-radius: 18px; padding: 16px; background: rgba(255,255,255,.03); border: 1px solid rgba(143,173,214,.14);
-      display: grid; gap: 14px;
-    }
-    .check-grid {
-      display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px;
-    }
-    .check-item {
-      display: flex; align-items: flex-start; gap: 10px; padding: 12px; border-radius: 14px;
-      background: rgba(6,12,20,.5); border: 1px solid rgba(143,173,214,.14);
-    }
-    .check-item input { margin-top: 3px; }
-    .check-item small { display: block; color: var(--muted); margin-top: 4px; line-height: 1.45; }
     .upload-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; }
     .upload-box {
       border: 1px dashed rgba(143,173,214,.28); border-radius: 18px; padding: 16px; background: rgba(255,255,255,.02);
@@ -300,7 +287,7 @@
       .sidebar-sticky { position: static; }
     }
     @media (max-width: 820px) {
-      .grid-2, .grid-3, .grid-4, .summary-grid, .upload-grid, .check-grid, .skill-grid { grid-template-columns: 1fr; }
+      .grid-2, .grid-3, .grid-4, .summary-grid, .upload-grid, .skill-grid { grid-template-columns: 1fr; }
       .panel-head { display: grid; }
       .hero-grid, .panel-body, .panel-head { padding: 18px; }
       .wrap { width: min(calc(100% - 20px), var(--max)); }
@@ -332,9 +319,8 @@
             <div class="eyebrow">Build &amp; Guide • moderation</div>
             <h1>Страница отправки билдов и гайдов на публикацию</h1>
             <p>
-              Пользователь собирает билд в одном месте: импортирует прокаченное дерево, выбирает до 6 скиллов,
-              при желании добавляет прокачку по каждому скиллу и прикладывает изображения экипировки. На выходе
-              формируется единая заявка для модерации.
+              Пользователь собирает билд в одном месте: импортирует прокаченное дерево, выбирает до 6 скиллов
+              и прикладывает изображения экипировки. На выходе формируется единая заявка для модерации.
             </p>
             <div class="hero-actions">
               <a class="button" href="#form-start">Заполнить билд</a>
@@ -352,7 +338,7 @@
             </div>
             <div class="mini-card">
               <h3>Интеграция с текущим сайтом</h3>
-              <p>Страница использует те же публичные JS-датасеты: skills и skill-leveling, плюс может забирать сохранённое дерево из /talent-tree.</p>
+              <p>Страница использует публичный датасет skills и может забирать сохранённое дерево из /talent-tree.</p>
             </div>
           </div>
         </div>
@@ -453,38 +439,25 @@
           </div>
         </article>
 
-        <article class="panel">
-          <div class="panel-head">
-            <div>
-              <div class="step-title"><span class="step-badge">3</span> Опционально: прокачка выбранных скиллов</div>
-              <p>Для каждого выбранного скилла можно указать rarity и отметить ноды/апгрейды. Если структура нод для скилла отсутствует, остаётся поле для комментария.</p>
-            </div>
-            <div class="toolbar">
-              <a class="soft" href="/skill-leveling" target="_blank" rel="noreferrer">Открыть Skill leveling</a>
-            </div>
-          </div>
-          <div class="panel-body">
-            <div id="skillLevelingContainer" class="stack"></div>
-          </div>
-        </article>
+        
 
         <article class="panel">
           <div class="panel-head">
             <div>
-              <div class="step-title"><span class="step-badge">4</span> Опционально: оружие и броня картинкой</div>
-              <p>Картинки не уходят на сервер автоматически. Они попадут в собранный JSON как base64 preview и могут быть приложены к письму/форме.</p>
+              <div class="step-title"><span class="step-badge">3</span> Опционально: оружие и броня картинкой</div>
+              <p>Можно прикрепить несколько изображений для оружия и брони. Они не уходят на сервер автоматически и попадут в собранный JSON как массив base64 preview.</p>
             </div>
           </div>
           <div class="panel-body">
             <div class="upload-grid">
               <div class="upload-box">
                 <div class="label">Оружие</div>
-                <input id="weaponImage" type="file" accept="image/*" />
+                <input id="weaponImage" type="file" accept="image/*" multiple />
                 <div id="weaponPreview" class="preview">Превью оружия</div>
               </div>
               <div class="upload-box">
                 <div class="label">Броня</div>
-                <input id="armorImage" type="file" accept="image/*" />
+                <input id="armorImage" type="file" accept="image/*" multiple />
                 <div id="armorPreview" class="preview">Превью брони</div>
               </div>
             </div>
@@ -552,7 +525,6 @@
   </main>
 
   <script src="./js/skill/skill.data.js"></script>
-  <script src="./js/skill-leveling/skill-db.js"></script>
   <script>
     (() => {
       const MAX_SKILLS = 6;
@@ -565,9 +537,8 @@
       const state = {
         skills: [],
         selectedSkills: [],
-        skillLevels: {},
-        weaponImage: null,
-        armorImage: null,
+        weaponImage: [],
+        armorImage: [],
         tree: null,
         json: ''
       };
@@ -589,7 +560,6 @@
         skillGrid: document.getElementById('skillGrid'),
         selectedSkills: document.getElementById('selectedSkills'),
         skillsLoadStatus: document.getElementById('skillsLoadStatus'),
-        skillLevelingContainer: document.getElementById('skillLevelingContainer'),
         weaponImage: document.getElementById('weaponImage'),
         armorImage: document.getElementById('armorImage'),
         weaponPreview: document.getElementById('weaponPreview'),
@@ -631,20 +601,6 @@
         if (window.skill && Array.isArray(window.skill.skills)) return window.skill.skills;
         if (window.SKILL_DATA && Array.isArray(window.SKILL_DATA.skills)) return window.SKILL_DATA.skills;
         return [];
-      }
-
-      function getSkillDbSkills() {
-        if (window.SKILL_DB && Array.isArray(window.SKILL_DB.skills)) return window.SKILL_DB.skills;
-        return [];
-      }
-
-      function getSkillLevelDefinition(skillId) {
-        const dbSkills = getSkillDbSkills();
-        if (!dbSkills.length) return null;
-        return dbSkills.find((item) => {
-          const candidates = [item.id, item.name, item.slug, item.skillId].filter(Boolean).map(String);
-          return candidates.includes(skillId) || candidates.includes(skillId.replace(/\s+/g, '-'));
-        }) || dbSkills.find((item) => String(item.name || '').toLowerCase() === String(skillId || '').toLowerCase()) || null;
       }
 
       function getSkillCardIcon(skill) {
@@ -752,18 +708,15 @@
         const index = state.selectedSkills.indexOf(skillId);
         if (index >= 0) {
           state.selectedSkills.splice(index, 1);
-          delete state.skillLevels[skillId];
         } else {
           if (state.selectedSkills.length >= MAX_SKILLS) {
             alert(`Можно выбрать максимум ${MAX_SKILLS} скиллов.`);
             return;
           }
           state.selectedSkills.push(skillId);
-          state.skillLevels[skillId] ||= { rarity: 'common', nodes: [], notes: '' };
         }
         renderSelectedSkills();
         renderSkillGrid();
-        renderSkillLeveling();
         renderValidation();
       }
 
@@ -783,72 +736,6 @@
         `).join('');
       }
 
-      function collectNodeOptions(definition) {
-        if (!definition || !definition.nodes || typeof definition.nodes !== 'object') return [];
-        return Object.entries(definition.nodes).map(([id, node]) => ({
-          id,
-          title: node?.title || id,
-          desc: node?.desc || node?.description || ''
-        }));
-      }
-
-      function renderSkillLeveling() {
-        if (!state.selectedSkills.length) {
-          el.skillLevelingContainer.innerHTML = '<div class="empty">Сначала выберите хотя бы один скилл в шаге 2.</div>';
-          return;
-        }
-
-        const cards = state.selectedSkills.map((skillId) => {
-          const skill = state.skills.find((item) => item.id === skillId);
-          const config = state.skillLevels[skillId] ||= { rarity: 'common', nodes: [], notes: '' };
-          const definition = getSkillLevelDefinition(skillId);
-          const nodes = collectNodeOptions(definition);
-
-          return `
-            <section class="skill-level-card">
-              <div class="grid-2">
-                <div>
-                  <h3>${escapeHtml(skill?.name || skillId)}</h3>
-                  <p class="hint">${escapeHtml(skill?.description || 'Описание отсутствует.')}</p>
-                </div>
-                <label class="field">
-                  <span class="label">Rarity</span>
-                  <select data-rarity-select="${escapeHtml(skillId)}">
-                    <option value="common" ${config.rarity === 'common' ? 'selected' : ''}>Common</option>
-                    <option value="rare" ${config.rarity === 'rare' ? 'selected' : ''}>Rare</option>
-                    <option value="legendary" ${config.rarity === 'legendary' ? 'selected' : ''}>Legendary</option>
-                    <option value="mythic" ${config.rarity === 'mythic' ? 'selected' : ''}>Mythic</option>
-                  </select>
-                </label>
-              </div>
-
-              ${nodes.length ? `
-                <div class="check-grid">
-                  ${nodes.map((node) => `
-                    <label class="check-item">
-                      <input type="checkbox" data-node-check="${escapeHtml(skillId)}::${escapeHtml(node.id)}" ${config.nodes.includes(node.id) ? 'checked' : ''} />
-                      <span>
-                        <strong>${escapeHtml(node.title)}</strong>
-                        ${node.desc ? `<small>${escapeHtml(node.desc)}</small>` : ''}
-                      </span>
-                    </label>
-                  `).join('')}
-                </div>
-              ` : `
-                <div class="empty">Для этого скилла структура нод не найдена в skill-db.js. Оставьте комментарий вручную.</div>
-              `}
-
-              <label class="field-block">
-                <span class="label">Комментарий по прокачке</span>
-                <textarea data-skill-notes="${escapeHtml(skillId)}" placeholder="Например: берём верхнюю ветку под AoE, skip middle node, mythic only for bossing.">${escapeHtml(config.notes || '')}</textarea>
-              </label>
-            </section>
-          `;
-        }).join('');
-
-        el.skillLevelingContainer.innerHTML = cards;
-      }
-
       async function readImageFile(file) {
         return new Promise((resolve, reject) => {
           const reader = new FileReader();
@@ -858,45 +745,43 @@
         });
       }
 
-      async function handleImageUpload(type, file) {
-        if (!file) {
-          state[type] = null;
+      async function handleImageUpload(type, files) {
+        const list = Array.from(files || []);
+        if (!list.length) {
+          state[type] = [];
           renderUploadPreview(type);
           return;
         }
-        const dataUrl = await readImageFile(file);
-        state[type] = {
+        state[type] = await Promise.all(list.map(async (file) => ({
           name: file.name,
           size: file.size,
           type: file.type,
-          dataUrl
-        };
+          dataUrl: await readImageFile(file)
+        })));
         renderUploadPreview(type);
       }
 
       function renderUploadPreview(type) {
         const target = type === 'weaponImage' ? el.weaponPreview : el.armorPreview;
-        const image = state[type];
-        if (!image?.dataUrl) {
+        const images = Array.isArray(state[type]) ? state[type] : [];
+        if (!images.length) {
           target.innerHTML = type === 'weaponImage' ? 'Превью оружия' : 'Превью брони';
           return;
         }
-        target.innerHTML = `<img src="${image.dataUrl}" alt="${escapeHtml(image.name)}">`;
-      }
-
-      function collectSkillLevelStateFromDom() {
-        for (const skillId of state.selectedSkills) {
-          const rarity = document.querySelector(`[data-rarity-select="${CSS.escape(skillId)}"]`)?.value || 'common';
-          const note = document.querySelector(`[data-skill-notes="${CSS.escape(skillId)}"]`)?.value || '';
-          const nodes = Array.from(document.querySelectorAll(`[data-node-check^="${CSS.escape(skillId)}::"]:checked`))
-            .map((input) => String(input.getAttribute('data-node-check')).split('::')[1]);
-          state.skillLevels[skillId] = { rarity, nodes, notes: note };
-        }
+        target.innerHTML = `
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(96px,1fr));gap:10px;width:100%;padding:10px;align-items:start;">
+            ${images.map((image, index) => `
+              <figure style="margin:0;display:grid;gap:6px;">
+                <img src="${image.dataUrl}" alt="${escapeHtml(image.name)}" style="width:100%;height:96px;object-fit:cover;border-radius:10px;">
+                <figcaption style="font-size:11px;line-height:1.35;color:var(--muted);word-break:break-word;">${index + 1}. ${escapeHtml(image.name)}</figcaption>
+              </figure>
+            `).join('')}
+          </div>
+        `;
       }
 
       function buildPayload() {
         parseTreeJson();
-        collectSkillLevelStateFromDom();
 
         const payload = {
           submittedAt: new Date().toISOString(),
@@ -916,13 +801,12 @@
               id: skill.id,
               name: skill.name,
               tags: skill.tags || [],
-              description: skill.description || '',
-              leveling: state.skillLevels[skillId] || null
+              description: skill.description || ''
             };
           }),
           gearImages: {
-            weapon: state.weaponImage,
-            armor: state.armorImage
+            weapon: Array.isArray(state.weaponImage) ? state.weaponImage : [],
+            armor: Array.isArray(state.armorImage) ? state.armorImage : []
           },
           moderation: {
             status: 'draft',
@@ -944,7 +828,6 @@
 
       function renderValidation() {
         parseTreeJson();
-        collectSkillLevelStateFromDom();
         const checks = [
           {
             ok: Boolean(el.buildTitle.value.trim()),
@@ -1080,11 +963,11 @@
         el.openMailDraft.addEventListener('click', openMailDraft);
 
         el.weaponImage.addEventListener('change', async (event) => {
-          await handleImageUpload('weaponImage', event.target.files?.[0] || null);
+          await handleImageUpload('weaponImage', event.target.files);
           renderValidation();
         });
         el.armorImage.addEventListener('change', async (event) => {
-          await handleImageUpload('armorImage', event.target.files?.[0] || null);
+          await handleImageUpload('armorImage', event.target.files);
           renderValidation();
         });
 
@@ -1095,15 +978,13 @@
 
         document.addEventListener('change', (event) => {
           if (event.target.matches('[data-node-check], [data-rarity-select]')) {
-            collectSkillLevelStateFromDom();
-            renderValidation();
+                renderValidation();
           }
         });
 
         document.addEventListener('input', (event) => {
           if (event.target.matches('[data-skill-notes]')) {
-            collectSkillLevelStateFromDom();
-            renderValidation();
+                renderValidation();
           }
         });
       }
@@ -1121,7 +1002,6 @@
         renderTreeSummary();
         renderSkillGrid();
         renderSelectedSkills();
-        renderSkillLeveling();
         renderUploadPreview('weaponImage');
         renderUploadPreview('armorImage');
         renderValidation();
