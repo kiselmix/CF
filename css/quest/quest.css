@@ -121,7 +121,14 @@ select{min-width:170px; cursor:pointer}
 /* описание */
 .meta{display:flex; flex-direction:column; gap:6px}
 .titleline{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
-.name{font-size:16px; font-weight:700}
+.name{font-size:16px; 
+font-weight:700;
+    text-decoration: none;
+    color: inherit;
+
+
+
+}
 .badges{display:flex; gap:6px; flex-wrap:wrap}
 .badge{
   font-size:12px;
