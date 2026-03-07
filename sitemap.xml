@@ -1,27 +1,16 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-<url>
-<loc>https://crystalfall.fun/</loc>
-</url>
+<sitemap>
+<loc>https://crystalfall.fun/sitemap-pages.xml</loc>
+</sitemap>
 
-<url>
-<loc>https://crystalfall.fun/skills.html</loc>
-</url>
+<sitemap>
+<loc>https://crystalfall.fun/sitemap-skills.xml</loc>
+</sitemap>
 
-<url>
-<loc>https://crystalfall.fun/talent-tree.html</loc>
-</url>
+<sitemap>
+<loc>https://crystalfall.fun/sitemap-quests.xml</loc>
+</sitemap>
 
-<url>
-<loc>https://crystalfall.fun/maps-act-1.html</loc>
-</url>
-
-<url>
-<loc>https://crystalfall.fun/quests.html</loc>
-</url>
-
-<url>
-<loc>https://crystalfall.fun/fusing.html</loc>
-</url>
-
-</urlset>
+</sitemapindex>
