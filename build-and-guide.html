@@ -728,6 +728,7 @@
           const icon = getSkillCardIcon(skill);
           const tags = (skill.tags || []).slice(0, 4).map((tag) => `<span class="pill">${escapeHtml(tag)}</span>`).join('');
           const isSelected = selected.has(skill.id);
+		  const slug = skill.id.toLowerCase().replace(/\s+/g,'-');
           return `
             <article class="skill-card ${isSelected ? 'is-selected' : ''}">
               ${icon ? `<img class="skill-icon" src="./${escapeHtml(icon).replace(/^\.\//, '')}" alt="${escapeHtml(skill.name)}" loading="lazy">` : '<div class="skill-icon"></div>'}
@@ -739,7 +740,7 @@
                   <button class="small-btn ${isSelected ? 'is-selected' : ''}" type="button" data-skill-toggle="${escapeHtml(skill.id)}">
                     ${isSelected ? 'Убрать' : 'Выбрать'}
                   </button>
-                  <a class="small-btn" href="/skill?slug=${encodeURIComponent(skill.id)}" target="_blank" rel="noreferrer">Открыть</a>
+                  <a class="small-btn" href="/skills/${slug}" target="_blank" rel="noreferrer">Открыть</a>
                 </div>
               </div>
             </article>
