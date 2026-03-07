@@ -30,7 +30,7 @@
 
     if (next) {
       html += `
-      <a class="moreQuestCard" href="../${next.slug}/">
+      <a class="moreQuestCard" href="../${next.slug}">
         <span class="mqName">${next.title} →</span>
         <span class="mqType">Next quest</span>
       </a>`;
@@ -48,7 +48,7 @@
 
   more.forEach(q => {
     html += `
-      <a class="moreQuestCard" href="../${q.slug}/">
+      <a class="moreQuestCard" href="../${q.slug}">
         <span class="mqName">${q.title}</span>
         <span class="mqType">Quest guide</span>
       </a>
