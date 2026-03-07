@@ -22,7 +22,7 @@
 
     if (prev) {
       html += `
-      <a class="moreQuestCard" href="../${prev.slug}/">
+      <a class="moreQuestCard" href="../${prev.slug}">
         <span class="mqName">← ${prev.title}</span>
         <span class="mqType">Previous quest</span>
       </a>`;
