@@ -612,6 +612,157 @@ function getTreeCenter(){
 
   const appliedGlitches = new Map();
 
+  const STORAGE_KEY = 'crystalfall_skill_leveling_v1';
+
+  function createEmptySkillState(){
+    return {
+      rarity: raritySelect?.value || 'common',
+      byRarity: {}
+    };
+  }
+
+  function readStoredState(){
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return { currentSkillId: '', skills: {} };
+      const parsed = JSON.parse(raw);
+      if (!parsed || typeof parsed !== 'object') return { currentSkillId: '', skills: {} };
+      if (!parsed.skills || typeof parsed.skills !== 'object') parsed.skills = {};
+      return parsed;
+    } catch (err) {
+      console.warn('[skill-leveling] Failed to read saved state:', err);
+      return { currentSkillId: '', skills: {} };
+    }
+  }
+
+  function writeStoredState(state){
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    } catch (err) {
+      console.warn('[skill-leveling] Failed to save state:', err);
+    }
+  }
+
+  function ensureStoredSkillState(rootState, skillId){
+    if (!rootState.skills[skillId] || typeof rootState.skills[skillId] !== 'object'){
+      rootState.skills[skillId] = createEmptySkillState();
+    }
+    if (!rootState.skills[skillId].byRarity || typeof rootState.skills[skillId].byRarity !== 'object'){
+      rootState.skills[skillId].byRarity = {};
+    }
+    return rootState.skills[skillId];
+  }
+
+  function clearSelectedNodes(){
+    for (const n of nodes){
+      if (n.id === 'bottom') continue;
+      elById.get(n.id)?.classList.remove('selected');
+    }
+    selectedByLevel.clear();
+    selectedByLevel.set(0, 'bottom');
+    elById.get('bottom')?.classList.add('selected');
+  }
+
+  function clearAppliedGlitchesState(){
+    appliedGlitches.clear();
+    clearAllGlitchSlots();
+    syncNodeInnersForRarity();
+  }
+
+  function saveCurrentSkillState(){
+    if (!currentSkill?.id) return;
+
+    const rootState = readStoredState();
+    const skillState = ensureStoredSkillState(rootState, currentSkill.id);
+    skillState.rarity = currentRarity;
+
+    const selectedNodeIds = getUpgradedNodeIds().filter(id => id !== 'bottom');
+    const glitchEntries = [];
+    for (const [nodeId, glitch] of appliedGlitches.entries()){
+      if (!glitch?.id) continue;
+      glitchEntries.push({ nodeId, glitchId: glitch.id });
+    }
+
+    skillState.byRarity[currentRarity] = {
+      selectedNodeIds,
+      glitchEntries
+    };
+
+    rootState.currentSkillId = currentSkill.id;
+    writeStoredState(rootState);
+  }
+
+  function restoreCurrentSkillState(){
+    clearSelectedNodes();
+    clearAppliedGlitchesState();
+
+    if (!currentSkill?.id) {
+      refreshLocks();
+      renderUpgradedCard();
+      return;
+    }
+
+    const rootState = readStoredState();
+    const skillState = rootState.skills?.[currentSkill.id];
+    const rarityState = skillState?.byRarity?.[currentRarity];
+    const savedNodeIds = Array.isArray(rarityState?.selectedNodeIds) ? rarityState.selectedNodeIds : [];
+
+    const sortedIds = [...savedNodeIds].sort((a, b) => {
+      const na = nodesById.get(a);
+      const nb = nodesById.get(b);
+      if (!na || !nb) return 0;
+      if (na.level !== nb.level) return na.level - nb.level;
+      return (na.x ?? 0) - (nb.x ?? 0);
+    });
+
+    refreshLocks();
+
+    for (const id of sortedIds){
+      const nodeMeta = nodesById.get(id);
+      const el = elById.get(id);
+      if (!nodeMeta || !el) continue;
+      if (!isEnabledByRarity(id)) continue;
+      if (!canUnlock(id)) continue;
+
+      const prevId = selectedByLevel.get(nodeMeta.level);
+      if (prevId && prevId !== id){
+        elById.get(prevId)?.classList.remove('selected');
+      }
+
+      el.classList.add('selected');
+      selectedByLevel.set(nodeMeta.level, id);
+      refreshLocks();
+    }
+
+    const glitchEntries = Array.isArray(rarityState?.glitchEntries) ? rarityState.glitchEntries : [];
+    const availableGlitches = getGlitchesForSkill(currentSkill);
+    const glitchesById = new Map(availableGlitches.map(g => [g.id, g]));
+
+    for (const entry of glitchEntries){
+      const nodeId = entry?.nodeId;
+      const glitchId = entry?.glitchId;
+      if (!nodeId || !glitchId) continue;
+      if (!isActiveGlitchSlot(nodeId)) continue;
+      if (!isUpgraded(nodeId)) continue;
+
+      const glitch = glitchesById.get(glitchId);
+      const nodeEl = elById.get(nodeId);
+      if (!glitch || !nodeEl) continue;
+
+      const inner = ensureInner(nodeEl, 'hex');
+      inner.innerHTML = '';
+      const img = document.createElement('img');
+      img.src = glitch.image;
+      img.alt = glitch.name;
+      inner.appendChild(img);
+      appliedGlitches.set(nodeId, glitch);
+    }
+
+    pruneInvalidSelections();
+    refreshLocks();
+    renderUpgradedCard();
+  }
+
 
 const parentsById = new Map();  
 function rebuildParentsGraph(){
@@ -1277,6 +1428,7 @@ upgraded.push(n.id);
       appliedGlitches.set(n.id, g);
 
       renderUpgradedCard();
+      saveCurrentSkillState();
 
 
 });
@@ -1308,6 +1460,7 @@ upgraded.push(n.id);
       pruneInvalidSelections();
       refreshLocks();
       renderUpgradedCard();
+      saveCurrentSkillState();
     });
 
     return btn;
@@ -1359,7 +1512,9 @@ upgraded.push(n.id);
     }
   }
 
-  function setRarityUI(rarity){
+  function setRarityUI(rarity, options = {}){
+    const { restoreState = true, saveState = true } = options;
+
     currentRarity = rarity;
     edges = getEdgesForRarity(currentRarity);
     rebuildParentsGraph();
@@ -1389,9 +1544,19 @@ upgraded.push(n.id);
 
     buildGlitchList();
     clearNonLegendaryTop();
+
+    if (restoreState){
+      restoreCurrentSkillState();
+    }
+
+    if (saveState){
+      saveCurrentSkillState();
+    }
   }
 
-  function setSkill(skillId){
+  function setSkill(skillId, options = {}){
+    const { restoreState = true, saveState = true } = options;
+
     currentSkill =
       SKILLS.find(s => s.id === skillId) ||
       SKILLS[0] ||
@@ -1414,8 +1579,17 @@ upgraded.push(n.id);
       }
     }
 
-    renderUpgradedCard();
-    buildGlitchList(); 
+    buildGlitchList();
+
+    if (restoreState){
+      restoreCurrentSkillState();
+    } else {
+      renderUpgradedCard();
+    }
+
+    if (saveState){
+      saveCurrentSkillState();
+    }
   }
 
   function buildSkillSelect(){
@@ -1557,17 +1731,37 @@ upgraded.push(n.id);
     layoutLineButtons();
 
 
-    if (SKILLS[0]) skillSelect.value = SKILLS[0].id;
-    setRarityUI(raritySelect.value);
-    setSkill(skillSelect.value);
-    clearAllGlitchSlots();
-    syncNodeInnersForRarity();
-    buildGlitchList();
-    clearNonLegendaryTop();
+    const persistedState = readStoredState();
+    const initialSkillId = (persistedState.currentSkillId && SKILLS.some(s => s.id === persistedState.currentSkillId))
+      ? persistedState.currentSkillId
+      : (SKILLS[0]?.id || '');
+
+    if (initialSkillId) skillSelect.value = initialSkillId;
+
+    setSkill(skillSelect.value, { restoreState: false, saveState: false });
+
+    const initialSkillState = persistedState.skills?.[skillSelect.value];
+    const initialRarity = RARITIES[initialSkillState?.rarity] ? initialSkillState.rarity : raritySelect.value;
+    raritySelect.value = initialRarity;
+
+    setRarityUI(raritySelect.value, { restoreState: false, saveState: false });
+    restoreCurrentSkillState();
+    saveCurrentSkillState();
 
 
-    skillSelect.addEventListener('change', () => setSkill(skillSelect.value));
-    raritySelect.addEventListener('change', () => setRarityUI(raritySelect.value));
+    skillSelect.addEventListener('change', () => {
+      saveCurrentSkillState();
+
+      const rootState = readStoredState();
+      const nextSkillState = rootState.skills?.[skillSelect.value];
+      const nextRarity = RARITIES[nextSkillState?.rarity] ? nextSkillState.rarity : raritySelect.value;
+
+      setSkill(skillSelect.value, { restoreState: false, saveState: false });
+      raritySelect.value = nextRarity;
+      setRarityUI(nextRarity, { restoreState: true, saveState: true });
+    });
+
+    raritySelect.addEventListener('change', () => setRarityUI(raritySelect.value, { restoreState: true, saveState: true }));
 
 
     new ResizeObserver(() => {
