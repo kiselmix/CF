@@ -627,8 +627,8 @@
       }
 
       function getSkillsFromGlobal() {
-        if (Array.isArray(window.SKILLS_DATA)) return window.SKILLS_DATA;
-        if (window.SKILLS_DATA && Array.isArray(window.SKILLS_DATA.skills)) return window.SKILLS_DATA.skills;
+        if (Array.isArray(window.skill)) return window.skill;
+        if (window.skill && Array.isArray(window.skill.skills)) return window.skill.skills;
         if (window.SKILL_DATA && Array.isArray(window.SKILL_DATA.skills)) return window.SKILL_DATA.skills;
         return [];
       }
@@ -715,7 +715,7 @@
         });
 
         if (!state.skills.length) {
-          el.skillGrid.innerHTML = '<div class="empty">Не удалось загрузить skill.data.js. Проверьте, что путь ./js/skill/skill.data.js существует и выставляет window.SKILLS_DATA.</div>';
+          el.skillGrid.innerHTML = '<div class="empty">Не удалось загрузить skill.data.js. Проверьте, что путь ./js/skill/skill.data.js существует и выставляет window.skill.</div>';
           return;
         }
 
