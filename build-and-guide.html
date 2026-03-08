@@ -714,7 +714,9 @@
         el.treeNodeCount.textContent = String(tree?.unlocked?.length || 0);
         const startId = tree?.startId;
 		el.treeStartNode.textContent = CLASS_MAP[startId] || startId || '—';
-        el.treeValidStatus.textContent = tree ? 'Yes' : 'No';
+        const hasNodes = tree && Array.isArray(tree.unlocked) && tree.unlocked.length > 0;
+		el.treeValidStatus.textContent = hasNodes ? 'Yes' : 'No';
+		
       }
 
       function importTreeFromLocalStorage() {
