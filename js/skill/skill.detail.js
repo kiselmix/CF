@@ -151,7 +151,7 @@
       return;
     }
 
-    document.title = `${t.name} — Skills`;
+    document.title = `${t.name} Skill – Crystalfall Guide | CrystalFall.fun`;
 
     const tags = []
       .concat(t.type && String(t.type) !== "Skill" ? [t.type] : [])
