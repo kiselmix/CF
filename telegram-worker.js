@@ -63,10 +63,14 @@ function validatePayload(payload) {
 }
 
 function formatTelegramMessage(payload) {
-  const skills = payload.skills.map((s, i) => `${i + 1}. ${s?.name || s?.id || '—'}`).join('\n');
-  const treeCount = payload.talentTree?.unlocked?.length || 0;
+  const skills = payload.skills
+    .map((s, i) => `${i + 1}. ${s?.name || s?.id || '—'}`)
+    .join('\n');
+
   const weaponCount = Array.isArray(payload.gearImages?.weapon) ? payload.gearImages.weapon.length : 0;
   const armorCount = Array.isArray(payload.gearImages?.armor) ? payload.gearImages.armor.length : 0;
+
+  const treeJson = JSON.stringify(payload.talentTree || {}, null, 2);
 
   return [
     '<b>Новая заявка Build &amp; Guide</b>',
@@ -75,7 +79,6 @@ function formatTelegramMessage(payload) {
     `<b>Тип:</b> ${escapeHtml(payload.type || '—')}`,
     `<b>Автор:</b> ${escapeHtml(payload.author?.name || '—')}`,
     `<b>Контакт:</b> ${escapeHtml(payload.author?.contact || '—')}`,
-    `<b>Нод в дереве:</b> ${treeCount}`,
     `<b>Картинок оружия:</b> ${weaponCount}`,
     `<b>Картинок брони:</b> ${armorCount}`,
     '',
@@ -86,7 +89,10 @@ function formatTelegramMessage(payload) {
     escapeHtml(payload.description || '—'),
     '',
     '<b>Guide text:</b>',
-    escapeHtml(payload.guideText || '—')
+    escapeHtml(payload.guideText || '—'),
+    '',
+    '<b>Talent tree JSON:</b>',
+    `<pre>${escapeHtml(treeJson)}</pre>`
   ].join('\n');
 }
 
