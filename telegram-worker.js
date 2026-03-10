@@ -34,8 +34,8 @@ export default {
       return json({
         ok: true,
         message: uploaded
-          ? 'Заявка отправлена модератору в Telegram вместе с изображениями.'
-          : 'Заявка отправлена модератору в Telegram.'
+          ? 'The request has been sent to the moderator along with the images.'
+          : 'The request has been sent to the moderator.'
       }, 200, env);
     } catch (error) {
       return json(
