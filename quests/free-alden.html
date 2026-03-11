@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Free Alden Quest Guide – Walkthrough, Rewards &amp; Steps | CrystalFall.fun</title>
   <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="../css/quest/quest.css" />
   <link rel="stylesheet" href="../css/quest/quest.detail.css" />
   <meta name="description" content="Step-by-step walkthrough for Free Alden quest in Crystalfall with objectives, rewards and screenshots.">
   <link rel="canonical" href="https://crystalfall.fun/quests/free-alden">
@@ -20,56 +19,48 @@
   <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Article", "headline": "Free Alden Quest Guide – Crystalfall", "description": "Step-by-step walkthrough for Free Alden quest in Crystalfall with objectives, rewards and screenshots.", "author": {"@type": "Organization", "name": "CrystalFall.fun"}, "publisher": {"@type": "Organization", "name": "CrystalFall.fun"}, "mainEntityOfPage": "https://crystalfall.fun/quests/free-alden", "about": [{"@type": "Thing", "name": "Free Alden"}, {"@type": "VideoGame", "name": "Crystalfall"}], "image": ["https://crystalfall.fun/img/quest/Act-1/Free-Alden/1.png"]}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://crystalfall.fun/"}, {"@type": "ListItem", "position": 2, "name": "Quests", "item": "https://crystalfall.fun/quests"}, {"@type": "ListItem", "position": 3, "name": "Free Alden", "item": "https://crystalfall.fun/quests/free-alden"}]}]</script>
 </head>
 <body>
-    <div class="siteHeader">
-        <a class="brand" href="https://crystalfall.fun/" aria-label="Home">
-          <img class="brandLogo" src="../img/logo.png" alt="logo" />
-          <span class="brandText">CrystalFall.fun</span>
-        </a>
+  <header class="siteHeader">
+    <div class="wrap">
+      <a class="brand" href="../">
+        <img src="../img/logo.png" alt="CrystalFall logo" class="brandLogo">
+        <span class="brandText">CrystalFall.fun</span>
+      </a>
 
-        <nav class="siteNav" aria-label="Main navigation">
+      <button class="burgerBtn" id="burgerBtn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobileNav">
+        <span class="burgerIcon"></span>
+      </button>
+
+      <nav class="siteNav" aria-label="Main navigation">
+        <a href="../talent-tree">Talent Tree</a>
+        <a href="../skills">Skills</a>
+        <a href="../skill-leveling">Skill leveling</a>
+        <a href="../maps-act-1">Maps</a>
+        <a href="../quests" class="is-active">Quests</a>
+        <a href="../fusing">Fusing</a>
+        <a href="../build-and-guide">Build &amp; Guide</a>
+      </nav>
+
+      <nav class="navOverlay" id="mobileNav" aria-label="Mobile navigation" hidden>
+        <div class="navPanel navMobile">
           <a href="../talent-tree">Talent Tree</a>
           <a href="../skills">Skills</a>
           <a href="../skill-leveling">Skill leveling</a>
           <a href="../maps-act-1">Maps</a>
-          <a class="is-active" href="../quests">Quests</a>
+          <a href="../quests" class="is-active">Quests</a>
           <a href="../fusing">Fusing</a>
-        </nav>
-        
-        <button class="burgerBtn" type="button"
-                aria-label="Open menu"
-                aria-controls="mobileNav"
-                aria-expanded="false">
-          <span class="burgerIcon" aria-hidden="true"></span>
-        </button>
-      </div>
-
-      <div class="navOverlay" id="mobileNav" hidden>
-          <div class="navPanel" role="dialog" aria-modal="true" aria-label="Menu">
-            <button class="navClose" type="button" aria-label="Close menu">✕</button>
-
-            <nav class="navMobile" aria-label="Main navigation (mobile)">
-              <a href="../talent-tree">Talent Tree</a>
-              <a href="../skills">Skills</a>
-              <a href="../skill-leveling">Skill leveling</a>
-              <a href="../maps-act-1">Maps</a>
-              <a class="is-active" href="../quests">Quests</a>
-              <a href="../fusing">Fusing</a>
-            </nav>
-          </div>
+          <a href="../build-and-guide">Build &amp; Guide</a>
         </div>
-  <div class="wrap">
-    <header class="detailHeader">
-      <a class="back" href="../quests">← Back to the list of quests</a>
-      <div class="toolbar"></div>
-    </header>
+      </nav>
+    </div>
+  </header>
 
+  <div class="wrap pageShell">
     <main id="questRoot" class="skillRoot" aria-live="polite">
       <article class="cardFrame">
         <div class="cardInner">
           <div class="topTitle">
             <div>
               <h1 class="skillName">Free Alden</h1>
-              <div class="skillKind">Quest</div>
               <div class="tagsLine"><span class="tag">Act 1</span></div>
             </div>
           </div>
@@ -137,47 +128,50 @@
         </div>
         </div>
           <div class="hr"></div>
-
-		  <div class="hr"></div>
           <div id="questNavBlock"></div>
         </div>
       </article>
     </main>
   </div>
-  	<script src="../js/quest/quests-data.js"></script>
-	<script src="../js/quest/quest-nav.js"></script>
+
+  <script src="../js/quest/quests-data.js"></script>
+  <script src="../js/quest/quest-nav.js"></script>
   <script>
   (() => {
-    const burger = document.querySelector('.burgerBtn');
-    const overlay = document.querySelector('.navOverlay');
-    const panel = overlay?.querySelector('.navPanel');
-    const closeBtn = overlay?.querySelector('.navClose');
+    const burger = document.getElementById('burgerBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    if (!burger || !mobileNav) return;
 
-    if (!burger || !overlay || !panel || !closeBtn) return;
-
-    const openMenu = () => {
-      overlay.hidden = false;
-      document.body.classList.add('nav-open');
-      burger.setAttribute('aria-expanded', 'true');
-      closeBtn.focus();
-    };
-
-    const closeMenu = () => {
-      overlay.hidden = true;
+    function closeMenu() {
+      mobileNav.classList.remove('is-open');
+      mobileNav.hidden = true;
       document.body.classList.remove('nav-open');
       burger.setAttribute('aria-expanded', 'false');
-      burger.focus();
-    };
+    }
 
-    burger.addEventListener('click', openMenu);
-    closeBtn.addEventListener('click', closeMenu);
+    function openMenu() {
+      mobileNav.hidden = false;
+      mobileNav.classList.add('is-open');
+      document.body.classList.add('nav-open');
+      burger.setAttribute('aria-expanded', 'true');
+    }
 
-    overlay.addEventListener('click', (e) => {
-      if (e.target === overlay) closeMenu();
+    burger.addEventListener('click', () => {
+      const opened = mobileNav.classList.contains('is-open') && !mobileNav.hidden;
+      opened ? closeMenu() : openMenu();
+    });
+
+    mobileNav.addEventListener('click', (e) => {
+      const link = e.target.closest('a');
+      if (link) closeMenu();
     });
 
     window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !overlay.hidden) closeMenu();
+      if (e.key === 'Escape') closeMenu();
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 820) closeMenu();
     });
   })();
   </script>
