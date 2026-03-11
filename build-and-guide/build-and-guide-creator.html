@@ -963,6 +963,15 @@
         state.tree = null;
         renderTreeSummary();
       }
+	  
+		function normalizeAssetPath(path) {
+		  const value = String(path || '').trim();
+		  if (!value) return '';
+		  if (value.startsWith('http://') || value.startsWith('https://') || value.startsWith('/')) {
+			return value;
+		  }
+		  return `/${value.replace(/^\.?\//, '')}`;
+		}
 
       function renderSkillGrid() {
         const query = el.skillSearch.value.trim().toLowerCase();
@@ -984,14 +993,14 @@
         }
 
         el.skillGrid.innerHTML = list.map((skill) => {
-          const icon = getSkillCardIcon(skill);
+          const icon = normalizeAssetPath(getSkillCardIcon(skill));
           const tags = (skill.tags || []).slice(0, 4).map((tag) => `<span class="pill">${escapeHtml(tag)}</span>`).join('');
           const isSelected = selected.has(skill.id);
 		  const slug = skill.id.toLowerCase().replace(/\s+/g,'-');
           return `
             <article class="skill-card ${isSelected ? 'is-selected' : ''}">
-              ${icon ? `<img class="skill-icon" src="./${escapeHtml(icon).replace(/^\.\//, '')}" alt="${escapeHtml(skill.name)}" loading="lazy">` : '<div class="skill-icon"></div>'}
-              <div>
+				${icon ? `<img class="skill-icon" src="${escapeHtml(icon)}" alt="${escapeHtml(skill.name)}" loading="lazy">` : '<div class="skill-icon"></div>'}             
+			 <div>
                 <div class="skill-name">${escapeHtml(skill.name)}</div>
                 <div class="skill-desc">${escapeHtml(skill.description || '')}</div>
                 <div class="skill-meta">${tags}</div>
