@@ -622,7 +622,6 @@
   // ===== Render items =====
   function renderItems(){
     itemGrid.innerHTML = "";
-    itemSummary.textContent = `${ITEMS.length} items`;
 
     for (const item of ITEMS){
       const btn = document.createElement('button');

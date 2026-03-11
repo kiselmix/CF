@@ -48,6 +48,7 @@
   });
 
   const data = window.SKILLTREE_DATA;
+  const READ_ONLY_TREE = Boolean(window.READ_ONLY_TREE);
   const links = (data && Array.isArray(data.links)) ? data.links
     : (data && Array.isArray(data.edges)) ? data.edges
     : null;
@@ -124,7 +125,7 @@
   }
 
   // ---- State ----
-  const LS_KEY = 'skilltree_progress_v2_no_points';
+  const LS_KEY = window.SKILLTREE_STORAGE_KEY || 'skilltree_progress_v2_no_points';
   const state = {
     unlocked: new Set(),
     startId: null,
@@ -502,10 +503,12 @@
     if (!selectedId) {
       $ptitle.textContent = state.startId ? 'Select a node' : 'Select a character class';
       if ($ptitleMobile) $ptitleMobile.textContent = $ptitle.textContent;
-      $pdesc.textContent = state.startId
-        ? 'Click a node to level up. Click an unlocked node again to reset the branch from that node (cascade). Wheel/pinch to zoom. Drag to move.'
-        : 'First, choose a character class: Knight, Rogue, Technomancer. Click again on the chosen class to reset the whole build.';
-      $pactions.style.display = 'none';
+     $pdesc.textContent = READ_ONLY_TREE
+  ? 'Click a node to inspect it. Wheel/pinch to zoom. Drag to move.'
+  : (state.startId
+      ? 'Click a node to level up. Click an unlocked node again to reset the branch from that node (cascade). Wheel/pinch to zoom. Drag to move.'
+      : 'First, choose a character class: Knight, Rogue, Technomancer. Click again on the chosen class to reset the whole build.');
+	 $pactions.style.display = 'none';
 
       updateActiveBonusesPanel();
       return;
@@ -526,9 +529,11 @@
     $pactions.style.display = 'flex';
     const status = u ? 'unlocked' : (blockedStart ? 'blocked' : (cu ? 'available' : 'locked'));
 
-    const hint = u
+    const hint = READ_ONLY_TREE
+  ? 'read only'
+  : (u
       ? (n.id === state.startId ? 'click: reset ALL' : 'click: reset branch')
-      : (blockedStart ? 'blocked (other class)' : (cu ? 'click: level up' : 'not available'));
+      : (blockedStart ? 'blocked (other class)' : (cu ? 'click: level up' : 'not available')));
 
     $pmeta.textContent = `type: ${n.type} • status: ${status} • ${hint}`;
 
@@ -652,22 +657,27 @@
 
     const p = localPosFromEvent(e);
 
-    // If this was a tap (no pinch, minimal move, short time) -> treat as click/tap
-    if (ptr.tap && ptr.tap.id === e.pointerId && !ptr.tap.moved && !ptr.pinch) {
-      const dt = performance.now() - ptr.tap.t;
-      if (dt < 450) {
-        const n = pickNodeAt(p.sx, p.sy);
-        if (!n) { selectedId = null; updatePanel(); render(); }
-        else {
-          if (!state.startId) state.charPreviewId = START_IDS.includes(n.id) ? n.id : null;
-          toggleNode(n.id);
-          selectedId = n.id;
-          updatePanel();
-          render();
-        }
-      }
-    }
+	if (ptr.tap && ptr.tap.id === e.pointerId && !ptr.tap.moved && !ptr.pinch) {
+	  const dt = performance.now() - ptr.tap.t;
+	  if (dt < 450) {
+		const n = pickNodeAt(p.sx, p.sy);
+		if (!n) {
+		  selectedId = null;
+		  updatePanel();
+		  render();
+		} else {
+		  if (!state.startId) state.charPreviewId = START_IDS.includes(n.id) ? n.id : null;
 
+		  if (!READ_ONLY_TREE) {
+			toggleNode(n.id);
+		  }
+
+		  selectedId = n.id;
+		  updatePanel();
+		  render();
+		}
+	  }
+	}
     ptr.active.delete(e.pointerId);
     ptr.last.delete(e.pointerId);
 
@@ -718,6 +728,7 @@
     hideTooltip();
   });
 
+if ($reset && !READ_ONLY_TREE) {
   $reset.addEventListener('click', () => {
     state.unlocked.clear();
     state.startId = null;
@@ -728,6 +739,7 @@
     updatePanel();
     render();
   });
+}
 
   load();
 
