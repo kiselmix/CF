@@ -59,10 +59,10 @@
 
   // ---- Character images ----
   const charImg = {
-    n1: loadImage('./img/talent/char_Technomancer.webp'),
-    n2: loadImage('./img/talent/char_Knight.webp'),
-    n3: loadImage('./img/talent/char_Rogue.webp'),
-    all: loadImage('./img/talent/char_all.webp'),
+    n1: loadImage('/img/talent/char_Technomancer.webp'),
+    n2: loadImage('/img/talent/char_Knight.webp'),
+    n3: loadImage('/img/talent/char_Rogue.webp'),
+    all: loadImage('/img/talent/char_all.webp'),
   };
   function loadImage(src) {
     const img = new Image();
