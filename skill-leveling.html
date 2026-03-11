@@ -3,62 +3,92 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Crystalfall: Skill leveling</title>
- 
+  <title>Crystalfall Skill Leveling Planner – Skill Upgrade Tree Simulator</title>
+ <meta name="description" content="Interactive Crystalfall skill leveling planner. Select skills, upgrade nodes and test builds in the skill upgrade tree simulator.">
    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./css/skill-leveling/skill-leveling.css" />
-   <link rel="stylesheet" href="./css/skill-leveling/skill.css" />
-   <meta property="og:title" content="Aether Rain Skill Tree – CrystalFall">
-<meta property="og:description" content="Full Aether Rain skill tree with nodes and modifiers">
-<meta property="og:image" content="https://crystalfall.fun/img/skill/Aether Rain.png">
+<meta property="og:title" content="Crystalfall Skill Leveling Guide & Planner">
+<meta property="og:description" content="Interactive Crystalfall skill leveling planner. Explore skill upgrade trees, test node combinations and optimize your build progression.">
+<meta property="og:image" content="https://crystalfall.fun/img/skill-leveling-guide-banner.png">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://crystalfall.fun/skills/aether-rain">
+<meta property="og:url" content="https://crystalfall.fun/skill-leveling">
+<link rel="canonical" href="https://crystalfall.fun/skill-leveling">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Crystalfall Skill Leveling Planner">
+<meta name="twitter:description" content="Explore the Crystalfall skill upgrade tree and test your builds with the interactive planner.">
+<meta name="twitter:image" content="https://crystalfall.fun/img/skill-leveling-guide-banner.png">
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebPage",
+ "name": "Crystalfall Skill Leveling Planner",
+ "description": "Interactive Crystalfall skill upgrade tree planner where you can test skill nodes and optimize builds.",
+ "url": "https://crystalfall.fun/skill-leveling",
+ "inLanguage": "en"
+}
+</script>
 </head>
 <body>
 
-  <div class="siteHeader">
-    <a class="brand" href="https://crystalfall.fun/" aria-label="Home">
-      <img class="brandLogo" src="img/logo.png" alt="logo" />
-      <span class="brandText">CrystalFall.fun</span>
-    </a>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="/">
+        <img src="./img/logo.png" alt="CrystalFall logo" class="logo">
+        CrystalFall.fun
+      </a>
 
-    <nav class="siteNav" aria-label="Main navigation">
-      <a href="./talent-tree">Talent Tree</a>
-      <a href="./skills">Skills</a>
-	  <a class="is-active" href="./skill-leveling">Skill leveling</a>
-      <a href="./maps-act-1">Maps</a>
-      <a href="./quests">Quests</a>
-      <a href="./fusing">Fusing</a>
-    </nav>
+      <button class="burger burgerBtn" id="burgerBtn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-    <button class="burgerBtn" type="button"
-      aria-label="Open menu"
-      aria-controls="mobileNav"
-      aria-expanded="false">
-      <span class="burgerIcon" aria-hidden="true"></span>
-    </button>
-  </div>
-
-  <div class="navOverlay" id="mobileNav" hidden>
-    <div class="navPanel" role="dialog" aria-modal="true" aria-label="Menu">
-      <button class="navClose" type="button" aria-label="Close menu">✕</button>
-
-      <nav class="navMobile" aria-label="Main navigation (mobile)">
-        <a href="./talent-tree">Talent Tree</a>
-        <a href="./skills">Skills</a>
-		 <a class="is-active" href="./skill-leveling">Skill leveling</a>
-        <a href="./maps-act-1">Maps</a>
-        <a href="./quests">Quests</a>
-        <a href="./fusing">Fusing</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="/talent-tree">Talent Tree</a>
+        <a href="/skills">Skills</a>
+        <a href="/skill-leveling" class="is-active">Skill leveling</a>
+        <a href="/maps-act-1">Maps</a>
+        <a href="/quests">Quests</a>
+        <a href="/fusing">Fusing</a>
+        <a href="/build-and-guide">Build &amp; Guide</a>
       </nav>
+
+      <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+        <a href="/talent-tree">Talent Tree</a>
+        <a href="/skills">Skills</a>
+        <a href="/skill-leveling" class="is-active">Skill leveling</a>
+        <a href="/maps-act-1">Maps</a>
+        <a href="/quests">Quests</a>
+        <a href="/fusing">Fusing</a>
+        <a href="/build-and-guide">Build &amp; Guide</a>
+      </nav>
+
+      <div class="mobile-overlay" id="mobileOverlay" hidden></div>
     </div>
-  </div>
-
-
+  </header>
 
 
   <div class="pageWrap">
 
+    <section class="hero-card">
+      <div class="hero-grid">
+        <header class="pageHeader">
+          <div>
+            <div class="eyebrow">Skills • upgrade tree</div>
+            <h1>Crystalfall Skill Leveling</h1>
+            <div class="sub">
+              Explore the Skill Upgrade Tree and plan the optimal build progression. Select a skill, choose its rarity, and activate nodes to upgrade it. Hover over a node to see its description and click it to level up.
+<br><br>
+				Insert a Crest to enhance a node, or use the Change Node button to randomly reroll nodes in the line, replicating the in-game mechanics and helping you test different build combinations.
+            </div>
+          </div>
+        </header>
+        <div class="hero-side">
+          <img src="./img/skill-leveling-guide-banner.png" alt="Crystalfall skill leveling upgrade tree planner interface">
+        </div>
+      </div>
+    </section>
 
   <div class="app">
     <div class="treeWrap" id="tree">
@@ -138,36 +168,38 @@
 
 <script>
 (() => {
-  const burger = document.querySelector('.burgerBtn');
-  const overlay = document.querySelector('.navOverlay');
-  const panel = overlay?.querySelector('.navPanel');
-  const closeBtn = overlay?.querySelector('.navClose');
+  const burger = document.getElementById('burgerBtn');
+  const mobileNav = document.getElementById('mobileNav');
+  if (!burger || !mobileNav) return;
 
-  if (!burger || !overlay || !panel || !closeBtn) return;
-
-  const openMenu = () => {
-    overlay.hidden = false;
-    document.body.classList.add('nav-open');
-    burger.setAttribute('aria-expanded', 'true');
-    closeBtn.focus();
-  };
-
-  const closeMenu = () => {
-    overlay.hidden = true;
-    document.body.classList.remove('nav-open');
+  function closeMenu() {
+    mobileNav.classList.remove('open');
+    burger.classList.remove('is-open');
     burger.setAttribute('aria-expanded', 'false');
-    burger.focus();
-  };
+  }
 
-  burger.addEventListener('click', openMenu);
-  closeBtn.addEventListener('click', closeMenu);
+  function openMenu() {
+    mobileNav.classList.add('open');
+    burger.classList.add('is-open');
+    burger.setAttribute('aria-expanded', 'true');
+  }
 
-  overlay.addEventListener('click', (e) => {
-    if (e.target === overlay) closeMenu();
+  burger.addEventListener('click', () => {
+    const opened = mobileNav.classList.contains('open');
+    opened ? closeMenu() : openMenu();
+  });
+
+  mobileNav.addEventListener('click', (e) => {
+    const link = e.target.closest('a');
+    if (link) closeMenu();
   });
 
   window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !overlay.hidden) closeMenu();
+    if (e.key === 'Escape') closeMenu();
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 820) closeMenu();
   });
 })();
 </script>

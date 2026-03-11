@@ -8,7 +8,7 @@
   <meta name="description" content="CrystalFall.fun is a fan-made Crystalfall guide with skill database, talent tree explorer, interactive maps, quest tracker and fusing recipes.">
 	<link rel="canonical" href="https://crystalfall.fun/" />
   <!-- Reuse existing header / base styles -->
-  <link rel="stylesheet" href="./css/skill/skill.css" />
+
   <meta property="og:title" content="Crystalfall Guide – Skills, Talent Tree, Maps & Quests">
 	<meta property="og:description" content="Fan-made Crystalfall guide with skills, talent tree, maps, quests and fusing recipes.">
 	<meta property="og:type" content="website">
@@ -21,77 +21,260 @@
 <meta name="twitter:image" content="https://crystalfall.fun/img/logo.png">
 <meta name="yandex-verification" content="ef3f87cb6cca6cd2" />
   <style>
-    :root { color-scheme: dark; }
+    :root {
+      --bg: #07111c;
+      --bg-soft: #0d1828;
+      --card: rgba(18, 29, 48, 0.95);
+      --card-2: rgba(12, 23, 39, 0.95);
+      --line: rgba(143, 173, 214, 0.22);
+      --line-strong: rgba(143, 173, 214, 0.38);
+      --text: #edf4ff;
+      --muted: #9fb0c8;
+      --accent: #62d0ff;
+      --accent-2: #7b8cff;
+      --good: #64d38a;
+      --warn: #ffcc66;
+      --danger: #ff7f7f;
+      --radius: 18px;
+      --shadow: 0 18px 42px rgba(0,0,0,.34);
+      --max: 1240px;
+      color-scheme: dark;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  scroll-behavior: smooth;
+  background:
+  url("./img/fox-class-fade.webp") right -140px bottom 100px / 720px no-repeat,
+  radial-gradient(circle at top, rgba(88,164,255,.18), transparent 34%),
+  linear-gradient(180deg, #08111c 0%, #09131f 50%, #06101a 100%);
+  color: var(--text);
+}
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { max-width: 100%; display: block; }
+    button, input, select, textarea { font: inherit; color: inherit; }
+
+    .siteHeader {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+      min-height: 68px;
+      padding: 0 4px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      backdrop-filter: blur(18px);
+      background: rgba(6, 13, 23, 0.78);
+      border-bottom: 1px solid rgba(143, 173, 214, 0.12);
+      position: sticky;
+    }
+
+    .brand {
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:800;
+      letter-spacing:.02em;
+      color:#fff;
+      white-space:nowrap;
+    }
+    .brand,
+    .brand:hover,
+    .brand:focus,
+    .brand:active {
+      text-decoration: none;
+    }
+
+    .brandLogo {
+      height: 36px;
+      width: auto;
+      display: block;
+    }
+
+    .brandText { color: #fff; }
+
+    .siteNav { display: flex; flex-wrap: wrap; gap: 10px; }
+
+    .siteNav a {
+      padding: 10px 14px;
+      border-radius: 999px;
+      color: var(--muted);
+      border: 1px solid transparent;
+    }
+
+    .siteNav a:hover,
+    .siteNav a.is-active {
+      color: #fff;
+      border-color: rgba(98,208,255,.28);
+      background: rgba(98,208,255,.08);
+      text-decoration: none;
+    }
+
+    .burgerBtn {
+      display: none;
+      position: absolute;
+      top: 50%;
+      right: 4px;
+      transform: translateY(-50%);
+      z-index: 41;
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      border: 1px solid rgba(143,173,214,.18);
+      border-radius: 12px;
+      background: rgba(255,255,255,.03);
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      transition: background .22s ease, border-color .22s ease;
+    }
+
+    .burgerBtn:hover {
+      background: rgba(98,208,255,.08);
+      border-color: rgba(98,208,255,.4);
+    }
+
+    .burgerIcon,
+    .burgerIcon::before,
+    .burgerIcon::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 20px;
+      height: 2px;
+      border-radius: 999px;
+      background: #fff;
+      transform-origin: center;
+      transition: transform .24s ease, opacity .2s ease;
+      content: "";
+    }
+
+    .burgerIcon { transform: translate(-50%, 0); }
+    .burgerIcon::before { transform: translate(-50%, -7px); }
+    .burgerIcon::after { transform: translate(-50%, 7px); }
 
     .homeWrap{
-      max-width: 1100px;
+      width: min(calc(100% - 32px), var(--max));
       margin: 0 auto;
-      padding: 22px 16px 40px;
+      padding: 34px 0 34px;
     }
 
     .hero{
       display: grid;
-      grid-template-columns: 1.4fr 1fr;
-      gap: 16px;
-      align-items: start;
-      margin-top: 12px;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 22px;
+      align-items: stretch;
+      margin-top: 0;
+      margin-bottom: 22px;
     }
 
-    .heroCard{
-      border: 1px solid rgba(255,255,255,.08);
-      background: rgba(0,0,0,.25);
-      border-radius: 14px;
-      padding: 18px;
-      box-shadow: 0 10px 24px rgba(0,0,0,.25);
+    .heroCard,
+    .heroSideCard,
+    .card{
+      background: linear-gradient(180deg, rgba(15, 26, 42, .95), rgba(10, 18, 29, .96));
+      border: 1px solid rgba(143, 173, 214, .16);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
     }
 
-    .hero h1{ margin: 0 0 6px; font-size: 32px; line-height: 1.15; }
-    .muted{ opacity: .82; }
+    .heroCard {
+      background: linear-gradient(135deg, rgba(14, 27, 43, .92), rgba(8, 17, 29, .96));
+      padding: 30px;
+      position: relative;
+    }
 
-    .ctaRow{ display:flex; gap:10px; flex-wrap: wrap; margin-top: 12px; }
+    .heroCard::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 20% 10%, rgba(98,208,255,.16), transparent 35%),
+                  radial-gradient(circle at 85% 20%, rgba(123,140,255,.14), transparent 28%);
+      pointer-events: none;
+    }
+
+    .heroCard > * { position: relative; z-index: 1; }
+
+    .heroSideCard {
+      padding: 22px;
+      display: grid;
+      align-content: center;
+      background: rgba(255,255,255,.035);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #c8e5ff;
+      background: rgba(98,208,255,.08);
+      border: 1px solid rgba(98,208,255,.2);
+      padding: 8px 12px;
+      border-radius: 999px;
+      margin-bottom: 14px;
+    }
+
+    .hero h1{ margin: 0 0 14px; font-size: clamp(30px, 4vw, 48px); line-height: 1.04; }
+    .muted{ color: #c7d5ea; font-size: 16px; line-height: 1.65; opacity: 1; }
+    .muted b { color: var(--text); }
+
+    .ctaRow{ display:flex; gap:10px; flex-wrap: wrap; margin-top: 18px; }
     .btn{
       display:inline-flex;
       align-items:center;
       justify-content:center;
       gap:8px;
-      padding: 10px 12px;
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.06);
-      color: inherit;
+      min-height: 46px;
+      padding: 0 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(143, 173, 214, .22);
+      background: rgba(255,255,255,.02);
+      color: var(--text);
       text-decoration:none;
-      font-weight: 600;
+      font-weight: 700;
+      transition: background .18s ease, border-color .18s ease, transform .12s ease;
     }
-    .btn:hover{ background: rgba(255,255,255,.10); }
+    .btn:hover{
+      background: rgba(98,208,255,.08);
+      border-color: rgba(98,208,255,.28);
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
 
     .kpi{
       display:grid;
       grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-top: 12px;
+      gap: 12px;
+      margin-top: 18px;
     }
     .kpiBox{
-      border: 1px solid rgba(255,255,255,.08);
-      background: rgba(255,255,255,.04);
-      border-radius: 12px;
-      padding: 10px;
+      border: 1px solid rgba(143, 173, 214, .16);
+      background: rgba(255,255,255,.035);
+      border-radius: 18px;
+      padding: 16px;
     }
-    .kpiVal{ font-size: 18px; font-weight: 800; }
-    .kpiLbl{ font-size: 12px; opacity: .8; }
+    .kpiVal{ font-size: 24px; font-weight: 900; color: var(--text); }
+    .kpiLbl{ font-size: 12px; color: var(--muted); opacity: 1; margin-top: 4px; }
 
     .grid{
       display:grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 14px;
+      gap: 22px;
+      margin-top: 0;
     }
 
     .card{
-      border: 1px solid rgba(255,255,255,.08);
-      background: rgba(0,0,0,.22);
-      border-radius: 14px;
-      padding: 14px;
-      box-shadow: 0 10px 24px rgba(0,0,0,.18);
+      padding: 22px;
     }
 
     .cardTitle{
@@ -99,37 +282,313 @@
       align-items:center;
       justify-content: space-between;
       gap: 10px;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
     }
 
     .badge{
       font-size: 12px;
-      padding: 4px 8px;
+      padding: 6px 10px;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,.12);
+      border: 1px solid rgba(143,255,255,.12);
       background: rgba(255,255,255,.06);
-      opacity: .9;
+      color: #dbe8fb;
+      opacity: 1;
       white-space: nowrap;
     }
 
-    .card h2{ font-size: 18px; margin: 0; }
-    .card p{ margin: 8px 0 0; opacity: .88; }
+    .card h2{ font-size: 21px; margin: 0; }
+    .card p{ margin: 0; color: var(--muted); opacity: 1; line-height: 1.6; }
 
-    .card ul{ margin: 10px 0 0; padding-left: 18px; }
-    .card li{ margin: 6px 0; opacity: .88; }
+    .card ul{ margin: 14px 0 0; padding-left: 18px; color: #c7d5ea; }
+    .card li{ margin: 8px 0; opacity: 1; }
 
-    .card .btn{ margin-top: 12px; width: 100%; }
+    .card .btn{ margin-top: 16px; width: 100%; }
 
-    .divider{ height: 1px; background: rgba(255,255,255,.08); margin: 18px 0; }
+    .divider{ height: 1px; background: rgba(143, 173, 214, .12); margin: 18px 0; }
 
-    .footer{ opacity: .7; font-size: 12px; margin-top: 20px; }
+    .footer{ color: var(--muted); opacity: 1; font-size: 12px; margin-top: 22px; text-align: center; }
 
-    /* Responsive */
-    @media (max-width: 900px){
+    .navOverlay {
+      position: fixed;
+      inset: 0;
+      z-index: 40;
+      background: rgba(4, 10, 18, .72);
+      backdrop-filter: blur(8px);
+      padding: 84px 10px 10px;
+    }
+
+    .navPanel {
+      position: relative;
+      margin: 0 auto;
+      width: min(100%, 420px);
+      padding: 18px;
+      border: 1px solid rgba(143,173,214,.16);
+      border-radius: 18px;
+      background: rgba(6,13,23,.96);
+      box-shadow: 0 18px 42px rgba(0,0,0,.42);
+    }
+
+    .navClose {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      border: 1px solid rgba(143,173,214,.18);
+      background: rgba(255,255,255,.03);
+      cursor: pointer;
+    }
+
+    .navMobile {
+      display: grid;
+      gap: 6px;
+      margin-top: 34px;
+    }
+
+    .navMobile a {
+      display: flex;
+      align-items: center;
+      min-height: 46px;
+      padding: 0 14px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      color: var(--text);
+      transition: background .18s ease, border-color .18s ease, color .18s ease;
+    }
+
+    .navMobile a:hover {
+      background: rgba(98,208,255,.08);
+      border-color: rgba(98,208,255,.22);
+      color: #fff;
+      text-decoration: none;
+    }
+
+    body.nav-open { overflow: hidden; }
+	
+	@media (max-width: 900px){
+  html, body{
+    background:
+      radial-gradient(circle at top, rgba(88,164,255,.18), transparent 34%),
+      linear-gradient(180deg, #08111c 0%, #09131f 50%, #06101a 100%);
+  }
+}
+
+    @media (max-width: 1080px){
       .hero{ grid-template-columns: 1fr; }
+      .grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 820px){
+      .siteHeader,
+      .homeWrap { width: min(calc(100% - 20px), var(--max)); }
+      .siteHeader { padding-right: 52px; }
+      .homeWrap{ padding: 18px 0 28px; }
+      .heroCard,
+      .heroSideCard,
+      .card { padding: 18px; }
+      .siteNav{ display:none; }
+      .burgerBtn{ display:block; }
       .grid{ grid-template-columns: 1fr; }
       .kpi{ grid-template-columns: 1fr 1fr; }
     }
+
+    @media (min-width: 821px){
+      .navOverlay { display: none !important; }
+    }
+
+    @media (max-width: 560px){
+      .kpi{ grid-template-columns: 1fr; }
+    }
+  
+
+    /* Full header from fusing.html */
+    .wrap { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: rgba(6, 13, 23, 0.78);
+      border-bottom: 1px solid rgba(143, 173, 214, 0.12);
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      min-height: 68px;
+      padding: 0 4px;
+      position: relative;
+    }
+
+    .topbar .brand,
+    .topbar .brand:hover,
+    .topbar .brand:focus,
+    .topbar .brand:active {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      letter-spacing: .02em;
+      color: #fff;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+
+    .topbar .logo {
+      height: 36px;
+      width: auto;
+      display: block;
+    }
+
+    .topbar .nav { display: flex; flex-wrap: wrap; gap: 10px; }
+
+    .topbar .nav a {
+      padding: 10px 14px;
+      border-radius: 999px;
+      color: var(--muted);
+      border: 1px solid transparent;
+    }
+
+    .topbar .nav a:hover,
+    .topbar .nav a.is-active {
+      color: #fff;
+      border-color: rgba(98,208,255,.28);
+      background: rgba(98,208,255,.08);
+      text-decoration: none;
+    }
+
+    .topbar .burger {
+      display: none;
+      position: absolute;
+      top: 50%;
+      right: 4px;
+      transform: translateY(-50%);
+      z-index: 41;
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      border: 1px solid rgba(143,173,214,.18);
+      border-radius: 12px;
+      background: rgba(255,255,255,.03);
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      transition: background .22s ease, border-color .22s ease;
+    }
+
+    .topbar .burger:hover {
+      background: rgba(98,208,255,.08);
+      border-color: rgba(98,208,255,.4);
+    }
+
+    .topbar .burger span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 20px;
+      height: 2px;
+      border-radius: 999px;
+      background: #fff;
+      transform-origin: center;
+      transition: transform .24s ease, opacity .2s ease;
+    }
+
+    .topbar .burger span:nth-child(1) { transform: translate(-50%, -7px); }
+    .topbar .burger span:nth-child(2) { transform: translate(-50%, 0); }
+    .topbar .burger span:nth-child(3) { transform: translate(-50%, 7px); }
+    .topbar .burger.is-open span:nth-child(1) { transform: translate(-50%, 0) rotate(45deg); }
+    .topbar .burger.is-open span:nth-child(2) { opacity: 0; }
+    .topbar .burger.is-open span:nth-child(3) { transform: translate(-50%, 0) rotate(-45deg); }
+
+    .topbar .mobile-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      position: absolute;
+      top: 68px;
+      left: 10px;
+      right: 10px;
+      z-index: 40;
+      padding: 10px;
+      border: 1px solid rgba(143,173,214,.16);
+      border-radius: 18px;
+      background: rgba(6,13,23,.96);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 18px 42px rgba(0,0,0,.42);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: translateY(-10px) scale(.985);
+      transform-origin: top center;
+      transition: opacity .24s ease, transform .24s ease, visibility .24s ease;
+    }
+
+    .topbar .mobile-nav.open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: translateY(0) scale(1);
+    }
+
+    .topbar .mobile-nav a {
+      display: flex;
+      align-items: center;
+      min-height: 46px;
+      padding: 0 14px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      color: var(--text);
+      transition: background .18s ease, border-color .18s ease, color .18s ease;
+    }
+
+    .topbar .mobile-nav a:hover,
+    .topbar .mobile-nav a.is-active {
+      background: rgba(98,208,255,.08);
+      border-color: rgba(98,208,255,.22);
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .topbar .mobile-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 39;
+      background: rgba(4, 10, 18, .72);
+      backdrop-filter: blur(8px);
+    }
+
+    @media (max-width: 820px){
+      .wrap,
+      .homeWrap { width: min(calc(100% - 20px), var(--max)); }
+      .topbar-inner { padding-right: 52px; }
+      .topbar .nav { display:none; }
+      .topbar .burger { display:block; }
+    }
+
+    @media (min-width: 821px) {
+      .topbar .mobile-nav,
+      .topbar .mobile-overlay {
+        display: none !important;
+      }
+    }
+	
+	.starterGuide{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 14px;
+}
+
+
+
+.starterGuide .btn{
+  margin-top: 8px;
+  width: 100%;
+}
+
   </style>
   
 
@@ -137,48 +596,48 @@
 </head>
 <body>
 
-  <div class="siteHeader">
-    <a class="brand" href="https://crystalfall.fun/" aria-label="Home">
-      <img class="brandLogo" src="img/logo.png" alt="Crystalfall guide logo" />
-      <span class="brandText">CrystalFall.fun</span>
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="/" aria-label="Home">
+      <img src="./img/logo.png" alt="CrystalFall logo" class="logo">
+      CrystalFall.fun
     </a>
 
-    <nav class="siteNav" aria-label="Main navigation">
-      <a href="./talent-tree">Talent Tree</a>
-      <a href="./skills">Skills</a>
-	  <a href="./skill-leveling">Skill leveling</a>
-      <a href="./maps-act-1">Maps</a>
-      <a href="./quests">Quests</a>
-      <a href="./fusing">Fusing</a>
+    <button class="burger" id="burgerBtn" type="button" aria-label="Menu" aria-controls="mobileNav" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav" aria-label="Main navigation">
+      <a href="/talent-tree">Talent Tree</a>
+      <a href="/skills">Skills</a>
+      <a href="/skill-leveling">Skill leveling</a>
+      <a href="/maps-act-1">Maps</a>
+      <a href="/quests">Quests</a>
+      <a href="/fusing">Fusing</a>
+      <a href="/build-and-guide">Build & Guide</a>
     </nav>
 
-    <button class="burgerBtn" type="button"
-      aria-label="Open menu"
-      aria-controls="mobileNav"
-      aria-expanded="false">
-      <span class="burgerIcon" aria-hidden="true"></span>
-    </button>
-  </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+      <a href="/talent-tree">Talent Tree</a>
+      <a href="/skills">Skills</a>
+      <a href="/skill-leveling">Skill leveling</a>
+      <a href="/maps-act-1">Maps</a>
+      <a href="/quests">Quests</a>
+      <a href="/fusing">Fusing</a>
+      <a href="/build-and-guide">Build & Guide</a>
+    </nav>
 
-  <div class="navOverlay" id="mobileNav" hidden>
-    <div class="navPanel" role="dialog" aria-modal="true" aria-label="Menu">
-      <button class="navClose" type="button" aria-label="Close menu">✕</button>
-
-      <nav class="navMobile" aria-label="Main navigation (mobile)">
-        <a href="./talent-tree">Talent Tree</a>
-        <a href="./skills">Skills</a>
-		<a href="./skill-leveling">Skill leveling</a>
-        <a href="./maps-act-1">Maps</a>
-        <a href="./quests">Quests</a>
-        <a href="./fusing">Fusing</a>
-      </nav>
-    </div>
+    <div class="mobile-overlay" id="mobileOverlay" hidden></div>
   </div>
+</header>
 
   <main class="homeWrap">
 
     <section class="hero">
       <div class="heroCard">
+        <div class="eyebrow">Crystalfall • guide hub</div>
         <h1>Crystalfall Game Guide</h1>
         <div class="muted">
           CrystalFall.fun is a fan-made guide for the <b><a href="https://crystalfall.com/">Crystalfall</a></b> game including:
@@ -186,7 +645,30 @@
         </div>
       </div>
 
-      
+		<aside class="heroSideCard">
+		  <h3>New to Crystalfall?</h3>
+
+		  <div class="muted">
+			Start with these guides to understand the basics of the game.
+		  </div>
+
+		  <ul class="starterGuide">
+			<li>
+			  <b>1. Explore the Talent Tree</b><br>
+			  Plan your character build and bonuses.
+			</li>
+
+			<li>
+			  <b>2. Learn the Skills</b><br>
+			  Browse abilities and see how they work.
+			</li>
+
+			<li>
+			  <b>3. Explore Maps</b><br>
+			  Find dungeon routes and key locations.
+			</li>
+		  </ul>
+		</aside>
     </section>
 
     <section class="grid" aria-label="Pages overview">
@@ -278,44 +760,46 @@
     </section>
 
     <div class="footer">
-      CrystalFall.fun • fan-made helper pages • v0.1.1
+      CrystalFall.fun • fan-made helper pages • v0.1.3
     </div>
 
   </main>
 
   <script>
   (() => {
-    const burger = document.querySelector('.burgerBtn');
-    const overlay = document.querySelector('.navOverlay');
-    const panel = overlay?.querySelector('.navPanel');
-    const closeBtn = overlay?.querySelector('.navClose');
+    const burger = document.getElementById('burgerBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileOverlay = document.getElementById('mobileOverlay');
 
-    if (!burger || !overlay || !panel || !closeBtn) return;
+    if (!burger || !mobileNav || !mobileOverlay) return;
 
     const openMenu = () => {
-      overlay.hidden = false;
-      document.body.classList.add('nav-open');
+      burger.classList.add('is-open');
       burger.setAttribute('aria-expanded', 'true');
-      closeBtn.focus();
+      mobileNav.classList.add('open');
+      mobileOverlay.hidden = false;
+      document.body.classList.add('nav-open');
     };
 
     const closeMenu = () => {
-      overlay.hidden = true;
-      document.body.classList.remove('nav-open');
+      burger.classList.remove('is-open');
       burger.setAttribute('aria-expanded', 'false');
-      burger.focus();
+      mobileNav.classList.remove('open');
+      mobileOverlay.hidden = true;
+      document.body.classList.remove('nav-open');
     };
 
-    burger.addEventListener('click', openMenu);
-    closeBtn.addEventListener('click', closeMenu);
-
-    overlay.addEventListener('click', (e) => {
-      if (e.target === overlay) closeMenu();
+    burger.addEventListener('click', () => {
+      const expanded = burger.getAttribute('aria-expanded') === 'true';
+      if (expanded) closeMenu();
+      else openMenu();
     });
 
+    mobileOverlay.addEventListener('click', closeMenu);
     window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !overlay.hidden) closeMenu();
+      if (e.key === 'Escape' && mobileNav.classList.contains('open')) closeMenu();
     });
+    mobileNav.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
   })();
   </script>
   

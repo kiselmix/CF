@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Crystalfall Fusing Guide – Recipes, Components & Crafting | CrystalFall.fun</title>
   <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="./css/skill/skill.css" />
+
   <link rel="stylesheet" href="./css/fusing/fusing.formula.css" />
   <meta name="description" content="Crystalfall fusing guide with crafting recipes, required components and item requirements. Click items to see their formula and crafting chain.">
   <link rel="canonical" href="https://crystalfall.fun/fusing">
@@ -28,61 +28,669 @@
 	 "description": "Crystalfall crafting and fusing recipes with required components and level requirements."
 	}
 	</script>
+
+  <style>
+    :root {
+      --bg: #07111c;
+      --bg-soft: #0d1828;
+      --card: rgba(18, 29, 48, 0.95);
+      --card-2: rgba(12, 23, 39, 0.95);
+      --line: rgba(143, 173, 214, 0.22);
+      --line-strong: rgba(143, 173, 214, 0.38);
+      --text: #edf4ff;
+      --muted: #9fb0c8;
+      --accent: #62d0ff;
+      --accent-2: #7b8cff;
+      --good: #64d38a;
+      --warn: #ffcc66;
+      --danger: #ff7f7f;
+      --radius: 18px;
+      --shadow: 0 18px 42px rgba(0,0,0,.34);
+      --max: 1240px;
+      color-scheme: dark;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      scroll-behavior: smooth;
+      background:
+      radial-gradient(circle at top, rgba(88,164,255,.18), transparent 34%),
+      linear-gradient(180deg, #08111c 0%, #09131f 50%, #06101a 100%);
+      color: var(--text);
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { max-width: 100%; display: block; }
+    button, input, select, textarea { font: inherit; color: inherit; }
+
+    .wrap { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
+
+    .topbar {
+      position: sticky; top: 0; z-index: 20;
+      backdrop-filter: blur(18px);
+      background: rgba(6, 13, 23, 0.78);
+      border-bottom: 1px solid rgba(143, 173, 214, 0.12);
+    }
+
+.topbar-inner {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 68px;
+  padding: 0 4px;
+  position: relative;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  font-weight:800;
+  letter-spacing:.02em;
+  color:#fff;
+  white-space:nowrap;
+}
+.brand,
+.brand:hover,
+.brand:focus,
+.brand:active {
+  text-decoration: none;
+}
+
+.logo {
+  height: 36px;
+  width: auto;
+  display: block;
+}
+
+    .nav { display: flex; flex-wrap: wrap; gap: 10px; }
+
+    .nav a {
+      padding: 10px 14px;
+      border-radius: 999px;
+      color: var(--muted);
+      border: 1px solid transparent;
+    }
+
+    .nav a:hover,
+    .nav a.is-active {
+      color: #fff;
+      border-color: rgba(98,208,255,.28);
+      background: rgba(98,208,255,.08);
+      text-decoration: none;
+    }
+
+    .burger {
+      display: none;
+      position: absolute;
+      top: 50%;
+      right: 4px;
+      transform: translateY(-50%);
+      z-index: 41;
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      border: 1px solid rgba(143,173,214,.18);
+      border-radius: 12px;
+      background: rgba(255,255,255,.03);
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      transition: background .22s ease, border-color .22s ease;
+    }
+
+    .burger:hover {
+      background: rgba(98,208,255,.08);
+      border-color: rgba(98,208,255,.4);
+    }
+
+    .burger span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 20px;
+      height: 2px;
+      border-radius: 999px;
+      background: #fff;
+      transform-origin: center;
+      transition: transform .24s ease, opacity .2s ease;
+    }
+
+    .burger span:nth-child(1) { transform: translate(-50%, -7px); }
+    .burger span:nth-child(2) { transform: translate(-50%, 0); }
+    .burger span:nth-child(3) { transform: translate(-50%, 7px); }
+    .burger.is-open span:nth-child(1) { transform: translate(-50%, 0) rotate(45deg); }
+    .burger.is-open span:nth-child(2) { opacity: 0; }
+    .burger.is-open span:nth-child(3) { transform: translate(-50%, 0) rotate(-45deg); }
+
+    .mobile-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      position: absolute;
+      top: 68px;
+      left: 10px;
+      right: 10px;
+      z-index: 40;
+      padding: 10px;
+      border: 1px solid rgba(143,173,214,.16);
+      border-radius: 18px;
+      background: rgba(6,13,23,.96);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 18px 42px rgba(0,0,0,.42);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: translateY(-10px) scale(.985);
+      transform-origin: top center;
+      transition: opacity .24s ease, transform .24s ease, visibility .24s ease;
+    }
+
+    .mobile-nav.open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: translateY(0) scale(1);
+    }
+
+    .mobile-nav a {
+      display: flex;
+      align-items: center;
+      min-height: 46px;
+      padding: 0 14px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      color: var(--text);
+      transition: background .18s ease, border-color .18s ease, color .18s ease;
+    }
+
+    .mobile-nav a:hover,
+    .mobile-nav a.is-active {
+      background: rgba(98,208,255,.08);
+      border-color: rgba(98,208,255,.22);
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .page-shell {
+      padding: 34px 0 34px;
+    }
+
+    .hero-card {
+      background: linear-gradient(135deg, rgba(14, 27, 43, .92), rgba(8, 17, 29, .96));
+      border: 1px solid rgba(143, 173, 214, .16);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 22px;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 20% 10%, rgba(98,208,255,.16), transparent 35%),
+                  radial-gradient(circle at 85% 20%, rgba(123,140,255,.14), transparent 28%);
+      pointer-events: none;
+    }
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 24px;
+  padding: 30px 0 0 30px;
+}
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #c8e5ff;
+      background: rgba(98,208,255,.08);
+      border: 1px solid rgba(98,208,255,.2);
+      padding: 8px 12px;
+      border-radius: 999px;
+      margin-bottom: 14px;
+    }
+
+    h1, h2, h3, p { margin: 0; }
+
+    .pageHeader {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: start;
+      margin: 0;
+    }
+
+    .pageHeader h1 {
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.04;
+      margin-bottom: 14px;
+    }
+
+    .pageHeader .sub {
+      color: #c7d5ea;
+      font-size: 16px;
+      line-height: 1.65;
+      max-width: 760px;
+    }
+
+    .count {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      align-self: start;
+      min-height: 46px;
+      padding: 0 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(143, 173, 214, .22);
+      background: rgba(255,255,255,.02);
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .hero-side {
+      display: grid;
+      gap: 14px;
+      align-content: end;
+      margin-bottom: -30px;
+      padding-bottom: 30px;
+    }
+
+    .info-card {
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,.035);
+      border: 1px solid rgba(143, 173, 214, .16);
+    }
+
+    .info-card h3 { font-size: 15px; margin-bottom: 8px; }
+    .info-card p { font-size: 14px; color: var(--muted); line-height: 1.55; }
+
+    .stack { display: grid; gap: 22px; }
+
+    .panel {
+      background: linear-gradient(180deg, rgba(15, 26, 42, .95), rgba(10, 18, 29, .96));
+      border: 1px solid rgba(143, 173, 214, .16);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .panelHead {
+      padding: 22px 22px 14px;
+      border-bottom: 1px solid rgba(143, 173, 214, .12);
+      display: flex;
+      gap: 16px;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .panelTitle {
+      display: flex;
+      align-items: center;
+      font-size: 21px;
+    }
+
+    .panelTitle::before {
+      min-width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(98,208,255,.12);
+      border: 1px solid rgba(98,208,255,.22);
+      color: #dff5ff;
+      font-weight: 800;
+      margin-right: 12px;
+    }
+
+    .small,
+    .formulaStatus,
+    .note {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .items,
+    .formulaBody { padding: 22px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(15, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .itemBtn {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1/1;
+      border-radius: 18px;
+      border: 1px solid rgba(143,173,214,.14);
+      background: rgba(255,255,255,.03);
+      overflow: hidden;
+      cursor: pointer;
+      padding: 0;
+      outline: none;
+      transition: transform .12s ease, border-color .12s ease, background .12s ease, box-shadow .12s ease;
+    }
+
+    .itemBtn:hover {
+      border-color: rgba(98,208,255,.45);
+      transform: translateY(-1px);
+      background: rgba(98,208,255,.08);
+      box-shadow: inset 0 0 0 1px rgba(98,208,255,.12);
+    }
+
+    .itemBtn.is-active {
+      border-color: rgba(98,208,255,.55);
+      background: rgba(98,208,255,.08);
+      box-shadow: inset 0 0 0 1px rgba(98,208,255,.18);
+    }
+
+    .itemBtn img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      padding: 12px;
+      filter: drop-shadow(0 10px 14px rgba(0,0,0,.45));
+    }
+
+    .qtyPill {
+      position: absolute;
+      right: 8px;
+      bottom: 8px;
+      font-size: 12px;
+      color: #fff;
+      background: rgba(5,10,18,.88);
+      border: 1px solid rgba(143,173,214,.18);
+      padding: 3px 7px;
+      border-radius: 999px;
+      backdrop-filter: blur(6px);
+    }
+
+    .formulaTop {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .selected {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .selIcon {
+      width: 90px;
+      height: 90px;
+      border-radius: 14px;
+      overflow: hidden;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(143,173,214,.18);
+      flex: 0 0 auto;
+    }
+
+    .selIcon img,
+    .compIcon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .selIcon img { padding: 10px; }
+    .selMeta { min-width: 0; }
+
+    .selName {
+      font-size: 16px;
+      font-weight: 900;
+      line-height: 1.15;
+      color: var(--text);
+    }
+
+    .selReq {
+      color: var(--muted);
+      margin-top: 6px;
+      font-size: 12px;
+    }
+
+    .recipe {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(143, 173, 214, .12);
+    }
+
+    .recipeRow {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 12px;
+      border-radius: 16px;
+      border: 1px solid rgba(143,173,214,.14);
+      background: rgba(255,255,255,.03);
+      transition: border-color .18s ease, background .18s ease;
+    }
+
+    .recipeRow:hover {
+      border-color: rgba(98,208,255,.45);
+      background: rgba(98,208,255,.08);
+    }
+
+    .recipeLeft {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .compIcon {
+      width: 60px;
+      height: 60px;
+      border-radius: 12px;
+      border: 1px solid rgba(143,173,214,.18);
+      background: rgba(255,255,255,.06);
+      overflow: hidden;
+      flex: 0 0 auto;
+    }
+
+    .compIcon img { padding: 6px; }
+
+    .compName {
+      font-weight: 800;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: var(--text);
+    }
+
+    .compNeed {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .compCount {
+      font-weight: 900;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(143,173,214,.18);
+      background: rgba(5,10,18,.88);
+      white-space: nowrap;
+      color: #dbe8fb;
+    }
+
+    .note {
+      display: grid;
+      gap: 5px;
+      padding: 14px;
+      border-radius: 16px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(143,173,214,.14);
+      margin-top: 14px;
+    }
+
+    .tooltip {
+      position: fixed;
+      z-index: 99999;
+      pointer-events: none;
+      width: min(360px, calc(100vw - 24px));
+      border-radius: 18px;
+      border: 1px solid rgba(143,173,214,.18);
+      background: radial-gradient(circle at 20% 10%, rgba(98,208,255,.14), transparent 45%),
+                  linear-gradient(180deg, rgba(15, 26, 42, .98), rgba(10, 18, 29, .98));
+      box-shadow: 0 18px 45px rgba(0,0,0,.55);
+      padding: 14px;
+      opacity: 0;
+      transform: translateY(6px);
+      transition: opacity .08s ease, transform .08s ease;
+      backdrop-filter: blur(8px);
+    }
+
+    .tooltip.is-show { opacity: 1; transform: translateY(0); }
+    .ttTitle { font-size: 15px; font-weight: 900; margin: 0 0 6px 0; color: var(--text); }
+    .ttBody { margin: 0; color: #d7c9b4; font-size: 13px; line-height: 1.35; }
+    .ttReq { margin: 10px 0 8px 0; color: var(--muted); font-size: 12px; }
+
+    .ttStats {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      color: #4bd6ff;
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .ttStats b { color: #fff; font-weight: 900; }
+
+    @media (max-width: 1080px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-side { margin-bottom: 0; padding-bottom: 0; }
+      .grid { grid-template-columns: repeat(7, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 820px) {
+      .wrap { width: min(calc(100% - 20px), var(--max)); }
+      .page-shell { padding: 18px 0 28px; }
+	  .hero-grid { padding: 18px 0 0 18px; }
+      .panelHead, .items, .formulaBody { padding: 18px; }
+      .pageHeader { grid-template-columns: 1fr; align-items: start; }
+      .panelHead { display: grid; }
+      .grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+      .topbar-inner { padding-right: 52px; }
+      .nav { display: none; }
+      .burger { display: block; }
+    }
+
+    @media (min-width: 821px) {
+      .mobile-nav,
+      .mobile-overlay {
+        display: none !important;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .recipeRow { align-items: flex-start; }
+      .compCount { margin-left: auto; }
+    }
+	
+	.hero-side img{
+		  align-self: end;
+		}
+  </style>
+
 </head>
 <body>
+<header class="topbar">
+  <div class="wrap topbar-inner">
 
-
-  <div class="siteHeader">
-    <a class="brand" href="https://crystalfall.fun/" aria-label="Home">
-      <img class="brandLogo" src="img/logo.png" alt="CrystalFall.fun logo" />
-      <span class="brandText">CrystalFall.fun</span>
+    <a class="brand" href="/">
+      <img src="./img/logo.png" alt="CrystalFall logo" class="logo">
+      CrystalFall.fun
     </a>
 
-    <nav class="siteNav" aria-label="Main navigation">
-      <a href="./talent-tree">Talent Tree</a>
-      <a href="./skills">Skills</a>
-	   <a href="./skill-leveling">Skill leveling</a>
-      <a href="./maps-act-1">Maps</a>
-      <a href="./quests">Quests</a>
-      <a class="is-active" href="./fusing">Fusing</a>
+    <button class="burger" id="burgerBtn" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav" aria-label="Main navigation">
+      <a href="/talent-tree">Talent Tree</a>
+      <a href="/skills">Skills</a>
+      <a href="/skill-leveling">Skill leveling</a>
+      <a href="/maps-act-1">Maps</a>
+      <a href="/quests">Quests</a>
+      <a href="/fusing" class="is-active">Fusing</a>
+      <a href="/build-and-guide">Build & Guide</a>
     </nav>
 
-    <button class="burgerBtn" type="button"
-      aria-label="Open menu"
-      aria-controls="mobileNav"
-      aria-expanded="false">
-      <span class="burgerIcon" aria-hidden="true"></span>
-    </button>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+      <a href="/talent-tree">Talent Tree</a>
+      <a href="/skills">Skills</a>
+      <a href="/skill-leveling">Skill leveling</a>
+      <a href="/maps-act-1">Maps</a>
+      <a href="/quests">Quests</a>
+      <a href="/fusing" class="is-active">Fusing</a>
+      <a href="/build-and-guide">Build & Guide</a>
+    </nav>
+
+    <div class="mobile-overlay" id="mobileOverlay" hidden></div>
+
   </div>
+</header>
 
-  <div class="navOverlay" id="mobileNav" hidden>
-    <div class="navPanel" role="dialog" aria-modal="true" aria-label="Menu">
-      <button class="navClose" type="button" aria-label="Close menu">✕</button>
 
-      <nav class="navMobile" aria-label="Main navigation (mobile)">
-        <a href="./talent-tree">Talent Tree</a>
-        <a href="./skills">Skills</a>
-		 <a href="./skill-leveling">Skill leveling</a>
-        <a href="./maps-act-1">Maps</a>
-        <a href="./quests">Quests</a>
-        <a class="is-active" href="./fusing">Fusing</a>
-      </nav>
-    </div>
-  </div>
 
-  <div class="wrap">
-    <header class="pageHeader">
-      <div>
-        <h1>Crystalfall Fusing Recipes</h1>
-        <div class="sub">
-		Browse Crystalfall fusing recipes and crafting formulas. 
-		Select an item to see required components, crafting chains and level requirements.
+
+
+
+
+  <main class="wrap page-shell">
+    <section class="hero-card">
+      <div class="hero-grid">
+        <header class="pageHeader">
+          <div>
+            <div class="eyebrow">Fusing • crafting formulas</div>
+            <h1>Crystalfall Fusing Recipes</h1>
+            <div class="sub">
+              Browse Crystalfall fusing recipes and crafting formulas.
+              Select an item to see required components, crafting chains and level requirements.
+            </div>
+          </div>
+		 
+        </header>
+		<div class="hero-side">
+			<img src="img/fusing-guide-banner.png" alt="Fusing guide">
 		</div>
       </div>
-      <div class="count" id="itemSummary">10 items</div>
-    </header>
+    </section>
 
-    <main class="stack" aria-label="Items and formula">
+    <div class="stack" aria-label="Items and formula">
       <!-- Item -->
       <section class="panel" aria-label="Item">
         <div class="panelHead">
@@ -121,11 +729,12 @@
           </div>
         </div>
       </section>
-    </main>
-  </div>
+    </div>
+  </main>
 
   <!-- Tooltip -->
   <div class="tooltip" id="tooltip" role="tooltip" aria-hidden="true"></div>
   <script src="./js/fusing/fusing.formula.js" defer></script>
+<script src="./js/common/header.js" defer></script>
 </body>
 </html>
