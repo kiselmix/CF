@@ -628,3 +628,9 @@ button, input, select, textarea { font: inherit; color: inherit; }
   .brandText { font-size: 16px; }
   .iconBig { width: 120px; height: 120px; }
 }
+
+.moreQuestCard,
+.moreQuestCard:hover,
+.moreQuestCard:focus {
+  text-decoration: none;
+}
