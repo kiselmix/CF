@@ -1,37 +1,37 @@
 const MARKER_TYPES = {
   well: {
     label: 'Well',
-    icon: '/maps/icon/well.png',
+    icon: '../maps/icon/well.png',
     clickable: false
   },
   dungeon: {
     label: 'Dungeon',
-    icon: '/maps/icon/dungeon.png',
+    icon: '../maps/icon/dungeon.png',
     clickable: true
   },
   shrine: {
     label: 'Shrine',
-    icon: '/maps/icon/shrine.png',
+    icon: '../maps/icon/shrine.png',
     clickable: false
   },
   boss: {
     label: 'boss',
-    icon: '/maps/icon/boss.png',
+    icon: '../maps/icon/boss.png',
     clickable: false
   },
   portal: {
     label: 'Portal',
-    icon: '/maps/icon/portal.png',
+    icon: '../maps/icon/portal.png',
     clickable: false
   },
   merchant: {
     label: 'merchant',
-    icon: '/maps/icon/merchant.png',
+    icon: '../maps/icon/merchant.png',
     clickable: false
   },
   stash: {
     label: 'stash',
-    icon: '/maps/icon/stash.png',
+    icon: '../maps/icon/stash.png',
     clickable: false
   },
 };
@@ -40,7 +40,7 @@ const MARKER_TYPES = {
 const GAME_MAPS = {
 	  dumping: {
     title: 'Dumping Grounds',
-    svg: '/maps/act-1/Dumping-Grounds.svg',
+    svg: '../maps/act-1/Dumping-Grounds.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
 		{ type: 'dungeon', y: 613, x: 475, title: 'The Cache', targetMap: 'cache', showLabel: true},
@@ -53,7 +53,7 @@ const GAME_MAPS = {
   
     cache: {
     title: 'The Cache',
-    svg: '/maps/act-1/The-Cache.svg',
+    svg: '../maps/act-1/The-Cache.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
       { type: 'dungeon', y: 748, x: 215, title: 'Dumping Grounds', targetMap: 'dumping', showLabel: true },
@@ -62,7 +62,7 @@ const GAME_MAPS = {
 
   castaway: {
     title: "Castaway's Landing",
-    svg: "/maps/act-1/Castaway's-Landing.svg",
+    svg: "../maps/act-1/Castaway's-Landing.svg",
     bounds: [[0, 0], [1000, 1000]],
     points: [
       { type: 'dungeon', y: 289, x: 175, title: 'Dumping Grounds', targetMap: 'dumping', showLabel: true },
@@ -77,7 +77,7 @@ const GAME_MAPS = {
 	
   blackwater: {
     title: 'Blackwater Creek',
-    svg: '/maps/act-1/Blackwater-Creek.svg',
+    svg: '../maps/act-1/Blackwater-Creek.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
 		{ type: 'shrine',   y: 124, x: 580, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
@@ -91,7 +91,7 @@ const GAME_MAPS = {
   
   putridlake: {
     title: 'Putrid Lake',
-    svg: '/maps/act-1/Putrid-Lake.svg',
+    svg: '../maps/act-1/Putrid-Lake.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
 		{ type: 'portal',  y: 763, x: 674, title: 'Portal', desc: 'Fast travel' },
@@ -103,7 +103,7 @@ const GAME_MAPS = {
   
   echoing: {
     title: 'Echoing Grotto',
-    svg: '/maps/act-1/Echoing-Grotto.svg',
+    svg: '../maps/act-1/Echoing-Grotto.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
 		{ type: 'shrine',   y: 883, x: 391, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
@@ -115,7 +115,7 @@ const GAME_MAPS = {
   
     wormhole: {
     title: 'Wormhole',
-    svg: '/maps/act-1/Wormhole.svg',
+    svg: '../maps/act-1/Wormhole.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
 		{ type: 'shrine', y: 398, x: 209, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
@@ -127,7 +127,7 @@ const GAME_MAPS = {
   
     cliffs: {
     title: 'The Cliffs',
-    svg: '/maps/act-1/The-Cliffs.svg',
+    svg: '../maps/act-1/The-Cliffs.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
 		{ type: 'well',  y: 452, x: 564, title: 'Well', desc: 'Refilling flasks', showLabel: true},
@@ -141,7 +141,7 @@ const GAME_MAPS = {
   
       veiled: {
     title: 'The Veiled Passage',
-    svg: '/maps/act-1/The-Veiled-Passage.svg',
+    svg: '../maps/act-1/The-Veiled-Passage.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
 		{ type: 'shrine', y: 134, x: 322, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
@@ -153,7 +153,7 @@ const GAME_MAPS = {
   
   weavernest: {
     title: "Weaver's Nest",
-    svg: '/maps/act-1/Weavers-Nest.svg',
+    svg: '../maps/act-1/Weavers-Nest.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
 		{ type: 'well',  y: 438, x: 815, title: 'Well', desc: 'Refilling flasks', showLabel: true},
@@ -164,7 +164,7 @@ const GAME_MAPS = {
   
   ruggedplains: {
     title: 'Rugged Plains',
-    svg: '/maps/act-1/Rugged-Plains.svg',
+    svg: '../maps/act-1/Rugged-Plains.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
 		{ type: 'well',  y: 225, x: 517, title: 'Well', desc: 'Refilling flasks', showLabel: true},
@@ -185,7 +185,7 @@ const GAME_MAPS = {
   
     holewall: {
     title: 'Hole In The Wall',
-    svg: '/maps/act-1/Hole-In-The-Wall.svg',
+    svg: '../maps/act-1/Hole-In-The-Wall.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
 		{ type: 'dungeon', y: 215, x: 232, title: 'Rugged Plains', targetMap: 'ruggedplains', showLabel: true },
@@ -195,7 +195,7 @@ const GAME_MAPS = {
   
     outercourt: {
     title: 'Outer Court',
-    svg: '/maps/act-1/Outer-Court.svg',
+    svg: '../maps/act-1/Outer-Court.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
 		{ type: 'shrine',   y: 173, x: 437, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
@@ -220,7 +220,7 @@ const GAME_MAPS = {
   
   prisonintake: {
     title: 'The Prison Intake',
-    svg: '/maps/act-1/The-Prison-Intake.svg',
+    svg: '../maps/act-1/The-Prison-Intake.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
 		{ type: 'shrine', y: 518, x: 721, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
@@ -232,7 +232,7 @@ const GAME_MAPS = {
   
     experimentation: {
     title: 'Experimentation Ward',
-    svg: '/maps/act-1/Experimentation-Ward.svg',
+    svg: '../maps/act-1/Experimentation-Ward.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
 		{ type: 'shrine',   y: 426, x: 682, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
@@ -244,7 +244,7 @@ const GAME_MAPS = {
   
     torturechamber: {
     title: 'Torture Chamber',
-    svg: '/maps/act-1/Torture-Chamber.svg',
+    svg: '../maps/act-1/Torture-Chamber.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
 		{ type: 'well',  y: 590, x: 130, title: 'Well', desc: 'Refilling flasks', showLabel: true},
