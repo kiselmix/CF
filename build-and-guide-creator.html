@@ -1,0 +1,1419 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  <title>Crystalfall Build Creator – Submit Builds & Guides | CrystalFall.fun</title>
+  <meta name="description" content="Create and submit your Crystalfall build. Choose skills, import talent tree and share your build guide with the community on CrystalFall.fun." />
+  <link rel="canonical" href="https://crystalfall.fun/build-and-guide">
+  <meta property="og:title" content="Crystalfall Builds & Guides – Submit Your Build">
+<meta property="og:description" content="Create and submit your Crystalfall build. Import talent tree, choose skills and share your guide with the community.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://crystalfall.fun/build-and-guide">
+<meta property="og:image" content="https://crystalfall.fun/img/build-guide-banner.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Crystalfall Builds & Guides – Submit Your Build">
+<meta name="twitter:description" content="Create and submit your Crystalfall build and guide.">
+<meta name="twitter:image" content="https://crystalfall.fun/img/build-guide-banner.png">
+  <style>
+    :root {
+      --bg: #07111c;
+      --bg-soft: #0d1828;
+      --card: rgba(18, 29, 48, 0.95);
+      --card-2: rgba(12, 23, 39, 0.95);
+      --line: rgba(143, 173, 214, 0.22);
+      --line-strong: rgba(143, 173, 214, 0.38);
+      --text: #edf4ff;
+      --muted: #9fb0c8;
+      --accent: #62d0ff;
+      --accent-2: #7b8cff;
+      --good: #64d38a;
+      --warn: #ffcc66;
+      --danger: #ff7f7f;
+      --radius: 18px;
+      --shadow: 0 18px 42px rgba(0,0,0,.34);
+      --max: 1240px;
+      color-scheme: dark;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; scroll-behavior:smooth; 
+	background:
+      radial-gradient(circle at top, rgba(88,164,255,.18), transparent 34%),
+      linear-gradient(180deg, #08111c 0%, #09131f 50%, #06101a 100%);
+      color: var(--text);
+    }
+	#form-start{
+  scroll-margin-top:90px;
+}
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { max-width: 100%; display: block; }
+    button, input, select, textarea {
+      font: inherit;
+      color: inherit;
+    }
+    .wrap { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
+    .topbar {
+      position: sticky; top: 0; z-index: 20;
+      backdrop-filter: blur(18px);
+      background: rgba(6, 13, 23, 0.78);
+      border-bottom: 1px solid rgba(143, 173, 214, 0.12);
+    }
+.topbar-inner {
+  display:flex;
+  align-items:center;
+  gap:18px;
+  min-height:68px;
+  padding:0 4px;
+  position:relative;
+}
+    .brand {
+      font-weight: 800; letter-spacing: .02em; color: #fff;
+      white-space: nowrap;
+    }
+.brand,
+.brand:hover,
+.brand:focus,
+.brand:active {
+  text-decoration: none;
+}
+    .nav { display: flex; flex-wrap: wrap; gap: 10px; }
+    .nav a {
+      padding: 10px 14px; border-radius: 999px;
+      color: var(--muted); border: 1px solid transparent;
+    }
+    .nav a:hover, .nav a.is-active {
+      color: #fff;
+      border-color: rgba(98,208,255,.28);
+      background: rgba(98,208,255,.08);
+      text-decoration: none;
+    }
+    .hero {
+      padding: 34px 0 16px;
+    }
+    .hero-card {
+      background: linear-gradient(135deg, rgba(14, 27, 43, .92), rgba(8, 17, 29, .96));
+      border: 1px solid rgba(143, 173, 214, .16);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
+    }
+    .hero-card::before {
+      content: ""; position: absolute; inset: 0;
+      background: radial-gradient(circle at 20% 10%, rgba(98,208,255,.16), transparent 35%),
+                  radial-gradient(circle at 85% 20%, rgba(123,140,255,.14), transparent 28%);
+      pointer-events: none;
+    }
+    .hero-grid {
+      display: grid; grid-template-columns: 1.15fr .85fr; gap: 24px;
+      padding: 30px;
+      position: relative;
+      z-index: 1;
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+      color: #c8e5ff;
+      background: rgba(98,208,255,.08);
+      border: 1px solid rgba(98,208,255,.2);
+      padding: 8px 12px; border-radius: 999px;
+      margin-bottom: 14px;
+    }
+    h1, h2, h3, p { margin: 0; }
+    h1 { font-size: clamp(30px, 4vw, 48px); line-height: 1.04; margin-bottom: 14px; }
+    .hero p {
+      color: #c7d5ea; font-size: 16px; line-height: 1.65;
+      max-width: 760px;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+    .button, .ghost, .danger, .soft {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      min-height: 46px; padding: 0 16px; border-radius: 14px; cursor: pointer;
+      border: 1px solid transparent; text-decoration: none; transition: .18s ease;
+      font-weight: 700;
+    }
+    .button {
+      background: linear-gradient(135deg, var(--accent), #7fb8ff);
+      color: #08111a;
+      box-shadow: 0 12px 28px rgba(98,208,255,.2);
+    }
+    .button:hover { transform: translateY(-1px); text-decoration: none; }
+    .ghost {
+      background: rgba(255,255,255,.02);
+      border-color: rgba(143, 173, 214, .22);
+      color: var(--text);
+    }
+    .ghost:hover, .soft:hover, .danger:hover { text-decoration: none; border-color: rgba(98,208,255,.4); }
+    .soft {
+      background: rgba(98,208,255,.08);
+      border-color: rgba(98,208,255,.16);
+      color: #dff5ff;
+    }
+    .danger {
+      background: rgba(255,127,127,.08);
+      border-color: rgba(255,127,127,.16);
+      color: #ffe3e3;
+    }
+    .hero-side{
+ display:flex;
+  align-items:flex-end;
+  margin-bottom:-30px;
+}
+    .mini-card {
+      padding: 18px; border-radius: 18px;
+      background: rgba(255,255,255,.035);
+      border: 1px solid rgba(143, 173, 214, .16);
+    }
+    .mini-card h3 { font-size: 15px; margin-bottom: 8px; }
+    .mini-card p { font-size: 14px; color: var(--muted); }
+    .layout {
+      display: grid; grid-template-columns: 1.4fr .8fr; gap: 22px; padding: 22px 0 34px;
+    }
+    .stack { display: grid; gap: 22px; }
+    .panel {
+      background: linear-gradient(180deg, rgba(15, 26, 42, .95), rgba(10, 18, 29, .96));
+      border: 1px solid rgba(143, 173, 214, .16);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .panel-head {
+      padding: 22px 22px 14px;
+      border-bottom: 1px solid rgba(143, 173, 214, .12);
+      display: flex; gap: 16px; justify-content: space-between; align-items: flex-start;
+    }
+    .panel-head p { color: var(--muted); margin-top: 6px; line-height: 1.55; font-size: 14px; }
+    .panel-body { padding: 22px; }
+    .grid-2, .grid-3, .grid-4 { display: grid; gap: 16px; }
+    .grid-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+    .grid-4 { grid-template-columns: repeat(4, minmax(0,1fr)); }
+    label.field, .field-block { display: grid; gap: 8px; }
+    .label {
+      font-size: 13px; font-weight: 700; letter-spacing: .02em; color: #d9e7fb;
+      display: flex; gap: 8px; align-items: center;
+    }
+    .hint { color: var(--muted); font-size: 12px; line-height: 1.45; }
+    input[type="text"], input[type="email"], textarea, select, input[type="search"] {
+      width: 100%;
+      background: rgba(7, 15, 25, 0.9);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 13px 14px;
+      outline: none;
+      transition: border-color .18s ease, box-shadow .18s ease;
+    }
+    input:focus, textarea:focus, select:focus {
+      border-color: rgba(98,208,255,.52);
+      box-shadow: 0 0 0 4px rgba(98,208,255,.10);
+    }
+    textarea { min-height: 108px; resize: vertical; }
+    .step-badge {
+      min-width: 36px; height: 36px; border-radius: 12px;
+      display: inline-flex; align-items: center; justify-content: center;
+      background: rgba(98,208,255,.12);
+      border: 1px solid rgba(98,208,255,.22);
+      color: #dff5ff; font-weight: 800;
+      margin-right: 12px;
+    }
+    .step-title { display: flex; align-items: center; font-size: 21px; }
+    .summary-grid { display: grid; gap: 12px; grid-template-columns: repeat(3, minmax(0,1fr)); margin-top: 14px; }
+    .stat {
+      border-radius: 18px; padding: 16px; background: rgba(255,255,255,.03); border: 1px solid rgba(143,173,214,.14);
+    }
+    .stat strong { display: block; font-size: 24px; margin-bottom: 6px; }
+    .stat span { color: var(--muted); font-size: 13px; }
+    .toolbar { display: flex; flex-wrap: wrap; gap: 10px; }
+    .tags, .selected-list, .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag, .chip {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 8px 12px; border-radius: 999px;
+      background: rgba(255,255,255,.04); border: 1px solid rgba(143,173,214,.18);
+      color: #dcebff; font-size: 13px;
+    }
+    .tag button, .chip button {
+      border: 0; background: transparent; color: inherit; cursor: pointer; padding: 0; font-weight: 800;
+    }
+    .skill-grid {
+      display: grid; gap: 12px; grid-template-columns: repeat(2, minmax(0,1fr)); margin-top: 16px;
+      max-height: 640px; overflow: auto; padding-right: 4px;
+    }
+    .skill-card {
+      display: grid; grid-template-columns: 56px 1fr; gap: 12px;
+      border-radius: 18px; padding: 14px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(143,173,214,.14);
+    }
+    .skill-card.is-selected {
+      border-color: rgba(98,208,255,.55);
+      background: rgba(98,208,255,.08);
+      box-shadow: inset 0 0 0 1px rgba(98,208,255,.18);
+    }
+    .skill-icon {
+      width: 56px; height: 56px; border-radius: 14px; object-fit: cover; background: rgba(255,255,255,.06);
+      border: 1px solid rgba(143,173,214,.18);
+    }
+    .skill-name { font-weight: 800; margin-bottom: 6px; }
+    .skill-desc { color: var(--muted); font-size: 13px; line-height: 1.45; }
+    .skill-meta { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 12px; }
+    .pill {
+      padding: 5px 9px; border-radius: 999px;
+      background: rgba(255,255,255,.06); color: #dcebff; font-size: 11px;
+      border: 1px solid rgba(143,173,214,.16);
+    }
+    .skill-actions { display: flex; gap: 8px; }
+.small-btn {
+  min-height: 36px;
+  padding: 0 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(143,173,214,.18);
+  background: rgba(255,255,255,.03);
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+}
+    .small-btn:hover { border-color: rgba(98,208,255,.45); text-decoration: none;}
+    .small-btn.is-selected { background: rgba(98,208,255,.12); border-color: rgba(98,208,255,.5); }
+    .empty {
+      border: 1px dashed rgba(143,173,214,.28);
+      border-radius: 18px; padding: 18px; color: var(--muted); background: rgba(255,255,255,.02);
+    }
+    .upload-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; }
+    .upload-box {
+      border: 1px dashed rgba(143,173,214,.28); border-radius: 18px; padding: 16px; background: rgba(255,255,255,.02);
+      min-height: 220px; display: grid; align-content: start; gap: 10px;
+    }
+    .upload-box input[type="file"] { width: 100%; }
+    .preview {
+      border-radius: 14px; overflow: hidden; background: rgba(255,255,255,.03);
+      border: 1px solid rgba(143,173,214,.14); min-height: 120px;
+      display: grid; place-items: center; color: var(--muted); font-size: 13px;
+    }
+    .sidebar-sticky { position: sticky; top: 88px; display: grid; gap: 22px; }
+    .note-list { display: grid; gap: 10px; }
+    .note {
+      display: grid; gap: 5px; padding: 14px; border-radius: 16px;
+      background: rgba(255,255,255,.03); border: 1px solid rgba(143,173,214,.14);
+    }
+    .note strong { font-size: 14px; }
+    .note span { color: var(--muted); font-size: 13px; line-height: 1.45; }
+    .status {
+      border-radius: 16px; padding: 14px 16px; font-size: 14px; line-height: 1.5;
+      border: 1px solid rgba(143,173,214,.14); background: rgba(255,255,255,.03);
+    }
+    .status.good { border-color: rgba(100,211,138,.35); background: rgba(100,211,138,.08); color: #dbffea; }
+    .status.warn { border-color: rgba(255,204,102,.35); background: rgba(255,204,102,.08); color: #fff1cc; }
+    .status.danger { border-color: rgba(255,127,127,.35); background: rgba(255,127,127,.08); color: #ffe3e3; }
+    .code-output {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      white-space: pre-wrap; word-break: break-word;
+      border-radius: 18px; padding: 16px; background: rgba(5,10,18,.88);
+      border: 1px solid rgba(143,173,214,.18); min-height: 220px; font-size: 12px; line-height: 1.55;
+      color: #dbe8fb;
+    }
+    .footer { color: var(--muted); font-size: 13px; padding: 0 0 36px; }
+    @media (max-width: 1080px) {
+      .hero-grid, .layout { grid-template-columns: 1fr; }
+      .sidebar-sticky { position: static; }
+    }
+	
+.topbar-inner {
+  display:flex;
+  align-items:center;
+  gap:18px;
+  min-height:68px;
+  padding:0 4px;
+  position:relative;
+}
+
+.brand {
+  font-weight:800;
+  letter-spacing:.02em;
+  color:#fff;
+  white-space:nowrap;
+}
+
+.topbar-inner {
+  display:flex;
+  align-items:center;
+  gap:18px;
+  min-height:68px;
+  padding:0 4px;
+  position:relative;
+}
+
+.burger{
+  display:none;
+  position:absolute;
+  top:50%;
+  right:4px;
+  transform:translateY(-50%);
+  z-index:41;
+
+  width:44px;
+  height:44px;
+  padding:0;
+  border:1px solid rgba(143,173,214,.18);
+  border-radius:12px;
+  background:rgba(255,255,255,.03);
+  cursor:pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    background .22s ease,
+    border-color .22s ease;
+}
+
+.burger:hover{
+  background:rgba(98,208,255,.08);
+  border-color:rgba(98,208,255,.4);
+}
+
+
+
+.burger span{
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:20px;
+  height:2px;
+  border-radius:999px;
+  background:#fff;
+  transform-origin:center;
+  transition:
+    transform .24s ease,
+    opacity .2s ease;
+}
+
+.burger span:nth-child(1){
+  transform:translate(-50%, -7px);
+}
+
+.burger span:nth-child(2){
+  transform:translate(-50%, 0);
+}
+
+.burger span:nth-child(3){
+  transform:translate(-50%, 7px);
+}
+
+.burger.is-open span:nth-child(1){
+  transform:translate(-50%, 0) rotate(45deg);
+}
+
+.burger.is-open span:nth-child(2){
+  opacity:0;
+}
+
+.burger.is-open span:nth-child(3){
+  transform:translate(-50%, 0) rotate(-45deg);
+}
+
+.mobile-nav{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  position:absolute;
+  top:68px;
+  left:10px;
+  right:10px;
+  z-index:40;
+
+  padding:10px;
+  border:1px solid rgba(143,173,214,.16);
+  border-radius:18px;
+  background:rgba(6,13,23,.96);
+  backdrop-filter:blur(16px);
+  box-shadow:0 18px 42px rgba(0,0,0,.42);
+
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transform:translateY(-10px) scale(.985);
+  transform-origin:top center;
+  transition:
+    opacity .24s ease,
+    transform .24s ease,
+    visibility .24s ease;
+}
+
+.mobile-nav.open{
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+  transform:translateY(0) scale(1);
+}
+
+.mobile-nav a{
+  display:flex;
+  align-items:center;
+  min-height:46px;
+  padding:0 14px;
+  border-radius:12px;
+  border:1px solid transparent;
+  color:var(--text);
+  transition:
+    background .18s ease,
+    border-color .18s ease,
+    color .18s ease;
+}
+
+.mobile-nav a:hover,
+.mobile-nav a.is-active{
+  background:rgba(98,208,255,.08);
+  border-color:rgba(98,208,255,.22);
+  color:#fff;
+  text-decoration:none;
+}
+
+@media (max-width: 820px) {
+  .grid-2, .grid-3, .grid-4, .summary-grid, .upload-grid, .skill-grid { grid-template-columns: 1fr; }
+  .panel-head { display: grid; }
+  .hero-grid, .panel-body, .panel-head { padding: 18px; }
+  .wrap { width: min(calc(100% - 20px), var(--max)); }
+
+  .topbar-inner{
+    padding-right:52px;
+  }
+
+  .nav { display:none; }
+  .burger { display:block; }
+}
+
+@media (min-width: 821px) {
+  .mobile-nav,
+  .mobile-overlay{
+    display:none !important;
+  }
+}
+
+
+
+	.file-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 44px;
+  padding: 0 16px;
+
+  border-radius: 12px;
+  border: 1px solid rgba(143,173,214,.18);
+  background: rgba(255,255,255,.03);
+
+  color: var(--text);
+  font-weight: 700;
+  cursor: pointer;
+
+  transition: 0.18s ease;
+}
+
+.file-btn:hover {
+  border-color: rgba(98,208,255,.45);
+  background: rgba(98,208,255,.08);
+}
+.hero-image{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+
+.guide-steps{
+  margin-top:20px;
+
+
+
+}
+
+.guide-steps h2{
+  margin-bottom:12px;
+  color:#dff5ff;
+}
+
+.guide-steps ul{
+  margin:0;
+  padding-left:18px;
+}
+
+.guide-steps li{
+  margin-bottom:6px;
+  color:#c7d5ea;
+}
+
+
+.tree-buttons{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  min-width:260px;
+}
+
+
+.tree-buttons a{
+  grid-column:1 / -1;
+}
+
+
+.full-btn{
+  width:100%;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  font-weight:800;
+  letter-spacing:.02em;
+  color:#fff;
+  white-space:nowrap;
+}
+
+.logo{
+  height:36px;
+  width:auto;
+  display:block;
+}
+
+
+  </style>
+		  <script type="application/ld+json">
+		{
+		 "@context": "https://schema.org",
+		 "@type": "WebPage",
+		 "name": "Crystalfall Build Creator",
+		 "description": "Create and submit your Crystalfall build and guide",
+		 "url": "https://crystalfall.fun/build-and-guide",
+		 "inLanguage": "en"
+		}
+		</script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+		<a class="brand" href="/">
+		  <img src="./img/logo.png" alt="CrystalFall logo" class="logo">
+		  CrystalFall.fun
+		</a>
+		<button class="burger" id="burgerBtn" aria-label="Menu">
+		  <span></span>
+		  <span></span>
+		  <span></span>
+		</button>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="/talent-tree">Talent Tree</a>
+        <a href="/skills">Skills</a>
+        <a href="/skill-leveling">Skill leveling</a>
+        <a href="/maps">Maps</a>
+        <a href="/quests">Quests</a>
+        <a href="/fusing">Fusing</a>
+        <a href="/build-and-guide" class="is-active">Build &amp; Guide</a>
+      </nav>
+		<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+		  <a href="/talent-tree">Talent Tree</a>
+		  <a href="/skills">Skills</a>
+		  <a href="/skill-leveling">Skill leveling</a>
+		  <a href="/maps">Maps</a>
+		  <a href="/quests">Quests</a>
+		  <a href="/fusing">Fusing</a>
+		  <a href="/build-and-guide" class="is-active">Build & Guide</a>
+		</nav>
+		<div class="mobile-overlay" id="mobileOverlay" hidden></div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero-card">
+        <div class="hero-grid">
+          <div>
+            <div class="eyebrow">Build &amp; Guide • moderation</div>
+            <h1>Crystalfall Build Creator – Submit Your Build and Guide</h1>
+            <p>
+              Use the CrystalFall build creator to assemble your character build.
+				Import your talent tree, choose up to six skills and attach gear screenshots.
+            </p>
+			<br>
+			<div class="guide-steps">
+				<h2>How to Submit a Build</h2>
+
+				<ul>
+				<li>Import your talent tree</li>
+				<li>Select your main skills</li>
+				<li>Add equipment screenshots</li>
+				<li>Describe your build strategy</li>
+				</ul>
+			</div>
+            <div class="hero-actions">
+              <a class="button" href="#form-start">Create a build or guide</a>
+                          </div>
+          </div>
+			<div class="hero-side">
+			  <img class="hero-image" src="/img/build-guide-banner.png" alt="Crystalfall build creator and guide submission">
+			</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="layout" id="form-start">
+      <section class="stack">
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <div class="step-title"><span class="step-badge">1</span> Information about a build or guide</div>
+              </div>
+          </div>
+          <div class="panel-body">
+            <div class="grid-2">
+              <label class="field">
+                <span class="label">Build or Guide name*</span>
+                <input id="buildTitle" type="text" placeholder="For example: Mythic Ranger AoE Farm Build" />
+              </label>
+              <label class="field">
+                <span class="label">Author's name / Nickname*</span>
+                <input id="authorName" type="text" placeholder="kiselmix" />
+              </label>
+              <label class="field">
+                <span class="label">Contact information*</span>
+                <input id="authorContact" type="text" placeholder="Telegram / Discord / email" />
+              </label>
+              <label class="field">
+                <span class="label">Category</span>
+                <select id="buildType">
+                  <option value="build">Build</option>
+                  <option value="guide">Guide</option>
+                  <option value="build+guide">Build + Guide</option>
+                </select>
+              </label>
+            </div>
+            <div style="height:16px"></div>
+            <label class="field-block">
+              <span class="label">Brief description*</span>
+              <textarea id="buildDescription" placeholder="Type of character, attack range type, strengths and weaknesses."></textarea>
+            </label>
+            <div style="height:16px"></div>
+            <label class="field-block">
+              <span class="label">Step-by-step guide / comments for the moderator</span>
+              <textarea id="guideText" placeholder="Any clarifications: rotation, stat priority, item tips, alternatives, important notes."></textarea>
+            </label>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <div class="step-title"><span class="step-badge">2</span> Talent Tree leveling </div>
+              <p>Import upgraded nodes from the page <a href="/talent-tree" target="_blank" rel="noreferrer">Talent Tree</a>. Maximum 100 nodes.</p>
+            </div>
+            <div class="toolbar">
+				<div class="toolbar tree-buttons">
+				  <a class="soft full-btn" href="/talent-tree" target="_blank" rel="noreferrer">
+					Open Talent Tree
+				  </a>
+
+				  <button class="ghost full-btn" type="button" id="importTreeBtn">
+					Import
+				  </button>
+
+				  <button class="danger full-btn" type="button" id="clearTreeBtn">
+					Clear
+				  </button>
+				</div>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div class="summary-grid">
+              <div class="stat"><strong id="treeNodeCount">0</strong><span>active nodes</span></div>
+              <div class="stat"><strong id="treeStartNode">—</strong><span>starting class</span></div>
+              <div class="stat"><strong id="treeValidStatus">Нет</strong><span>imported</span></div>
+            </div>
+            <div style="height:16px"></div>
+			<textarea id="treeJson" hidden></textarea>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <div class="step-title"><span class="step-badge">3</span> Selected skills</div>
+              <p>You can select from 1 to 6 skills.</p>
+            </div>
+            <div class="toolbar">
+              <label class="field" style="min-width:260px">
+                <span class="label">Search</span>
+                <input id="skillSearch" type="search" placeholder="Fire, movement, melee, shield..." />
+              </label>
+            </div>
+          </div>
+          <div class="panel-body">
+           <div style="height:16px"></div>
+            <div class="selected-list" id="selectedSkills"></div>
+            <div style="height:16px"></div>
+            <div class="skill-grid" id="skillGrid"></div>
+          </div>
+        </article>
+
+        
+
+        <article class="panel">
+          <div class="panel-head">
+            <div>
+              <div class="step-title"><span class="step-badge">4</span> Optional: weapons and armor picture</div>
+              <p>You can attach multiple images for weapons and armor.</p>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div class="upload-grid">
+              <div class="upload-box">
+                <div class="label">Weapon</div>
+                <label class="file-btn">
+				  Select files
+				  <input id="weaponImage" type="file" accept="image/*" multiple hidden>
+				</label>
+                <div id="weaponPreview" class="preview">Weapon preview</div>
+              </div>
+              <div class="upload-box">
+                <div class="label">Armor</div>
+                <label class="file-btn">
+				  Select files
+				  <input id="armorImage" type="file" accept="image/*" multiple hidden>
+				</label>
+                <div id="armorPreview" class="preview">Armor preview</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-body">
+            <div id="sendStatus" class="status warn">After checking the form, click "Submit".</div>
+            <div style="height:16px"></div>
+            <div class="toolbar">
+              <button class="button" type="button" id="submitToModerator">Submit</button>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <aside>
+        <div class="sidebar-sticky">
+          <article class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>Application verification</h2>
+              </div>
+            </div>
+            <div class="panel-body">
+              <div id="validationBox" class="note-list"></div>
+            </div>
+          </article>
+        </div>
+      </aside>
+    </div>
+
+    <div class="footer"></div>
+  </main>
+
+  <script src="/js/skill/skill.data.js"></script>
+  <script>
+    (() => {
+      const MAX_SKILLS = 6;
+      const TREE_STORAGE_KEYS = [
+        'skilltree_progress_v2_no_points',
+        'skilltree_progress',
+        'talent_tree_progress'
+      ];
+      const WORKER_ENDPOINT_STORAGE_KEY = 'build_guide_worker_endpoint';
+
+      const state = {
+        skills: [],
+        selectedSkills: [],
+        weaponImage: [],
+        armorImage: [],
+        tree: null,
+        json: ''
+      };
+
+      const el = {
+        buildTitle: document.getElementById('buildTitle'),
+        authorName: document.getElementById('authorName'),
+        authorContact: document.getElementById('authorContact'),
+        buildType: document.getElementById('buildType'),
+        buildDescription: document.getElementById('buildDescription'),
+        guideText: document.getElementById('guideText'),
+        treeJson: document.getElementById('treeJson'),
+        treeNodeCount: document.getElementById('treeNodeCount'),
+        treeStartNode: document.getElementById('treeStartNode'),
+        treeValidStatus: document.getElementById('treeValidStatus'),
+        importTreeBtn: document.getElementById('importTreeBtn'),
+        clearTreeBtn: document.getElementById('clearTreeBtn'),
+        skillSearch: document.getElementById('skillSearch'),
+        skillGrid: document.getElementById('skillGrid'),
+        selectedSkills: document.getElementById('selectedSkills'),
+        skillsLoadStatus: document.getElementById('skillsLoadStatus'),
+        weaponImage: document.getElementById('weaponImage'),
+        armorImage: document.getElementById('armorImage'),
+        weaponPreview: document.getElementById('weaponPreview'),
+        armorPreview: document.getElementById('armorPreview'),
+        validationBox: document.getElementById('validationBox'),
+        submitToModerator: document.getElementById('submitToModerator'),
+        sendStatus: document.getElementById('sendStatus')
+      };
+	  
+	  const CLASS_MAP = {
+	  n1: "Technomancer",
+	  n2: "Knight",
+	  n3: "Rogue",
+	};
+
+      function escapeHtml(value) {
+        return String(value ?? '')
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+      }
+
+      function slugify(value) {
+        return String(value || 'build-submission')
+          .toLowerCase()
+          .trim()
+          .replace(/[^a-z0-9а-яё]+/gi, '-')
+          .replace(/^-+|-+$/g, '') || 'build-submission';
+      }
+
+      function safeJsonParse(value) {
+        try { return JSON.parse(value); } catch { return null; }
+      }
+
+      function getSkillsFromGlobal() {
+        if (Array.isArray(window.skill)) return window.skill;
+        if (window.skill && Array.isArray(window.skill.skills)) return window.skill.skills;
+        if (window.SKILL_DATA && Array.isArray(window.SKILL_DATA.skills)) return window.SKILL_DATA.skills;
+        return [];
+      }
+
+      function getSkillCardIcon(skill) {
+        return skill.icon || skill.image || '';
+      }
+
+      function parseTreeJson() {
+        const value = el.treeJson.value.trim();
+        if (!value) {
+          state.tree = null;
+          renderTreeSummary();
+          return;
+        }
+        const parsed = safeJsonParse(value);
+        const unlocked = Array.isArray(parsed?.unlocked) ? parsed.unlocked : [];
+        const startId = parsed?.startId ? String(parsed.startId) : '';
+        state.tree = parsed && typeof parsed === 'object' ? { ...parsed, unlocked, startId } : null;
+        renderTreeSummary();
+      }
+
+      function renderTreeSummary() {
+        const tree = state.tree;
+        el.treeNodeCount.textContent = String(tree?.unlocked?.length || 0);
+        const startId = tree?.startId;
+		el.treeStartNode.textContent = CLASS_MAP[startId] || startId || '—';
+        const hasNodes = tree && Array.isArray(tree.unlocked) && tree.unlocked.length > 0;
+		el.treeValidStatus.textContent = hasNodes ? 'Yes' : 'No';
+		
+      }
+
+      function importTreeFromLocalStorage() {
+        let raw = null;
+        let usedKey = null;
+        for (const key of TREE_STORAGE_KEYS) {
+          const candidate = localStorage.getItem(key);
+          if (candidate) {
+            raw = candidate;
+            usedKey = key;
+            break;
+          }
+        }
+        if (!raw) {
+          el.treeJson.value = '';
+          state.tree = null;
+          renderTreeSummary();
+          alert('The saved tree build was not found. First, open /talent-tree and select the nodes.');
+          return;
+        }
+        const parsed = safeJsonParse(raw);
+        if (!parsed || typeof parsed !== 'object') {
+          alert(`Failed to parse the tree by key ${usedKey}.`);
+          return;
+        }
+        el.treeJson.value = JSON.stringify(parsed, null, 2);
+        parseTreeJson();
+      }
+
+      function clearTree() {
+        el.treeJson.value = '';
+        state.tree = null;
+        renderTreeSummary();
+      }
+
+      function renderSkillGrid() {
+        const query = el.skillSearch.value.trim().toLowerCase();
+        const selected = new Set(state.selectedSkills);
+        const list = state.skills.filter((skill) => {
+          if (!query) return true;
+          const haystack = [skill.name, skill.description, ...(skill.tags || [])].join(' ').toLowerCase();
+          return haystack.includes(query);
+        });
+
+        if (!state.skills.length) {
+          el.skillGrid.innerHTML = '<div class="empty">Failed to load skills.</div>';
+          return;
+        }
+
+        if (!list.length) {
+          el.skillGrid.innerHTML = '<div class="empty">No skills were found matching your request.</div>';
+          return;
+        }
+
+        el.skillGrid.innerHTML = list.map((skill) => {
+          const icon = getSkillCardIcon(skill);
+          const tags = (skill.tags || []).slice(0, 4).map((tag) => `<span class="pill">${escapeHtml(tag)}</span>`).join('');
+          const isSelected = selected.has(skill.id);
+		  const slug = skill.id.toLowerCase().replace(/\s+/g,'-');
+          return `
+            <article class="skill-card ${isSelected ? 'is-selected' : ''}">
+              ${icon ? `<img class="skill-icon" src="./${escapeHtml(icon).replace(/^\.\//, '')}" alt="${escapeHtml(skill.name)}" loading="lazy">` : '<div class="skill-icon"></div>'}
+              <div>
+                <div class="skill-name">${escapeHtml(skill.name)}</div>
+                <div class="skill-desc">${escapeHtml(skill.description || '')}</div>
+                <div class="skill-meta">${tags}</div>
+                <div class="skill-actions">
+                  <button class="small-btn ${isSelected ? 'is-selected' : ''}" type="button" data-skill-toggle="${escapeHtml(skill.id)}">
+                    ${isSelected ? 'Remove' : 'Choose'}
+                  </button>
+                  <a class="small-btn" href="../skills/${slug}" target="_blank" rel="noreferrer">Open</a>
+                </div>
+              </div>
+            </article>
+          `;
+        }).join('');
+      }
+
+      function toggleSkill(skillId) {
+        const index = state.selectedSkills.indexOf(skillId);
+        if (index >= 0) {
+          state.selectedSkills.splice(index, 1);
+        } else {
+          if (state.selectedSkills.length >= MAX_SKILLS) {
+            alert(`You can choose a maximum of ${MAX_SKILLS} skills.`);
+            return;
+          }
+          state.selectedSkills.push(skillId);
+        }
+        renderSelectedSkills();
+        renderSkillGrid();
+        renderValidation();
+      }
+
+      function renderSelectedSkills() {
+        if (!state.selectedSkills.length) {
+          el.selectedSkills.innerHTML = '<div class="empty">No skills have been selected yet.</div>';
+          return;
+        }
+        const selectedObjects = state.selectedSkills
+          .map((id) => state.skills.find((skill) => skill.id === id))
+          .filter(Boolean);
+        el.selectedSkills.innerHTML = selectedObjects.map((skill, index) => `
+          <span class="chip">
+            ${index + 1}. ${escapeHtml(skill.name)}
+            <button type="button" data-skill-toggle="${escapeHtml(skill.id)}" aria-label="Delete ${escapeHtml(skill.name)}">×</button>
+          </span>
+        `).join('');
+      }
+
+      async function readImageFile(file) {
+        return new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => resolve(String(reader.result || ''));
+          reader.onerror = reject;
+          reader.readAsDataURL(file);
+        });
+      }
+
+      async function handleImageUpload(type, files) {
+        const list = Array.from(files || []);
+        if (!list.length) {
+          state[type] = [];
+          renderUploadPreview(type);
+          return;
+        }
+        state[type] = await Promise.all(list.map(async (file) => ({
+          name: file.name,
+          size: file.size,
+          type: file.type,
+          dataUrl: await readImageFile(file)
+        })));
+        renderUploadPreview(type);
+      }
+
+      function renderUploadPreview(type) {
+        const target = type === 'weaponImage' ? el.weaponPreview : el.armorPreview;
+        const images = Array.isArray(state[type]) ? state[type] : [];
+        if (!images.length) {
+          target.innerHTML = type === 'weaponImage' ? 'Weapon preview' : 'Armor preview';
+          return;
+        }
+target.innerHTML = `
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(96px,1fr));gap:10px;width:100%;padding:10px;align-items:start;">
+    ${images.map((image, index) => `
+      <figure style="margin:0;display:grid;gap:6px;position:relative;">
+        
+        <button 
+          type="button"
+          onclick="removeImage('${type}', ${index})"
+          style="
+            position:absolute;
+            top:4px;
+            right:4px;
+            width:22px;
+            height:22px;
+            border-radius:50%;
+            border:none;
+            background:rgba(0,0,0,.65);
+            color:white;
+            font-weight:700;
+            cursor:pointer;
+            line-height:20px;
+          "
+        >×</button>
+
+        <img src="${image.dataUrl}" 
+             alt="${escapeHtml(image.name)}"
+             style="width:100%;height:96px;object-fit:cover;border-radius:10px;">
+
+        <figcaption style="font-size:11px;line-height:1.35;color:var(--muted);word-break:break-word;">
+          ${index + 1}. ${escapeHtml(image.name)}
+        </figcaption>
+
+      </figure>
+    `).join('')}
+  </div>
+`;
+      }
+	  
+	  function removeImage(type, index) {
+		  if (!Array.isArray(state[type])) return;
+
+		  state[type].splice(index, 1);
+		  renderUploadPreview(type);
+		  renderValidation();
+		}
+
+      function buildPayload() {
+        parseTreeJson();
+
+        const payload = {
+          submittedAt: new Date().toISOString(),
+          source: 'build-and-guide-page',
+          type: el.buildType.value,
+          title: el.buildTitle.value.trim(),
+          author: {
+            name: el.authorName.value.trim(),
+            contact: el.authorContact.value.trim()
+          },
+          description: el.buildDescription.value.trim(),
+          guideText: el.guideText.value.trim(),
+          talentTree: state.tree,
+          skills: state.selectedSkills.map((skillId) => {
+            const skill = state.skills.find((item) => item.id === skillId) || { id: skillId, name: skillId };
+            return {
+              id: skill.id,
+              name: skill.name,
+              tags: skill.tags || [],
+              description: skill.description || ''
+            };
+          }),
+          gearImages: {
+            weapon: Array.isArray(state.weaponImage) ? state.weaponImage : [],
+            armor: Array.isArray(state.armorImage) ? state.armorImage : []
+          },
+          moderation: {
+            status: 'draft',
+            ready: isReadyToSubmit()
+          }
+        };
+        state.json = JSON.stringify(payload, null, 2);
+        return payload;
+      }
+
+      function isReadyToSubmit() {
+        const titleOk = Boolean(el.buildTitle.value.trim());
+        const authorOk = Boolean(el.authorName.value.trim());
+        const descOk = Boolean(el.buildDescription.value.trim());
+        const skillsOk = state.selectedSkills.length > 0 && state.selectedSkills.length <= MAX_SKILLS;
+        const treeOk = Boolean(state.tree && Array.isArray(state.tree.unlocked) && state.tree.unlocked.length);
+        return titleOk && authorOk && descOk && skillsOk && treeOk;
+      }
+
+      function renderValidation() {
+        parseTreeJson();
+        const checks = [
+          {
+            ok: Boolean(el.buildTitle.value.trim()),
+            title: 'Add build name',
+            text: 'A clear and concise name'
+          },
+          {
+            ok: Boolean(el.authorName.value.trim()),
+            title: 'The author is indicated',
+            text: 'Contact will help clarify controversial details before publication.'
+          },
+          {
+            ok: Boolean(el.buildDescription.value.trim()),
+            title: 'Add description',
+            text: 'At least one clear paragraph about what the build is needed for.'
+          },
+          {
+            ok: Boolean(state.tree && Array.isArray(state.tree.unlocked) && state.tree.unlocked.length),
+            title: 'Add Talent Tree',
+            text: 'Level up the Talent Tree and import'
+          },
+          {
+            ok: state.selectedSkills.length > 0,
+            title: 'Select skills',
+            text: 'You can select from 1 to 6 skills.'
+          },
+          {
+            ok: state.selectedSkills.length <= MAX_SKILLS,
+            title: `No more than ${MAX_SKILLS} skills`,
+            
+          },
+          {
+            ok: true,
+            title: 'Add weapons and armor',
+            text: 'Attach images of your equipment with specifications.'
+          }
+        ];
+
+        el.validationBox.innerHTML = checks.map((check) => `
+          <div class="note">
+            <strong>${check.ok ? '✓' : '—'} ${escapeHtml(check.title)}</strong>
+            <span>${escapeHtml(check.text)}</span>
+          </div>
+        `).join('');
+      }
+
+      async function submitToModerator() {
+        parseTreeJson();
+        if (!isReadyToSubmit()) {
+          renderValidation();
+          el.sendStatus.className = 'status danger';
+          el.sendStatus.textContent = 'Your application is not ready to be submitted. Please check the required fields on the right.';
+          return;
+        }
+
+        const endpoint = 'https://cf-build-guide-telegram.crystalfall.workers.dev/submit';
+
+        const payload = buildPayload();
+        el.sendStatus.className = 'status warn';
+        el.sendStatus.textContent = 'Submitting a request...';
+        el.submitToModerator.disabled = true;
+
+        try {
+          const response = await fetch(endpoint, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+
+          const raw = await response.text();
+          let data = null;
+          try { data = raw ? JSON.parse(raw) : null; } catch { data = { raw }; }
+
+          if (!response.ok || !data?.ok) {
+            throw new Error(data?.error || data?.message || `HTTP ${response.status}`);
+          }
+
+          el.sendStatus.className = 'status good';
+          el.sendStatus.textContent = data?.message || 'The request has been sent to the moderator.';
+        } catch (error) {
+          el.sendStatus.className = 'status danger';
+          el.sendStatus.textContent = `Sending error: ${error.message || error}`;
+        } finally {
+          el.submitToModerator.disabled = false;
+        }
+      }
+
+      function attachEvents() {
+        const rerender = () => renderValidation();
+        [
+          el.buildTitle,
+          el.authorName,
+          el.authorContact,
+          el.buildType,
+          el.buildDescription,
+          el.guideText,
+          el.treeJson,
+          el.skillSearch
+        ].forEach((node) => node.addEventListener('input', () => {
+          if (node === el.treeJson) parseTreeJson();
+          if (node === el.skillSearch) renderSkillGrid();
+          rerender();
+        }));
+
+        el.importTreeBtn.addEventListener('click', importTreeFromLocalStorage);
+        el.clearTreeBtn.addEventListener('click', clearTree);
+        el.submitToModerator.addEventListener('click', submitToModerator);
+
+        el.weaponImage.addEventListener('change', async (event) => {
+          await handleImageUpload('weaponImage', event.target.files);
+          renderValidation();
+        });
+        el.armorImage.addEventListener('change', async (event) => {
+          await handleImageUpload('armorImage', event.target.files);
+          renderValidation();
+        });
+
+        document.addEventListener('click', (event) => {
+          const toggle = event.target.closest('[data-skill-toggle]');
+          if (toggle) toggleSkill(toggle.getAttribute('data-skill-toggle'));
+        });
+
+        document.addEventListener('change', (event) => {
+          if (event.target.matches('[data-node-check], [data-rarity-select]')) {
+                renderValidation();
+          }
+        });
+
+        document.addEventListener('input', (event) => {
+          if (event.target.matches('[data-skill-notes]')) {
+                renderValidation();
+          }
+        });
+      }
+
+      function init() {
+        state.skills = getSkillsFromGlobal();
+        parseTreeJson();
+        renderTreeSummary();
+        renderSkillGrid();
+        renderSelectedSkills();
+        renderUploadPreview('weaponImage');
+        renderUploadPreview('armorImage');
+        renderValidation();
+        attachEvents();
+      }
+	  
+	  const burgerBtn = document.getElementById('burgerBtn');
+const mobileNav = document.getElementById('mobileNav');
+const mobileOverlay = document.getElementById('mobileOverlay');
+
+function isMobileViewport() {
+  return window.innerWidth <= 820;
+}
+
+function getScrollbarWidth() {
+  return window.innerWidth - document.documentElement.clientWidth;
+}
+
+function openMobileMenu() {
+  if (!burgerBtn || !mobileNav || !mobileOverlay) return;
+
+  burgerBtn.classList.add('is-open');
+  burgerBtn.setAttribute('aria-expanded', 'true');
+
+  mobileNav.classList.add('open');
+
+  mobileOverlay.hidden = false;
+  requestAnimationFrame(() => {
+    mobileOverlay.classList.add('is-open');
+  });
+
+  const scrollbarWidth = getScrollbarWidth();
+
+document.documentElement.style.overflow = 'hidden';
+
+}
+
+function closeMobileMenu() {
+  if (!burgerBtn || !mobileNav || !mobileOverlay) return;
+
+  burgerBtn.classList.remove('is-open');
+  burgerBtn.setAttribute('aria-expanded', 'false');
+
+  mobileNav.classList.remove('open');
+  mobileOverlay.classList.remove('is-open');
+
+  window.setTimeout(() => {
+    if (!mobileOverlay.classList.contains('is-open')) {
+      mobileOverlay.hidden = true;
+    }
+  }, 240);
+document.documentElement.style.overflow = '';
+}
+
+function toggleMobileMenu() {
+  const isOpen = mobileNav.classList.contains('open');
+  if (isOpen) {
+    closeMobileMenu();
+  } else {
+    openMobileMenu();
+  }
+}
+
+if (burgerBtn && mobileNav && mobileOverlay) {
+  burgerBtn.addEventListener('click', (event) => {
+    event.stopPropagation();
+    toggleMobileMenu();
+  });
+
+  mobileOverlay.addEventListener('click', closeMobileMenu);
+
+  mobileNav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      closeMobileMenu();
+    });
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      closeMobileMenu();
+    }
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!isMobileViewport()) return;
+    if (!mobileNav.classList.contains('open')) return;
+
+    const clickedInsideMenu = mobileNav.contains(event.target);
+    const clickedBurger = burgerBtn.contains(event.target);
+
+    if (!clickedInsideMenu && !clickedBurger) {
+      closeMobileMenu();
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (!isMobileViewport()) {
+      closeMobileMenu();
+    }
+  });
+
+
+}
+
+window.removeImage = removeImage;
+
+      init();
+    })();
+  </script>
+</body>
+</html>
