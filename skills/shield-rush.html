@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Shield Rush Skill – Crystalfall Guide | CrystalFall.fun</title>
   <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="../css/skill/skill.css" />
   <link rel="stylesheet" href="../css/skill/skill.detail.css" />
   <meta name="description" content="Shield Rush skill guide for Crystalfall with description, stats, effects, requirements and gameplay video.">
   <link rel="canonical" href="https://crystalfall.fun/skills/shield-rush">
@@ -17,48 +16,52 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Shield Rush Skill Guide","description":"Charge through crowds of enemies, dealing damage with your shield and leaving destruction in your wake.","keywords":"Crystalfall, Shield Rush, skill guide, Melee, Shield, Movement, Channeling, Physical","about":{"@type":"Thing","name":"Shield Rush","additionalType":"VideoGame skill"},"isPartOf":{"@type":"CollectionPage","name":"Crystalfall Skills List","url":"https://crystalfall.fun/skills"}}</script>
 </head>
 <body>
-  <div class="siteHeader">
-    <a class="brand" href="https://crystalfall.fun/" aria-label="Home">
-      <img class="brandLogo" src="../img/logo.png" alt="logo" />
-      <span class="brandText">CrystalFall.fun</span>
-    </a>
-    <nav class="siteNav" aria-label="Main navigation">
-      <a href="../talent-tree">Talent Tree</a>
-      <a class="is-active" href="../skills">Skills</a>
-      <a href="../skill-leveling">Skill leveling</a>
-      <a href="../maps-act-1">Maps</a>
-      <a href="../quests">Quests</a>
-      <a href="../fusing">Fusing</a>
-    </nav>
-    <button class="burgerBtn" type="button" aria-label="Open menu" aria-controls="mobileNav" aria-expanded="false">
-      <span class="burgerIcon" aria-hidden="true"></span>
-    </button>
-  </div>
-  <div class="navOverlay" id="mobileNav" hidden>
-    <div class="navPanel" role="dialog" aria-modal="true" aria-label="Menu">
-      <button class="navClose" type="button" aria-label="Close menu">✕</button>
-      <nav class="navMobile" aria-label="Main navigation (mobile)">
+  <header class="siteHeader">
+    <div class="wrap">
+      <a class="brand" href="../">
+        <img src="../img/logo.png" alt="CrystalFall logo" class="brandLogo">
+        <span class="brandText">CrystalFall.fun</span>
+      </a>
+
+      <button class="burgerBtn" id="burgerBtn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobileNav">
+        <span class="burgerIcon"></span>
+      </button>
+
+      <nav class="siteNav" aria-label="Main navigation">
         <a href="../talent-tree">Talent Tree</a>
-        <a class="is-active" href="../skills">Skills</a>
+        <a href="../skills" class="is-active">Skills</a>
         <a href="../skill-leveling">Skill leveling</a>
         <a href="../maps-act-1">Maps</a>
         <a href="../quests">Quests</a>
         <a href="../fusing">Fusing</a>
+        <a href="../build-and-guide">Build &amp; Guide</a>
+      </nav>
+
+      <nav class="navOverlay" id="mobileNav" aria-label="Mobile navigation" hidden>
+        <div class="navPanel navMobile">
+          <a href="../talent-tree">Talent Tree</a>
+          <a href="../skills" class="is-active">Skills</a>
+          <a href="../skill-leveling">Skill leveling</a>
+          <a href="../maps-act-1">Maps</a>
+          <a href="../quests">Quests</a>
+          <a href="../fusing">Fusing</a>
+          <a href="../build-and-guide">Build &amp; Guide</a>
+        </div>
       </nav>
     </div>
-  </div>
-  <div class="wrap">
-    <header class="detailHeader">
-      <a class="back" href="../skills">← Back to the list of skills</a>
-      <div class="toolbar"></div>
-    </header>
+  </header>
+
+  <div class="wrap pageShell">
+
     <main id="skillRoot" class="skillRoot" aria-live="polite">
       <article class="cardFrame">
         <div class="cardInner">
           <div class="topTitle">
+            <div class="iconBig">
+              <img src="../img/skill/Shield Rush.png" alt="Shield Rush">
+            </div>
             <div>
               <h1 class="skillName">Shield Rush</h1>
-              <div class="skillKind">Skill</div>
               <div class="tagsLine"><span class="tag">Melee</span><span class="tag">Shield</span><span class="tag">Movement</span><span class="tag">Channeling</span><span class="tag">Physical</span></div>
             </div>
           </div>
@@ -67,9 +70,6 @@
               <div class="desc" style="margin-top:10px; font-size:15px; color:#e8e0d4">Charge through crowds of enemies, dealing damage with your shield and leaving destruction in your wake.</div>
               <ul class="stats"><li><b>Skill Level:</b> 1</li><li><b>Cost:</b> Aether 20</li><li><b>Physical Damage:</b> 6 - 10</li><li><b>Cast Speed:</b> 1</li><li><b>Damage Rate:</b> 5</li><li><b>Range:</b> 500</li><li><b>Requirements:</b> Level 10, Shield</li></ul>
               <ul class="effects"><li>+15% Stun Chance</li><li>You gain 23% increased Movement Speed</li><li>Gain +9% of Damage as Extra Physical Damage per 1 Skill Level</li></ul>
-            </div>
-            <div style="display:flex; justify-content:flex-end">
-              <div class="iconBig"><img src="../img/skill/Shield Rush.png" alt="Shield Rush"></div>
             </div>
           </div>
         </div>
@@ -80,19 +80,44 @@
       </article>
     </main>
   </div>
+
   <script>
   (() => {
-    const burger = document.querySelector('.burgerBtn');
-    const overlay = document.querySelector('.navOverlay');
-    const panel = overlay?.querySelector('.navPanel');
-    const closeBtn = overlay?.querySelector('.navClose');
-    if (!burger || !overlay || !panel || !closeBtn) return;
-    const openMenu = () => { overlay.hidden = false; document.body.classList.add('nav-open'); burger.setAttribute('aria-expanded', 'true'); closeBtn.focus(); };
-    const closeMenu = () => { overlay.hidden = true; document.body.classList.remove('nav-open'); burger.setAttribute('aria-expanded', 'false'); burger.focus(); };
-    burger.addEventListener('click', openMenu);
-    closeBtn.addEventListener('click', closeMenu);
-    overlay.addEventListener('click', (e) => { if (e.target === overlay) closeMenu(); });
-    window.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !overlay.hidden) closeMenu(); });
+    const burger = document.getElementById('burgerBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    if (!burger || !mobileNav) return;
+
+    function closeMenu() {
+      mobileNav.classList.remove('is-open');
+      mobileNav.hidden = true;
+      document.body.classList.remove('nav-open');
+      burger.setAttribute('aria-expanded', 'false');
+    }
+
+    function openMenu() {
+      mobileNav.hidden = false;
+      mobileNav.classList.add('is-open');
+      document.body.classList.add('nav-open');
+      burger.setAttribute('aria-expanded', 'true');
+    }
+
+    burger.addEventListener('click', () => {
+      const opened = mobileNav.classList.contains('is-open') && !mobileNav.hidden;
+      opened ? closeMenu() : openMenu();
+    });
+
+    mobileNav.addEventListener('click', (e) => {
+      const link = e.target.closest('a');
+      if (link) closeMenu();
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMenu();
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 820) closeMenu();
+    });
   })();
   </script>
 </body>
