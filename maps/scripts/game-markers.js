@@ -259,7 +259,7 @@ const GAME_MAPS = {
     svg: "../maps/act-1/Rat-Burrow.svg",
     bounds: [[0, 0], [1000, 1000]],
     points: [
-      { type: 'dungeon', y: 289, x: 175, title: 'Putrid Lake', targetMap: 'putridlake', showLabel: true },
+      { type: 'dungeon', y: 813, x: 773, title: 'Putrid Lake', targetMap: 'putridlake', showLabel: true },
     ],
   },
   
@@ -268,7 +268,7 @@ const GAME_MAPS = {
     svg: "../maps/act-1/Rock-Shelter.svg",
     bounds: [[0, 0], [1000, 1000]],
     points: [
-      { type: 'dungeon', y: 289, x: 175, title: 'The Cliffs', targetMap: 'cliffs', showLabel: true },
+      { type: 'dungeon', y: 689, x: 111, title: 'The Cliffs', targetMap: 'cliffs', showLabel: true },
     ],
   },
   
@@ -277,7 +277,7 @@ const GAME_MAPS = {
     svg: "../maps/act-1/Cliff-Temple.svg",
     bounds: [[0, 0], [1000, 1000]],
     points: [
-      { type: 'dungeon', y: 289, x: 175, title: 'The Cliffs', targetMap: 'cliffs', showLabel: true },
+      { type: 'dungeon', y: 227, x: 175, title: 'The Cliffs', targetMap: 'cliffs', showLabel: true },
     ],
   },
   
@@ -286,7 +286,7 @@ const GAME_MAPS = {
     svg: "../maps/act-1/The-Dry-Well.svg",
     bounds: [[0, 0], [1000, 1000]],
     points: [
-      { type: 'dungeon', y: 289, x: 175, title: 'Rugged Plains', targetMap: 'ruggedplains', showLabel: true },
+      { type: 'dungeon', y: 815, x: 769, title: 'Rugged Plains', targetMap: 'ruggedplains', showLabel: true },
     ],
   },
   
@@ -295,7 +295,7 @@ const GAME_MAPS = {
     svg: "../maps/act-1/Armory.svg",
     bounds: [[0, 0], [1000, 1000]],
     points: [
-      { type: 'dungeon', y: 289, x: 175, title: 'Outer Court', targetMap: 'outercourt', showLabel: true },
+      { type: 'dungeon', y: 869, x: 565, title: 'Outer Court', targetMap: 'outercourt', showLabel: true },
     ],
   },
   
@@ -304,7 +304,7 @@ const GAME_MAPS = {
     svg: "../maps/act-1/Abandonded-Cellblock.svg",
     bounds: [[0, 0], [1000, 1000]],
     points: [
-      { type: 'dungeon', y: 289, x: 175, title: 'Outer Court', targetMap: 'outercourt', showLabel: true },
+      { type: 'dungeon', y: 725, x: 861, title: 'Outer Court', targetMap: 'outercourt', showLabel: true },
     ],
   },
 };
