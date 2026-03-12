@@ -2,7 +2,7 @@
 window.addEventListener('DOMContentLoaded', () => {
   const map = L.map('map', { crs: L.CRS.Simple, minZoom: -1, maxZoom: 3 });
 
-	/*	map.on('click', (e) => {
+  /*	map.on('click', (e) => {
 		  console.log(`x: ${Math.round(e.latlng.lng)}, y: ${Math.round(e.latlng.lat)}`);
 		  console.log({ x: e.latlng.lng, y: e.latlng.lat });
 		}); */
@@ -17,6 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
         if (!cfg) return;
 
         currentMapKey = mapKey;
+        history.replaceState(null, '', '?map=' + encodeURIComponent(mapKey));
   		document.getElementById('currentMapTitle').textContent = cfg.title;
   		renderMapSelect(); 
         // overlay
@@ -85,8 +86,17 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
   	mapSelectList.addEventListener('click', (e) => e.stopPropagation());
-		
 
-      setMap('dumping');
+      function getMapFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+        return params.get('map');
+      }
+
+      const urlMap = getMapFromUrl();
+
+      if (urlMap && GAME_MAPS[urlMap]) {
+        setMap(urlMap);
+      } else {
+        setMap('dumping');
+      }
 });
-
