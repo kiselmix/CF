@@ -371,13 +371,17 @@
   background:
     radial-gradient(circle at center, rgba(255,255,255,.02), transparent 55%),
     rgba(255,255,255,.025);
-  overflow: auto;
-  padding: 10px;
+  overflow: hidden;
+  padding: 18px 28px;
+}
+
+.flowchartWrap .flowchartSvg {
+  overflow: visible;
 }
 
 .flowchartInner {
-  min-width: 520px;
-  min-height: 360px;
+  min-width: 0;
+  width: 100%;
 }
 
 .flowchartSvg {
@@ -413,7 +417,7 @@
 
 .flow-node-text {
   fill: #ffffff;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 700;
   text-anchor: middle;
   dominant-baseline: middle;
@@ -525,11 +529,19 @@
       .flowchartWrap {
         padding: 12px;
         border-radius: 18px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
       }
 
       .flowchartInner {
-            min-width:900px;
-			min-height:540px;
+        min-width: 980px;
+        min-height: 620px;
+      }
+
+      .flowchartSvg {
+        width: 980px;
+        max-width: none;
       }
 	  
 		.heroCardLayout{
@@ -666,7 +678,7 @@
 
       <div class="flowchartWrap">
         <div class="flowchartInner">
-          <svg id="act1Flowchart" class="flowchartSvg" viewBox="0 0 640 420" aria-label="Act 1 map flowchart"></svg>
+          <svg id="act1Flowchart" class="flowchartSvg" viewBox="0 0 1060 620" preserveAspectRatio="xMidYMid meet" aria-label="Act 1 map flowchart"></svg>
         </div>
       </div>
 
@@ -773,28 +785,32 @@
   const SVG_NS = 'http://www.w3.org/2000/svg';
 
 const positions = {
-  dumping:         { x: 20,  y: 40  },
-  cache:           { x: 150, y: 40  },
-  castaway:        { x: 150, y: 110 },
-  blackwater:      { x: 280, y: 110 },
-  putridlake:      { x: 410, y: 110 },
-  echoing:         { x: 540, y: 110 },
-
-  wormhole:        { x: 540, y: 40  },
-  cliffs:          { x: 540, y: 180 },
-  veiled:          { x: 410, y: 180 },
-  weavernest:      { x: 540, y: 250 },
-
-  ruggedplains:    { x: 280, y: 180 },
-  holewall:        { x: 150, y: 180 },
-  outercourt:      { x: 150, y: 250 },
-  prisonintake:    { x: 280, y: 250 },
-  experimentation: { x: 410, y: 250 },
-  torturechamber:  { x: 410, y: 320 }
+  dumping:            { x: 40,  y: 60  },
+  cache:              { x: 210, y: 60  },
+  castaway:           { x: 210, y: 150 },
+  blackwater:         { x: 380, y: 150 },
+  putridlake:         { x: 550, y: 150 },
+  ratburrow:          { x: 720, y: 60  },
+  echoing:            { x: 720, y: 150 },
+  wormhole:           { x: 890, y: 60  },
+  cliffs:             { x: 890, y: 150 },
+  rockshelter:        { x: 890, y: 240 },
+  clifftemple:        { x: 890, y: 330 },
+  veiled:             { x: 720, y: 330 },
+  weavernest:         { x: 890, y: 420 },
+  ruggedplains:       { x: 550, y: 330 },
+  thedrywell:         { x: 720, y: 420 },
+  holewall:           { x: 380, y: 330 },
+  outercourt:         { x: 380, y: 420 },
+  abandondedcellblock:{ x: 210, y: 510 },
+  armory:             { x: 380, y: 510 },
+  prisonintake:       { x: 550, y: 510 },
+  experimentation:    { x: 720, y: 510 },
+  torturechamber:     { x: 890, y: 510 }
 };
 
-const nodeWidth = 96;
-const nodeHeight = 34;
+const nodeWidth = 120;
+const nodeHeight = 42;
 
   function getDungeonEdges() {
     const edges = [];
@@ -915,7 +931,7 @@ const nodeHeight = 34;
       if (!mapData) continue;
 
       const link = makeSvgEl('a', {
-        href: `./maps/maps-act-1.html?map=${encodeURIComponent(mapKey)}`,
+        href: `./maps/maps-act-1?map=${encodeURIComponent(mapKey)}`,
         class: 'flow-node-link'
       });
 
