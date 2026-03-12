@@ -97,7 +97,7 @@ const GAME_MAPS = {
 		{ type: 'portal',  y: 763, x: 674, title: 'Portal', desc: 'Fast travel' },
 		{ type: 'dungeon', y: 411, x: 250, title: 'Echoing Grotto', targetMap: 'echoing', showLabel: true },
 		{ type: 'dungeon', y: 213, x: 203, title: 'Blackwater Creek', targetMap: 'blackwater', showLabel: true },
-		{ type: 'dungeon', y: 870, x: 663, title: 'Rat Burrow', showLabel: true },
+		{ type: 'dungeon', y: 870, x: 663, title: 'Rat Burrow', targetMap: 'ratburrow', showLabel: true },
     ],
   },
   
@@ -133,8 +133,8 @@ const GAME_MAPS = {
 		{ type: 'well',  y: 452, x: 564, title: 'Well', desc: 'Refilling flasks', showLabel: true},
 		{ type: 'portal',  y: 88, x: 733, title: 'Portal', desc: 'Fast travel' },
 		{ type: 'dungeon', y: 118, x: 713, title: 'Echoing Grotto', targetMap: 'echoing', showLabel: true },
-		{ type: 'dungeon', y: 532, x: 585, title: 'Rock Shelter', showLabel: true },
-		{ type: 'dungeon', y: 936, x: 427, title: 'Cliff Temple', showLabel: true },
+		{ type: 'dungeon', y: 532, x: 585, title: 'Rock Shelter', targetMap: 'rockshelter', showLabel: true }, 
+		{ type: 'dungeon', y: 936, x: 427, title: 'Cliff Temple', targetMap: 'clifftemple', showLabel: true }, 
 		{ type: 'dungeon', y: 933, x: 702, title: 'The Veiled Passage', targetMap: 'veiled', showLabel: true },
     ],
   },
@@ -212,8 +212,8 @@ const GAME_MAPS = {
 		{ type: 'well',  y: 863, x: 480, title: 'Well', desc: 'Refilling flasks', showLabel: true},
 		{ type: 'portal',  y: 597, x: 473, title: 'Portal', desc: 'Fast travel' },
 		{ type: 'dungeon', y: 85, x: 607, title: 'Hole In The Wall', targetMap: 'holewall', showLabel: true },
-		{ type: 'dungeon', y: 407, x: 654, title: 'Abandonded Cellblock', showLabel: true },
-		{ type: 'dungeon', y: 753, x: 244, title: 'Armory', showLabel: true },
+		{ type: 'dungeon', y: 407, x: 654, title: 'Abandonded Cellblock', targetMap: 'abandondedcellblock', showLabel: true },
+		{ type: 'dungeon', y: 753, x: 244, title: 'Armory', targetMap: 'armory', showLabel: true },
 		{ type: 'dungeon', y: 943, x: 759, title: 'The Prison Intake', targetMap: 'prisonintake', showLabel: true },
     ],
   },
@@ -251,6 +251,60 @@ const GAME_MAPS = {
 		{ type: 'dungeon', y: 233, x: 931, title: 'Experimentation Ward', targetMap: 'experimentation', showLabel: true },
 		{ type: 'dungeon', y: 670, x: 58, title: 'Outer Court', targetMap: 'outercourt', showLabel: true },
 		{ type: 'boss',  y: 624, x: 103, title: 'Boss', desc: 'Boss', showLabel: true},
+    ],
+  },
+  
+  ratburrow: {
+    title: "Rat Burrow",
+    svg: "../maps/act-1/Rat-Burrow.svg",
+    bounds: [[0, 0], [1000, 1000]],
+    points: [
+      { type: 'dungeon', y: 289, x: 175, title: 'Putrid Lake', targetMap: 'putridlake', showLabel: true },
+    ],
+  },
+  
+  rockshelter: {
+    title: "Rock Shelter",
+    svg: "../maps/act-1/Rock-Shelter.svg",
+    bounds: [[0, 0], [1000, 1000]],
+    points: [
+      { type: 'dungeon', y: 289, x: 175, title: 'The Cliffs', targetMap: 'cliffs', showLabel: true },
+    ],
+  },
+  
+  clifftemple: {
+    title: "Cliff Temple",
+    svg: "../maps/act-1/Cliff-Temple.svg",
+    bounds: [[0, 0], [1000, 1000]],
+    points: [
+      { type: 'dungeon', y: 289, x: 175, title: 'The Cliffs', targetMap: 'cliffs', showLabel: true },
+    ],
+  },
+  
+  thedrywell: {
+    title: "The Dry Well",
+    svg: "../maps/act-1/The-Dry-Well.svg",
+    bounds: [[0, 0], [1000, 1000]],
+    points: [
+      { type: 'dungeon', y: 289, x: 175, title: 'Rugged Plains', targetMap: 'ruggedplains', showLabel: true },
+    ],
+  },
+  
+   armory: {
+    title: "Armory",
+    svg: "../maps/act-1/Armory.svg",
+    bounds: [[0, 0], [1000, 1000]],
+    points: [
+      { type: 'dungeon', y: 289, x: 175, 'Outer Court', targetMap: 'outercourt', showLabel: true },
+    ],
+  },
+  
+   abandondedcellblock: {
+    title: "Abandonded Cellblock",
+    svg: "../maps/act-1/Abandonded-Cellblock.svg",
+    bounds: [[0, 0], [1000, 1000]],
+    points: [
+      { type: 'dungeon', y: 289, x: 175, title: 'Outer Court', targetMap: 'outercourt', showLabel: true },
     ],
   },
 };
@@ -334,7 +388,7 @@ function createMarkerSystem({ map, points, onPortalClick, sidebarRoot }) {
     `;
     marker.bindPopup(popupHtml);
 
-    // Важно: кликабельный только portal
+
     if (p.type === 'dungeon' && p.targetMap && typeof onPortalClick === 'function') {
       marker.on('click', () => onPortalClick(p.targetMap));
     }
