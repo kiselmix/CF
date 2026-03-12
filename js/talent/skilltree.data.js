@@ -18,7 +18,7 @@ window.SKILLTREE_DATA = {
       "cost": 1,
       "title": "Technomancer",
       "desc": "Technomancers are enigmatic hybrids of human and crow, wielding steampunk staffs infused with aether.",
-      "icon": "Technomancer.png"
+      "icon": "/img/talent/Technomancer.png"
     },
     {
       "id": "n2",
@@ -30,7 +30,7 @@ window.SKILLTREE_DATA = {
       "cost": 1,
       "title": "Knight",
       "desc": "The Knight class is a powerful hybrid of human and lion, specializing in melee combat with blades and shields.",
-      "icon": "Knight.png"
+      "icon": "/img/talent/Knight.png"
     },
     {
       "id": "n3",
@@ -42,7 +42,7 @@ window.SKILLTREE_DATA = {
       "cost": 1,
       "title": "Rogue",
       "desc": "Rogues are mutated foxes adept at dealing consistent damage from close or long range with pistols, rifles and shotguns.",
-      "icon": "Rogue.png"
+      "icon": "/img/talent/Rogue.png"
     },
     {
       "id": "n4",
