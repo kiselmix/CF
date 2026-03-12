@@ -1,34 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-<url>
-<loc>https://crystalfall.fun/quests/a-new-path</loc>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-
-<url>
-<loc>https://crystalfall.fun/quests/the-breach-engine</loc>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-
-<url>
-<loc>https://crystalfall.fun/quests/the-breach-engine-reforged</loc>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-
-<url>
-<loc>https://crystalfall.fun/quests/caught-in-a-web</loc>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-
-<url>
-<loc>https://crystalfall.fun/quests/free-alden</loc>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-
+  <url>
+    <loc>https://crystalfall.fun/quests.html</loc>
+  </url>
+  <url>
+    <loc>https://crystalfall.fun/quests/a-new-path</loc>
+  </url>
+  <url>
+    <loc>https://crystalfall.fun/quests/the-breach-engine</loc>
+  </url>
+  <url>
+    <loc>https://crystalfall.fun/quests/the-breach-engine-reforged</loc>
+  </url>
+  <url>
+    <loc>https://crystalfall.fun/quests/caught-in-a-web</loc>
+  </url>
+  <url>
+    <loc>https://crystalfall.fun/quests/free-alden</loc>
+  </url>
 </urlset>

@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
+    <loc>https://crystalfall.fun/skills.html</loc>
+  </url>
+</urlset>
+
+<url>
 <loc>https://crystalfall.fun/skills/fire-bolt</loc>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
