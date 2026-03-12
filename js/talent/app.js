@@ -71,6 +71,22 @@
     return img;
   }
 
+  const nodeIconCache = new Map();
+  function getNodeIcon(src) {
+    if (!src) return null;
+    const cleanSrc = String(src).trim();
+    if (!cleanSrc) return null;
+
+    if (!nodeIconCache.has(cleanSrc)) {
+      const img = new Image();
+      img.onload = () => { try { render(); } catch {} };
+      img.onerror = () => { console.warn('Failed to load node icon:', cleanSrc); };
+      img.src = cleanSrc;
+      nodeIconCache.set(cleanSrc, img);
+    }
+    return nodeIconCache.get(cleanSrc);
+  }
+
   const START_IDS = ['n1','n2','n3'];
 
   // ---- Precompute bounds for character placement ----
@@ -336,11 +352,34 @@
         ctx.rect(p.x - s/2, p.y - s/2, s, s);
         ctx.fill();
         ctx.stroke();
+
+        const icon = getNodeIcon(n.icon);
+        if (icon && icon.complete && icon.naturalWidth > 0) {
+          const inset = Math.max(2, s * 0.08);
+          ctx.save();
+          ctx.beginPath();
+          ctx.rect(p.x - s/2 + inset, p.y - s/2 + inset, s - inset * 2, s - inset * 2);
+          ctx.clip();
+          ctx.drawImage(icon, p.x - s/2 + inset, p.y - s/2 + inset, s - inset * 2, s - inset * 2);
+          ctx.restore();
+        }
       } else {
         ctx.beginPath();
         ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
         ctx.fill();
         ctx.stroke();
+
+        const icon = getNodeIcon(n.icon);
+        if (icon && icon.complete && icon.naturalWidth > 0) {
+          const inset = Math.max(2, r * 0.12);
+          const size = Math.max(0, (r - inset) * 2);
+          ctx.save();
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, Math.max(0, r - inset), 0, Math.PI * 2);
+          ctx.clip();
+          ctx.drawImage(icon, p.x - size / 2, p.y - size / 2, size, size);
+          ctx.restore();
+        }
       }
     }
 
