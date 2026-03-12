@@ -179,7 +179,7 @@ const GAME_MAPS = {
 		{ type: 'portal',  y: 88, x: 733, title: 'Portal', desc: 'Fast travel' },
 		{ type: 'dungeon', y: 67, x: 778, title: 'The Veiled Passage', targetMap: 'veiled', showLabel: true },
 		{ type: 'dungeon', y: 956, x: 430, title: "Hole In The Wall", targetMap: 'holewall', showLabel: true },
-		{ type: 'dungeon', y: 346, x: 650, title: 'The Dry Well', showLabel: true },
+		{ type: 'dungeon', y: 346, x: 650, title: 'The Dry Well', targetMap: 'thedrywell',showLabel: true },
     ],
   },
   
@@ -295,7 +295,7 @@ const GAME_MAPS = {
     svg: "../maps/act-1/Armory.svg",
     bounds: [[0, 0], [1000, 1000]],
     points: [
-      { type: 'dungeon', y: 289, x: 175, 'Outer Court', targetMap: 'outercourt', showLabel: true },
+      { type: 'dungeon', y: 289, x: 175, title: 'Outer Court', targetMap: 'outercourt', showLabel: true },
     ],
   },
   
@@ -384,7 +384,7 @@ function createMarkerSystem({ map, points, onPortalClick, sidebarRoot }) {
     const popupHtml = `
       <div class="popup-title">${escapeHtml(p.title)}</div>
       ${p.desc ? `<div class="popup-desc">${escapeHtml(p.desc)}</div>` : ''}
-      ${p.type === 'dungeon' && p.targetMap ? `<div style="margin-top:8px; font-size:12px; opacity:.75;">Клик по маркеру переключит карту</div>` : ''}
+      ${p.type === 'dungeon' && p.targetMap ? `<div style="margin-top:8px; font-size:12px; opacity:.75;">Clicking on the marker will switch the map</div>` : ''}
     `;
     marker.bindPopup(popupHtml);
 
