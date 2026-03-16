@@ -379,7 +379,7 @@
         }
       } else if (n.type === 'major') {
         const frameImg = isUnlocked(n.id) ? majorNodeFrameImg.active : majorNodeFrameImg.inactive;
-        const frameSize = r * 3;
+        const frameSize = r * 3.2;
         const frameReady = frameImg && frameImg.complete && frameImg.naturalWidth > 0;
 
         if (frameReady) {
@@ -431,7 +431,7 @@
         }
       } else if (n.type === 'keystone') {
         const frameImg = isUnlocked(n.id) ? keystoneNodeFrameImg.active : keystoneNodeFrameImg.inactive;
-        const frameSize = r * 2.6;
+        const frameSize = r * 3.4;
         const frameReady = frameImg && frameImg.complete && frameImg.naturalWidth > 0;
 
         if (frameReady) {
