@@ -405,7 +405,7 @@
         }
       } else if (n.type === 'minor') {
         const frameImg = isUnlocked(n.id) ? minorNodeFrameImg.active : minorNodeFrameImg.inactive;
-        const frameSize = r * 2.8;
+        const frameSize = r * 2.4;
         const frameReady = frameImg && frameImg.complete && frameImg.naturalWidth > 0;
 
         if (frameReady) {
