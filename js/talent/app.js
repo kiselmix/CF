@@ -370,7 +370,7 @@
         }
       } else if (n.type === 'major') {
         const frameImg = isUnlocked(n.id) ? majorNodeFrameImg.active : majorNodeFrameImg.inactive;
-        const frameSize = r * 3,4;
+        const frameSize = r * 3.4;
         const frameReady = frameImg && frameImg.complete && frameImg.naturalWidth > 0;
 
         if (frameReady) {
