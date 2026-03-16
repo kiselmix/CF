@@ -277,7 +277,7 @@
     }
 
     if (state.startId && START_IDS.includes(n.id) && n.id !== state.startId) return 'rgba(255,120,120,1)';
-    if (canUnlock(n.id)) return 'rgba(120,170,255,.85)';
+    if (canUnlock(n.id)) return 'rgba(120,170,255,.55)';
     return 'rgba(110,120,150,.40)';
   }
 
