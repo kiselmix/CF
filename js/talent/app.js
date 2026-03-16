@@ -271,7 +271,7 @@
   function nodeColor(n) {
     if (isUnlocked(n.id)) {
       if (n.type === 'keystone') return 'rgba(255,210,120,.95)';
-      if (n.type === 'start') return 'rgba(160,220,255,.95)';
+      if (n.type === 'start') return 'rgba(160,220,255,1)';
       if (n.type === 'square') return 'rgba(190,255,190,.95)';
       return 'rgba(190,200,255,.92)';
     }
