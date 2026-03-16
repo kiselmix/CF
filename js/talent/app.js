@@ -64,11 +64,6 @@
     n3: loadImage('/img/talent/char_Rogue.webp'),
     all: loadImage('/img/talent/char_all.webp'),
   };
-
-  const majorNodeFrameImg = {
-    active: loadImage('/img/talent/frame_node_major_active.png'),
-    inactive: loadImage('/img/talent/frame_node_major_inactive.png'),
-  };
   function loadImage(src) {
     const img = new Image();
     img.onload = () => { try { render(); } catch {} };
@@ -366,31 +361,6 @@
           ctx.rect(p.x - s/2 + inset, p.y - s/2 + inset, s - inset * 2, s - inset * 2);
           ctx.clip();
           ctx.drawImage(icon, p.x - s/2 + inset, p.y - s/2 + inset, s - inset * 2, s - inset * 2);
-          ctx.restore();
-        }
-      } else if (n.type === 'major') {
-        const frameImg = isUnlocked(n.id) ? majorNodeFrameImg.active : majorNodeFrameImg.inactive;
-        const frameSize = r * 2.6;
-        const frameReady = frameImg && frameImg.complete && frameImg.naturalWidth > 0;
-
-        if (frameReady) {
-          ctx.drawImage(frameImg, p.x - frameSize / 2, p.y - frameSize / 2, frameSize, frameSize);
-        } else {
-          ctx.beginPath();
-          ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
-          ctx.fill();
-          ctx.stroke();
-        }
-
-        const icon = getNodeIcon(n.icon);
-        if (icon && icon.complete && icon.naturalWidth > 0) {
-          const iconRadius = r * 0.92;
-          const size = iconRadius * 2;
-          ctx.save();
-          ctx.beginPath();
-          ctx.arc(p.x, p.y, iconRadius, 0, Math.PI * 2);
-          ctx.clip();
-          ctx.drawImage(icon, p.x - size / 2, p.y - size / 2, size, size);
           ctx.restore();
         }
       } else {
