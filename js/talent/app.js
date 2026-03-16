@@ -271,7 +271,7 @@
   function nodeColor(n) {
     if (isUnlocked(n.id)) {
       if (n.type === 'keystone') return 'rgba(255,210,120,.95)';
-      if (n.type === 'start') return 'rgba(160,220,255,1)';
+      if (n.type === 'start') return 'rgba(160,220,255,.95)';
       if (n.type === 'square') return 'rgba(190,255,190,.95)';
       return 'rgba(190,200,255,.92)';
     }
@@ -431,7 +431,7 @@
         }
       } else if (n.type === 'keystone') {
         const frameImg = isUnlocked(n.id) ? keystoneNodeFrameImg.active : keystoneNodeFrameImg.inactive;
-        const frameSize = r * 2.4;
+        const frameSize = r * 2.6;
         const frameReady = frameImg && frameImg.complete && frameImg.naturalWidth > 0;
 
         if (frameReady) {
