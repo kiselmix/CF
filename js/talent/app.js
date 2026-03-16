@@ -73,6 +73,10 @@
     active: loadImage('/img/talent/frame_node_minor_active.png'),
     inactive: loadImage('/img/talent/frame_node_minor_inactive.png'),
   };
+  const keystoneNodeFrameImg = {
+    active: loadImage('/img/talent/frame_node_singular_active.png'),
+    inactive: loadImage('/img/talent/frame_node_singular_inactive.png'),
+  };
   function loadImage(src) {
     const img = new Image();
     img.onload = () => { try { render(); } catch {} };
@@ -414,6 +418,31 @@
         const icon = getNodeIcon(n.icon);
         if (icon && icon.complete && icon.naturalWidth > 0) {
           const iconRadius = r * 0.8;
+          const size = iconRadius * 2;
+          ctx.save();
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, iconRadius, 0, Math.PI * 2);
+          ctx.clip();
+          ctx.drawImage(icon, p.x - size / 2, p.y - size / 2, size, size);
+          ctx.restore();
+        }
+      } else if (n.type === 'keystone') {
+        const frameImg = isUnlocked(n.id) ? keystoneNodeFrameImg.active : keystoneNodeFrameImg.inactive;
+        const frameSize = r * 3.2;
+        const frameReady = frameImg && frameImg.complete && frameImg.naturalWidth > 0;
+
+        if (frameReady) {
+          ctx.drawImage(frameImg, p.x - frameSize / 2, p.y - frameSize / 2, frameSize, frameSize);
+        } else {
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.stroke();
+        }
+
+        const icon = getNodeIcon(n.icon);
+        if (icon && icon.complete && icon.naturalWidth > 0) {
+          const iconRadius = r * 0.78;
           const size = iconRadius * 2;
           ctx.save();
           ctx.beginPath();
