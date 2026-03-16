@@ -370,7 +370,7 @@
         if (icon && icon.complete && icon.naturalWidth > 0) {
           const inset = Math.max(2, s * 0.08);
           ctx.save();
-          if (!isUnlocked(n.id)) ctx.globalAlpha = 0.5;
+          if (!isUnlocked(n.id)) ctx.globalAlpha = 1;
           ctx.beginPath();
           ctx.rect(p.x - s/2 + inset, p.y - s/2 + inset, s - inset * 2, s - inset * 2);
           ctx.clip();
@@ -396,7 +396,7 @@
           const iconRadius = r * 0.92;
           const size = iconRadius * 2;
           ctx.save();
-          if (!isUnlocked(n.id)) ctx.globalAlpha = 0.5;
+          if (!isUnlocked(n.id)) ctx.globalAlpha = 0.3;
           ctx.beginPath();
           ctx.arc(p.x, p.y, iconRadius, 0, Math.PI * 2);
           ctx.clip();
@@ -422,7 +422,7 @@
           const iconRadius = r * 0.8;
           const size = iconRadius * 2;
           ctx.save();
-          if (!isUnlocked(n.id)) ctx.globalAlpha = 0.5;
+          if (!isUnlocked(n.id)) ctx.globalAlpha = 0.3;
           ctx.beginPath();
           ctx.arc(p.x, p.y, iconRadius, 0, Math.PI * 2);
           ctx.clip();
@@ -448,7 +448,7 @@
           const iconRadius = r * 0.78;
           const size = iconRadius * 2;
           ctx.save();
-          if (!isUnlocked(n.id)) ctx.globalAlpha = 0.5;
+          if (!isUnlocked(n.id)) ctx.globalAlpha = 0.3;
           ctx.beginPath();
           ctx.arc(p.x, p.y, iconRadius, 0, Math.PI * 2);
           ctx.clip();
@@ -466,7 +466,7 @@
           const inset = Math.max(2, r * 0.12);
           const size = Math.max(0, (r - inset) * 2);
           ctx.save();
-          if (!isUnlocked(n.id)) ctx.globalAlpha = 0.5;
+          if (!isUnlocked(n.id)) ctx.globalAlpha = 0.3;
           ctx.beginPath();
           ctx.arc(p.x, p.y, Math.max(0, r - inset), 0, Math.PI * 2);
           ctx.clip();
