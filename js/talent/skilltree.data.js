@@ -423,7 +423,7 @@ window.SKILLTREE_DATA = {
       "cost": 1,
       "title": "Minor Node",
       "desc": "5% increased Skill Duration",
-      "icon": ""
+      "icon": "/img/talent/icon_talent_minor_cooldown.png"
     },
     {
       "id": "n37",
@@ -459,7 +459,7 @@ window.SKILLTREE_DATA = {
       "cost": 1,
       "title": "Minor Node",
       "desc": "5% increased Skill Duration",
-      "icon": ""
+      "icon": "/img/talent/icon_talent_minor_cooldown.png"
     },
     {
       "id": "n40",
@@ -471,7 +471,7 @@ window.SKILLTREE_DATA = {
       "cost": 1,
       "title": "Minor Node",
       "desc": "5% increased Skill Duration",
-      "icon": ""
+      "icon": "/img/talent/icon_talent_minor_cooldown.png"
     },
     {
       "id": "n41",
@@ -1959,7 +1959,7 @@ window.SKILLTREE_DATA = {
       "cost": 1,
       "title": "Minor Node",
       "desc": "+5 Intelligence",
-      "icon": ""
+      "icon": "/img/talent/icon_intelligence.png"
     },
     {
       "id": "n165",
@@ -2283,7 +2283,7 @@ window.SKILLTREE_DATA = {
       "cost": 1,
       "title": "Minor Node",
       "desc": "+5 Intelligence",
-      "icon": ""
+      "icon": "/img/talent/icon_intelligence.png"
     },
     {
       "id": "n192",
@@ -3615,7 +3615,7 @@ window.SKILLTREE_DATA = {
       "cost": 1,
       "title": "Minor Node",
       "desc": "+5 Dexterity",
-      "icon": ""
+      "icon": "/img/talent/icon_target.png"
     },
     {
       "id": "n303",
@@ -4395,7 +4395,7 @@ window.SKILLTREE_DATA = {
       "cost": 1,
       "title": "Minor Node",
       "desc": "5% increased Maximum Life",
-      "icon": ""
+      "icon": "/img/talent/icon_talent_minor_life.png"
     },
     {
       "id": "n368",
@@ -4407,7 +4407,7 @@ window.SKILLTREE_DATA = {
       "cost": 1,
       "title": "Minor Node",
       "desc": "5% increased Maximum Life",
-      "icon": ""
+      "icon": "/img/talent/icon_talent_minor_life.png"
     },
     {
       "id": "n369",
@@ -6759,7 +6759,7 @@ window.SKILLTREE_DATA = {
       "cost": 1,
       "title": "Minor Node",
       "desc": "10% increased Physical Damage",
-      "icon": ""
+      "icon": "/img/talent/icon_talent_minor_critical_hit_chance.png"
     },
     {
       "id": "n565",
@@ -6771,7 +6771,7 @@ window.SKILLTREE_DATA = {
       "cost": 1,
       "title": "Minor Node",
       "desc": "10% increased Physical Damage",
-      "icon": ""
+      "icon": "/img/talent/icon_talent_minor_critical_hit_chance.png"
     },
     {
       "id": "n566",
@@ -7671,7 +7671,7 @@ window.SKILLTREE_DATA = {
       "cost": 1,
       "title": "Minor Node",
       "desc": "+1% of Fire Damage leeched as Aether",
-      "icon": ""
+      "icon": "/img/talent/icon_fire.png"
     },
     {
       "id": "n641",
@@ -7743,19 +7743,19 @@ window.SKILLTREE_DATA = {
       "cost": 1,
       "title": "Minor Node",
       "desc": "2% decreased Skill Resource Cost with Melee Skills",
-      "icon": ""
+      "icon": "/img/talent/icon_talent_minor_aether.png"
     },
     {
       "id": "n647",
       "x": -108,
       "y": 607,
       "size": "m",
-      "r": 26,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Powerhouse",
       "desc": "5% decreased Skill Resource Cost with Melee Skills\n5% increased Action Speed",
-      "icon": ""
+      "icon": "/img/talent/icon_talent_minor_aether.png"
     },
     {
       "id": "n648",
@@ -7767,7 +7767,7 @@ window.SKILLTREE_DATA = {
       "cost": 1,
       "title": "Minor Node",
       "desc": "3% decreased Skill Resource Cost with Melee Skills",
-      "icon": ""
+      "icon": "/img/talent/icon_talent_minor_aether.png"
     },
     {
       "id": "n649",
@@ -7807,27 +7807,27 @@ window.SKILLTREE_DATA = {
     },
     {
       "id": "n652",
-      "x": -289,
-      "y": 512,
+      "x": -288,
+      "y": 513,
       "size": "s",
       "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
       "desc": "Gain +1 Aether on Hit",
-      "icon": ""
+      "icon": "/img/talent/icon_talent_minor_aether.png"
     },
     {
       "id": "n653",
       "x": -288,
       "y": 418,
       "size": "m",
-      "r": 26,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Striker",
       "desc": "Gain +1 Aether on Hit\nGain +10 Aether on Critical Hit",
-      "icon": ""
+      "icon": "/img/talent/icon_talent_minor_aether.png"
     },
     {
       "id": "n654",
@@ -8127,7 +8127,7 @@ window.SKILLTREE_DATA = {
       "cost": 1,
       "title": "Minor Node",
       "desc": "+5 Dexterity",
-      "icon": ""
+      "icon": "/img/talent/icon_dexterity.png"
     },
     {
       "id": "n679",
@@ -9783,7 +9783,7 @@ window.SKILLTREE_DATA = {
       "cost": 1,
       "title": "Minor Node",
       "desc": "1% decreased Skill Cooldown",
-      "icon": ""
+      "icon": "/img/talent/icon_talent_minor_cooldown.png"
     },
     {
       "id": "n817",
@@ -9795,19 +9795,19 @@ window.SKILLTREE_DATA = {
       "cost": 1,
       "title": "Minor Node",
       "desc": "1% decreased Skill Cooldown",
-      "icon": ""
+      "icon": "/img/talent/icon_talent_minor_cooldown.png"
     },
     {
       "id": "n818",
       "x": 938,
       "y": 510,
       "size": "m",
-      "r": 26,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Blackguard",
       "desc": "3% decreased Skill Cooldown\n5% decreased Skill Resource Cost with Cooldown Skills\nGain +5 Life on Kill",
-      "icon": ""
+      "icon": "/img/talent/icon_talent_minor_cooldown.png"
     },
     {
       "id": "n819",
@@ -10455,7 +10455,7 @@ window.SKILLTREE_DATA = {
       "cost": 1,
       "title": "Minor Node",
       "desc": "10% increased Physical Damage",
-      "icon": ""
+      "icon": "/img/talent/icon_physical.png"
     },
     {
       "id": "n873",
