@@ -69,6 +69,10 @@
     active: loadImage('/img/talent/frame_node_major_active.png'),
     inactive: loadImage('/img/talent/frame_node_major_inactive.png'),
   };
+  const minorNodeFrameImg = {
+    active: loadImage('/img/talent/frame_node_minor_active.png'),
+    inactive: loadImage('/img/talent/frame_node_minor_inactive.png'),
+  };
   function loadImage(src) {
     const img = new Image();
     img.onload = () => { try { render(); } catch {} };
@@ -385,6 +389,31 @@
         const icon = getNodeIcon(n.icon);
         if (icon && icon.complete && icon.naturalWidth > 0) {
           const iconRadius = r * 0.92;
+          const size = iconRadius * 2;
+          ctx.save();
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, iconRadius, 0, Math.PI * 2);
+          ctx.clip();
+          ctx.drawImage(icon, p.x - size / 2, p.y - size / 2, size, size);
+          ctx.restore();
+        }
+      } else if (n.type === 'minor') {
+        const frameImg = isUnlocked(n.id) ? minorNodeFrameImg.active : minorNodeFrameImg.inactive;
+        const frameSize = r * 3.4;
+        const frameReady = frameImg && frameImg.complete && frameImg.naturalWidth > 0;
+
+        if (frameReady) {
+          ctx.drawImage(frameImg, p.x - frameSize / 2, p.y - frameSize / 2, frameSize, frameSize);
+        } else {
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.stroke();
+        }
+
+        const icon = getNodeIcon(n.icon);
+        if (icon && icon.complete && icon.naturalWidth > 0) {
+          const iconRadius = r * 0.8;
           const size = iconRadius * 2;
           ctx.save();
           ctx.beginPath();
