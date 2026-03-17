@@ -33,41 +33,53 @@
 <noscript><div><img src="https://mc.yandex.ru/watch/107727914" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"ItemList",
-    "name":"Crystalfall Builds & Guides",
-    "url":"https://crystalfall.fun/build-and-guide",
-    "description":"Collection of Crystalfall community builds and guides with links to detailed pages.",
-    "numberOfItems":4,
-    "itemListElement":[
-      {
-        "@type":"ListItem",
-        "position":1,
-        "url":"https://crystalfall.fun/build-and-guide/best-knight-build-level-50",
-        "name":"Best Knight Whirlwind Build (Level 50)"
-      },
-      {
-        "@type":"ListItem",
-        "position":2,
-        "url":"https://crystalfall.fun/build-and-guide/best-rogue-build-level-50",
-        "name":"Best Rogue Build Level 50"
-      },
-      {
-        "@type":"ListItem",
-        "position":3,
-        "url":"https://crystalfall.fun/build-and-guide/best-technomancer-build-level-50",
-        "name":"Best Technomancer Build Level 50"
-      },
-      {
-        "@type":"ListItem",
-        "position":4,
-        "url":"https://crystalfall.fun/build-and-guide/spin-2-win-infinite-sustain",
-        "name":"Spin 2 Win Infinite Sustain"
-      }
-    ]
-  }
-  </script>
+{
+  "@context":"https://schema.org",
+  "@type":"ItemList",
+  "name":"Crystalfall Builds & Guides",
+  "url":"https://crystalfall.fun/build-and-guide",
+  "description":"Collection of Crystalfall community builds and guides with links to detailed pages.",
+  "numberOfItems":6,
+  "itemListElement":[
+    {
+      "@type":"ListItem",
+      "position":1,
+      "url":"https://crystalfall.fun/skill-upgrade-guide",
+      "name":"How to Upgrade Skills"
+    },
+    {
+      "@type":"ListItem",
+      "position":2,
+      "url":"https://crystalfall.fun/gear-upgrade-guide",
+      "name":"How to Upgrade Equipment and Weapons"
+    },
+    {
+      "@type":"ListItem",
+      "position":3,
+      "url":"https://crystalfall.fun/build-and-guide/best-knight-build-level-50",
+      "name":"Best Knight Whirlwind Build Level 50"
+    },
+    {
+      "@type":"ListItem",
+      "position":4,
+      "url":"https://crystalfall.fun/build-and-guide/best-rogue-build-level-50",
+      "name":"Best Rogue Build Level 50"
+    },
+    {
+      "@type":"ListItem",
+      "position":5,
+      "url":"https://crystalfall.fun/build-and-guide/best-technomancer-build-level-50",
+      "name":"Best Technomancer Build Level 50"
+    },
+    {
+      "@type":"ListItem",
+      "position":6,
+      "url":"https://crystalfall.fun/build-and-guide/spin-2-win-infinite-sustain",
+      "name":"Spin 2 Win Infinite Sustain"
+    }
+  ]
+}
+</script>
 
   <script type="application/ld+json">
   {
@@ -795,6 +807,8 @@
       <section class="seoBlock">
         <h2>Build and guide pages</h2>
         <div class="linkGrid">
+			<a href="/build-and-guide/gear-upgrade-guide">How to Upgrade Equipment and Weapons in Crystalfall</a>
+			<a href="/build-and-guide/skill-upgrade-guide">How to Upgrade and Level Skills in Crystalfall</a>
           <a href="/build-and-guide/best-knight-build-level-50">Best Knight Whirlwind Build Level 50</a>
           <a href="/build-and-guide/best-rogue-build-level-50">Best Rogue Build Level 50</a>
           <a href="/build-and-guide/best-technomancer-build-level-50">Best Technomancer Build Level 50</a>
@@ -806,9 +820,30 @@
 
   <script>
     const BUILD_GUIDE_ITEMS = [
-      {
+      
+	  {
+		  id: 0,
+		  title: "How to Upgrade Equipment and Weapons",
+		  url: "/gear-upgrade-guide",
+		  type: "Guide",
+		  author: "CrystalFall",
+		  description: "Complete guide on upgrading gear, rarity, affixes, sockets and crafting system.",
+		  tags: ["Guide"],
+		  updated: "Guide"
+		},
+		{
+		  id: -1,
+		  title: "How to Upgrade Skills",
+		  url: "/skill-upgrade-guide",
+		  type: "Guide",
+		  author: "CrystalFall",
+		  description: "Full guide on upgrading skills, rarity progression and Tinkerbox system.",
+		  tags: ["Guide"],
+		  updated: "Guide"
+		},
+	  {
         id: 1,
-        title: "Best Knight Whirlwind Build (Level 50)",
+        title: "Best Knight Whirlwind Build Level 50",
         url: "/build-and-guide/best-knight-build-level-50",
         type: "Build",
         author: "ALI",
