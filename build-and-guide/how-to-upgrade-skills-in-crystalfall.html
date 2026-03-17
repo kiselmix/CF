@@ -1355,49 +1355,35 @@ Mastering this system is essential for endgame builds and optimization.
 
 
   <script>
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImage = document.getElementById('lightboxImage');
-    const lightboxCaption = document.getElementById('lightboxCaption');
-    const lightboxClose = document.getElementById('lightboxClose');
-    const lightboxBackdrop = document.getElementById('lightboxBackdrop');
-    const gearImageButtons = document.querySelectorAll('.gear-image-button');
+    const burgerBtn = document.getElementById('burgerBtn');
+    const mobileNav = document.getElementById('mobileNav');
 
-    function openLightbox(src, caption, altText) {
-      lightboxImage.src = src;
-      lightboxImage.alt = altText || caption || 'Expanded image';
-      lightboxCaption.textContent = caption || '';
-      lightbox.classList.add('is-open');
-      lightbox.setAttribute('aria-hidden', 'false');
-      document.body.classList.add('lightbox-open');
-    }
-
-    function closeLightbox() {
-      lightbox.classList.remove('is-open');
-      lightbox.setAttribute('aria-hidden', 'true');
-      lightboxImage.src = '';
-      lightboxImage.alt = '';
-      lightboxCaption.textContent = '';
-      document.body.classList.remove('lightbox-open');
-    }
-
-    gearImageButtons.forEach((button) => {
-      button.addEventListener('click', () => {
-        const src = button.dataset.fullImage || '';
-        const caption = button.dataset.caption || '';
-        const img = button.querySelector('img');
-        const altText = img ? img.alt : '';
-        openLightbox(src, caption, altText);
+    if (burgerBtn && mobileNav) {
+      burgerBtn.addEventListener('click', () => {
+        const isOpen = mobileNav.classList.toggle('open');
+        burgerBtn.classList.toggle('is-open', isOpen);
+        burgerBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
       });
-    });
 
-    lightboxClose.addEventListener('click', closeLightbox);
-    lightboxBackdrop.addEventListener('click', closeLightbox);
+      document.addEventListener('click', (e) => {
+        const clickedInsideNav = mobileNav.contains(e.target);
+        const clickedBurger = burgerBtn.contains(e.target);
 
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && lightbox.classList.contains('is-open')) {
-        closeLightbox();
-      }
-    });
+        if (!clickedInsideNav && !clickedBurger) {
+          mobileNav.classList.remove('open');
+          burgerBtn.classList.remove('is-open');
+          burgerBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 820) {
+          mobileNav.classList.remove('open');
+          burgerBtn.classList.remove('is-open');
+          burgerBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
   </script>
 
 </body>
