@@ -1224,7 +1224,7 @@
   <p>
     To upgrade your skills, you must first unlock the <strong>Tinkerbox</strong>.
     It becomes available after completing the quest:
-    <strong>"The Breach Engine Reforged"</strong>.
+    <a href="/quests/the-breach-engine-reforged" target="_blank" rel="noopener">"The Breach Engine Reforged"</a>.
   </p>
 
   <img src="/img/guide/upgrade-skills/upgrade-skills-1.png" alt="Inventory crafting button">
@@ -1284,7 +1284,7 @@ This option allows you to upgrade skill rarity from:
 </ul>
 
 <p>
-All module recipes can be found in the <strong>Fusing</strong> section.
+All module recipes can be found in the <a href="/fusing" target="_blank" rel="noopener">Fusing</a> section.
 </p>
 
 <img src="/img/guide/upgrade-skills/upgrade-skills-4.png" alt="Upgrade rarity UI">
@@ -1293,7 +1293,7 @@ All module recipes can be found in the <strong>Fusing</strong> section.
 <div class="guide-card">
 <h3>2. Shuffle Skill Row</h3>
 <p>
-This option allows you to reroll nodes inside a selected row. Starting from the third row, you can get nodes when shuffling that are hidden, since your rarity is not fully upgraded.
+This option allows you to reroll nodes inside a selected row. Starting from the third row (Rare rarity), you can get nodes when shuffling that are hidden, since your rarity is not fully upgraded.
 </p>
 
 <ul>
@@ -1303,7 +1303,7 @@ This option allows you to reroll nodes inside a selected row. Starting from the 
 </ul>
 
 <p>
-This is useful for optimizing builds and improving node combinations.
+More information about this mechanic on the <a href="/skill-leveling" target="_blank" rel="noopener">Skill Leveling</a> page.
 </p>
 
 <img src="/img/guide/upgrade-skills/upgrade-skills-5.png" alt="Shuffle skill row">
@@ -1352,6 +1352,53 @@ Mastering this system is essential for endgame builds and optimization.
 
 </div>
 </main>
+
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const lightboxClose = document.getElementById('lightboxClose');
+    const lightboxBackdrop = document.getElementById('lightboxBackdrop');
+    const gearImageButtons = document.querySelectorAll('.gear-image-button');
+
+    function openLightbox(src, caption, altText) {
+      lightboxImage.src = src;
+      lightboxImage.alt = altText || caption || 'Expanded image';
+      lightboxCaption.textContent = caption || '';
+      lightbox.classList.add('is-open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('lightbox-open');
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('is-open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxImage.src = '';
+      lightboxImage.alt = '';
+      lightboxCaption.textContent = '';
+      document.body.classList.remove('lightbox-open');
+    }
+
+    gearImageButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const src = button.dataset.fullImage || '';
+        const caption = button.dataset.caption || '';
+        const img = button.querySelector('img');
+        const altText = img ? img.alt : '';
+        openLightbox(src, caption, altText);
+      });
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightboxBackdrop.addEventListener('click', closeLightbox);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('is-open')) {
+        closeLightbox();
+      }
+    });
+  </script>
 
 </body>
 </html>
