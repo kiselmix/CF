@@ -111,15 +111,37 @@ p{line-height:1.7;color:#cfdcf3;}
   background:#0d1828;
   border:1px solid rgba(143,173,214,.15);
 }
+
 .class-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:24px;
-  align-items:center;
+  align-items:start;
 }
 .class-img{
   max-width:100%;
 }
+
+.class-img-wrap{
+  position: relative;
+  height: 100%;
+  min-height: 700px; /* подстрой под высоту секции */
+  overflow: hidden;
+  align-self: stretch;
+}
+
+.class-img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  object-fit: contain;
+  object-position: top center;
+  will-change: transform;
+}
+
 .list{padding-left:18px;}
 .list li{margin-bottom:8px;}
 @media(max-width:800px){
@@ -1048,21 +1070,7 @@ p{line-height:1.7;color:#cfdcf3;}
   font-size:14px;
 }
 
-.class-img-wrap{
-  position: relative;
-  height: 500px;
-  overflow: hidden;
-}
 
-.class-img{
-  position: absolute;
-  top: -60px;
-  left: 0;
-  width: 100%;
-  height: calc(100% + 120px);
-  object-fit: cover;
-  will-change: transform;
-}
 
     @media (max-width:900px){
       .intro-grid{
@@ -1516,22 +1524,32 @@ Even when playing as a Кnight you can choose a pistol, or when playing as a Rog
   </script>
   
 <script>
-const parallaxItems = document.querySelectorAll('.class-img-wrap');
-
 function updateParallax() {
-  const windowHeight = window.innerHeight;
+  const wraps = document.querySelectorAll('.class-img-wrap');
 
-  parallaxItems.forEach((wrap) => {
+  wraps.forEach((wrap) => {
     const img = wrap.querySelector('.class-img');
     if (!img) return;
 
     const rect = wrap.getBoundingClientRect();
+    const wrapHeight = wrap.offsetHeight;
+    const imgHeight = img.offsetHeight;
 
-    if (rect.top < windowHeight && rect.bottom > 0) {
-      const progress = (windowHeight - rect.top) / (windowHeight + rect.height);
-      const move = progress * 80; 
-      img.style.transform = `translateY(${move}px)`;
+    const maxMove = Math.max(0, imgHeight - wrapHeight);
+    if (maxMove <= 0) {
+      img.style.transform = 'translateY(0px)';
+      return;
     }
+
+    const viewportHeight = window.innerHeight;
+    const start = viewportHeight;
+    const end = -rect.height;
+
+    let progress = (start - rect.top) / (start - end);
+    progress = Math.max(0, Math.min(1, progress));
+
+    const move = progress * maxMove;
+    img.style.transform = `translateY(${move}px)`;
   });
 }
 
