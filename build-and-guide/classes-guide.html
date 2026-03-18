@@ -1048,6 +1048,20 @@ p{line-height:1.7;color:#cfdcf3;}
   font-size:14px;
 }
 
+.class-img-wrap {
+  position: relative;
+  height: 420px; /* высота блока (контейнера) */
+  overflow: hidden;
+}
+
+.class-img {
+  position: sticky;
+  top: 100px; /* отступ от верха (под хедер подстрой) */
+  
+  width: 100%;
+  height: auto;
+}
+
     @media (max-width:900px){
       .intro-grid{
         grid-template-columns:1fr;
@@ -1211,10 +1225,11 @@ p{line-height:1.7;color:#cfdcf3;}
 <div class="wrap">
 
 <section class="hero">
-<h1>Crystalfall Classes Guide</h1>
+<h1>Crystalfall Classes Guide: Knight, Rogue, and Technomancer</h1>
 <p>
-Explore the three core classes in Crystalfall — Knight, Rogue, and Technomancer.
-Learn their strengths, playstyles, and how to optimize them using the Talent Tree system.
+In the world of Crystalfall, choosing the right class defines your entire gameplay experience. Whether you prefer brutal melee combat, agile ranged damage, or mystical steampunk power, the three core archetypes — Knight, Rogue, and Technomancer — offer unique playstyles supported by deep Talent Tree customization.
+<br><br>
+This guide explores each class in detail, including abilities, strengths, and how to optimize them through the Talent Tree system.
 </p>
 </section>
 
@@ -1228,28 +1243,46 @@ Learn their strengths, playstyles, and how to optimize them using the Talent Tre
 The Knight is a powerful hybrid of human and lion, specializing in close combat with blades and shields.
 This class excels at survivability and sustained melee damage.
 </p>
-
+<br>
+<p><strong>Key Features</strong></p>
 <ul class="list">
-<li>High defense and block chance</li>
-<li>Strong melee scaling</li>
-<li>Excellent survivability</li>
+<li>High survivability (Defense, Block Chance, Life)</li>
+<li>Strong melee damage scaling</li>
+<li>Crowd control via stun mechanics</li>
+<li>Shield-based defensive bonuses</li>
 </ul>
 
-<p><strong>Best Talent Focus:</strong></p>
+<p><strong>Talent Tree Focus</strong></p>
+<p>The Knight Talent Tree emphasizes <strong>physical damage and survivability scaling</strong>. Early nodes grant:</p>
 <ul class="list">
-<li>Physical Damage</li>
-<li>Defense & Block</li>
-<li>Strength scaling</li>
+<li>Increased Physical Damage (+10–20%)</li>
+<li>Bonus Defense and Block Chance</li>
+<li>Strength attributes for scaling melee output</li>
 </ul>
 
-<p>
-Key nodes like <strong>Heavy Hitter</strong> and <strong>Tank</strong> dramatically increase durability and damage.
-</p>
+<p>Important nodes include:</p>
+<ul class="list">
+<li><strong>Heavy Hitter</strong> → boosts raw melee damage</li>
+<li><strong>Hardhead</strong> → critical mitigation + defense</li>
+<li><strong>Tank</strong> → massive defensive scaling with shield</li>
+<li><strong>With Might and Main (Keystone)</strong> → converts resource usage into damage scaling</li>
+</ul>
+
+<p><strong>Playstyle</strong></p>
+<p>Knights excel in:</p>
+<ul class="list">
+<li>Frontline tanking</li>
+<li>Sustained DPS in melee range</li>
+<li>Absorbing heavy damage while controlling enemies</li>
+</ul>
+<p><strong>Best for</strong>: players who prefer durability and direct combat engagement.</p>
+
+
 
 </div>
 
-<div>
-<img src="/img/lion-knight-class-fade.webp" alt="Knight class" class="class-img">
+<div class="class-img-wrap">
+  <img src="/img/lion-knight-class-fade.webp" alt="Knight class" class="class-img">
 </div>
 
 </div>
@@ -1264,27 +1297,47 @@ Key nodes like <strong>Heavy Hitter</strong> and <strong>Tank</strong> dramatica
 </div>
 
 <div>
-<h2>Rogue – Agile Ranged DPS</h2>
+<h2>Rogue Class – The Agile Fox Assassin</h2>
 <p>
-Rogues are mutated foxes capable of dealing consistent damage at any range using firearms.
-They rely on speed, precision, and mobility.
+Rogues are mutated fox hybrids specializing in <strong>consistent damage output</strong> at both close and long range. 
+They wield pistols, rifles, and shotguns, making them one of the most versatile damage dealers.
 </p>
-
+<br>
+<p><strong>Key Features</strong></p>
 <ul class="list">
-<li>High mobility and dodge</li>
-<li>Flexible ranged combat</li>
-<li>Strong sustained DPS</li>
+<li>High mobility and dodge chance</li>
+<li>Flexible ranged and close combat</li>
+<li>Sustained DPS with weapon scaling</li>
+<li>Critical and precision-based gameplay</li>
 </ul>
 
-<p><strong>Best Talent Focus:</strong></p>
+<p><strong>Talent Tree Focus</strong></p>
+<p>The Rogue Talent Tree revolves around:</p>
 <ul class="list">
 <li>Attack Speed</li>
-<li>Dexterity</li>
-<li>Weapon specialization</li>
+<li>Dexterity scaling</li>
+<li>Weapon specialization (dual wield, ranged)</li>
+<li>Mobility and dodge mechanics</li>
+</ul>
+
+<p>Notable progression nodes include:</p>
+<ul class="list">
+<li><strong>Ambidexterity</strong> → dual-wield attack speed bonus</li>
+<li><strong>Footwork</strong> → movement speed + melee range</li>
+<li><strong>Balance and Stability</strong> → dodge + resource generation</li>
+<li>Various nodes boosting attack speed and weapon damage</li>
+</ul>
+
+<p><strong>Playstyle</strong></p>
+<p>Rogues excel at:</p>
+<ul class="list">
+<li>Hit-and-run tactics</li>
+<li>Sustained ranged damage</li>
+<li>High mobility combat</li>
 </ul>
 
 <p>
-Nodes like <strong>Ambidexterity</strong> and <strong>Footwork</strong> enhance speed and damage output.
+<strong>Best for</strong>: players who prefer speed, precision, and flexible combat range. 
 </p>
 
 </div>
@@ -1297,27 +1350,46 @@ Nodes like <strong>Ambidexterity</strong> and <strong>Footwork</strong> enhance 
 <div class="class-grid">
 
 <div>
-<h2>Technomancer – Aether Hybrid Caster</h2>
+<h2>Technomancer Class – The Aether-Wielding Hybrid</h2>
 <p>
-Technomancers are mysterious human-crow hybrids using steampunk staffs powered by aether.
-They combine magic, technology, and elemental damage.
+TTechnomancers are mysterious hybrids of human and crow, harnessing <strong>steampunk staffs infused with aether energy</strong>. This class blends magic, technology, and resource management into a unique playstyle.
 </p>
-
+<br>
+<p><strong>Key Features</strong></p>
 <ul class="list">
 <li>Aether-based resource system</li>
-<li>Elemental damage scaling</li>
-<li>Strong utility skills</li>
+<li>Elemental and hybrid damage scaling</li>
+<li>Strong utility and area effects</li>
+<li>Skill duration and cooldown manipulation</li>
 </ul>
 
-<p><strong>Best Talent Focus:</strong></p>
+<p><strong>Talent Tree Focus</strong></p>
+<p>The Technomancer Talent Tree emphasizes:</p>
 <ul class="list">
 <li>Aether regeneration</li>
-<li>Elemental conversion</li>
-<li>Cooldown & duration</li>
+<li>Elemental damage conversion (Fire, Cold, Lightning)</li>
+<li>Skill efficiency (cooldowns, duration)</li>
+<li>Hybrid scaling between physical and elemental damage</li>
+</ul>
+
+<p>Key nodes include:</p>
+<ul class="list">
+<li><strong>Meditation Technique</strong> → boosts aether regeneration and skill duration</li>
+<li><strong>Generator</strong> → converts physical damage into lightning</li>
+<li><strong>Firestarter / Firekeeper</strong> → fire damage and burn scaling</li>
+<li><strong>Shock Trooper</strong> → lightning penetration and speed bonuses</li>
+</ul>
+
+<p><strong>Playstyle</strong></p>
+<p>Technomancers are ideal for:</p>
+<ul class="list">
+<li>Strategic, ability-driven gameplay</li>
+<li>Area damage and elemental effects</li>
+<li>Resource optimization builds</li>
 </ul>
 
 <p>
-Important nodes include <strong>Meditation Technique</strong> and <strong>Generator</strong>.
+<strong>Best for</strong>: players who enjoy complex mechanics and hybrid builds.
 </p>
 
 </div>
@@ -1329,7 +1401,7 @@ Important nodes include <strong>Meditation Technique</strong> and <strong>Genera
 </div>
 </section>
 
-<!-- TALENT TREE -->
+
 <section class="panel">
 <h2>Talent Tree System</h2>
 
@@ -1338,9 +1410,9 @@ Each class starts from a unique node in the Talent Tree and expands through conn
 </p>
 
 <ul class="list">
-<li><strong>Minor nodes</strong> – small stat bonuses</li>
-<li><strong>Major nodes</strong> – strong upgrades</li>
-<li><strong>Keystones</strong> – build-defining mechanics</li>
+<li><strong>Minor nodes</strong> – small stat bonuses (damage, defense, aether, etc.)</li>
+<li><strong>Major nodes</strong> – impactful upgrades (build-defining bonuses)</li>
+<li><strong>Keystones</strong> – game-changing mechanics</li>
 </ul>
 
 <p>
@@ -1353,14 +1425,49 @@ Use the Talent Tree builder to experiment with different setups.
 <section class="panel">
 <h2>Which Class Should You Choose?</h2>
 
-<ul class="list">
-<li><strong>Knight</strong> → Tanky melee fighter</li>
-<li><strong>Rogue</strong> → Fast ranged DPS</li>
-<li><strong>Technomancer</strong> → Hybrid caster</li>
-</ul>
+<div style="overflow-x:auto; margin:16px 0;">
+<table style="width:100%; border-collapse:collapse; font-size:14px;">
+  <thead>
+    <tr style="background:rgba(98,208,255,.08);">
+      <th style="padding:12px; border:1px solid rgba(143,173,214,.14); text-align:left;">Class</th>
+      <th style="padding:12px; border:1px solid rgba(143,173,214,.14); text-align:left;">Difficulty</th>
+      <th style="padding:12px; border:1px solid rgba(143,173,214,.14); text-align:left;">Damage Type</th>
+      <th style="padding:12px; border:1px solid rgba(143,173,214,.14); text-align:left;">Playstyle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding:12px; border:1px solid rgba(143,173,214,.14);">Knight</td>
+      <td style="padding:12px; border:1px solid rgba(143,173,214,.14);">Easy</td>
+      <td style="padding:12px; border:1px solid rgba(143,173,214,.14);">Physical (Melee)</td>
+      <td style="padding:12px; border:1px solid rgba(143,173,214,.14);">Tank / Bruiser</td>
+    </tr>
+    <tr>
+      <td style="padding:12px; border:1px solid rgba(143,173,214,.14);">Rogue</td>
+      <td style="padding:12px; border:1px solid rgba(143,173,214,.14);">Medium</td>
+      <td style="padding:12px; border:1px solid rgba(143,173,214,.14);">Physical (Ranged)</td>
+      <td style="padding:12px; border:1px solid rgba(143,173,214,.14);">Agile DPS</td>
+    </tr>
+    <tr>
+      <td style="padding:12px; border:1px solid rgba(143,173,214,.14);">Technomancer</td>
+      <td style="padding:12px; border:1px solid rgba(143,173,214,.14);">Hard</td>
+      <td style="padding:12px; border:1px solid rgba(143,173,214,.14);">Elemental / Aether</td>
+      <td style="padding:12px; border:1px solid rgba(143,173,214,.14);">Hybrid / Strategic Caster</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
+</section>
+
+<section class="panel">
+<h2>Final Thoughts</h2>
 <p>
-Your choice depends on your preferred playstyle, but the Talent Tree allows deep customization for any build.
+Your choice depends on your preferred playstyle, but the <strong>Talent Tree and Skills</strong> allows deep customization for any build. 
+Whether you want an unbreakable Knight, a deadly Rogue, or a versatile Technomancer, success depends on how you navigate and optimize your progression path.
+<br>
+Mastering your class means understanding not just abilities — but how every node, bonus, and keystone interacts within your build.
+Even when playing as a Кnight you can choose a pistol, or when playing as a Rogue — sword and shield.
 </p>
 
 </section>
