@@ -1048,18 +1048,20 @@ p{line-height:1.7;color:#cfdcf3;}
   font-size:14px;
 }
 
-.class-img-wrap {
+.class-img-wrap{
   position: relative;
-  height: 420px; /* высота блока (контейнера) */
+  height: 500px; /* регулируешь */
   overflow: hidden;
 }
 
-.class-img {
-  position: sticky;
-  top: 100px; /* отступ от верха (под хедер подстрой) */
-  
+.class-img{
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
+  height: 120%; /* больше контейнера для движения */
+  object-fit: cover;
+  will-change: transform;
 }
 
     @media (max-width:900px){
@@ -1292,7 +1294,7 @@ This class excels at survivability and sustained melee damage.
 <section class="panel">
 <div class="class-grid">
 
-<div>
+<div class="class-img-wrap">
 <img src="/img/fox-class-fade.webp" alt="Rogue class" class="class-img">
 </div>
 
@@ -1394,7 +1396,7 @@ TTechnomancers are mysterious hybrids of human and crow, harnessing <strong>stea
 
 </div>
 
-<div>
+<div class="class-img-wrap">
 <img src="/img/crow-technomancer-class-fade.webp" alt="Technomancer class" class="class-img">
 </div>
 
@@ -1509,6 +1511,22 @@ Even when playing as a Кnight you can choose a pistol, or when playing as a Rog
       });
     }
   </script>
+  
+  <script>
+const img = document.querySelector('.class-img');
+const wrap = document.querySelector('.class-img-wrap');
+
+window.addEventListener('scroll', () => {
+  const rect = wrap.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
+
+  if(rect.top < windowHeight && rect.bottom > 0){
+    const progress = (windowHeight - rect.top) / (windowHeight + rect.height);
+    const move = progress * 100; // сила эффекта
+    img.style.transform = `translateY(${move}px)`;
+  }
+});
+</script>
 
 </body>
 </html>
