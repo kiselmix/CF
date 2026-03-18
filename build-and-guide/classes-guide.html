@@ -136,6 +136,8 @@ p{line-height:1.7;color:#cfdcf3;}
   object-fit: contain;
   object-position: top right;
   will-change: transform;
+  backface-visibility: hidden;
+  transform: translate3d(0,0,0);
 }
 
 .list{padding-left:18px;}
@@ -1521,22 +1523,36 @@ Even when playing as a Кnight you can choose a pistol, or when playing as a Rog
   </script>
   
 <script>
-function updateParallax() {
+const parallaxItems = [];
+
+function setupParallax() {
   document.querySelectorAll('.panel').forEach((panel) => {
     const wrap = panel.querySelector('.class-img-wrap');
     const img = panel.querySelector('.class-img');
 
     if (!wrap || !img) return;
 
-    const panelRect = panel.getBoundingClientRect();
-    const panelHeight = panel.offsetHeight;
-    const wrapHeight = wrap.offsetHeight;
-    const imgHeight = img.offsetHeight;
+    parallaxItems.push({
+      panel,
+      wrap,
+      img,
+      currentY: 0,
+      targetY: 0
+    });
+  });
+}
+
+function updateParallaxTargets() {
+  parallaxItems.forEach((item) => {
+    const panelRect = item.panel.getBoundingClientRect();
+    const panelHeight = item.panel.offsetHeight;
+    const wrapHeight = item.wrap.offsetHeight;
+    const imgHeight = item.img.offsetHeight;
 
     const maxMove = Math.max(0, imgHeight - wrapHeight);
 
     if (maxMove <= 0) {
-      img.style.transform = 'translateY(0px)';
+      item.targetY = 0;
       return;
     }
 
@@ -1545,13 +1561,55 @@ function updateParallax() {
     let progress = (-panelRect.top) / scrollRange;
     progress = Math.max(0, Math.min(1, progress));
 
-    img.style.transform = `translateY(${progress * maxMove}px)`;
+    item.targetY = progress * maxMove;
   });
 }
 
-window.addEventListener('scroll', updateParallax, { passive: true });
-window.addEventListener('resize', updateParallax);
-window.addEventListener('load', updateParallax);
+function animateParallax() {
+  let needsNextFrame = false;
+
+  parallaxItems.forEach((item) => {
+    item.currentY += (item.targetY - item.currentY) * 0.08;
+
+    if (Math.abs(item.targetY - item.currentY) < 0.1) {
+      item.currentY = item.targetY;
+    } else {
+      needsNextFrame = true;
+    }
+
+    item.img.style.transform = `translateY(${item.currentY}px)`;
+  });
+
+  if (needsNextFrame) {
+    requestAnimationFrame(animateParallax);
+  }
+}
+
+let ticking = false;
+
+function onScroll() {
+  updateParallaxTargets();
+
+  if (!ticking) {
+    ticking = true;
+    requestAnimationFrame(() => {
+      animateParallax();
+      ticking = false;
+    });
+  }
+}
+
+setupParallax();
+updateParallaxTargets();
+window.addEventListener('scroll', onScroll, { passive: true });
+window.addEventListener('resize', () => {
+  updateParallaxTargets();
+  animateParallax();
+});
+window.addEventListener('load', () => {
+  updateParallaxTargets();
+  animateParallax();
+});
 </script>
 
 </body>
