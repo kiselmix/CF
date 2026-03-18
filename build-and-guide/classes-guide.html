@@ -121,7 +121,6 @@ p{line-height:1.7;color:#cfdcf3;}
 
 .class-img-wrap{
   position: relative;
-  min-height: 700px;
   height: 100%;
   overflow: hidden;
   align-self: stretch;
@@ -132,9 +131,9 @@ p{line-height:1.7;color:#cfdcf3;}
   top: 0;
   left: 0;
   width: 100%;
-  height: calc(100% + 500px); 
+  height: calc(100% + 300px); /* запас */
   object-fit: contain;
-  object-position: top center;
+  object-position: top right;
   will-change: transform;
 }
 
@@ -404,6 +403,7 @@ p{line-height:1.7;color:#cfdcf3;}
       box-shadow:var(--shadow);
       overflow:hidden;
       margin-bottom:22px;
+	  position: relative;
     }
 
     .panel-head{
@@ -1521,25 +1521,26 @@ Even when playing as a Кnight you can choose a pistol, or when playing as a Rog
   
 <script>
 function updateParallax() {
-  document.querySelectorAll('.class-img-wrap').forEach((wrap) => {
-    const img = wrap.querySelector('.class-img');
-    if (!img) return;
+  document.querySelectorAll('.panel').forEach((panel) => {
+    const wrap = panel.querySelector('.class-img-wrap');
+    const img = panel.querySelector('.class-img');
 
-    const rect = wrap.getBoundingClientRect();
-    const wrapHeight = wrap.offsetHeight;
+    if (!wrap || !img) return;
+
+    const panelRect = panel.getBoundingClientRect();
+
+    const panelHeight = panel.offsetHeight;
     const imgHeight = img.offsetHeight;
 
-    const maxMove = Math.max(0, imgHeight - wrapHeight);
+    const maxMove = Math.max(0, imgHeight - wrap.offsetHeight);
 
     if (maxMove <= 0) {
-      img.style.transform = 'translateY(0px)';
+      img.style.transform = 'translateY(0)';
       return;
     }
 
-    const start = 0; // когда верх блока коснулся верха экрана
-    const end = window.innerHeight - rect.height; // когда низ блока дошёл до низа экрана
-
-    let progress = (start - rect.top) / (start - end);
+    // Прогресс строго внутри panel
+    let progress = (-panelRect.top) / panelHeight;
     progress = Math.max(0, Math.min(1, progress));
 
     const move = progress * maxMove;
