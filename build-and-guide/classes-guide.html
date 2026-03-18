@@ -124,6 +124,7 @@ p{line-height:1.7;color:#cfdcf3;}
   height: 100%;
   overflow: hidden;
   align-self: stretch;
+  min-height: 100%;
 }
 
 .class-img{
@@ -131,7 +132,7 @@ p{line-height:1.7;color:#cfdcf3;}
   top: 0;
   left: 0;
   width: 100%;
-  height: calc(100% + 300px); /* запас */
+  height: calc(100% + 400px);
   object-fit: contain;
   object-position: top right;
   will-change: transform;
@@ -1528,23 +1529,23 @@ function updateParallax() {
     if (!wrap || !img) return;
 
     const panelRect = panel.getBoundingClientRect();
-
     const panelHeight = panel.offsetHeight;
+    const wrapHeight = wrap.offsetHeight;
     const imgHeight = img.offsetHeight;
 
-    const maxMove = Math.max(0, imgHeight - wrap.offsetHeight);
+    const maxMove = Math.max(0, imgHeight - wrapHeight);
 
     if (maxMove <= 0) {
-      img.style.transform = 'translateY(0)';
+      img.style.transform = 'translateY(0px)';
       return;
     }
 
-    // Прогресс строго внутри panel
-    let progress = (-panelRect.top) / panelHeight;
+    const scrollRange = Math.max(1, panelHeight - window.innerHeight);
+
+    let progress = (-panelRect.top) / scrollRange;
     progress = Math.max(0, Math.min(1, progress));
 
-    const move = progress * maxMove;
-    img.style.transform = `translateY(${move}px)`;
+    img.style.transform = `translateY(${progress * maxMove}px)`;
   });
 }
 
