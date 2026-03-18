@@ -124,8 +124,7 @@ p{line-height:1.7;color:#cfdcf3;}
 
 .class-img-wrap{
   position: relative;
-  height: 100%;
-  min-height: 700px; /* подстрой под высоту секции */
+  min-height: 700px;
   overflow: hidden;
   align-self: stretch;
 }
@@ -135,8 +134,7 @@ p{line-height:1.7;color:#cfdcf3;}
   top: 0;
   left: 0;
   width: 100%;
-  height: auto;
-  min-height: 100%;
+  height: calc(100% + 220px);
   object-fit: contain;
   object-position: top center;
   will-change: transform;
@@ -1532,24 +1530,13 @@ function updateParallax() {
     if (!img) return;
 
     const rect = wrap.getBoundingClientRect();
-    const wrapHeight = wrap.offsetHeight;
-    const imgHeight = img.offsetHeight;
-
-    const maxMove = Math.max(0, imgHeight - wrapHeight);
-    if (maxMove <= 0) {
-      img.style.transform = 'translateY(0px)';
-      return;
-    }
-
     const viewportHeight = window.innerHeight;
-    const start = viewportHeight;
-    const end = -rect.height;
 
-    let progress = (start - rect.top) / (start - end);
+    let progress = (viewportHeight - rect.top) / (viewportHeight + rect.height);
     progress = Math.max(0, Math.min(1, progress));
 
-    const move = progress * maxMove;
-    img.style.transform = `translateY(${move}px)`;
+    const maxMove = 220; // столько пикселей картинка проезжает вниз
+    img.style.transform = `translateY(${progress * maxMove}px)`;
   });
 }
 
