@@ -1569,7 +1569,7 @@ function animateParallax() {
   let needsNextFrame = false;
 
   parallaxItems.forEach((item) => {
-    item.currentY += (item.targetY - item.currentY) * 0.08;
+    item.currentY += (item.targetY - item.currentY) * 0.06;
 
     if (Math.abs(item.targetY - item.currentY) < 0.1) {
       item.currentY = item.targetY;
