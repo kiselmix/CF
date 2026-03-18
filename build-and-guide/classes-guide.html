@@ -122,6 +122,7 @@ p{line-height:1.7;color:#cfdcf3;}
 .class-img-wrap{
   position: relative;
   min-height: 700px;
+  height: 100%;
   overflow: hidden;
   align-self: stretch;
 }
@@ -131,7 +132,7 @@ p{line-height:1.7;color:#cfdcf3;}
   top: 0;
   left: 0;
   width: 100%;
-  height: calc(100% + 220px);
+  height: calc(100% + 260px); /* запас для движения */
   object-fit: contain;
   object-position: top center;
   will-change: transform;
@@ -1520,20 +1521,29 @@ Even when playing as a Кnight you can choose a pistol, or when playing as a Rog
   
 <script>
 function updateParallax() {
-  const wraps = document.querySelectorAll('.class-img-wrap');
-
-  wraps.forEach((wrap) => {
+  document.querySelectorAll('.class-img-wrap').forEach((wrap) => {
     const img = wrap.querySelector('.class-img');
     if (!img) return;
 
     const rect = wrap.getBoundingClientRect();
-    const viewportHeight = window.innerHeight;
+    const wrapHeight = wrap.offsetHeight;
+    const imgHeight = img.offsetHeight;
 
-    let progress = (viewportHeight - rect.top) / (viewportHeight + rect.height);
+    const maxMove = Math.max(0, imgHeight - wrapHeight);
+
+    if (maxMove <= 0) {
+      img.style.transform = 'translateY(0px)';
+      return;
+    }
+
+    const start = 0; // когда верх блока коснулся верха экрана
+    const end = window.innerHeight - rect.height; // когда низ блока дошёл до низа экрана
+
+    let progress = (start - rect.top) / (start - end);
     progress = Math.max(0, Math.min(1, progress));
 
-    const maxMove = 220; // столько пикселей картинка проезжает вниз
-    img.style.transform = `translateY(${progress * maxMove}px)`;
+    const move = progress * maxMove;
+    img.style.transform = `translateY(${move}px)`;
   });
 }
 
