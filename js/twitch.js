@@ -9,7 +9,7 @@
       const res = await fetch('https://twitch-api.crystalfall.workers.dev/?channel=' + encodeURIComponent(channel));
       const data = await res.json();
 
-      if (!data.live) return;
+      widget.hidden = false;
 
       widget.hidden = false;
 
