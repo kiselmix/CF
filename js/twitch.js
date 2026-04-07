@@ -68,7 +68,7 @@
         return;
       }
 
-      const data = await res.json();
+      const data = { live: true };
       console.log('Twitch live check:', data);
 
       if (data.live !== true) {
