@@ -2,20 +2,47 @@
   const channel = 'kiselmix69';
   const parent = 'crystalfall.fun';
 
+  const STORAGE_KEY = 'twitch_widget_closed_until';
+  const HIDE_FOR_MS = 60 * 60 * 1000; // 1 hour
+
   let player = null;
-  let isClosed = false;
+
+  function isTemporarilyClosed() {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return false;
+
+    const closedUntil = Number(raw);
+    if (!Number.isFinite(closedUntil)) {
+      localStorage.removeItem(STORAGE_KEY);
+      return false;
+    }
+
+    if (Date.now() >= closedUntil) {
+      localStorage.removeItem(STORAGE_KEY);
+      return false;
+    }
+
+    return true;
+  }
+
+  function closeForOneHour() {
+    localStorage.setItem(STORAGE_KEY, String(Date.now() + HIDE_FOR_MS));
+  }
 
   async function init() {
     const widget = document.getElementById('twitchWidget');
     const mount = document.getElementById('twitchPlayerMount');
-    const muteBtn = document.getElementById('twitchMuteBtn');
-    const pauseBtn = document.getElementById('twitchPauseBtn');
     const closeBtn = document.getElementById('twitchCloseBtn');
 
-    if (!widget || !mount || !muteBtn || !pauseBtn || !closeBtn) return;
+    if (!widget || !mount || !closeBtn) return;
+
+    if (isTemporarilyClosed()) {
+      widget.hidden = true;
+      return;
+    }
 
     closeBtn.addEventListener('click', () => {
-      isClosed = true;
+      closeForOneHour();
       widget.hidden = true;
 
       if (player) {
@@ -25,35 +52,9 @@
           console.error('Pause on close failed', e);
         }
       }
-    });
 
-    muteBtn.addEventListener('click', () => {
-      if (!player) return;
-
-      try {
-        const muted = player.getMuted();
-        player.setMuted(!muted);
-        muteBtn.textContent = muted ? '🔊 Sound' : '🔇 Sound';
-      } catch (e) {
-        console.error('Mute toggle failed', e);
-      }
-    });
-
-    pauseBtn.addEventListener('click', () => {
-      if (!player) return;
-
-      try {
-        const paused = player.isPaused();
-        if (paused) {
-          player.play();
-          pauseBtn.textContent = '⏸ Pause';
-        } else {
-          player.pause();
-          pauseBtn.textContent = '▶ Play';
-        }
-      } catch (e) {
-        console.error('Pause toggle failed', e);
-      }
+      mount.innerHTML = '';
+      player = null;
     });
 
     try {
@@ -67,12 +68,11 @@
         return;
       }
 
-      const data = { live: true };
+      const data = await res.json();
       console.log('Twitch live check:', data);
 
-      if (data.live !== true || isClosed) {
+      if (data.live !== true) {
         widget.hidden = true;
-        mount.innerHTML = '';
         return;
       }
 
@@ -86,16 +86,6 @@
           parent: [parent],
           muted: true,
           autoplay: true
-        });
-
-        player.addEventListener(Twitch.Player.READY, () => {
-          try {
-            player.setMuted(true);
-            muteBtn.textContent = '🔇 Sound';
-            pauseBtn.textContent = '⏸ Pause';
-          } catch (e) {
-            console.error('Player ready init failed', e);
-          }
         });
       });
     } catch (e) {
