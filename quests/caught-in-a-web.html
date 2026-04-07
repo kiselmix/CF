@@ -31,6 +31,9 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/107727914" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+
+<link rel="stylesheet" href="/css/twitch.css">
+
 </head>
 <body>
   <header class="siteHeader">
@@ -161,5 +164,19 @@
     });
   })();
   </script>
+  
+  
+  <div id="twitchWidget" class="twitch-widget" hidden>
+  <div class="twitch-widget__toolbar">
+    <div class="twitch-widget__spacer"></div>
+    <button id="twitchCloseBtn" class="twitch-widget__btn" type="button">✕ Close</button>
+  </div>
+
+  <div id="twitchPlayerMount" class="twitch-widget__player"></div>
+</div>
+
+<script src="https://player.twitch.tv/js/embed/v1.js"></script>
+<script src="/js/twitch.js" defer></script>
+  
 </body>
 </html>
