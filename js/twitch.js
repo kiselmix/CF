@@ -9,9 +9,11 @@
       const res = await fetch('https://twitch-api.crystalfall.workers.dev/?channel=' + encodeURIComponent(channel));
       const data = await res.json();
 
-      if (!data.live) return;
+     // if (!data.live) return;
 
       widget.hidden = false;
+	  
+	  const data = { live: true };
 
       new Twitch.Player('twitchPlayerMount', {
         width: '100%',
