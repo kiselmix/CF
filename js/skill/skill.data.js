@@ -161,6 +161,29 @@ window.skill = [
     sort: 55,
   },
   
+    {
+  id: "Disintegrate",
+  name: "Disintegrate",
+  icon: "img/skill/Disintegrate.png",
+  tags: ["Spell", "Aether", "Channeling", "Beam", "DoT"],
+  type: "Skill",
+  description: "Channel an aether beam that builds up damage over time and explodes slain enemies.",
+  stats: {
+    skillLevel: 1,
+    cost: "Aether 15",
+    aetherDamage: "9 - 15",
+    castSpeed: 1,
+    range: 15,
+    requirements: "Level 18, Rod or Staff"
+  },
+  effects: [
+    "Adds 1 to 2 Aether Damage per 20 Intelligence",
+    "8% increased Aether Damage per 1 Skill Level"
+  ],
+  video: {},
+  sort: 56
+},
+  
   {
     id: "Piercing-Shot",
     name: "Piercing Shot",
@@ -343,6 +366,98 @@ window.skill = [
 	},
     sort: 120,
   },
+  
+  
+{
+  id: "Lightning-Bolt",
+  name: "Lightning Bolt",
+  icon: "img/skill/Lightning Bolt.png",
+  tags: ["Ranged", "Projectile", "Lightning"],
+  type: "Skill",
+  description: "Discharge a bolt of lightning that chains to additional targets.",
+  stats: {
+    skillLevel: 1,
+    cost: "Aether 15",
+    projectileSpeed: 25,
+    requirements: "Level 18, Rifle or Pistol"
+  },
+  effects: [
+    "+50% Physical Damage converted to Lightning",
+    "+166% Chain Chance",
+    "+8% Extra Lightning Damage per level"
+  ],
+  video: {},
+  sort: 121
+},
+
+{
+  id: "Pyro-Bullet",
+  name: "Pyro Bullet",
+  icon: "img/skill/Pyro Bullet.png",
+  tags: ["Ranged", "Projectile", "Fire"],
+  type: "Skill",
+  description: "Fire enhanced bullets that ignite enemies.",
+  stats: {
+    skillLevel: 1,
+    cost: "Aether 15",
+    projectileSpeed: 25,
+    requirements: "Level 18, Rifle or Pistol"
+  },
+  effects: [
+    "+50% Physical Damage converted to Fire",
+    "Increased Burn Chance",
+    "+6% Extra Fire Damage per level"
+  ],
+  video: {},
+  sort: 122
+},
+
+{
+  id: "Recoil",
+  name: "Recoil",
+  icon: "img/skill/Recoil.png",
+  tags: ["Ranged", "Projectile", "Movement", "Physical"],
+  type: "Skill",
+  description: "Slide back while firing your weapon.",
+  stats: {
+    skillLevel: 1,
+    cost: "Aether 25",
+    projectileSpeed: 25,
+    requirements: "Level 10, Rifle or Pistol or Shotgun"
+  },
+  effects: [
+    "Chance to deal Double or Triple Damage",
+    "+20% Extra Physical Damage per level"
+  ],
+  video: {},
+  sort: 123
+},
+
+{
+  id: "Trip-Mine",
+  name: "Trip Mine",
+  icon: "img/skill/Trip Mine.png",
+  tags: ["Mine", "AoE", "Physical"],
+  type: "Skill",
+  description: "Place a mine that explodes when triggered.",
+  stats: {
+    skillLevel: 1,
+    cost: "Aether 25",
+    physicalDamage: "6 - 10",
+    aoeRadius: 2.6,
+    castSpeed: 1.5,
+    range: 15,
+    requirements: "Level 18"
+  },
+  effects: [
+    "+45% Knockback Chance",
+    "+18% Extra Physical Damage per level",
+    "+2 to Maximum Mines"
+  ],
+  video: {},
+  sort: 124
+},
+  
   {
     id: "Whirlwind",
     name: "Whirlwind",
@@ -576,116 +691,6 @@ window.skill = [
     sort: 220,
   },
   
-  {
-  id: "Disintegrate",
-  name: "Disintegrate",
-  icon: "img/skill/Disintegrate.png",
-  tags: ["Spell", "Aether", "Channeling", "Beam", "DoT"],
-  type: "Skill",
-  description: "Channel an aether beam that builds up damage over time and explodes slain enemies.",
-  stats: {
-    skillLevel: 1,
-    cost: "Aether 15",
-    aetherDamage: "9 - 15",
-    castSpeed: 1,
-    range: 15,
-    requirements: "Level 18, Rod or Staff"
-  },
-  effects: [
-    "Adds 1 to 2 Aether Damage per 20 Intelligence",
-    "8% increased Aether Damage per 1 Skill Level"
-  ],
-  video: {},
-  sort: 56
-},
 
-{
-  id: "Lightning-Bolt",
-  name: "Lightning Bolt",
-  icon: "img/skill/Lightning Bolt.png",
-  tags: ["Ranged", "Projectile", "Lightning"],
-  type: "Skill",
-  description: "Discharge a bolt of lightning that chains to additional targets.",
-  stats: {
-    skillLevel: 1,
-    cost: "Aether 15",
-    projectileSpeed: 25,
-    requirements: "Level 18, Rifle or Pistol"
-  },
-  effects: [
-    "+50% Physical Damage converted to Lightning",
-    "+166% Chain Chance",
-    "+8% Extra Lightning Damage per level"
-  ],
-  video: {},
-  sort: 121
-},
 
-{
-  id: "Pyro-Bullet",
-  name: "Pyro Bullet",
-  icon: "img/skill/Pyro Bullet.png",
-  tags: ["Ranged", "Projectile", "Fire"],
-  type: "Skill",
-  description: "Fire enhanced bullets that ignite enemies.",
-  stats: {
-    skillLevel: 1,
-    cost: "Aether 15",
-    projectileSpeed: 25,
-    requirements: "Level 18, Rifle or Pistol"
-  },
-  effects: [
-    "+50% Physical Damage converted to Fire",
-    "Increased Burn Chance",
-    "+6% Extra Fire Damage per level"
-  ],
-  video: {},
-  sort: 122
-},
-
-{
-  id: "Recoil",
-  name: "Recoil",
-  icon: "img/skill/Recoil.png",
-  tags: ["Ranged", "Projectile", "Movement", "Physical"],
-  type: "Skill",
-  description: "Slide back while firing your weapon.",
-  stats: {
-    skillLevel: 1,
-    cost: "Aether 25",
-    projectileSpeed: 25,
-    requirements: "Level 10, Rifle or Pistol or Shotgun"
-  },
-  effects: [
-    "Chance to deal Double or Triple Damage",
-    "+20% Extra Physical Damage per level"
-  ],
-  video: {},
-  sort: 123
-},
-
-{
-  id: "Trip-Mine",
-  name: "Trip Mine",
-  icon: "img/skill/Trip Mine.png",
-  tags: ["Mine", "AoE", "Physical"],
-  type: "Skill",
-  description: "Place a mine that explodes when triggered.",
-  stats: {
-    skillLevel: 1,
-    cost: "Aether 25",
-    physicalDamage: "6 - 10",
-    aoeRadius: 2.6,
-    castSpeed: 1.5,
-    range: 15,
-    requirements: "Level 18"
-  },
-  effects: [
-    "+45% Knockback Chance",
-    "+18% Extra Physical Damage per level",
-    "+2 to Maximum Mines"
-  ],
-  video: {},
-  sort: 124
-}
 ];
