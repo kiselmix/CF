@@ -596,7 +596,7 @@ window.skill = [
     "8% increased Aether Damage per 1 Skill Level"
   ],
   video: {},
-  sort: 230
+  sort: 56
 },
 
 {
@@ -618,7 +618,7 @@ window.skill = [
     "+8% Extra Lightning Damage per level"
   ],
   video: {},
-  sort: 240
+  sort: 121
 },
 
 {
@@ -640,7 +640,7 @@ window.skill = [
     "+6% Extra Fire Damage per level"
   ],
   video: {},
-  sort: 250
+  sort: 122
 },
 
 {
@@ -661,7 +661,7 @@ window.skill = [
     "+20% Extra Physical Damage per level"
   ],
   video: {},
-  sort: 260
+  sort: 123
 },
 
 {
@@ -686,6 +686,6 @@ window.skill = [
     "+2 to Maximum Mines"
   ],
   video: {},
-  sort: 270
+  sort: 124
 }
 ];
