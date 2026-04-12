@@ -46,11 +46,11 @@ window.SKILLTREE_DATA = {
       "x": -518,
       "y": 384,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "10% increased Physical Damage\n+5 Defense",
+      "desc": "10% increased Physical Damage\n+10 Defense",
       "icon": "/img/talent/icon_physical.png"
     },
     {
@@ -91,8 +91,8 @@ window.SKILLTREE_DATA = {
     },
     {
       "id": "n8",
-      "x": -520,
-      "y": 470,
+      "x": -519,
+      "y": 463,
       "size": "s",
       "r": 16,
       "type": "minor",
@@ -106,11 +106,11 @@ window.SKILLTREE_DATA = {
       "x": -672,
       "y": 384,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Heavy Hitter",
-      "desc": "20% increased Physical Damage",
+      "desc": "25% increased Physical Damage\n+5% Stun Chance against Enemies on Full Life",
       "icon": "/img/talent/icon_physical.png"
     },
     {
@@ -142,11 +142,11 @@ window.SKILLTREE_DATA = {
       "x": -442,
       "y": 162,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "+20 to Maximum Life",
+      "desc": "+25 to Maximum Life",
       "icon": "/img/talent/icon_talent_minor_life.png"
     },
     {
@@ -226,16 +226,16 @@ window.SKILLTREE_DATA = {
       "x": -441,
       "y": -16,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "+20 to Maximum Aether",
+      "desc": "+25 to Maximum Aether",
       "icon": "/img/talent/icon_talent_minor_aether.png"
     },
     {
       "id": "n21",
-      "x": -598,
+      "x": -596,
       "y": -104,
       "size": "m",
       "r": 20,
@@ -296,7 +296,7 @@ window.SKILLTREE_DATA = {
     {
       "id": "n26",
       "x": -598,
-      "y": -281,
+      "y": -283,
       "size": "s",
       "r": 16,
       "type": "minor",
@@ -331,7 +331,7 @@ window.SKILLTREE_DATA = {
     },
     {
       "id": "n29",
-      "x": -981,
+      "x": -980,
       "y": 293,
       "size": "s",
       "r": 16,
@@ -406,11 +406,11 @@ window.SKILLTREE_DATA = {
       "x": -978,
       "y": -60,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "15% increased Aether Regeneration",
+      "desc": "10% increased Aether Regeneration",
       "icon": "/img/talent/icon_talent_minor_aether.png"
     },
     {
@@ -442,11 +442,11 @@ window.SKILLTREE_DATA = {
       "x": -979,
       "y": 28,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "25% increased Aether Regeneration",
+      "desc": "10% increased Aether Regeneration",
       "icon": "/img/talent/icon_talent_minor_aether.png"
     },
     {
@@ -538,11 +538,11 @@ window.SKILLTREE_DATA = {
       "x": -902,
       "y": 604,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Melee",
-      "desc": "20% increased Physical Damage with Melee Skills",
+      "desc": "20% increased Physical Damage with Melee Skills\n+3% Block Chance vs Melee",
       "icon": "/img/talent/icon_talent_minor_melee_damage.png"
     },
     {
@@ -646,11 +646,11 @@ window.SKILLTREE_DATA = {
       "x": -1209,
       "y": 1050,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Tank",
-      "desc": "10% increased Maximum Life\n+2% Block Chance while You have Shield Equipped\n40% increased Defense while You have Shield Equipped",
+      "desc": "10% increased Maximum Life\n+2% Block Chance while You have Shield Equipped\n50% increased Defense while You have Shield Equipped",
       "icon": "/img/talent/icon_talent_minor_block_chance.png"
     },
     {
@@ -670,11 +670,11 @@ window.SKILLTREE_DATA = {
       "x": -902,
       "y": 869,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Balance and Stability",
-      "desc": "+3% Dodge Chance\nGain +10 Aether on Dodge\nGain +1 Aether when Struck",
+      "desc": "+3% Dodge Chance\nGain +5 Aether on Dodge\nGain +1 Aether when Struck",
       "icon": "/img/talent/icon_talent_minor_movement_speed.png"
     },
     {
@@ -790,11 +790,11 @@ window.SKILLTREE_DATA = {
       "x": -1131,
       "y": 1004,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "",
+      "desc": "20% increased Defense while You have Shield Equipped",
       "icon": "/img/talent/icon_talent_minor_block_chance.png"
     },
     {
@@ -802,11 +802,11 @@ window.SKILLTREE_DATA = {
       "x": -1208,
       "y": 959,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "",
+      "desc": "Gain +3 Life on Block\nGain +3 Aether on Block",
       "icon": "/img/talent/icon_talent_minor_block_chance.png"
     },
     {
@@ -814,11 +814,11 @@ window.SKILLTREE_DATA = {
       "x": -1670,
       "y": 692,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Ambidexterity",
-      "desc": "20% increased Attack Speed while You are Dual Wielding\n+5 Dexterity",
+      "desc": "20% increased Attack Speed while You are Dual Wielding\n+5% Block Chance while You are Dual Wielding\n+5 Dexterity",
       "icon": "/img/talent/icon_dexterity.png"
     },
     {
@@ -838,11 +838,11 @@ window.SKILLTREE_DATA = {
       "x": -1515,
       "y": 427,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Champion",
-      "desc": "30% increased Damage with Two Handed Melee Weapons",
+      "desc": "35% increased Damage with Two Handed Melee Weapons\n+5% Block Chance while You have Two Handed Melee Weapon Equipped",
       "icon": "/img/talent/icon_talent_minor_melee_2h.png"
     },
     {
@@ -859,7 +859,7 @@ window.SKILLTREE_DATA = {
     },
     {
       "id": "n73",
-      "x": -1515,
+      "x": -1514,
       "y": 605,
       "size": "s",
       "r": 16,
@@ -874,11 +874,11 @@ window.SKILLTREE_DATA = {
       "x": -1439,
       "y": 649,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "10% increased Damage\n5% increased Attack Speed",
+      "desc": "10% increased Damage with Melee Skills",
       "icon": "/img/talent/icon_talent_minor_attack_speed.png"
     },
     {
@@ -946,23 +946,23 @@ window.SKILLTREE_DATA = {
       "x": -1513,
       "y": 75,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "Gain +5% of Physical Damage as Extra Fire\n5% increased Burn Duration",
+      "desc": "Gain +5% of Physical Damage as Extra Fire Damage\n5% increased Burn Duration",
       "icon": "/img/talent/icon_talent_minor_fire_damage.png"
     },
     {
       "id": "n81",
       "x": -1437,
-      "y": 116,
+      "y": 114,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "Gain +5% of Physical Damage as Extra Fire",
+      "desc": "Gain +5% of Physical Damage as Extra Fire Damage",
       "icon": "/img/talent/icon_talent_minor_fire_damage.png"
     },
     {
@@ -970,11 +970,11 @@ window.SKILLTREE_DATA = {
       "x": -1437,
       "y": 208,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "Gain +5% of Physical Damage as Extra Fire",
+      "desc": "Gain +5% of Physical Damage as Extra Fire Damage",
       "icon": "/img/talent/icon_talent_minor_fire_damage.png"
     },
     {
@@ -1028,7 +1028,7 @@ window.SKILLTREE_DATA = {
     {
       "id": "n87",
       "x": -1516,
-      "y": -199,
+      "y": -195,
       "size": "s",
       "r": 16,
       "type": "minor",
@@ -1078,11 +1078,11 @@ window.SKILLTREE_DATA = {
       "x": -1515,
       "y": -284,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Resistor",
-      "desc": "+5% to Elemental Resistances",
+      "desc": "+5% to Elemental Resistances\n+15% Lightning Resistance",
       "icon": "/img/talent/icon_talent_minor_lightning_damage.png"
     },
     {
@@ -1102,11 +1102,11 @@ window.SKILLTREE_DATA = {
       "x": -1823,
       "y": -185,
       "size": "l",
-      "r": 24,
+      "r": 26,
       "type": "keystone",
       "cost": 1,
       "title": "A Surefire Way",
-      "desc": "25% increased Burn Damage Global\n20% decreased Burn Duration Global\n25% increased Skill Resource Cost with Fire Skills",
+      "desc": "25% more Burn Damage\n20% less Burn Duration\n25% more Skill Resource Cost with Fire Skills",
       "icon": "/img/talent/icon_talent_minor_fire_damage.png"
     },
     {
@@ -1123,7 +1123,7 @@ window.SKILLTREE_DATA = {
     },
     {
       "id": "n95",
-      "x": -1746,
+      "x": -1744,
       "y": 117,
       "size": "s",
       "r": 16,
@@ -1282,11 +1282,11 @@ window.SKILLTREE_DATA = {
       "x": -2260,
       "y": 74,
       "size": "l",
-      "r": 24,
+      "r": 26,
       "type": "keystone",
       "cost": 1,
       "title": "Lightning in a Bottle",
-      "desc": "+1 Lucky Rolls to Lightning Damage if You've used a Flask Recently\n+1 Unlucky Rolls to Lightning Damage if You haven't used a Flask Recently\nThe time span counted as Recently is 50% decreased",
+      "desc": "+1 Lucky Rolls to Lightning Damage if You've used a Flask Recently\n+1 Unlucky Rolls to Lightning Damage if You haven't used a Flask Recently\nThe time span counted as Recently is 50% less",
       "icon": "/img/talent/icon_talent_minor_lightning_damage.png"
     },
     {
@@ -1390,11 +1390,11 @@ window.SKILLTREE_DATA = {
       "x": -2130,
       "y": 250,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Breathwork",
-      "desc": "10% increased Maximum Aether\n10% increased Aether Regeneration\n5% increased Maximum Life",
+      "desc": "10% increased Maximum Aether\n10% increased Aether Regeneration\n10% increased Maximum Life",
       "icon": "/img/talent/icon_plus.png"
     },
     {
@@ -1736,7 +1736,7 @@ window.SKILLTREE_DATA = {
     {
       "id": "n146",
       "x": -2436,
-      "y": -1345,
+      "y": -1347,
       "size": "s",
       "r": 16,
       "type": "minor",
@@ -1798,11 +1798,11 @@ window.SKILLTREE_DATA = {
       "x": -2746,
       "y": -1255,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "+3% Crushing Hit Chance",
+      "desc": "+2% Crushing Hit Chance",
       "icon": "/img/talent/icon_talent_minor_damage.png"
     },
     {
@@ -1810,11 +1810,11 @@ window.SKILLTREE_DATA = {
       "x": -2821,
       "y": -1214,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "+3% Crushing Hit Chance",
+      "desc": "+1% Crushing Hit Chance",
       "icon": "/img/talent/icon_talent_minor_damage.png"
     },
     {
@@ -1822,11 +1822,11 @@ window.SKILLTREE_DATA = {
       "x": -2822,
       "y": -1121,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Breaker",
-      "desc": "+6% Crushing Hit Chance\n25% increased Crushing Hit Effect against Enemies on Full Life",
+      "desc": "+4% Crushing Hit Chance\n25% increased Crushing Hit Effect against Enemies on Full Life",
       "icon": "/img/talent/icon_talent_minor_damage.png"
     },
     {
@@ -1834,11 +1834,11 @@ window.SKILLTREE_DATA = {
       "x": -2666,
       "y": -1123,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "Gain +5 Aether on Crushing Hit",
+      "desc": "10% increased Crushing Hit Chance",
       "icon": "/img/talent/icon_talent_minor_aether.png"
     },
     {
@@ -1846,11 +1846,11 @@ window.SKILLTREE_DATA = {
       "x": -2742,
       "y": -1079,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "Gain +5 Aether on Crushing Hit",
+      "desc": "10% increased Crushing Hit Chance",
       "icon": "/img/talent/icon_talent_minor_aether.png"
     },
     {
@@ -1858,11 +1858,11 @@ window.SKILLTREE_DATA = {
       "x": -2744,
       "y": -1166,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Maker",
-      "desc": "Gain +20 Aether on Crushing Hit\nGain +10 Life on Crushing Hit",
+      "desc": "Gain +10 Aether on Crushing Hit\nGain +5 Life on Crushing Hit\n20% increased Crushing Hit Chance if You haven't made a Crushing Hit Recently",
       "icon": "/img/talent/icon_talent_minor_life_aether.png"
     },
     {
@@ -2002,11 +2002,11 @@ window.SKILLTREE_DATA = {
       "x": -1899,
       "y": -1301,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "10% increased Physical Damage",
+      "desc": "10% increased Physical Damage with Melee Skills",
       "icon": "/img/talent/icon_physical.png"
     },
     {
@@ -2014,11 +2014,11 @@ window.SKILLTREE_DATA = {
       "x": -1899,
       "y": -1212,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "10% increased Physical Damage",
+      "desc": "10% increased Physical Damage with Melee Skills",
       "icon": "/img/talent/icon_physical.png"
     },
     {
@@ -2038,11 +2038,11 @@ window.SKILLTREE_DATA = {
       "x": -1823,
       "y": -1348,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Colossus",
-      "desc": "20% increased Physical Damage\n10% increased Range with Melee Skills\n+5% Stun Chance with Melee Skills",
+      "desc": "20% increased Physical Damage with Melee Skills\n10% increased Range with Melee Skills\n+5% Stun Chance with Melee Skills",
       "icon": "/img/talent/icon_talent_minor_melee_damage.png"
     },
     {
@@ -2059,14 +2059,14 @@ window.SKILLTREE_DATA = {
     },
     {
       "id": "n173",
-      "x": -1694,
-      "y": -1523,
+      "x": -1632,
+      "y": -1589,
       "size": "l",
-      "r": 24,
+      "r": 26,
       "type": "keystone",
       "cost": 1,
-      "title": "Mystic",
-      "desc": "Nearby is Distant if You've used an Aether Skill Recently\nDistant is Nearby if You've used an Aether Skill Recently",
+      "title": "A Smoking Gun",
+      "desc": "Your Aether Damage Hits always inflict Dazzle if You haven't made a Kill Recently\nYou cannot inflict Dazzle if You've made a Kill Recently",
       "icon": "/img/talent/icon_talent_minor_aether_damage.png"
     },
     {
@@ -2079,18 +2079,6 @@ window.SKILLTREE_DATA = {
       "cost": 1,
       "title": "Minor Node",
       "desc": "5% increased Maximum Aether",
-      "icon": "/img/talent/icon_talent_minor_aether.png"
-    },
-    {
-      "id": "n175",
-      "x": -1362,
-      "y": -1433,
-      "size": "s",
-      "r": 16,
-      "type": "minor",
-      "cost": 1,
-      "title": "Minor Node",
-      "desc": "Gain +1% of Aether Damage Taken as Aether",
       "icon": "/img/talent/icon_talent_minor_aether.png"
     },
     {
@@ -2158,11 +2146,11 @@ window.SKILLTREE_DATA = {
       "x": -1207,
       "y": -1170,
       "size": "l",
-      "r": 24,
+      "r": 26,
       "type": "keystone",
       "cost": 1,
       "title": "Aethereal Body",
-      "desc": "25% increased Maximum Aether\n+25% of Damage Taken from Aether before Life\n25% increased Aether Damage\n25% decreased Maximum Life\n50% decreased Physical Damage",
+      "desc": "25% more Maximum Aether\n+25% of Damage Taken from Aether before Life\n25% more Aether Damage\n25% less Maximum Life\n50% less Physical Damage",
       "icon": "/img/talent/icon_talent_minor_aether.png"
     },
     {
@@ -2250,18 +2238,6 @@ window.SKILLTREE_DATA = {
       "icon": "/img/talent/icon_talent_minor_aether.png"
     },
     {
-      "id": "n189",
-      "x": -1056,
-      "y": -1256,
-      "size": "s",
-      "r": 16,
-      "type": "minor",
-      "cost": 1,
-      "title": "Minor Node",
-      "desc": "5% increased Maximum Aether",
-      "icon": "/img/talent/icon_talent_minor_aether.png"
-    },
-    {
       "id": "n190",
       "x": -900,
       "y": -1167,
@@ -2275,7 +2251,7 @@ window.SKILLTREE_DATA = {
     },
     {
       "id": "n191",
-      "x": -1516,
+      "x": -1518,
       "y": -1878,
       "size": "s",
       "r": 16,
@@ -2326,11 +2302,11 @@ window.SKILLTREE_DATA = {
       "x": -1287,
       "y": -1830,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "5% increased Aether Regeneration",
+      "desc": "10% increased Aether Regeneration",
       "icon": "/img/talent/icon_talent_minor_aether.png"
     },
     {
@@ -2338,11 +2314,11 @@ window.SKILLTREE_DATA = {
       "x": -1288,
       "y": -1743,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "5% increased Aether Regeneration",
+      "desc": "10% increased Aether Regeneration",
       "icon": "/img/talent/icon_talent_minor_aether.png"
     },
     {
@@ -2362,11 +2338,11 @@ window.SKILLTREE_DATA = {
       "x": -1209,
       "y": -1699,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Bottomless",
-      "desc": "15% increased Maximum Aether\n+20 of Flask Amount is recovered Instantly",
+      "desc": "15% increased Maximum Aether\n+25% of Flask Amount is recovered Instantly\n+25% of Aether Leech is recovered Instantly",
       "icon": "/img/talent/icon_talent_minor_aether.png"
     },
     {
@@ -2494,11 +2470,11 @@ window.SKILLTREE_DATA = {
       "x": -1210,
       "y": -2407,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Apothecary",
-      "desc": "+5% to all Resistances if You've used a Flask Recently\n10% increased Flask Recovery Amount",
+      "desc": "+5% to all Resistances if You've used a Flask Recently\n10% increased Flask Recovery Amount\n+1 to Maximum Flask Doses",
       "icon": "/img/talent/icon_talent_minor_aether_damage.png"
     },
     {
@@ -2530,17 +2506,17 @@ window.SKILLTREE_DATA = {
       "x": 21,
       "y": -2406,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "5% increased Aether Regeneration",
+      "desc": "+5 Intelligence",
       "icon": "/img/talent/icon_talent_minor_aether.png"
     },
     {
       "id": "n213",
       "x": 21,
-      "y": -2054,
+      "y": -2055,
       "size": "s",
       "r": 16,
       "type": "minor",
@@ -2554,11 +2530,11 @@ window.SKILLTREE_DATA = {
       "x": -210,
       "y": -2185,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "Gain +5% of Physical Damage as Extra Fire Damage",
+      "desc": "+2% Physical Resistance",
       "icon": "/img/talent/icon_talent_minor_fire_damage.png"
     },
     {
@@ -2566,35 +2542,11 @@ window.SKILLTREE_DATA = {
       "x": -287,
       "y": -2142,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "Gain +5% of Physical Damage as Extra Fire Damage",
-      "icon": "/img/talent/icon_talent_minor_fire_damage.png"
-    },
-    {
-      "id": "n216",
-      "x": -365,
-      "y": -2185,
-      "size": "s",
-      "r": 16,
-      "type": "minor",
-      "cost": 1,
-      "title": "Minor Node",
-      "desc": "Gain +5% of Physical Damage as Extra Fire Damage",
-      "icon": "/img/talent/icon_talent_minor_fire_damage.png"
-    },
-    {
-      "id": "n217",
-      "x": -366,
-      "y": -2275,
-      "size": "s",
-      "r": 16,
-      "type": "minor",
-      "cost": 1,
-      "title": "Minor Node",
-      "desc": "Gain +5% of Physical Damage as Extra Fire Damage",
+      "desc": "+2% Physical Resistance",
       "icon": "/img/talent/icon_talent_minor_fire_damage.png"
     },
     {
@@ -2602,23 +2554,23 @@ window.SKILLTREE_DATA = {
       "x": -288,
       "y": -2321,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "Gain +5% of Physical Damage as Extra Fire Damage",
+      "desc": "10% increased Skill Reservation Cost",
       "icon": "/img/talent/icon_talent_minor_fire_damage.png"
     },
     {
       "id": "n219",
-      "x": -211,
-      "y": -2278,
+      "x": -288,
+      "y": -2232,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
-      "title": "Torchbearer",
-      "desc": "Gain +5% of Physical Damage as Extra Fire Damage\nYou have +5 chance to gain Ignition for 5 sec on Burn",
+      "title": "Chrysalis",
+      "desc": "+1% Physical Resistance per 10 Resource Reserved",
       "icon": "/img/talent/icon_talent_minor_fire_damage.png"
     },
     {
@@ -2756,7 +2708,7 @@ window.SKILLTREE_DATA = {
     {
       "id": "n231",
       "x": 22,
-      "y": -2761,
+      "y": -2763,
       "size": "l",
       "r": 24,
       "type": "keystone",
@@ -2923,7 +2875,7 @@ window.SKILLTREE_DATA = {
     },
     {
       "id": "n245",
-      "x": -212,
+      "x": -214,
       "y": -3334,
       "size": "s",
       "r": 16,
@@ -3055,14 +3007,14 @@ window.SKILLTREE_DATA = {
     },
     {
       "id": "n256",
-      "x": 20,
+      "x": 22,
       "y": -3562,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Lightbringer",
-      "desc": "10% increased Attack Speed while You are Dual Wielding\n10% increased Range while You are Dual Wielding\n+5% to all Penetrations while You are Dual Wielding",
+      "desc": "5% increased Maximum Aether\n10% increased Attack Speed while You are Dual Wielding\n10% increased Range while You are Dual Wielding\n+5% to all Penetrations while You are Dual Wielding",
       "icon": "/img/talent/icon_talent_minor_attack_speed.png"
     },
     {
@@ -3190,11 +3142,11 @@ window.SKILLTREE_DATA = {
       "x": 1402,
       "y": -2143,
       "size": "l",
-      "r": 24,
+      "r": 26,
       "type": "keystone",
       "cost": 1,
-      "title": "Fire Breather",
-      "desc": "20% increased Fire Damage\n+10% Chance to Burn Yourself on Burn",
+      "title": "The Calm before the Storm",
+      "desc": "40% more Skill Duration\n20% more Skill Cooldown",
       "icon": "/img/talent/icon_talent_minor_fire_damage.png"
     },
     {
@@ -3214,23 +3166,23 @@ window.SKILLTREE_DATA = {
       "x": 1170,
       "y": -2275,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "+5 Intelligence",
+      "desc": "+5% of outgoing Physical Damage Converted to Lightning Damage",
       "icon": "/img/talent/icon_intelligence.png"
     },
     {
       "id": "n270",
-      "x": 1172,
+      "x": 1169,
       "y": -2367,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "+5 Intelligence",
+      "desc": "+5% of outgoing Physical Damage Converted to Lightning Damage",
       "icon": "/img/talent/icon_intelligence.png"
     },
     {
@@ -3262,11 +3214,11 @@ window.SKILLTREE_DATA = {
       "x": 1247,
       "y": -2407,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Lightning Rod",
-      "desc": "+25% Projectile Split Chance if You've been Struck Recently\nGain +15% of Physical Damage as Extra Lightning Damage if You've been Struck Recently",
+      "desc": "Gain +10% of Physical Damage as Extra Lightning Damage with Ranged Skills\n+25% Projectile Chain Chance against Shocked Enemies\n+25% Projectile Chain Chance if You've been Struck Recently",
       "icon": "/img/talent/icon_talent_minor_lightning_damage.png"
     },
     {
@@ -3274,11 +3226,11 @@ window.SKILLTREE_DATA = {
       "x": 1247,
       "y": -2320,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Conductor",
-      "desc": "+10% of incoming Physical Damage Converted to Lightning Damage\n+10% of outgoing Physical Damage Converted to Lightning Damage",
+      "desc": "+5% of incoming Physical Damage Converted to Lightning Damage\n+5% of outgoing Physical Damage Converted to Lightning Damage",
       "icon": "/img/talent/icon_talent_minor_lightning_damage.png"
     },
     {
@@ -3358,11 +3310,11 @@ window.SKILLTREE_DATA = {
       "x": 1097,
       "y": -1966,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Fire Bug",
-      "desc": "50% increased Projectile Speed against Burning Enemies\n10% increased Action Speed while You are Burning\n+20% of incoming Physical Damage Converted to Fire Damage vs Burning Enemies",
+      "desc": "5% decreased Skill Resource Cost with Fire Skills\n5% increased Action Speed if You've used a Fire Skill Recently\n30% increased Projectile Speed against Burning Enemies\n5% increased Action Speed while You are Burning",
       "icon": "/img/talent/icon_talent_minor_fire_damage.png"
     },
     {
@@ -3370,35 +3322,23 @@ window.SKILLTREE_DATA = {
       "x": 1555,
       "y": -1877,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "5% increased Elemental Damage",
+      "desc": "+5 Intelligence",
       "icon": "/img/talent/icon_elemental.png"
     },
     {
       "id": "n283",
-      "x": 1862,
-      "y": -1698,
+      "x": 1871,
+      "y": -1695,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "5% increased Elemental Damage",
-      "icon": "/img/talent/icon_elemental.png"
-    },
-    {
-      "id": "n284",
-      "x": 2170,
-      "y": -1523,
-      "size": "s",
-      "r": 16,
-      "type": "minor",
-      "cost": 1,
-      "title": "Minor Node",
-      "desc": "5% increased Elemental Damage",
+      "desc": "+5 Intelligence",
       "icon": "/img/talent/icon_elemental.png"
     },
     {
@@ -3406,35 +3346,23 @@ window.SKILLTREE_DATA = {
       "x": 2474,
       "y": -1344,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "5% increased Elemental Damage",
+      "desc": "+5 Intelligence",
       "icon": "/img/talent/icon_elemental.png"
-    },
-    {
-      "id": "n286",
-      "x": 2300,
-      "y": -1344,
-      "size": "s",
-      "r": 22,
-      "type": "square",
-      "cost": 1,
-      "title": "Glyph Socket",
-      "desc": "",
-      "icon": "/img/talent/frame_node_glyph_hovered.png"
     },
     {
       "id": "n287",
       "x": 2630,
       "y": -1256,
       "size": "l",
-      "r": 24,
+      "r": 26,
       "type": "keystone",
       "cost": 1,
-      "title": "The Calm before the Storm",
-      "desc": "20% increased Skill Cooldown\n30% increased Skill Duration",
+      "title": "High Stakes",
+      "desc": "+100% of Skill Resource Cost Converted from Aether to Life\n50% more Skill Resource Cost while You are Healthy\n+1 Lucky Rolls to Damage while You are Injured",
       "icon": "/img/talent/icon_talent_minor_cooldown.png"
     },
     {
@@ -3463,8 +3391,8 @@ window.SKILLTREE_DATA = {
     },
     {
       "id": "n290",
-      "x": 2785,
-      "y": -1617,
+      "x": 2783,
+      "y": -1619,
       "size": "s",
       "r": 16,
       "type": "minor",
@@ -3548,7 +3476,7 @@ window.SKILLTREE_DATA = {
     {
       "id": "n297",
       "x": 1862,
-      "y": -990,
+      "y": -988,
       "size": "s",
       "r": 16,
       "type": "minor",
@@ -3619,8 +3547,8 @@ window.SKILLTREE_DATA = {
     },
     {
       "id": "n303",
-      "x": 1248,
-      "y": -636,
+      "x": 1251,
+      "y": -635,
       "size": "s",
       "r": 16,
       "type": "minor",
@@ -3706,11 +3634,11 @@ window.SKILLTREE_DATA = {
       "x": 1248,
       "y": -989,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Rocket Science",
-      "desc": "+10% Projectile Split Chance\n1% increased Projectile Speed per 5 Resource Consumed by Skill",
+      "desc": "+10% Projectile Split Chance\n1% increased Projectile Speed per 1 Resource Consumed by Skill",
       "icon": "/img/talent/icon_talent_minor_projectile_damage.png"
     },
     {
@@ -3738,21 +3666,9 @@ window.SKILLTREE_DATA = {
       "icon": "/img/talent/icon_intelligence.png"
     },
     {
-      "id": "n313",
-      "x": 940,
-      "y": -1167,
-      "size": "s",
-      "r": 16,
-      "type": "minor",
-      "cost": 1,
-      "title": "Minor Node",
-      "desc": "5% increased Elemental Damage",
-      "icon": "/img/talent/icon_elemental.png"
-    },
-    {
       "id": "n314",
-      "x": 326,
-      "y": -1168,
+      "x": 324,
+      "y": -1180,
       "size": "s",
       "r": 16,
       "type": "minor",
@@ -3775,27 +3691,15 @@ window.SKILLTREE_DATA = {
     },
     {
       "id": "n316",
-      "x": 1096,
-      "y": -1435,
+      "x": 1022,
+      "y": -1476,
       "size": "l",
-      "r": 24,
+      "r": 26,
       "type": "keystone",
       "cost": 1,
       "title": "Short Circuit",
-      "desc": "+50% Lightning Penetration\nYou are Vulnerable To Lightning Damage\n100% increased Shock Duration on Yourself",
+      "desc": "+50% Lightning Penetration\nYou are Vulnerable To Lightning Damage\n+10% of incoming Physical Damage Converted to Lightning Damage\n100% increased Shock Duration on Yourself",
       "icon": "/img/talent/icon_talent_minor_lightning_damage.png"
-    },
-    {
-      "id": "n317",
-      "x": 938,
-      "y": -1613,
-      "size": "s",
-      "r": 22,
-      "type": "square",
-      "cost": 1,
-      "title": "Glyph Socket",
-      "desc": "",
-      "icon": "/img/talent/frame_node_glyph_hovered.png"
     },
     {
       "id": "n318",
@@ -3811,86 +3715,14 @@ window.SKILLTREE_DATA = {
     },
     {
       "id": "n319",
-      "x": 709,
-      "y": -1656,
-      "size": "s",
-      "r": 16,
-      "type": "minor",
-      "cost": 1,
-      "title": "Minor Node",
-      "desc": "10% increased Lightning Damage\n10% increased Shock Chance",
-      "icon": "/img/talent/icon_talent_minor_lightning_damage.png"
-    },
-    {
-      "id": "n320",
-      "x": 710,
-      "y": -1742,
-      "size": "s",
-      "r": 16,
-      "type": "minor",
-      "cost": 1,
-      "title": "Minor Node",
-      "desc": "10% increased Shock Chance",
-      "icon": "/img/talent/icon_talent_minor_lightning_damage.png"
-    },
-    {
-      "id": "n321",
       "x": 633,
-      "y": -1791,
+      "y": -1697,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "10% increased Shock Chance",
-      "icon": "/img/talent/icon_talent_minor_lightning_damage.png"
-    },
-    {
-      "id": "n322",
-      "x": 632,
-      "y": -1700,
-      "size": "m",
-      "r": 20,
-      "type": "major",
-      "cost": 1,
-      "title": "Circuitry",
-      "desc": "+50% Projectile Chain Chance against Shocked Enemies\nGain +25% of Lightning Damage as Extra Fire Damage on failed Projectile Chain",
-      "icon": "/img/talent/icon_talent_minor_lightning_damage.png"
-    },
-    {
-      "id": "n323",
-      "x": 632,
-      "y": -1611,
-      "size": "s",
-      "r": 16,
-      "type": "minor",
-      "cost": 1,
-      "title": "Minor Node",
-      "desc": "10% increased Lightning Damage",
-      "icon": "/img/talent/icon_talent_minor_lightning_damage.png"
-    },
-    {
-      "id": "n324",
-      "x": 557,
-      "y": -1656,
-      "size": "s",
-      "r": 16,
-      "type": "minor",
-      "cost": 1,
-      "title": "Minor Node",
-      "desc": "10% increased Lightning Damage",
-      "icon": "/img/talent/icon_talent_minor_lightning_damage.png"
-    },
-    {
-      "id": "n325",
-      "x": 557,
-      "y": -1746,
-      "size": "m",
-      "r": 20,
-      "type": "major",
-      "cost": 1,
-      "title": "Thermoelectrics",
-      "desc": "4% decreased Skill Cooldown\n+25% of outgoing Lightning Damage Converted to Cold Damage",
+      "desc": "5% increased Elemental Damage",
       "icon": "/img/talent/icon_talent_minor_lightning_damage.png"
     },
     {
@@ -3910,35 +3742,23 @@ window.SKILLTREE_DATA = {
       "x": 198,
       "y": -1345,
       "size": "l",
-      "r": 24,
+      "r": 26,
       "type": "keystone",
       "cost": 1,
       "title": "Thin on the Ground",
-      "desc": "25% increased AoE Radius\n25% decreased Damage with AoE Skills",
+      "desc": "25% more AoE Radius\n25% less Damage with AoE Skills",
       "icon": "/img/talent/icon_cross.png"
     },
     {
       "id": "n328",
-      "x": 249,
+      "x": 251,
       "y": -1480,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "+5 Intelligence",
-      "icon": "/img/talent/icon_intelligence.png"
-    },
-    {
-      "id": "n329",
-      "x": 326,
-      "y": -1432,
-      "size": "s",
-      "r": 16,
-      "type": "minor",
-      "cost": 1,
-      "title": "Minor Node",
-      "desc": "+5 Intelligence",
+      "desc": "5% increased Elemental Damage",
       "icon": "/img/talent/icon_intelligence.png"
     },
     {
@@ -3946,60 +3766,24 @@ window.SKILLTREE_DATA = {
       "x": 403,
       "y": -1480,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "+5 Intelligence",
-      "icon": "/img/talent/icon_intelligence.png"
-    },
-    {
-      "id": "n331",
-      "x": 401,
-      "y": -1566,
-      "size": "s",
-      "r": 22,
-      "type": "square",
-      "cost": 1,
-      "title": "Glyph Socket",
-      "desc": "",
-      "icon": "/img/talent/frame_node_glyph_hovered.png"
-    },
-    {
-      "id": "n332",
-      "x": 327,
-      "y": -1611,
-      "size": "s",
-      "r": 16,
-      "type": "minor",
-      "cost": 1,
-      "title": "Minor Node",
-      "desc": "+5 Intelligence",
+      "desc": "5% decreased Skill Resource Cost with Elemental Skills",
       "icon": "/img/talent/icon_intelligence.png"
     },
     {
       "id": "n333",
-      "x": 248,
+      "x": 253,
       "y": -1572,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "+5 Intelligence",
+      "desc": "+5% to Elemental Resistances",
       "icon": "/img/talent/icon_intelligence.png"
-    },
-    {
-      "id": "n334",
-      "x": 329,
-      "y": -1522,
-      "size": "m",
-      "r": 20,
-      "type": "major",
-      "cost": 1,
-      "title": "Brilliance",
-      "desc": "1% increased AoE Radius per 10 Intelligence",
-      "icon": "/img/talent/icon_talent_minor_aoe_radius.png"
     },
     {
       "id": "n335",
@@ -4054,11 +3838,11 @@ window.SKILLTREE_DATA = {
       "x": -287,
       "y": -1525,
       "size": "l",
-      "r": 24,
+      "r": 26,
       "type": "keystone",
       "cost": 1,
       "title": "Gravity Well",
-      "desc": "Nearby is within 50% increased Distance\n50% increased Auto Pickup Radius\n50% decreased Projectile Speed",
+      "desc": "Nearby is within 50% increased Distance\n50% increased Auto Pickup Radius\n50% less Projectile Speed",
       "icon": "/img/talent/icon_talent_minor_auto_pickup_radius.png"
     },
     {
@@ -4111,8 +3895,8 @@ window.SKILLTREE_DATA = {
     },
     {
       "id": "n344",
-      "x": 20,
-      "y": -991,
+      "x": 19,
+      "y": -997,
       "size": "s",
       "r": 16,
       "type": "minor",
@@ -4134,39 +3918,27 @@ window.SKILLTREE_DATA = {
       "icon": "/img/talent/icon_intelligence.png"
     },
     {
-      "id": "n346",
-      "x": -671,
-      "y": -1297,
-      "size": "s",
-      "r": 16,
-      "type": "minor",
-      "cost": 1,
-      "title": "Minor Node",
-      "desc": "5% increased Maximum Aether\n5% increased Maximum Life",
-      "icon": "/img/talent/icon_talent_minor_life_aether.png"
-    },
-    {
       "id": "n347",
       "x": -672,
       "y": -1388,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "5% increased Maximum Life",
+      "desc": "5% increased Maximum Life\n5% increased Maximum Aether",
       "icon": "/img/talent/icon_talent_minor_life.png"
     },
     {
       "id": "n348",
-      "x": -594,
+      "x": -596,
       "y": -1436,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "5% increased Maximum Life",
+      "desc": "5% increased Maximum Life\n5% increased Maximum Aether",
       "icon": "/img/talent/icon_talent_minor_life.png"
     },
     {
@@ -4174,11 +3946,11 @@ window.SKILLTREE_DATA = {
       "x": -517,
       "y": -1392,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "5% increased Maximum Aether\n5% increased Maximum Life",
+      "desc": "5% increased Maximum Life\n5% increased Maximum Aether",
       "icon": "/img/talent/icon_talent_minor_life_aether.png"
     },
     {
@@ -4198,11 +3970,11 @@ window.SKILLTREE_DATA = {
       "x": -594,
       "y": -1256,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "5% increased Maximum Aether",
+      "desc": "5% increased Maximum Life\n5% increased Maximum Aether",
       "icon": "/img/talent/icon_talent_minor_aether.png"
     },
     {
@@ -4210,11 +3982,11 @@ window.SKILLTREE_DATA = {
       "x": -595,
       "y": -1344,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Evergreen",
-      "desc": "5% increased Maximum Life\n5% increased Maximum Aether\nRegenerate +1% of Maximum Life per second\nRegenerate +1% of Maximum Aether per second",
+      "desc": "10% increased Maximum Life\n10% increased Maximum Aether\nRegenerate +1% of Maximum Life per second\nRegenerate +1% of Maximum Aether per second",
       "icon": "/img/talent/icon_talent_minor_life_aether.png"
     },
     {
@@ -4231,8 +4003,8 @@ window.SKILLTREE_DATA = {
     },
     {
       "id": "n354",
-      "x": -134,
-      "y": -901,
+      "x": -368,
+      "y": -775,
       "size": "l",
       "r": 24,
       "type": "keystone",
@@ -4246,11 +4018,11 @@ window.SKILLTREE_DATA = {
       "x": -57,
       "y": -680,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "5% increased Maximum Aether",
+      "desc": "10% increased Maximum Aether",
       "icon": "/img/talent/icon_talent_minor_aether.png"
     },
     {
@@ -4258,11 +4030,11 @@ window.SKILLTREE_DATA = {
       "x": -57,
       "y": -591,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "5% increased Maximum Aether",
+      "desc": "10% increased Maximum Aether",
       "icon": "/img/talent/icon_talent_minor_aether.png"
     },
     {
@@ -4270,16 +4042,16 @@ window.SKILLTREE_DATA = {
       "x": 20,
       "y": -548,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "+20 to Maximum Aether",
+      "desc": "+25 to Maximum Aether",
       "icon": "/img/talent/icon_talent_minor_aether.png"
     },
     {
       "id": "n358",
-      "x": 96,
+      "x": 97,
       "y": -593,
       "size": "s",
       "r": 16,
@@ -4294,11 +4066,11 @@ window.SKILLTREE_DATA = {
       "x": 20,
       "y": -637,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "5% increased Cast Speed",
+      "desc": "5% increased Maximum Aether",
       "icon": "/img/talent/icon_talent_minor_rod_damage.png"
     },
     {
@@ -4306,11 +4078,11 @@ window.SKILLTREE_DATA = {
       "x": 19,
       "y": -724,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Caster",
-      "desc": "10% increased Cast Speed\nGain +1 Aether on Hit",
+      "desc": "5% increased Maximum Aether\n10% increased Cast Speed\nGain +1 Aether on Hit",
       "icon": "/img/talent/icon_talent_minor_rod_damage.png"
     },
     {
@@ -4318,11 +4090,11 @@ window.SKILLTREE_DATA = {
       "x": 95,
       "y": -679,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Elementalist",
-      "desc": "10% increased Elemental Damage\n5% decreased Skill Resource Cost with Elemental Skills",
+      "desc": "15% increased Elemental Damage\n5% decreased Skill Resource Cost with Elemental Skills",
       "icon": "/img/talent/icon_elemental.png"
     },
     {
@@ -4330,11 +4102,11 @@ window.SKILLTREE_DATA = {
       "x": -210,
       "y": -414,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "10% increased Skill Duration\n5% decreased Skill Cooldown",
+      "desc": "10% increased Skill Duration\n5% decreased Skill Cooldown\n5% decreased Skill Resource Cost with Cooldown Skills",
       "icon": "/img/talent/icon_talent_minor_cooldown.png"
     },
     {
@@ -4366,11 +4138,11 @@ window.SKILLTREE_DATA = {
       "x": -286,
       "y": -459,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Timekeeper",
-      "desc": "10% increased Skill Duration\n5% decreased Skill Cooldown\nRegenerate +1/s Aether per second",
+      "desc": "20% increased Skill Duration\n10% decreased Skill Cooldown",
       "icon": "/img/talent/icon_talent_minor_cooldown.png"
     },
     {
@@ -4378,11 +4150,11 @@ window.SKILLTREE_DATA = {
       "x": -517,
       "y": -592,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "5% increased Maximum Life\n5% increased Aether Regeneration",
+      "desc": "5% increased Maximum Life",
       "icon": "/img/talent/icon_talent_minor_life_aether.png"
     },
     {
@@ -4390,58 +4162,34 @@ window.SKILLTREE_DATA = {
       "x": -517,
       "y": -680,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
       "desc": "5% increased Maximum Life",
       "icon": "/img/talent/icon_talent_minor_life.png"
-    },
-    {
-      "id": "n368",
-      "x": -596,
-      "y": -724,
-      "size": "s",
-      "r": 16,
-      "type": "minor",
-      "cost": 1,
-      "title": "Minor Node",
-      "desc": "5% increased Maximum Life",
-      "icon": "/img/talent/icon_talent_minor_life.png"
-    },
-    {
-      "id": "n369",
-      "x": -595,
-      "y": -544,
-      "size": "s",
-      "r": 16,
-      "type": "minor",
-      "cost": 1,
-      "title": "Minor Node",
-      "desc": "5% increased Aether Regeneration",
-      "icon": "/img/talent/icon_talent_minor_aether.png"
     },
     {
       "id": "n370",
       "x": -672,
       "y": -591,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "5% increased Aether Regeneration",
+      "desc": "5% increased Maximum Aether",
       "icon": "/img/talent/icon_talent_minor_aether.png"
     },
     {
       "id": "n371",
-      "x": -594,
-      "y": -637,
+      "x": -593,
+      "y": -634,
       "size": "s",
-      "r": 22,
-      "type": "square",
+      "r": 12,
+      "type": "minor",
       "cost": 1,
-      "title": "Glyph Socket",
+      "title": "Minor Node",
       "desc": "",
       "icon": "/img/talent/frame_node_glyph_hovered.png"
     },
@@ -4449,12 +4197,12 @@ window.SKILLTREE_DATA = {
       "id": "n372",
       "x": -672,
       "y": -681,
-      "size": "l",
-      "r": 24,
-      "type": "keystone",
+      "size": "s",
+      "r": 12,
+      "type": "minor",
       "cost": 1,
-      "title": "Alchemy",
-      "desc": "+100% of Aether Regeneration Converted to Life Regeneration\n+100% of Skill Resource Cost Converted from Aether to Life",
+      "title": "Minor Node",
+      "desc": "5% increased Maximum Aether",
       "icon": "/img/talent/icon_talent_minor_life_aether.png"
     },
     {
@@ -4736,7 +4484,7 @@ window.SKILLTREE_DATA = {
     {
       "id": "n396",
       "x": -1208,
-      "y": -989,
+      "y": -991,
       "size": "m",
       "r": 20,
       "type": "major",
@@ -4822,11 +4570,11 @@ window.SKILLTREE_DATA = {
       "x": -2051,
       "y": 559,
       "size": "l",
-      "r": 24,
+      "r": 26,
       "type": "keystone",
       "cost": 1,
       "title": "Blue Blood",
-      "desc": "Life as Backup Resource\n+100% of Life Regeneration Converted to Aether Regeneration while You are on Full Life Global 100% decreased to Leech Resistances",
+      "desc": "Life as Backup Resource\n+100% of Life Regeneration Converted to Aether Regeneration while You are on Full Life\n-100% to Leech Resistances\n100% increased Bleed Duration on Yourself",
       "icon": "/img/talent/icon_talent_minor_life_aether.png"
     },
     {
@@ -4855,7 +4603,7 @@ window.SKILLTREE_DATA = {
     },
     {
       "id": "n406",
-      "x": -1899,
+      "x": -1901,
       "y": 473,
       "size": "s",
       "r": 16,
@@ -5026,11 +4774,11 @@ window.SKILLTREE_DATA = {
       "x": -1646,
       "y": 1136,
       "size": "l",
-      "r": 24,
+      "r": 26,
       "type": "keystone",
       "cost": 1,
       "title": "Skin in the Game",
-      "desc": "20% increased Damage\n20% increased Damage Taken",
+      "desc": "20% more Damage\n20% more Damage Taken",
       "icon": "/img/talent/icon_physical.png"
     },
     {
@@ -5158,11 +4906,11 @@ window.SKILLTREE_DATA = {
       "x": -2259,
       "y": 1490,
       "size": "l",
-      "r": 24,
+      "r": 26,
       "type": "keystone",
       "cost": 1,
       "title": "A Blunt Instrument",
-      "desc": "25% increased AoE Radius\nYou cannot make Critical Hits with AoE Skills",
+      "desc": "25% more AoE Radius\nYou cannot make Critical Hits with AoE Skills",
       "icon": "/img/talent/icon_talent_minor_aoe_radius.png"
     },
     {
@@ -5206,11 +4954,11 @@ window.SKILLTREE_DATA = {
       "x": -2745,
       "y": 1136,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Lord of Walls",
-      "desc": "25% increased Defense\n+10% Chance to Negate\n+3% to Maximum Block Chance",
+      "desc": "50% increased Defense\n+10% Chance to Negate\n+3% to Maximum Block Chance",
       "icon": "/img/talent/icon_talent_minor_block_chance.png"
     },
     {
@@ -5264,7 +5012,7 @@ window.SKILLTREE_DATA = {
     {
       "id": "n440",
       "x": -2820,
-      "y": 1358,
+      "y": 1357,
       "size": "s",
       "r": 16,
       "type": "minor",
@@ -5503,8 +5251,8 @@ window.SKILLTREE_DATA = {
     },
     {
       "id": "n460",
-      "x": -1821,
-      "y": 1846,
+      "x": -1827,
+      "y": 1843,
       "size": "s",
       "r": 16,
       "type": "minor",
@@ -5710,11 +5458,11 @@ window.SKILLTREE_DATA = {
       "x": -1209,
       "y": 1314,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Skullsplitter",
-      "desc": "+5% Critical Hit Chance with Axes\n10% increased Critical Hit Damage with Axes\nGain +10 Life on Kill",
+      "desc": "+5% Critical Hit Chance with Axes\n10% increased Critical Hit Damage with Axes\nGain +5 Life on Kill",
       "icon": "/img/talent/icon_talent_minor_axe_damage.png"
     },
     {
@@ -5794,11 +5542,11 @@ window.SKILLTREE_DATA = {
       "x": -1595,
       "y": 1714,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Bonegrinder",
-      "desc": "+5% Crushing Hit Chance with Maces\nGain +25 Aether on Crushing Hit",
+      "desc": "+5% Crushing Hit Chance with Maces\nGain +5 Aether on Crushing Hit",
       "icon": "/img/talent/icon_talent_minor_mace_damage.png"
     },
     {
@@ -5815,7 +5563,7 @@ window.SKILLTREE_DATA = {
     },
     {
       "id": "n486",
-      "x": -902,
+      "x": -899,
       "y": 1534,
       "size": "l",
       "r": 24,
@@ -5842,11 +5590,11 @@ window.SKILLTREE_DATA = {
       "x": -673,
       "y": 1446,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Thorns",
-      "desc": "Reflect +10 Physical Damage\n+10% Physical Penetration",
+      "desc": "Reflect +10 Physical Damage\n+5% Physical Penetration",
       "icon": "/img/talent/icon_physical.png"
     },
     {
@@ -5890,11 +5638,11 @@ window.SKILLTREE_DATA = {
       "x": -514,
       "y": 1535,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Presence",
-      "desc": "25% increased Physical Damage against Nearby Enemies\n15% increased Physical Damage while You are on Full Life\n10% increased Physical Damage while You are Healthy",
+      "desc": "20% increased Physical Damage against Nearby Enemies\n20% increased Physical Damage while You are on Full Life\n10% increased Physical Damage while You are Healthy",
       "icon": "/img/talent/icon_physical.png"
     },
     {
@@ -5947,7 +5695,7 @@ window.SKILLTREE_DATA = {
     },
     {
       "id": "n497",
-      "x": -1362,
+      "x": -1359,
       "y": 1934,
       "size": "s",
       "r": 16,
@@ -5960,7 +5708,7 @@ window.SKILLTREE_DATA = {
     {
       "id": "n498",
       "x": -1360,
-      "y": 2023,
+      "y": 2021,
       "size": "m",
       "r": 20,
       "type": "major",
@@ -6190,11 +5938,11 @@ window.SKILLTREE_DATA = {
       "x": -1209,
       "y": 2198,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "+20 Defense",
+      "desc": "25% increased Defense",
       "icon": "/img/talent/icon_physical.png"
     },
     {
@@ -6223,7 +5971,7 @@ window.SKILLTREE_DATA = {
     },
     {
       "id": "n520",
-      "x": -1056,
+      "x": -1054,
       "y": 2287,
       "size": "l",
       "r": 24,
@@ -6238,11 +5986,11 @@ window.SKILLTREE_DATA = {
       "x": -1208,
       "y": 2287,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "+20 Defense",
+      "desc": "25% increased Defense",
       "icon": "/img/talent/icon_physical.png"
     },
     {
@@ -6259,7 +6007,7 @@ window.SKILLTREE_DATA = {
     },
     {
       "id": "n523",
-      "x": -1361,
+      "x": -1359,
       "y": 2288,
       "size": "s",
       "r": 16,
@@ -6428,7 +6176,7 @@ window.SKILLTREE_DATA = {
     {
       "id": "n537",
       "x": -595,
-      "y": 1845,
+      "y": 1844,
       "size": "s",
       "r": 16,
       "type": "minor",
@@ -6535,7 +6283,7 @@ window.SKILLTREE_DATA = {
     },
     {
       "id": "n546",
-      "x": -673,
+      "x": -670,
       "y": 2865,
       "size": "s",
       "r": 16,
@@ -6718,11 +6466,11 @@ window.SKILLTREE_DATA = {
       "x": -288,
       "y": 2997,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "5% increased Skill Duration with Physical",
+      "desc": "5% increased Skill Duration with Physical skills",
       "icon": "/img/talent/icon_physical.png"
     },
     {
@@ -6730,11 +6478,11 @@ window.SKILLTREE_DATA = {
       "x": -365,
       "y": 3041,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "5% increased Skill Duration with Physical",
+      "desc": "5% increased Skill Duration with Physical skills",
       "icon": "/img/talent/icon_physical.png"
     },
     {
@@ -6883,7 +6631,7 @@ window.SKILLTREE_DATA = {
     },
     {
       "id": "n575",
-      "x": 20,
+      "x": 21,
       "y": 3442,
       "size": "m",
       "r": 20,
@@ -6898,11 +6646,11 @@ window.SKILLTREE_DATA = {
       "x": -135,
       "y": 3350,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Wielder",
-      "desc": "10% increased Attack Speed with Swords\n+5% Block Chance while You have Sword Equipped\nGain +5 Aether on Hit\nGain +5 Aether on Block",
+      "desc": "10% increased Attack Speed with Swords\n+5% Block Chance while You have Sword Equipped\nGain +3 Aether on Hit\nGain +3 Aether on Block",
       "icon": "/img/talent/icon_talent_minor_sword_damage.png"
     },
     {
@@ -7102,11 +6850,11 @@ window.SKILLTREE_DATA = {
       "x": 98,
       "y": 2511,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "10% increased Bleed Duration",
+      "desc": "5% increased AoE Radius with Shout Skills",
       "icon": "/img/talent/icon_talent_minor_critical_hit_chance.png"
     },
     {
@@ -7114,11 +6862,11 @@ window.SKILLTREE_DATA = {
       "x": 97,
       "y": 2421,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "2% decreased Skill Resource Cost",
+      "desc": "Gain +1% of Physical Damage Taken as Aether",
       "icon": "/img/talent/icon_talent_minor_critical_hit_chance.png"
     },
     {
@@ -7126,17 +6874,17 @@ window.SKILLTREE_DATA = {
       "x": 174,
       "y": 2375,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "2% decreased Skill Resource Cost",
+      "desc": "Gain +1% of Physical Damage Taken as Aether",
       "icon": "/img/talent/icon_talent_minor_critical_hit_chance.png"
     },
     {
       "id": "n596",
-      "x": 172,
-      "y": 2468,
+      "x": 173,
+      "y": 2461,
       "size": "m",
       "r": 20,
       "type": "major",
@@ -7150,11 +6898,11 @@ window.SKILLTREE_DATA = {
       "x": 174,
       "y": 2554,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "10% increased Bleed Duration",
+      "desc": "5% increased AoE Radius with Shout Skills",
       "icon": "/img/talent/icon_talent_minor_critical_hit_chance.png"
     },
     {
@@ -7162,11 +6910,11 @@ window.SKILLTREE_DATA = {
       "x": 249,
       "y": 2510,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "5% increased Bleed Duration",
+      "desc": "5% increased AoE Radius with Shout Skills",
       "icon": "/img/talent/icon_talent_minor_critical_hit_chance.png"
     },
     {
@@ -7210,11 +6958,11 @@ window.SKILLTREE_DATA = {
       "x": -210,
       "y": 2422,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "10% increased Physical Damage",
+      "desc": "+2% Physical Resistance",
       "icon": "/img/talent/icon_physical.png"
     },
     {
@@ -7222,35 +6970,35 @@ window.SKILLTREE_DATA = {
       "x": -290,
       "y": 2467,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "+2% Physical Resistance",
+      "desc": "+1% Physical Resistance",
       "icon": "/img/talent/icon_physical.png"
     },
     {
       "id": "n604",
-      "x": -364,
-      "y": 2422,
+      "x": -367,
+      "y": 2421,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "+2% Physical Resistance",
+      "desc": "+1% Physical Resistance",
       "icon": "/img/talent/icon_physical.png"
     },
     {
       "id": "n605",
-      "x": -366,
-      "y": 2332,
+      "x": -367,
+      "y": 2329,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "+2% Physical Resistance",
+      "desc": "+1% Physical Resistance",
       "icon": "/img/talent/icon_physical.png"
     },
     {
@@ -7270,11 +7018,11 @@ window.SKILLTREE_DATA = {
       "x": -288,
       "y": 2378,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Healer",
-      "desc": "+4% Physical Resistance\n10% decreased Ailment Duration on Yourself\nRegenerate +1% of Maximum Life per second while You are Injured",
+      "desc": "+5% Physical Resistance\n10% decreased Ailment Duration on Yourself\nRegenerate +1% of Maximum Life per second",
       "icon": "/img/talent/icon_physical.png"
     },
     {
@@ -7294,11 +7042,11 @@ window.SKILLTREE_DATA = {
       "x": -211,
       "y": 2067,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "10% increased Physical Damage",
+      "desc": "5% increased Range with Melee Skills",
       "icon": "/img/talent/icon_physical.png"
     },
     {
@@ -7318,11 +7066,11 @@ window.SKILLTREE_DATA = {
       "x": -212,
       "y": 1980,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Envelopment",
-      "desc": "1% increased Movement Speed per 1 Nearby Enemy\n20% increased Physical Damage against Nearby Enemies",
+      "desc": "1% increased Movement Speed per 1 Nearby Enemy\n10% increased Range with Melee Skills",
       "icon": "/img/talent/icon_physical.png"
     },
     {
@@ -7330,11 +7078,11 @@ window.SKILLTREE_DATA = {
       "x": -284,
       "y": 1931,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "10% increased Physical Damage",
+      "desc": "5% increased Range with Melee Skills",
       "icon": "/img/talent/icon_physical.png"
     },
     {
@@ -7618,11 +7366,11 @@ window.SKILLTREE_DATA = {
       "x": -135,
       "y": 1049,
       "size": "l",
-      "r": 24,
+      "r": 26,
       "type": "keystone",
       "cost": 1,
       "title": "Up In Arms",
-      "desc": "15% increased Physical Damage\n15% increased Defense\n30% increased Skill Cooldown",
+      "desc": "15% more Physical Damage\n15% more Defense\n30% more Skill Cooldown",
       "icon": "/img/talent/icon_physical.png"
     },
     {
@@ -7784,7 +7532,7 @@ window.SKILLTREE_DATA = {
     {
       "id": "n650",
       "x": -288,
-      "y": 604,
+      "y": 605,
       "size": "s",
       "r": 16,
       "type": "minor",
@@ -7810,11 +7558,11 @@ window.SKILLTREE_DATA = {
       "x": -288,
       "y": 513,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "Gain +1 Aether on Hit",
+      "desc": "+1% Critical Hit Chance",
       "icon": "/img/talent/icon_talent_minor_aether.png"
     },
     {
@@ -7822,11 +7570,11 @@ window.SKILLTREE_DATA = {
       "x": -288,
       "y": 418,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Striker",
-      "desc": "Gain +1 Aether on Hit\nGain +10 Aether on Critical Hit",
+      "desc": "+4% Critical Hit Chance\n25% increased Critical Hit Chance against Stunned Enemies\nGain +5 Aether on Critical Hit",
       "icon": "/img/talent/icon_talent_minor_aether.png"
     },
     {
@@ -7843,14 +7591,14 @@ window.SKILLTREE_DATA = {
     },
     {
       "id": "n655",
-      "x": 195,
-      "y": 781,
+      "x": 134,
+      "y": 841,
       "size": "l",
-      "r": 24,
+      "r": 26,
       "type": "keystone",
       "cost": 1,
-      "title": "A Smoking Gun",
-      "desc": "Your Aether Damage Hits always inflict Dazzle if You haven't made a Kill Recently\nYou cannot inflict Dazzle if You've made a Kill Recently",
+      "title": "Bite the Bullet",
+      "desc": "100% more Ailment Duration on Yourself\n25% more Damage while You are Ailing\n25% more Block Chance while You are Ailing",
       "icon": "/img/talent/icon_cross.png"
     },
     {
@@ -7870,11 +7618,11 @@ window.SKILLTREE_DATA = {
       "x": 327,
       "y": 869,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "Gain +10% of Physical Damage as Extra Aether Damage",
+      "desc": "+3% Block Chance vs Projectile",
       "icon": "/img/talent/icon_talent_minor_aether_damage.png"
     },
     {
@@ -7882,11 +7630,11 @@ window.SKILLTREE_DATA = {
       "x": 247,
       "y": 915,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "10% increased Dazzle Duration",
+      "desc": "+2% Block Chance vs Projectile",
       "icon": "/img/talent/icon_talent_minor_aether_damage.png"
     },
     {
@@ -7894,11 +7642,11 @@ window.SKILLTREE_DATA = {
       "x": 405,
       "y": 915,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "Gain +5% of Physical Damage as Extra Aether Damage",
+      "desc": "You take 5% decreased Critical Hit Damage while You are Stationary",
       "icon": "/img/talent/icon_talent_minor_aether_damage.png"
     },
     {
@@ -7906,23 +7654,23 @@ window.SKILLTREE_DATA = {
       "x": 405,
       "y": 1004,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "Gain +5% of Physical Damage as Extra Aether Damage",
+      "desc": "You take 5% decreased Critical Hit Damage while You are Stationary",
       "icon": "/img/talent/icon_talent_minor_aether_damage.png"
     },
     {
       "id": "n661",
       "x": 327,
       "y": 1047,
-      "size": "m",
-      "r": 20,
-      "type": "major",
+      "size": "s",
+      "r": 12,
+      "type": "minor",
       "cost": 1,
-      "title": "Light-Eater",
-      "desc": "20% increased Damage against Dazzled Enemies\n+1% of Damage leeched as Aether against Dazzled Enemies\nGain +10% of Aether Damage Taken as Aether",
+      "title": "Minor Node",
+      "desc": "+2% Physical Resistance while You are Stationary",
       "icon": "/img/talent/icon_talent_minor_aether_damage.png"
     },
     {
@@ -7930,23 +7678,23 @@ window.SKILLTREE_DATA = {
       "x": 248,
       "y": 1002,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "10% increased Dazzle Duration",
+      "desc": "+3% Physical Resistance while You are Stationary",
       "icon": "/img/talent/icon_talent_minor_aether_damage.png"
     },
     {
       "id": "n663",
-      "x": 328,
+      "x": 326,
       "y": 959,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
-      "title": "Covert Ops",
-      "desc": "25% increased Dazzle Chance\n25% increased Dazzle Duration\n10% increased Attack Speed against Dazzled Enemies",
+      "title": "Entrenched",
+      "desc": "+5% Block Chance vs Projectile\n+5% Physical Resistance while You are Stationary\nYou take 10% decreased Critical Hit Damage while You are Stationary",
       "icon": "/img/talent/icon_talent_minor_aether_damage.png"
     },
     {
@@ -7954,11 +7702,11 @@ window.SKILLTREE_DATA = {
       "x": 554,
       "y": 471,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "10% increased Range",
+      "desc": "+5 Dexterity",
       "icon": "/img/talent/icon_talent_minor_ranged_damage.png"
     },
     {
@@ -7966,11 +7714,11 @@ window.SKILLTREE_DATA = {
       "x": 554,
       "y": 381,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "10% increased Physical Damage with Ranged Skills",
+      "desc": "20% increased Physical Damage",
       "icon": "/img/talent/icon_talent_minor_ranged_damage.png"
     },
     {
@@ -7990,11 +7738,11 @@ window.SKILLTREE_DATA = {
       "x": 710,
       "y": 387,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Gunman's Grip",
-      "desc": "10% increased Attack Speed with Ranged Skills\n+5% Critical Hit Chance with Ranged Skills",
+      "desc": "10% increased Attack Speed with Ranged Skills\n5% decreased Skill Resource Cost with Ranged Skills",
       "icon": "/img/talent/icon_talent_minor_ranged_damage.png"
     },
     {
@@ -8026,11 +7774,11 @@ window.SKILLTREE_DATA = {
       "x": 711,
       "y": 468,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Shooter",
-      "desc": "20% increased Physical Damage with Ranged Skills\nGain +5 Aether on Kill",
+      "desc": "20% increased Physical Damage with Ranged Skills\n10% increased Range with Ranged Skills\nGain +3 Aether on Kill",
       "icon": "/img/talent/icon_talent_minor_ranged_damage.png"
     },
     {
@@ -8038,11 +7786,11 @@ window.SKILLTREE_DATA = {
       "x": 634,
       "y": 692,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "5% increased Physical Damage with Ranged Skills",
+      "desc": "5% increased Damage",
       "icon": "/img/talent/icon_talent_minor_ranged_damage.png"
     },
     {
@@ -8050,35 +7798,23 @@ window.SKILLTREE_DATA = {
       "x": 710,
       "y": 738,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "10% increased Physical Damage with Ranged Skills",
+      "desc": "10% increased Damage against Distant Enemies",
       "icon": "/img/talent/icon_talent_minor_ranged_damage.png"
     },
     {
-      "id": "n673",
-      "x": 634,
-      "y": 781,
-      "size": "s",
-      "r": 22,
-      "type": "square",
-      "cost": 1,
-      "title": "Glyph Socket",
-      "desc": "",
-      "icon": "/img/talent/frame_node_glyph_hovered.png"
-    },
-    {
       "id": "n674",
-      "x": 709,
-      "y": 828,
+      "x": 711,
+      "y": 823,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Harrier",
-      "desc": "30% increased Physical Damage against Distant Enemies",
+      "desc": "25% increased Damage against Distant Enemies\nGain +5 Aether on Kill",
       "icon": "/img/talent/icon_talent_minor_ranged_damage.png"
     },
     {
@@ -8086,11 +7822,11 @@ window.SKILLTREE_DATA = {
       "x": 632,
       "y": 869,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "10% increased Physical Damage",
+      "desc": "5% increased Damage",
       "icon": "/img/talent/icon_talent_minor_shotgun_damage.png"
     },
     {
@@ -8098,7 +7834,7 @@ window.SKILLTREE_DATA = {
       "x": 558,
       "y": 827,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
@@ -8110,11 +7846,11 @@ window.SKILLTREE_DATA = {
       "x": 560,
       "y": 739,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Enforcer",
-      "desc": "10% increased Physical Damage against Nearby Enemies\n+10% Stun Chance against Nearby Enemies\nGain +10 Aether on Stun\n+1% of Physical Damage leeched as Aether against Stunned Enemies",
+      "desc": "+10% Stun Chance against Nearby Enemies\nGain +5 Aether on Stun\n+1% of Physical Damage leeched as Aether against Stunned Enemies",
       "icon": "/img/talent/icon_talent_minor_damage.png"
     },
     {
@@ -8143,8 +7879,8 @@ window.SKILLTREE_DATA = {
     },
     {
       "id": "n680",
-      "x": 635,
-      "y": 1136,
+      "x": 634,
+      "y": 1131,
       "size": "s",
       "r": 16,
       "type": "minor",
@@ -8152,30 +7888,6 @@ window.SKILLTREE_DATA = {
       "title": "Minor Node",
       "desc": "+5 Dexterity",
       "icon": "/img/talent/icon_dexterity.png"
-    },
-    {
-      "id": "n681",
-      "x": 940,
-      "y": 958,
-      "size": "s",
-      "r": 16,
-      "type": "minor",
-      "cost": 1,
-      "title": "Minor Node",
-      "desc": "+5 Dexterity",
-      "icon": "/img/talent/icon_dexterity.png"
-    },
-    {
-      "id": "n682",
-      "x": 939,
-      "y": 1088,
-      "size": "l",
-      "r": 24,
-      "type": "keystone",
-      "cost": 1,
-      "title": "An Eye for an Eye",
-      "desc": "You Reflect 100% of Damage Taken. You Leech 1% of Damage as Life if You've been Struck Recently. You cannot Reflect Damage Dodged, Damage Blocked, or Damage Mitigated.",
-      "icon": "/img/talent/icon_talent_minor_damage.png"
     },
     {
       "id": "n683",
@@ -8230,11 +7942,11 @@ window.SKILLTREE_DATA = {
       "x": 633,
       "y": 1845,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Supercharged",
-      "desc": "1% increased Lightning Damage per 5 Resource Consumed by Skill\n20% increased Lightning Damage while You are on Full Aether",
+      "desc": "1% increased Lightning Damage per 5 Resource Consumed by Skill\n15% increased Lightning Damage while You are on Full Aether\n15% increased Lightning Damage while You are Energized",
       "icon": "/img/talent/icon_talent_minor_lightning_damage.png"
     },
     {
@@ -8266,11 +7978,11 @@ window.SKILLTREE_DATA = {
       "x": 631,
       "y": 1934,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Fulminator",
-      "desc": "+10% Double Strike Chance with Lightning Skills\n10% increased Range with Lightning Skills",
+      "desc": "+20% Projectile Fork Chance with Lightning Skills\n10% increased Range with Lightning Skills",
       "icon": "/img/talent/icon_talent_minor_lightning_damage.png"
     },
     {
@@ -8286,111 +7998,99 @@ window.SKILLTREE_DATA = {
       "icon": "/img/talent/icon_elemental.png"
     },
     {
-      "id": "n692",
-      "x": 940,
-      "y": 1845,
-      "size": "l",
-      "r": 24,
-      "type": "keystone",
-      "cost": 1,
-      "title": "Guns Blazing",
-      "desc": "1% increased Attack Speed per 5 Resource Consumed by Skill while You are Dual Wielding",
-      "icon": "/img/talent/icon_talent_minor_pistol_damage.png"
-    },
-    {
       "id": "n693",
-      "x": 479,
-      "y": 1402,
+      "x": 517,
+      "y": 1418,
       "size": "l",
-      "r": 24,
+      "r": 26,
       "type": "keystone",
       "cost": 1,
-      "title": "A Slippery Slope",
-      "desc": "+50% Projectile Chain Chance per 1 Nearby Enemy\n+50% of outgoing Physical Damage Converted to Cold Damage on Projectile Chain\n+10% Chance to Chill Yourself on Chill",
+      "title": "Piercing Cold",
+      "desc": "Your Projectiles always Pierce against Distant Enemies\nYour Projectiles cannot Pierce against Nearby Enemies\n+50% of outgoing Physical Damage Converted to Cold Damage on Projectile Pierce\n+50% of incoming Physical Damage Converted to Cold Damage if You've Chilled an Enemy Recently\n+50% of incoming Physical Damage Converted to Fire Damage if You haven't Chilled an Enemy Recently",
       "icon": "/img/talent/icon_talent_minor_projectile_damage.png"
     },
     {
       "id": "n694",
-      "x": 864,
-      "y": 1356,
+      "x": 713,
+      "y": 1442,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "2% decreased Skill Cooldown\n5% increased Cold Damage",
+      "desc": "10% increased Cold Damage",
       "icon": "/img/talent/icon_talent_minor_cold_damage.png"
     },
     {
       "id": "n695",
-      "x": 865,
-      "y": 1266,
+      "x": 711,
+      "y": 1352,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "2% decreased Skill Cooldown",
+      "desc": "10% increased Cold Damage",
       "icon": "/img/talent/icon_talent_minor_cooldown.png"
     },
     {
       "id": "n696",
-      "x": 941,
-      "y": 1220,
+      "x": 788,
+      "y": 1306,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "1% decreased Skill Cooldown",
+      "desc": "10% increased Cold Damage",
       "icon": "/img/talent/icon_talent_minor_cooldown.png"
     },
     {
       "id": "n697",
-      "x": 942,
-      "y": 1318,
+      "x": 789,
+      "y": 1394,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Stone Cold Killer",
-      "desc": "5% decreased Skill Cooldown\n+5% Fire Resistance\n10% increased Critical Hit Damage with Cold Skills",
+      "desc": "25% increased Cold Damage\n5% decreased Skill Cooldown\n+5% Fire Resistance",
       "icon": "/img/talent/icon_talent_minor_cooldown.png"
     },
     {
       "id": "n698",
-      "x": 941,
-      "y": 1403,
+      "x": 789,
+      "y": 1486,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "10% increased Cold Damage",
+      "desc": "+10% Chance to Negate Chills",
       "icon": "/img/talent/icon_talent_minor_cold_damage.png"
     },
     {
       "id": "n699",
-      "x": 1018,
-      "y": 1360,
+      "x": 864,
+      "y": 1443,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "10% increased Cold Damage",
+      "desc": "+10% Chance to Negate Chills",
       "icon": "/img/talent/icon_talent_minor_cold_damage.png"
     },
     {
       "id": "n700",
-      "x": 1019,
-      "y": 1269,
+      "x": 863,
+      "y": 1345,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
-      "title": "Cryogenics",
-      "desc": "25% increased Cold Damage\n5% decreased Skill Resource Cost with Cold Skills",
+      "title": "Cold Adaptation",
+      "desc": "+5% Cold Resistance\n10% decreased Skill Resource Cost with Cold Skills\n+20% Chance to Negate Chills if You've been Chilled Recently",
       "icon": "/img/talent/icon_talent_minor_cold_damage.png"
     },
     {
@@ -8410,11 +8110,11 @@ window.SKILLTREE_DATA = {
       "x": 1071,
       "y": 2198,
       "size": "l",
-      "r": 24,
+      "r": 26,
       "type": "keystone",
       "cost": 1,
-      "title": "Close Quarters",
-      "desc": "2% increased Damage per 1 Nearby Enemy with Ranged Skills\n20% decreased Damage against Distant Enemies",
+      "title": "Playing with Fire",
+      "desc": "20% more Fire Damage\n+10% Chance to Burn Yourself on Burn",
       "icon": "/img/talent/icon_talent_minor_ranged_damage.png"
     },
     {
@@ -8422,11 +8122,11 @@ window.SKILLTREE_DATA = {
       "x": 1424,
       "y": 2197,
       "size": "l",
-      "r": 24,
+      "r": 26,
       "type": "keystone",
       "cost": 1,
-      "title": "Piercing Cold",
-      "desc": "Your Projectiles always Pierce against Distant Enemies\nYour Projectiles cannot Pierce against Nearby Enemies\n+50% of outgoing Physical Damage Converted to Cold Damage on Projectile Pierce\n+50% of incoming Physical Damage Converted to Cold Damage if You've Chilled an Enemy Recently\n+50% of incoming Physical Damage Converted to Fire Damage if You haven't Chilled an Enemy Recently",
+      "title": "A Slippery Slope",
+      "desc": "+50% Projectile Chain Chance per 1 Nearby Enemy\n+50% of outgoing Physical Damage Converted to Cold Damage on Projectile Chain\n+10% Chance to Chill Yourself on Chill",
       "icon": "/img/talent/icon_talent_minor_ranged_damage.png"
     },
     {
@@ -8623,7 +8323,7 @@ window.SKILLTREE_DATA = {
     },
     {
       "id": "n720",
-      "x": 1632,
+      "x": 1634,
       "y": 2424,
       "size": "m",
       "r": 20,
@@ -8686,10 +8386,10 @@ window.SKILLTREE_DATA = {
       "x": 1939,
       "y": 2157,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
-      "title": "",
+      "title": "Minor Node",
       "desc": "5% increased Damage with Projectile Skills",
       "icon": "/img/talent/icon_talent_minor_projectile_damage.png"
     },
@@ -8722,11 +8422,11 @@ window.SKILLTREE_DATA = {
       "x": 1939,
       "y": 2246,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Army of One",
-      "desc": "+1% Chance to Fire Extra Projectile per 1 Distant Enemy\n10% increased Damage with Projectile Skills\nGain +10% of Damage Taken as Aether vs Projectile",
+      "desc": "+1% Chance to Fire Extra Projectile per 1 Distant Enemy\n10% increased Damage with Projectile Skills\nGain +5% of Damage Taken as Aether vs Projectile",
       "icon": "/img/talent/icon_talent_minor_projectile_damage.png"
     },
     {
@@ -8866,11 +8566,11 @@ window.SKILLTREE_DATA = {
       "x": 1248,
       "y": 1580,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "+5% Fire Resistance",
+      "desc": "+10% Fire Resistance",
       "icon": "/img/talent/icon_talent_minor_lightning_damage.png"
     },
     {
@@ -8899,14 +8599,14 @@ window.SKILLTREE_DATA = {
     },
     {
       "id": "n743",
-      "x": 1246,
+      "x": 1248,
       "y": 1490,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Weather Proof",
-      "desc": "+5% to Elemental Resistances",
+      "desc": "+10% to Elemental Resistances",
       "icon": "/img/talent/icon_elemental.png"
     },
     {
@@ -8938,11 +8638,11 @@ window.SKILLTREE_DATA = {
       "x": 1248,
       "y": 1402,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "+5% Cold Resistance",
+      "desc": "+10% Cold Resistance",
       "icon": "/img/talent/icon_talent_minor_cold_damage.png"
     },
     {
@@ -8962,11 +8662,11 @@ window.SKILLTREE_DATA = {
       "x": 2296,
       "y": 1490,
       "size": "l",
-      "r": 24,
+      "r": 26,
       "type": "keystone",
       "cost": 1,
-      "title": "Stack the Deck",
-      "desc": "+50% Chance to Fire Extra Projectile on Every Third Attack\nYou cannot fire Extra Projectiles if You've been Struck Recently",
+      "title": "Close Quarters",
+      "desc": "2% more Damage per 1 Nearby Enemy with Ranged Skills\n20% less Damage against Distant Enemies",
       "icon": "/img/talent/icon_talent_minor_damage.png"
     },
     {
@@ -8974,11 +8674,11 @@ window.SKILLTREE_DATA = {
       "x": 2652,
       "y": 1490,
       "size": "l",
-      "r": 24,
+      "r": 26,
       "type": "keystone",
       "cost": 1,
       "title": "Straight Shooter",
-      "desc": "Your Projectiles deal 20% more damage, cost 20% less resources, and have 20% more Range and Speed. You cannot fire extra Projectiles and your Projectiles cannot Chain, Split, or Fork.",
+      "desc": "Your Projectiles deal 30% more damage, cost 20% less resources, and have 30% more Range and Speed. You cannot fire extra Projectiles and your Projectiles cannot Chain, Split, or Fork.",
       "icon": "/img/talent/icon_talent_minor_projectile_damage.png"
     },
     {
@@ -9094,11 +8794,11 @@ window.SKILLTREE_DATA = {
       "x": 2706,
       "y": 1624,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "5% increased Damage with Pistols",
+      "desc": "10% increased Damage with Pistols",
       "icon": "/img/talent/icon_talent_minor_pistol_damage.png"
     },
     {
@@ -9403,58 +9103,58 @@ window.SKILLTREE_DATA = {
     },
     {
       "id": "n785",
-      "x": 1770,
-      "y": 1136,
+      "x": 1862,
+      "y": 1218,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "5% increased Attack Speed with Pistols",
+      "desc": "5% increased Attack Speed with Pistols\n+10% Projectile Chain Chance with Pistols",
       "icon": "/img/talent/icon_talent_minor_pistol_damage.png"
     },
     {
       "id": "n786",
-      "x": 1952,
-      "y": 1139,
+      "x": 1865,
+      "y": 1042,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "5% increased Attack Speed with Pistols",
+      "desc": "+3% Critical Hit Chance with Pistols\n5% increased Critical Hit Damage with Pistols",
       "icon": "/img/talent/icon_talent_minor_pistol_damage.png"
     },
     {
       "id": "n787",
-      "x": 1928,
-      "y": 1073,
+      "x": 1783,
+      "y": 996,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "5% increased Attack Speed with Pistols",
+      "desc": "+2% Critical Hit Chance with Pistols",
       "icon": "/img/talent/icon_talent_minor_pistol_damage.png"
     },
     {
       "id": "n788",
-      "x": 1861,
-      "y": 1047,
+      "x": 1865,
+      "y": 950,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
-      "title": "Lawbreaker",
-      "desc": "10% increased Attack Speed while You are Dual Wielding\n+5% Dodge Chance while You have Pistol Equipped\n+10% Projectile Chain Chance with Pistols",
+      "title": "Gunslinger",
+      "desc": "+5% Critical Hit Chance with Pistols\n+10% Critical Hit Damage with Pistols\nGain +5 Aether on Critical Hit",
       "icon": "/img/talent/icon_talent_minor_pistol_damage.png"
     },
     {
       "id": "n789",
-      "x": 1797,
-      "y": 1199,
+      "x": 1784,
+      "y": 1262,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
@@ -9464,13 +9164,13 @@ window.SKILLTREE_DATA = {
     {
       "id": "n790",
       "x": 1862,
-      "y": 1225,
+      "y": 1310,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
-      "title": "Gunslinger",
-      "desc": "+5% Critical Hit Chance with Pistols\n+10% Critical Hit Damage with Pistols\nGain +10 Aether on Critical Hit",
+      "title": "Lawbreaker",
+      "desc": "10% increased Attack Speed while You are Dual Wielding\n+5% Dodge Chance while You have Pistol Equipped\n+20% Projectile Chain Chance with Pistols",
       "icon": "/img/talent/icon_talent_minor_pistol_damage.png"
     },
     {
@@ -9487,7 +9187,7 @@ window.SKILLTREE_DATA = {
     },
     {
       "id": "n792",
-      "x": 1246,
+      "x": 1245,
       "y": 1134,
       "size": "s",
       "r": 16,
@@ -9550,11 +9250,11 @@ window.SKILLTREE_DATA = {
       "x": 1557,
       "y": 1313,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Flak Machine",
-      "desc": "20% increased Physical Damage with Shotguns\n20% increased Range with Shotguns",
+      "desc": "30% increased Physical Damage with Shotguns\n20% increased Range with Shotguns",
       "icon": "/img/talent/icon_talent_minor_shotgun_damage.png"
     },
     {
@@ -9574,24 +9274,12 @@ window.SKILLTREE_DATA = {
       "x": 1555,
       "y": 1404,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Tactical Ops",
-      "desc": "10% increased Attack Speed with Shotguns\n+5% Block Chance while You have Shotgun Equipped\n+5% Stun Chance against Nearby Enemies\nGain +20 Aether on Stun",
+      "desc": "10% increased Attack Speed with Shotguns\n+5% Block Chance while You have Shotgun Equipped\n+5% Stun Chance against Nearby Enemies\nGain +5 Aether on Stun",
       "icon": "/img/talent/icon_talent_minor_shotgun_damage.png"
-    },
-    {
-      "id": "n800",
-      "x": 1732,
-      "y": 959,
-      "size": "l",
-      "r": 24,
-      "type": "keystone",
-      "cost": 1,
-      "title": "One-Armed Bandit",
-      "desc": "+1 Lucky Rolls to Hit Chance while your Off Hand is Empty\n25% increased Maximum Aether while your Off Hand is Empty\n25% increased of Damage leeched as Aether while your Off Hand is Empty",
-      "icon": "/img/talent/icon_talent_minor_pistol_damage.png"
     },
     {
       "id": "n801",
@@ -9619,8 +9307,8 @@ window.SKILLTREE_DATA = {
     },
     {
       "id": "n803",
-      "x": 1250,
-      "y": 853,
+      "x": 1247,
+      "y": 848,
       "size": "s",
       "r": 16,
       "type": "minor",
@@ -9643,14 +9331,14 @@ window.SKILLTREE_DATA = {
     },
     {
       "id": "n805",
-      "x": 1251,
-      "y": 782,
+      "x": 1247,
+      "y": 780,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Ocular Dominance",
-      "desc": "+5% Critical Hit Chance against Distant Enemies\n10% increased Range with Ranged Skills",
+      "desc": "+5% Critical Hit Chance against Distant Enemies\n5% increased Critical Hit Damage against Distant Enemies\n10% increased Range with Projectile Skills",
       "icon": "/img/talent/icon_talent_minor_critical_hit_chance.png"
     },
     {
@@ -9679,50 +9367,38 @@ window.SKILLTREE_DATA = {
     },
     {
       "id": "n808",
-      "x": 1311,
-      "y": 745,
+      "x": 1314,
+      "y": 739,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "5% increased Critical Hit Damage",
+      "desc": "5% increased Critical Hit Damage against Distant Enemies",
       "icon": "/img/talent/icon_talent_minor_critical_hit_chance.png"
     },
     {
       "id": "n809",
-      "x": 1367,
-      "y": 713,
+      "x": 1370,
+      "y": 705,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "+2% Critical Hit Chance against Nearby Enemies",
-      "icon": "/img/talent/icon_talent_minor_critical_hit_chance.png"
-    },
-    {
-      "id": "n810",
-      "x": 1386,
-      "y": 780,
-      "size": "s",
-      "r": 16,
-      "type": "minor",
-      "cost": 1,
-      "title": "Minor Node",
-      "desc": "+2% Critical Hit Chance against Nearby Enemies",
+      "desc": "+1% Critical Hit Chance against Nearby Enemies",
       "icon": "/img/talent/icon_talent_minor_critical_hit_chance.png"
     },
     {
       "id": "n811",
-      "x": 1367,
-      "y": 850,
+      "x": 1388,
+      "y": 772,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Adrenaline Junkie",
-      "desc": "5% increased Action Speed while You are Energized\n+5% Critical Hit Chance against Nearby Enemies\nGain +10 Aether on Critical Hit\nGain +5 Aether when Critically Struck",
+      "desc": "5% increased Action Speed while You are Energized\n+5% Critical Hit Chance against Nearby Enemies\n10% increased Critical Hit Damage while You are Injured\nGain +5 Aether when Critically Struck",
       "icon": "/img/talent/icon_talent_minor_critical_hit_chance.png"
     },
     {
@@ -9730,11 +9406,11 @@ window.SKILLTREE_DATA = {
       "x": 941,
       "y": 690,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Trailblazer",
-      "desc": "+5 to all Attributes\n5% decreased Skill Resource Cost with Movement Skills",
+      "desc": "+5 to all Attributes\n5% increased Movement Speed",
       "icon": "/img/talent/icon_plus.png"
     },
     {
@@ -9778,11 +9454,11 @@ window.SKILLTREE_DATA = {
       "x": 1031,
       "y": 603,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "1% decreased Skill Cooldown",
+      "desc": "3% decreased Skill Cooldown",
       "icon": "/img/talent/icon_talent_minor_cooldown.png"
     },
     {
@@ -9790,11 +9466,11 @@ window.SKILLTREE_DATA = {
       "x": 1005,
       "y": 543,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "1% decreased Skill Cooldown",
+      "desc": "2% decreased Skill Cooldown",
       "icon": "/img/talent/icon_talent_minor_cooldown.png"
     },
     {
@@ -9802,11 +9478,11 @@ window.SKILLTREE_DATA = {
       "x": 938,
       "y": 510,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Blackguard",
-      "desc": "3% decreased Skill Cooldown\n5% decreased Skill Resource Cost with Cooldown Skills\nGain +5 Life on Kill",
+      "desc": "5% decreased Skill Cooldown\nGain +5 Life on Kill",
       "icon": "/img/talent/icon_talent_minor_cooldown.png"
     },
     {
@@ -9814,11 +9490,11 @@ window.SKILLTREE_DATA = {
       "x": 1782,
       "y": 827,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "15% increased Physical Damage with Rifles",
+      "desc": "10% increased Damage with Rifles",
       "icon": "/img/talent/icon_talent_minor_rifle_damage.png"
     },
     {
@@ -9826,11 +9502,11 @@ window.SKILLTREE_DATA = {
       "x": 1783,
       "y": 738,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "10% increased Physical Damage against Distant Enemies",
+      "desc": "10% increased Damage against Distant Enemies",
       "icon": "/img/talent/icon_talent_minor_rifle_damage.png"
     },
     {
@@ -9838,11 +9514,11 @@ window.SKILLTREE_DATA = {
       "x": 1862,
       "y": 690,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "10% increased Physical Damage against Distant Enemies",
+      "desc": "10% increased Damage against Distant Enemies",
       "icon": "/img/talent/icon_talent_minor_rifle_damage.png"
     },
     {
@@ -9850,11 +9526,11 @@ window.SKILLTREE_DATA = {
       "x": 1861,
       "y": 780,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Sniper",
-      "desc": "20% increased Physical Damage against Distant Enemies\n20% increased Projectile Speed with Rifles\nGain +10 Life on Kill",
+      "desc": "30% increased Damage against Distant Enemies\n20% increased Projectile Speed with Rifles \nGain +5 Life on Kill",
       "icon": "/img/talent/icon_talent_minor_rifle_damage.png"
     },
     {
@@ -9862,7 +9538,7 @@ window.SKILLTREE_DATA = {
       "x": 1861,
       "y": 872,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
@@ -9874,7 +9550,7 @@ window.SKILLTREE_DATA = {
       "x": 1937,
       "y": 826,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
@@ -9886,24 +9562,12 @@ window.SKILLTREE_DATA = {
       "x": 1938,
       "y": 738,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Musketeer",
-      "desc": "20% increased Physical Damage with Rifles\n+15% Projectile Pierce Chance with Rifles",
+      "desc": "30% increased Physical Damage with Rifles\n+20% Projectile Pierce Chance with Rifles",
       "icon": "/img/talent/icon_talent_minor_rifle_damage.png"
-    },
-    {
-      "id": "n826",
-      "x": 1555,
-      "y": 605,
-      "size": "s",
-      "r": 16,
-      "type": "minor",
-      "cost": 1,
-      "title": "Minor Node",
-      "desc": "+5 Dexterity",
-      "icon": "/img/talent/icon_dexterity.png"
     },
     {
       "id": "n827",
@@ -9922,11 +9586,11 @@ window.SKILLTREE_DATA = {
       "x": 1019,
       "y": 293,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "5% increased Range with Projectile Skills\n5% increased Projectile Speed",
+      "desc": "10% increased Aether Regeneration",
       "icon": "/img/talent/icon_talent_minor_projectile_damage.png"
     },
     {
@@ -9934,11 +9598,11 @@ window.SKILLTREE_DATA = {
       "x": 939,
       "y": 339,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "5% increased Range with Projectile Skills\n5% increased Projectile Speed",
+      "desc": "10% increased Aether Regeneration",
       "icon": "/img/talent/icon_talent_minor_projectile_damage.png"
     },
     {
@@ -9946,11 +9610,11 @@ window.SKILLTREE_DATA = {
       "x": 862,
       "y": 295,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "5% increased Range with Projectile Skills\n5% increased Projectile Speed",
+      "desc": "5% increased Maximum Aether",
       "icon": "/img/talent/icon_talent_minor_projectile_damage.png"
     },
     {
@@ -9958,48 +9622,24 @@ window.SKILLTREE_DATA = {
       "x": 862,
       "y": 204,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "5% increased Range with Projectile Skills\n5% increased Projectile Speed",
-      "icon": "/img/talent/icon_talent_minor_projectile_damage.png"
-    },
-    {
-      "id": "n832",
-      "x": 942,
-      "y": 162,
-      "size": "s",
-      "r": 16,
-      "type": "minor",
-      "cost": 1,
-      "title": "Minor Node",
-      "desc": "5% increased Range with Projectile Skills\n5% increased Projectile Speed",
+      "desc": "5% increased Maximum Aether",
       "icon": "/img/talent/icon_talent_minor_projectile_damage.png"
     },
     {
       "id": "n833",
-      "x": 939,
-      "y": 249,
+      "x": 1018,
+      "y": 201,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
-      "title": "Aeronautics",
-      "desc": "10% increased Damage with Projectile Skills\n10% increased Range with Projectile Skills\n10% increased Projectile Speed",
+      "title": "Loaded",
+      "desc": "10% increased Damage while You are Energized\n10% increased Maximum Aether\n30% increased Aether Regeneration",
       "icon": "/img/talent/icon_talent_minor_projectile_damage.png"
-    },
-    {
-      "id": "n834",
-      "x": 1423,
-      "y": 426,
-      "size": "l",
-      "r": 24,
-      "type": "keystone",
-      "cost": 1,
-      "title": "Bite the Bullet",
-      "desc": "+10% Block Chance vs Projectile\n+20% Chance to Negate vs Projectile\n10% increased Damage Taken vs Projectile",
-      "icon": "/img/talent/icon_talent_minor_damage.png"
     },
     {
       "id": "n835",
@@ -10018,11 +9658,11 @@ window.SKILLTREE_DATA = {
       "x": 1555,
       "y": 246,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "5% increased Damage with Projectile Skills",
+      "desc": "+10% Projectile Pierce Chance",
       "icon": "/img/talent/icon_talent_minor_projectile_damage.png"
     },
     {
@@ -10030,11 +9670,11 @@ window.SKILLTREE_DATA = {
       "x": 1628,
       "y": 206,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "5% increased Damage with Projectile Skills",
+      "desc": "+10% Projectile Pierce Chance",
       "icon": "/img/talent/icon_talent_minor_projectile_damage.png"
     },
     {
@@ -10042,11 +9682,11 @@ window.SKILLTREE_DATA = {
       "x": 1707,
       "y": 160,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Caliber",
-      "desc": "20% increased Damage with Projectile Skills\n5% increased Critical Hit Damage with Projectile Skills",
+      "desc": "20% increased Damage with Projectile Skills\n+20% Projectile Pierce Chance\nYour Hits always cause Knockback on failed Projectile Pierce",
       "icon": "/img/talent/icon_talent_minor_projectile_damage.png"
     },
     {
@@ -10078,11 +9718,11 @@ window.SKILLTREE_DATA = {
       "x": 1554,
       "y": 72,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Trigger-Happy",
-      "desc": "1% increased Attack Speed per 20 Resource Consumed by Skill with Ranged Skills",
+      "desc": "15% increased Attack Speed with Ranged Skills\nGain +2 Aether on Hit",
       "icon": "/img/talent/icon_talent_minor_ranged_damage.png"
     },
     {
@@ -10114,11 +9754,11 @@ window.SKILLTREE_DATA = {
       "x": 1708,
       "y": 340,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Gunnery",
-      "desc": "30% increased Damage with Ranged Skills\n+5% Dodge Chance vs Projectile",
+      "desc": "10% increased Damage with Ranged Skills\n5% decreased Skill Cooldown with Ranged Skills\n10% increased Skill Duration with Ranged Skills",
       "icon": "/img/talent/icon_talent_minor_ranged_damage.png"
     },
     {
@@ -10158,27 +9798,15 @@ window.SKILLTREE_DATA = {
       "icon": "/img/talent/icon_dexterity.png"
     },
     {
-      "id": "n848",
-      "x": 764,
-      "y": 71,
-      "size": "l",
-      "r": 24,
-      "type": "keystone",
-      "cost": 1,
-      "title": "Jump the Gun",
-      "desc": "5% increased Action Speed\n-10% Dodge Chance",
-      "icon": "/img/talent/icon_cross.png"
-    },
-    {
       "id": "n849",
       "x": 556,
       "y": 118,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "2% increased Maximum Life",
+      "desc": "5% increased Maximum Life",
       "icon": "/img/talent/icon_talent_minor_life.png"
     },
     {
@@ -10186,11 +9814,11 @@ window.SKILLTREE_DATA = {
       "x": 558,
       "y": 207,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "2% increased Movement Speed",
+      "desc": "+1% Dodge Chance",
       "icon": "/img/talent/icon_talent_minor_movement_speed.png"
     },
     {
@@ -10198,11 +9826,11 @@ window.SKILLTREE_DATA = {
       "x": 480,
       "y": 252,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Runner",
-      "desc": "3% increased Movement Speed\n+3% Dodge Chance",
+      "desc": "5% increased Movement Speed\n+3% Dodge Chance\nRegenerate +1% of Maximum Aether per second",
       "icon": "/img/talent/icon_talent_minor_movement_speed.png"
     },
     {
@@ -10210,11 +9838,11 @@ window.SKILLTREE_DATA = {
       "x": 479,
       "y": 160,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "+2% Dodge Chance",
+      "desc": "+1% Dodge Chance",
       "icon": "/img/talent/icon_talent_minor_movement_speed.png"
     },
     {
@@ -10222,11 +9850,11 @@ window.SKILLTREE_DATA = {
       "x": 404,
       "y": 205,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "+20 to Maximum Life",
+      "desc": "+15 to Maximum Life\n5% increased Movement Speed",
       "icon": "/img/talent/icon_talent_minor_life.png"
     },
     {
@@ -10234,11 +9862,11 @@ window.SKILLTREE_DATA = {
       "x": 404,
       "y": 117,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "3% increased Maximum Life",
+      "desc": "5% increased Maximum Life",
       "icon": "/img/talent/icon_talent_minor_life.png"
     },
     {
@@ -10246,7 +9874,7 @@ window.SKILLTREE_DATA = {
       "x": 480,
       "y": 72,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Circulatory Systems",
@@ -10266,81 +9894,9 @@ window.SKILLTREE_DATA = {
       "icon": "/img/talent/icon_dexterity.png"
     },
     {
-      "id": "n857",
-      "x": 1031,
-      "y": -106,
-      "size": "s",
-      "r": 16,
-      "type": "minor",
-      "cost": 1,
-      "title": "Minor Node",
-      "desc": "+1% Critical Hit Chance",
-      "icon": "/img/talent/icon_talent_minor_critical_hit_chance.png"
-    },
-    {
-      "id": "n858",
-      "x": 1003,
-      "y": -41,
-      "size": "s",
-      "r": 16,
-      "type": "minor",
-      "cost": 1,
-      "title": "Minor Node",
-      "desc": "+1% Critical Hit Chance",
-      "icon": "/img/talent/icon_talent_minor_critical_hit_chance.png"
-    },
-    {
-      "id": "n859",
-      "x": 943,
-      "y": -13,
-      "size": "m",
-      "r": 20,
-      "type": "major",
-      "cost": 1,
-      "title": "Duelist",
-      "desc": "+3% Critical Hit Chance with Projectile Skills\n+10% Ending Hit Chance with Projectile Skills",
-      "icon": "/img/talent/icon_talent_minor_critical_hit_chance.png"
-    },
-    {
-      "id": "n860",
-      "x": 852,
-      "y": -105,
-      "size": "s",
-      "r": 16,
-      "type": "minor",
-      "cost": 1,
-      "title": "Minor Node",
-      "desc": "+1% Dodge Chance",
-      "icon": "/img/talent/icon_dexterity.png"
-    },
-    {
-      "id": "n861",
-      "x": 874,
-      "y": -168,
-      "size": "s",
-      "r": 16,
-      "type": "minor",
-      "cost": 1,
-      "title": "Minor Node",
-      "desc": "+1% Dodge Chance",
-      "icon": "/img/talent/icon_dexterity.png"
-    },
-    {
-      "id": "n862",
-      "x": 941,
-      "y": -191,
-      "size": "m",
-      "r": 20,
-      "type": "major",
-      "cost": 1,
-      "title": "Counterplay",
-      "desc": "+3% Dodge Chance\n+5% Critical Hit Chance if You've Dodged Recently",
-      "icon": "/img/talent/icon_dexterity.png"
-    },
-    {
       "id": "n863",
-      "x": 634,
-      "y": -283,
+      "x": 633,
+      "y": -287,
       "size": "s",
       "r": 16,
       "type": "minor",
@@ -10352,7 +9908,7 @@ window.SKILLTREE_DATA = {
     {
       "id": "n864",
       "x": 1861,
-      "y": 73,
+      "y": 71,
       "size": "s",
       "r": 16,
       "type": "minor",
@@ -10366,11 +9922,11 @@ window.SKILLTREE_DATA = {
       "x": 1938,
       "y": 115,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "1% decreased Skill Cooldown with Physical Skills\n1% increased Movement Speed while You are Ailing",
+      "desc": "1% decreased Skill Cooldown with Physical Skills\n5% increased Movement Speed while You are Ailing",
       "icon": "/img/talent/icon_talent_minor_cooldown.png"
     },
     {
@@ -10414,11 +9970,11 @@ window.SKILLTREE_DATA = {
       "x": 2015,
       "y": 164,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Escape Artist",
-      "desc": "5% increased Movement Speed while You are Ailing\n10% decreased Ailment Duration on Yourself\n25% decreased Stun Duration on Yourself",
+      "desc": "10% increased Movement Speed while You are Ailing\n10% decreased Ailment Duration on Yourself\n25% decreased Stun Duration on Yourself",
       "icon": "/img/talent/icon_talent_minor_movement_speed.png"
     },
     {
@@ -10426,11 +9982,11 @@ window.SKILLTREE_DATA = {
       "x": 1938,
       "y": 207,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "1% increased Movement Speed while You are Ailing",
+      "desc": "5% increased Movement Speed while You are Ailing",
       "icon": "/img/talent/icon_talent_minor_movement_speed.png"
     },
     {
@@ -10438,36 +9994,24 @@ window.SKILLTREE_DATA = {
       "x": 2016,
       "y": 249,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "1% increased Movement Speed while You are Ailing",
+      "desc": "5% increased Movement Speed while You are Ailing",
       "icon": "/img/talent/icon_talent_minor_movement_speed.png"
     },
     {
       "id": "n872",
-      "x": 1861,
+      "x": 1863,
       "y": 427,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "10% increased Physical Damage",
+      "desc": "+5 Dexterity",
       "icon": "/img/talent/icon_physical.png"
-    },
-    {
-      "id": "n873",
-      "x": 1939,
-      "y": 473,
-      "size": "s",
-      "r": 22,
-      "type": "square",
-      "cost": 1,
-      "title": "Glyph Socket",
-      "desc": "",
-      "icon": "/img/talent/frame_node_glyph_hovered.png"
     },
     {
       "id": "n874",
@@ -10498,11 +10042,11 @@ window.SKILLTREE_DATA = {
       "x": 2018,
       "y": 517,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Terminal Ballistics",
-      "desc": "+20% Projectile Pierce Chance\n+10% Physical Penetration on Projectile Pierce",
+      "desc": "+30% Projectile Pierce Chance\n+5% to all Penetrations on Projectile Pierce",
       "icon": "/img/talent/icon_talent_minor_projectile_damage.png"
     },
     {
@@ -10510,11 +10054,11 @@ window.SKILLTREE_DATA = {
       "x": 1939,
       "y": 559,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "+5% Physical Penetration on Projectile Pierce",
+      "desc": "+5% to all Penetrations on Projectile Pierce",
       "icon": "/img/talent/icon_talent_minor_projectile_damage.png"
     },
     {
@@ -10522,24 +10066,12 @@ window.SKILLTREE_DATA = {
       "x": 1865,
       "y": 517,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "+5% Physical Penetration on Projectile Pierce",
+      "desc": "+5% to all Penetrations on Projectile Pierce",
       "icon": "/img/talent/icon_talent_minor_projectile_damage.png"
-    },
-    {
-      "id": "n879",
-      "x": 1708,
-      "y": 515,
-      "size": "l",
-      "r": 24,
-      "type": "keystone",
-      "cost": 1,
-      "title": "Glass Cannon",
-      "desc": "25% increased Physical Damage with Ranged Skills\n20% decreased Maximum Life",
-      "icon": "/img/talent/icon_cross.png"
     },
     {
       "id": "n880",
@@ -10567,14 +10099,14 @@ window.SKILLTREE_DATA = {
     },
     {
       "id": "n882",
-      "x": 2301,
-      "y": 71,
+      "x": 2303,
+      "y": 69,
       "size": "l",
-      "r": 24,
+      "r": 26,
       "type": "keystone",
       "cost": 1,
       "title": "Minimalism",
-      "desc": "20% decreased Skill Resource Cost\n20% decreased Range",
+      "desc": "20% less Skill Resource Cost\n20% less Range",
       "icon": "/img/talent/icon_talent_minor_ranged_damage.png"
     },
     {
@@ -10666,11 +10198,11 @@ window.SKILLTREE_DATA = {
       "x": 2783,
       "y": 606,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Trickshotter",
-      "desc": "+25% Projectile Chain Chance\nGain +10 Aether on Projectile Chain",
+      "desc": "+25% Projectile Chain Chance\nGain +3 Aether on Projectile Chain",
       "icon": "/img/talent/icon_talent_minor_projectile_damage.png"
     },
     {
@@ -10750,11 +10282,11 @@ window.SKILLTREE_DATA = {
       "x": 2936,
       "y": -192,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Bounty Hunter",
-      "desc": "20% increased Damage with Rifles\n+10% Ending Hit Chance with Rifles\nGain +20 Aether on One-Shot",
+      "desc": "20% increased Damage with Rifles\n+10% Ending Hit Chance with Rifles\nGain +10 Aether on One-Shot",
       "icon": "/img/talent/icon_talent_minor_rifle_damage.png"
     },
     {
@@ -10894,11 +10426,11 @@ window.SKILLTREE_DATA = {
       "x": 1861,
       "y": -280,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Heavy Artillery",
-      "desc": "30% increased Physical Damage with Projectile Skills\n+5% Stun Chance with Projectile Skills\n10% increased Range with Projectile Skills\n10% increased Skill Resource Cost with Projectile Skills",
+      "desc": "30% increased Physical Damage with Projectile Skills\n1% increased Range per 1 Resource Consumed by Skill with Projectile Skills\n10% increased Skill Resource Cost with Projectile Skills",
       "icon": "/img/talent/icon_talent_minor_projectile_damage.png"
     },
     {
@@ -11024,7 +10556,7 @@ window.SKILLTREE_DATA = {
     {
       "id": "n920",
       "x": 940,
-      "y": -459,
+      "y": -460,
       "size": "s",
       "r": 16,
       "type": "minor",
@@ -11035,86 +10567,50 @@ window.SKILLTREE_DATA = {
     },
     {
       "id": "n921",
-      "x": 250,
+      "x": 252,
       "y": -416,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "10% increased Damage with Projectile Skills",
-      "icon": "/img/talent/icon_talent_minor_projectile_damage.png"
-    },
-    {
-      "id": "n922",
-      "x": 249,
-      "y": -504,
-      "size": "s",
-      "r": 16,
-      "type": "minor",
-      "cost": 1,
-      "title": "Minor Node",
-      "desc": "+5% Projectile Fork Chance",
+      "desc": "20% increased Damage with Projectile Skills",
       "icon": "/img/talent/icon_talent_minor_projectile_damage.png"
     },
     {
       "id": "n923",
-      "x": 326,
-      "y": -369,
+      "x": 324,
+      "y": -373,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "+5% Projectile Return Chance",
+      "desc": "5% increased Damage with Projectile Skills",
       "icon": "/img/talent/icon_talent_minor_projectile_damage.png"
     },
     {
       "id": "n924",
-      "x": 404,
-      "y": -414,
+      "x": 403,
+      "y": -416,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
-      "desc": "+5% Projectile Fork Chance",
-      "icon": "/img/talent/icon_talent_minor_projectile_damage.png"
-    },
-    {
-      "id": "n925",
-      "x": 401,
-      "y": -503,
-      "size": "s",
-      "r": 16,
-      "type": "minor",
-      "cost": 1,
-      "title": "Minor Node",
-      "desc": "+5% Projectile Return Chance",
+      "desc": "5% increased Damage with Projectile Skills",
       "icon": "/img/talent/icon_talent_minor_projectile_damage.png"
     },
     {
       "id": "n926",
-      "x": 327,
-      "y": -461,
+      "x": 324,
+      "y": -465,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Propulsion Systems",
-      "desc": "10% increased Projectile Speed \n10% increased Damage with Projectile Skills \n+10% Projectile Return Chance \n+10% Projectile Fork Chance",
-      "icon": "/img/talent/icon_talent_minor_projectile_damage.png"
-    },
-    {
-      "id": "n927",
-      "x": 633,
-      "y": -548,
-      "size": "s",
-      "r": 16,
-      "type": "minor",
-      "cost": 1,
-      "title": "Minor Node",
-      "desc": "+5% Chance to Negate vs Projectile",
+      "desc": "25% increased Damage with Projectile Skills\n10% increased Projectile Speed",
       "icon": "/img/talent/icon_talent_minor_projectile_damage.png"
     },
     {
@@ -11122,7 +10618,7 @@ window.SKILLTREE_DATA = {
       "x": 633,
       "y": -639,
       "size": "s",
-      "r": 16,
+      "r": 12,
       "type": "minor",
       "cost": 1,
       "title": "Minor Node",
@@ -11167,7 +10663,7 @@ window.SKILLTREE_DATA = {
     },
     {
       "id": "n932",
-      "x": 326,
+      "x": 324,
       "y": -813,
       "size": "s",
       "r": 16,
@@ -11204,7 +10700,7 @@ window.SKILLTREE_DATA = {
     {
       "id": "n935",
       "x": 403,
-      "y": -676,
+      "y": -684,
       "size": "s",
       "r": 16,
       "type": "minor",
@@ -11254,11 +10750,11 @@ window.SKILLTREE_DATA = {
       "x": 173,
       "y": -903,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Hot Work",
-      "desc": "10% increased Burn Chance\n20% increased Burn Duration\n20% increased Fire Damage against Burning Enemies",
+      "desc": "10% increased Fire Damage\n10% increased Burn Chance\n20% increased Burn Duration\n20% increased Fire Damage against Burning Enemies",
       "icon": "/img/talent/icon_talent_minor_fire_damage.png"
     },
     {
@@ -11314,11 +10810,11 @@ window.SKILLTREE_DATA = {
       "x": 479,
       "y": -902,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Cooling Systems",
-      "desc": "+1% of Cold Damage leeched as Aether against Chilled Enemies\n5% decreased Skill Cooldown\n20% decreased Burn Duration on Yourself",
+      "desc": "10% increased Cold Damage\n+1% of Cold Damage leeched as Aether against Chilled Enemies\n5% decreased Skill Cooldown\n20% decreased Burn Duration on Yourself",
       "icon": "/img/talent/icon_talent_minor_cold_damage.png"
     },
     {
@@ -11360,7 +10856,7 @@ window.SKILLTREE_DATA = {
     {
       "id": "n948",
       "x": -903,
-      "y": 1312,
+      "y": 1310,
       "size": "m",
       "r": 20,
       "type": "major",
@@ -11398,11 +10894,11 @@ window.SKILLTREE_DATA = {
       "x": -827,
       "y": 1268,
       "size": "m",
-      "r": 20,
+      "r": 18,
       "type": "major",
       "cost": 1,
       "title": "Breakneck",
-      "desc": "10% increased Attack Speed with Swords\n5% increased Movement Speed while You have Sword Equipped\nGain +5 Aether on Hit",
+      "desc": "10% increased Attack Speed with Swords\n5% increased Movement Speed while You have Sword Equipped\nGain +1 Aether on Hit",
       "icon": "/img/talent/icon_talent_minor_sword_damage.png"
     },
     {
@@ -11416,6 +10912,1998 @@ window.SKILLTREE_DATA = {
       "title": "Brawler",
       "desc": "10% increased Maximum Life\n10% increased Maximum Aether",
       "icon": "/img/talent/icon_talent_minor_life_aether.png"
+    },
+    {
+      "id": "n952",
+      "x": -1207,
+      "y": 1615,
+      "size": "l",
+      "r": 26,
+      "type": "keystone",
+      "cost": 1,
+      "title": "In the Flesh",
+      "desc": "10% more Maximum Life\n10% more Physical Damage\n100% less Lightning Damage\n100% less Fire Damage\n100% less Cold Damage\n100% less Aether Damage",
+      "icon": ""
+    },
+    {
+      "id": "n673",
+      "x": 1170,
+      "y": 1885,
+      "size": "s",
+      "r": 12,
+      "type": "square",
+      "cost": 1,
+      "title": "",
+      "desc": "",
+      "icon": ""
+    },
+    {
+      "id": "n681",
+      "x": 862,
+      "y": 996,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "5% increased Maximum Aether",
+      "icon": ""
+    },
+    {
+      "id": "n682",
+      "x": 942,
+      "y": 952,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "5% increased Maximum Life\n5% increased Maximum Aether",
+      "icon": ""
+    },
+    {
+      "id": "n692",
+      "x": 1018,
+      "y": 992,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "5% increased Maximum Life",
+      "icon": ""
+    },
+    {
+      "id": "n953",
+      "x": 940,
+      "y": 1129,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "5% increased Maximum Life\n5% increased Maximum Aether",
+      "icon": ""
+    },
+    {
+      "id": "n954",
+      "x": 864,
+      "y": 1083,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "Spender",
+      "desc": "10% increased Maximum Aether\n5% increased Action Speed\n10% increased Skill Resource Cost",
+      "icon": ""
+    },
+    {
+      "id": "n955",
+      "x": 1018,
+      "y": 1082,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "Saver",
+      "desc": "10% increased Maximum Life\n5% decreased Skill Resource Cost\n25% increased Aether Regeneration while You are Stationary",
+      "icon": ""
+    },
+    {
+      "id": "n956",
+      "x": 1131,
+      "y": 1194,
+      "size": "l",
+      "r": 26,
+      "type": "keystone",
+      "cost": 1,
+      "title": "An Eye for an Eye",
+      "desc": "You Reflect 100% of Damage Taken. You Leech 1% of Damage as Life if You've been Struck Recently. You cannot Reflect Damage Dodged, Damage Blocked, or Damage Mitigated.",
+      "icon": ""
+    },
+    {
+      "id": "n800",
+      "x": 1944,
+      "y": 996,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "5% increased Critical Hit Damage with Pistols",
+      "icon": ""
+    },
+    {
+      "id": "n957",
+      "x": 1939,
+      "y": 1263,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "+10% Projectile Chain Chance with Pistols",
+      "icon": ""
+    },
+    {
+      "id": "n958",
+      "x": 2093,
+      "y": 992,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "",
+      "desc": "",
+      "icon": ""
+    },
+    {
+      "id": "n959",
+      "x": 2093,
+      "y": 908,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "",
+      "desc": "",
+      "icon": ""
+    },
+    {
+      "id": "n960",
+      "x": 2171,
+      "y": 860,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "",
+      "desc": "",
+      "icon": ""
+    },
+    {
+      "id": "n961",
+      "x": 2172,
+      "y": 951,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "",
+      "desc": "",
+      "icon": ""
+    },
+    {
+      "id": "n826",
+      "x": 1133,
+      "y": 709,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "5% increased Critical Hit Damage",
+      "icon": ""
+    },
+    {
+      "id": "n810",
+      "x": 1367,
+      "y": 845,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "+1% Critical Hit Chance against Nearby Enemies",
+      "icon": "/img/talent/icon_talent_minor_critical_hit_chance.png"
+    },
+    {
+      "id": "n879",
+      "x": 1479,
+      "y": 551,
+      "size": "l",
+      "r": 26,
+      "type": "keystone",
+      "cost": 1,
+      "title": "Guns Blazing",
+      "desc": "1% increased Attack Speed per 1 Resource Consumed by Skill while You are Dual Wielding\n25% increased Skill Resource Cost",
+      "icon": ""
+    },
+    {
+      "id": "n962",
+      "x": 1555,
+      "y": 596,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "+5 Dexterity",
+      "icon": ""
+    },
+    {
+      "id": "n963",
+      "x": 1640,
+      "y": 644,
+      "size": "l",
+      "r": 26,
+      "type": "keystone",
+      "cost": 1,
+      "title": "One-Armed Bandit",
+      "desc": "+1 Lucky Rolls to Hit Chance while your Off Hand is Empty\n25% more Maximum Aether while your Off Hand is Empty\n+1% of Damage leeched as Aether while your Off Hand is Empty",
+      "icon": ""
+    },
+    {
+      "id": "n832",
+      "x": 940,
+      "y": 241,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "",
+      "desc": "",
+      "icon": ""
+    },
+    {
+      "id": "n834",
+      "x": 941,
+      "y": 152,
+      "size": "s",
+      "r": 12,
+      "type": "square",
+      "cost": 1,
+      "title": "",
+      "desc": "",
+      "icon": ""
+    },
+    {
+      "id": "n848",
+      "x": 808,
+      "y": 75,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "Trespasser",
+      "desc": "+10% Projectile Pierce Chance per 1 Nearby Enemy\n+5% Physical Penetration on Projectile Pierce",
+      "icon": ""
+    },
+    {
+      "id": "n873",
+      "x": 724,
+      "y": 75,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "+10% Projectile Pierce Chance",
+      "icon": ""
+    },
+    {
+      "id": "n857",
+      "x": 866,
+      "y": -153,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "+1% Dodge Chance",
+      "icon": ""
+    },
+    {
+      "id": "n858",
+      "x": 787,
+      "y": -202,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "+1% Dodge Chance",
+      "icon": ""
+    },
+    {
+      "id": "n860",
+      "x": 712,
+      "y": -156,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "+1% Dodge Chance",
+      "icon": ""
+    },
+    {
+      "id": "n861",
+      "x": 789,
+      "y": -111,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "Counterplay",
+      "desc": "+2% Dodge Chance\nGain +3 Aether on Dodge\n+5% Critical Hit Chance if You've Dodged Recently",
+      "icon": ""
+    },
+    {
+      "id": "n862",
+      "x": 1010,
+      "y": -60,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "+1% Critical Hit Chance",
+      "icon": ""
+    },
+    {
+      "id": "n964",
+      "x": 1089,
+      "y": -15,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "+1% Critical Hit Chance",
+      "icon": ""
+    },
+    {
+      "id": "n965",
+      "x": 1169,
+      "y": -57,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "+1% Critical Hit Chance",
+      "icon": ""
+    },
+    {
+      "id": "n966",
+      "x": 1095,
+      "y": -105,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "Duelist",
+      "desc": "+2% Critical Hit Chance\n15% increased Critical Hit Damage\n+10% Ending Hit Chance",
+      "icon": ""
+    },
+    {
+      "id": "n859",
+      "x": 942,
+      "y": 19,
+      "size": "l",
+      "r": 26,
+      "type": "keystone",
+      "cost": 1,
+      "title": "",
+      "desc": "",
+      "icon": ""
+    },
+    {
+      "id": "n967",
+      "x": 1326,
+      "y": -331,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "5% increased Range with Projectile Skills",
+      "icon": ""
+    },
+    {
+      "id": "n968",
+      "x": 1324,
+      "y": -424,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "5% increased Range with Projectile Skills",
+      "icon": ""
+    },
+    {
+      "id": "n969",
+      "x": 1400,
+      "y": -473,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "5% increased Range with Projectile Skills",
+      "icon": ""
+    },
+    {
+      "id": "n970",
+      "x": 1401,
+      "y": -382,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "Aeronautics",
+      "desc": "10% increased Range with Projectile Skills\n25% increased Projectile Speed\n5% decreased Skill Resource Cost with Projectile Skills",
+      "icon": ""
+    },
+    {
+      "id": "n971",
+      "x": 1399,
+      "y": -289,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "+10% Projectile Chain Chance",
+      "icon": ""
+    },
+    {
+      "id": "n972",
+      "x": 1478,
+      "y": -334,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "+10% Projectile Chain Chance",
+      "icon": ""
+    },
+    {
+      "id": "n973",
+      "x": 1477,
+      "y": -423,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "Ballistician",
+      "desc": "+30% Projectile Chain Chance\n+5% Dodge Chance vs Projectile",
+      "icon": ""
+    },
+    {
+      "id": "n974",
+      "x": 1363,
+      "y": -575,
+      "size": "l",
+      "r": 26,
+      "type": "keystone",
+      "cost": 1,
+      "title": "Glass Cannon",
+      "desc": "25% more Physical Damage with Ranged Skills\n20% less Maximum Life",
+      "icon": ""
+    },
+    {
+      "id": "n975",
+      "x": 940,
+      "y": -379,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "+5% Chance to Negate while You have Rod Equipped",
+      "icon": ""
+    },
+    {
+      "id": "n976",
+      "x": 1077,
+      "y": -630,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "Intelligence",
+      "desc": "+15 Intelligence",
+      "icon": ""
+    },
+    {
+      "id": "n977",
+      "x": 940,
+      "y": -557,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "5% increased Damage while You have Rod Equipped",
+      "icon": ""
+    },
+    {
+      "id": "n978",
+      "x": 863,
+      "y": -511,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "5% increased Damage while You have Rod Equipped",
+      "icon": ""
+    },
+    {
+      "id": "n979",
+      "x": 862,
+      "y": -599,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "Scourge",
+      "desc": "10% increased Damage while You have Rod Equipped\n10% increased Chance to inflict Ailments while You have Rod Equipped\n10% increased Ailment Duration while You have Rod Equipped",
+      "icon": ""
+    },
+    {
+      "id": "n980",
+      "x": 939,
+      "y": -645,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "10% increased Ailment Effect while You have Rod Equipped",
+      "icon": ""
+    },
+    {
+      "id": "n981",
+      "x": 861,
+      "y": -692,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "10% increased Ailment Effect while You have Rod Equipped",
+      "icon": ""
+    },
+    {
+      "id": "n982",
+      "x": 1021,
+      "y": -425,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "+5% Chance to Negate while You have Rod Equipped",
+      "icon": ""
+    },
+    {
+      "id": "n983",
+      "x": 1019,
+      "y": -334,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "Ward",
+      "desc": "+5% Chance to Negate while You have Rod Equipped\n+5% to all Resistances while You have Rod Equipped",
+      "icon": ""
+    },
+    {
+      "id": "n984",
+      "x": 943,
+      "y": -288,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "+5% Chance to Negate while You have Rod Equipped",
+      "icon": ""
+    },
+    {
+      "id": "n985",
+      "x": 1019,
+      "y": -246,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "Gain +5 Aether on Negate",
+      "icon": ""
+    },
+    {
+      "id": "n286",
+      "x": 1863,
+      "y": -736,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "+10% of Life and Aether Leech is recovered Instantly",
+      "icon": ""
+    },
+    {
+      "id": "n986",
+      "x": 1783,
+      "y": -692,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "+1% of Physical Damage leeched as Life",
+      "icon": ""
+    },
+    {
+      "id": "n987",
+      "x": 1940,
+      "y": -691,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "+1% of Aether Damage leeched as Aether",
+      "icon": ""
+    },
+    {
+      "id": "n988",
+      "x": 1862,
+      "y": -646,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "Sink",
+      "desc": "5% increased Maximum Aether\n5% increased Maximum Life\n50% increased Auto Pickup Radius\n+2% of Aether Damage leeched as Aether\n+2% of Physical Damage leeched as Life",
+      "icon": ""
+    },
+    {
+      "id": "n989",
+      "x": 2092,
+      "y": -871,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "5% increased Damage",
+      "icon": ""
+    },
+    {
+      "id": "n990",
+      "x": 2166,
+      "y": -914,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "10% increased Physical Damage",
+      "icon": ""
+    },
+    {
+      "id": "n991",
+      "x": 2171,
+      "y": -825,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "Source",
+      "desc": "30% increased Physical Damage while You are on Full Life\n30% increased Aether Damage while You are on Full Aether\n20% increased Range with Channeling Skills",
+      "icon": ""
+    },
+    {
+      "id": "n992",
+      "x": 2093,
+      "y": -781,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "10% increased Aether Damage",
+      "icon": ""
+    },
+    {
+      "id": "n993",
+      "x": 1631,
+      "y": -1135,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "5% increased Damage with Mine Skills",
+      "icon": ""
+    },
+    {
+      "id": "n994",
+      "x": 1634,
+      "y": -1223,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "5% increased Damage with Mine Skills",
+      "icon": ""
+    },
+    {
+      "id": "n995",
+      "x": 1554,
+      "y": -1272,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "5% increased Damage with Mine Skills",
+      "icon": ""
+    },
+    {
+      "id": "n996",
+      "x": 1556,
+      "y": -1177,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "Sapper",
+      "desc": "10% increased AoE Radius with Mine Skills\n15% increased Damage with Mine Skills",
+      "icon": ""
+    },
+    {
+      "id": "n997",
+      "x": 1479,
+      "y": -1135,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "5% increased AoE Radius with Mine Skills",
+      "icon": ""
+    },
+    {
+      "id": "n998",
+      "x": 1556,
+      "y": -1091,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "5% increased AoE Radius with Mine Skills",
+      "icon": ""
+    },
+    {
+      "id": "n284",
+      "x": 2084,
+      "y": -1572,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "+5 Intelligence",
+      "icon": ""
+    },
+    {
+      "id": "n999",
+      "x": 2243,
+      "y": -1482,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "+5 Intelligence",
+      "icon": ""
+    },
+    {
+      "id": "n1000",
+      "x": 2243,
+      "y": -1570,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "Capacity",
+      "desc": "10% increased Maximum Aether\n10% increased Maximum Life\n10% increased Damage",
+      "icon": ""
+    },
+    {
+      "id": "n1001",
+      "x": 2168,
+      "y": -1616,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "5% increased Maximum Life",
+      "icon": ""
+    },
+    {
+      "id": "n1002",
+      "x": 2084,
+      "y": -1483,
+      "size": "m",
+      "r": 18,
+      "type": "square",
+      "cost": 1,
+      "title": "",
+      "desc": "",
+      "icon": ""
+    },
+    {
+      "id": "n1003",
+      "x": 2168,
+      "y": -1438,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "5% increased Maximum Aether",
+      "icon": ""
+    },
+    {
+      "id": "n1004",
+      "x": 1634,
+      "y": -1578,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "10% increased Aether Regeneration",
+      "icon": ""
+    },
+    {
+      "id": "n1005",
+      "x": 1635,
+      "y": -1487,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "5% decreased Skill Aether Cost with Aether Skills",
+      "icon": ""
+    },
+    {
+      "id": "n1006",
+      "x": 1556,
+      "y": -1444,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "5% decreased Skill Aether Cost if You've used an Aether Skill Recently",
+      "icon": ""
+    },
+    {
+      "id": "n1007",
+      "x": 1556,
+      "y": -1532,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "Aether Drift",
+      "desc": "20% decreased Skill Aether Cost if You've used an Aether Skill Recently",
+      "icon": ""
+    },
+    {
+      "id": "n1008",
+      "x": 1556,
+      "y": -1620,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "10% increased Aether Regeneration",
+      "icon": ""
+    },
+    {
+      "id": "n1009",
+      "x": 1480,
+      "y": -1572,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "10% increased Aether Regeneration",
+      "icon": ""
+    },
+    {
+      "id": "n1010",
+      "x": 1480,
+      "y": -1487,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "Skybound",
+      "desc": "5% increased Movement Speed\n20% increased Aether Regeneration",
+      "icon": ""
+    },
+    {
+      "id": "n313",
+      "x": 328,
+      "y": -556,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "Orbital Mechanics",
+      "desc": "+15% Projectile Return Chance\nGain +1 Aether on Projectile Return",
+      "icon": ""
+    },
+    {
+      "id": "n317",
+      "x": 252,
+      "y": -509,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "+5% Projectile Return Chance",
+      "icon": ""
+    },
+    {
+      "id": "n320",
+      "x": 404,
+      "y": -511,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "+5% Projectile Return Chance",
+      "icon": ""
+    },
+    {
+      "id": "n321",
+      "x": -593,
+      "y": -725,
+      "size": "m",
+      "r": 18,
+      "type": "square",
+      "cost": 1,
+      "title": "",
+      "desc": "",
+      "icon": ""
+    },
+    {
+      "id": "n322",
+      "x": -599,
+      "y": -549,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "Synchronizer",
+      "desc": "10% increased Maximum Aether\nRegenerate +1/s Aether per second\n+10% of Aether Regeneration Converted to Life Regeneration while You are on Full Aether",
+      "icon": ""
+    },
+    {
+      "id": "n323",
+      "x": -213,
+      "y": -859,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "10% increased Physical Damage with Staves",
+      "icon": ""
+    },
+    {
+      "id": "n324",
+      "x": -214,
+      "y": -951,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "10% increased Physical Damage with Staves",
+      "icon": ""
+    },
+    {
+      "id": "n325",
+      "x": -132,
+      "y": -1001,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "10% increased Physical Damage with Staves",
+      "icon": ""
+    },
+    {
+      "id": "n368",
+      "x": -134,
+      "y": -911,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "Pendulum",
+      "desc": "+5% Critical Hit Chance with Staves\n10% increased Physical Damage with Staves\n5% increased Attack Speed with Staves",
+      "icon": ""
+    },
+    {
+      "id": "n369",
+      "x": -134,
+      "y": -817,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "5% increased Attack Speed with Staves",
+      "icon": ""
+    },
+    {
+      "id": "n922",
+      "x": -57,
+      "y": -866,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "5% increased Attack Speed with Staves",
+      "icon": ""
+    },
+    {
+      "id": "n925",
+      "x": -56,
+      "y": -951,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "5% increased Attack Speed with Staves",
+      "icon": ""
+    },
+    {
+      "id": "n927",
+      "x": 636,
+      "y": -1090,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "10% increased Aether Damage",
+      "icon": ""
+    },
+    {
+      "id": "n1011",
+      "x": 557,
+      "y": -1134,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "10% increased Aether Damage",
+      "icon": ""
+    },
+    {
+      "id": "n1012",
+      "x": 556,
+      "y": -1224,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "10% increased Aether Damage",
+      "icon": ""
+    },
+    {
+      "id": "n1013",
+      "x": 632,
+      "y": -1179,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "Atmosphere",
+      "desc": "20% increased Aether Damage\n+10% Aether Penetration against Nearby Enemies\n10% increased AoE Radius if You've used an Aether Skill Recently",
+      "icon": ""
+    },
+    {
+      "id": "n1014",
+      "x": 632,
+      "y": -1269,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "10% increased Aether Damage",
+      "icon": ""
+    },
+    {
+      "id": "n1015",
+      "x": 712,
+      "y": -1222,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "+10% Aether Penetration",
+      "icon": ""
+    },
+    {
+      "id": "n1016",
+      "x": 711,
+      "y": -1135,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "10% increased AoE Radius if You've used an Aether Skill Recently",
+      "icon": ""
+    },
+    {
+      "id": "n1017",
+      "x": 941,
+      "y": -1002,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "+5% to Elemental Resistances",
+      "icon": ""
+    },
+    {
+      "id": "n1018",
+      "x": 865,
+      "y": -1048,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "+10% Fire Resistance",
+      "icon": ""
+    },
+    {
+      "id": "n1019",
+      "x": 1018,
+      "y": -1047,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "+10% Cold Resistance",
+      "icon": ""
+    },
+    {
+      "id": "n1020",
+      "x": 941,
+      "y": -1089,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "+10% Lightning Resistance",
+      "icon": ""
+    },
+    {
+      "id": "n1021",
+      "x": 1017,
+      "y": -1134,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "Freezer",
+      "desc": "20% increased Cold Damage\n+5% Critical Hit Chance with Cold Skills",
+      "icon": ""
+    },
+    {
+      "id": "n1022",
+      "x": 1016,
+      "y": -1224,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "10% increased Cold Damage",
+      "icon": ""
+    },
+    {
+      "id": "n1023",
+      "x": 939,
+      "y": -1273,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "5% increased Elemental Damage",
+      "icon": ""
+    },
+    {
+      "id": "n1024",
+      "x": 863,
+      "y": -1223,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "10% increased Fire Damage",
+      "icon": ""
+    },
+    {
+      "id": "n1025",
+      "x": 864,
+      "y": -1133,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "Bellow",
+      "desc": "20% increased Fire Damage\n5% increased Cast Speed with Fire Skills",
+      "icon": ""
+    },
+    {
+      "id": "n1026",
+      "x": 940,
+      "y": -1178,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "Arc",
+      "desc": "20% increased Lightning Damage\n20% increased Range with Lightning Skills",
+      "icon": ""
+    },
+    {
+      "id": "n1027",
+      "x": 865,
+      "y": -1482,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "5% increased Skill Resource Cost with Elemental Skills",
+      "icon": ""
+    },
+    {
+      "id": "n1028",
+      "x": 864,
+      "y": -1391,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "Instability",
+      "desc": "15% increased Skill Resource Cost with Elemental Skills\n5% increased Cast Speed with Elemental Skills\n5% increased Attack Speed with Elemental Skills",
+      "icon": ""
+    },
+    {
+      "id": "n1029",
+      "x": 939,
+      "y": -1621,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "5% increased Maximum Life",
+      "icon": ""
+    },
+    {
+      "id": "n1030",
+      "x": 1017,
+      "y": -1667,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "Preservation",
+      "desc": "10% increased Maximum Life\n5% decreased Skill Resource Cost with Elemental Skills\n+5% to Elemental Resistances",
+      "icon": ""
+    },
+    {
+      "id": "n329",
+      "x": 327,
+      "y": -1622,
+      "size": "m",
+      "r": 18,
+      "type": "square",
+      "cost": 1,
+      "title": "",
+      "desc": "",
+      "icon": ""
+    },
+    {
+      "id": "n331",
+      "x": 402,
+      "y": -1567,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "5% increased Elemental Damage",
+      "icon": ""
+    },
+    {
+      "id": "n332",
+      "x": 325,
+      "y": -1433,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "Catalysis",
+      "desc": "5% decreased Skill Resource Cost with Elemental Skills\n20% increased Chance to inflict Ailments with Elemental Skills",
+      "icon": ""
+    },
+    {
+      "id": "n334",
+      "x": 632,
+      "y": -1619,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "10% increased Cold Damage",
+      "icon": ""
+    },
+    {
+      "id": "n1031",
+      "x": 714,
+      "y": -1575,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "20% increased Skill Resource Cost with Cold Skills",
+      "icon": ""
+    },
+    {
+      "id": "n1032",
+      "x": 714,
+      "y": -1485,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "20% increased Skill Resource Cost with Cold Skills",
+      "icon": ""
+    },
+    {
+      "id": "n1033",
+      "x": 633,
+      "y": -1534,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "Cryogenics",
+      "desc": "1% increased Cold Damage per 3 Resource Consumed by Skill\n+5% of incoming Physical Damage Converted to Cold Damage\nGain +10% of Cold Damage Taken as Aether",
+      "icon": ""
+    },
+    {
+      "id": "n1034",
+      "x": 633,
+      "y": -1446,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "Time Dilation",
+      "desc": "10% increased Attack Speed with Cold Skills\n20% increased Chill Duration",
+      "icon": ""
+    },
+    {
+      "id": "n1035",
+      "x": 555,
+      "y": -1489,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "5% increased Attack Speed with Cold Skills",
+      "icon": ""
+    },
+    {
+      "id": "n1036",
+      "x": 555,
+      "y": -1577,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "5% increased Attack Speed with Cold Skills",
+      "icon": ""
+    },
+    {
+      "id": "n1037",
+      "x": 479,
+      "y": -1790,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "10% increased Lightning Damage\n10% increased Shock Chance",
+      "icon": ""
+    },
+    {
+      "id": "n1038",
+      "x": 402,
+      "y": -1751,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "10% increased Lightning Damage",
+      "icon": ""
+    },
+    {
+      "id": "n1039",
+      "x": 327,
+      "y": -1792,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "10% increased Lightning Damage",
+      "icon": ""
+    },
+    {
+      "id": "n1040",
+      "x": 325,
+      "y": -1881,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "Thermoelectrics",
+      "desc": "5% decreased Skill Cooldown\nGain +10% of Lightning Damage as Extra Cold Damage",
+      "icon": ""
+    },
+    {
+      "id": "n1041",
+      "x": 405,
+      "y": -1840,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "Circuitry",
+      "desc": "+30% Projectile Chain Chance against Shocked Enemies\nGain +10% of Lightning Damage as Extra Fire Damage",
+      "icon": ""
+    },
+    {
+      "id": "n1042",
+      "x": 403,
+      "y": -1926,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "10% increased Shock Chance",
+      "icon": ""
+    },
+    {
+      "id": "n1043",
+      "x": 479,
+      "y": -1879,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "10% increased Shock Chance",
+      "icon": ""
+    },
+    {
+      "id": "n1044",
+      "x": 713,
+      "y": -1749,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "10% increased Fire Damage",
+      "icon": ""
+    },
+    {
+      "id": "n1045",
+      "x": 712,
+      "y": -1840,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "10% increased Fire Damage",
+      "icon": ""
+    },
+    {
+      "id": "n1046",
+      "x": 788,
+      "y": -1886,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "10% increased Fire Damage",
+      "icon": ""
+    },
+    {
+      "id": "n1047",
+      "x": 865,
+      "y": -1843,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "Torchbearer",
+      "desc": "20% increased Fire Damage\n20% increased Burn Chance against Enemies on Full Life\n5% increased Maximum Life",
+      "icon": ""
+    },
+    {
+      "id": "n1048",
+      "x": 866,
+      "y": -1752,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "15% increased Burn Chance against Enemies on Full Life",
+      "icon": ""
+    },
+    {
+      "id": "n1049",
+      "x": 788,
+      "y": -1708,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "15% increased Burn Chance against Enemies on Full Life",
+      "icon": ""
+    },
+    {
+      "id": "n1050",
+      "x": 634,
+      "y": -1977,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "",
+      "icon": ""
+    },
+    {
+      "id": "n1051",
+      "x": 558,
+      "y": -2019,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "",
+      "icon": ""
+    },
+    {
+      "id": "n1052",
+      "x": 557,
+      "y": -2106,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "",
+      "icon": ""
+    },
+    {
+      "id": "n1053",
+      "x": 713,
+      "y": -2108,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "",
+      "icon": ""
+    },
+    {
+      "id": "n1054",
+      "x": 714,
+      "y": -2020,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "",
+      "icon": ""
+    },
+    {
+      "id": "n1055",
+      "x": 632,
+      "y": -2064,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "",
+      "desc": "",
+      "icon": ""
+    },
+    {
+      "id": "n216",
+      "x": -211,
+      "y": -2282,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "10% increased Skill Reservation Cost",
+      "icon": ""
+    },
+    {
+      "id": "n217",
+      "x": -212,
+      "y": -1928,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "5% increased Maximum Aether",
+      "icon": ""
+    },
+    {
+      "id": "n1056",
+      "x": -211,
+      "y": -1841,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "5% increased Maximum Aether",
+      "icon": ""
+    },
+    {
+      "id": "n1057",
+      "x": -290,
+      "y": -1796,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "5% increased Maximum Aether",
+      "icon": ""
+    },
+    {
+      "id": "n1058",
+      "x": -291,
+      "y": -1886,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "Buffer",
+      "desc": "10% increased Maximum Aether\n+10% of Damage Taken from Aether before Life while You are Channeling",
+      "icon": ""
+    },
+    {
+      "id": "n1059",
+      "x": -365,
+      "y": -1843,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "Elasticity",
+      "desc": "20% increased Damage with Channeling Skills\n10% increased Range with Channeling Skills\nGain +5% of Damage Taken as Aether while You are Channeling",
+      "icon": ""
+    },
+    {
+      "id": "n1060",
+      "x": -366,
+      "y": -1933,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "5% increased Damage with Channeling Skills",
+      "icon": ""
+    },
+    {
+      "id": "n1061",
+      "x": -288,
+      "y": -1976,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "5% increased Damage with Channeling Skills",
+      "icon": ""
+    },
+    {
+      "id": "n1062",
+      "x": -674,
+      "y": -2111,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "+10 Intelligence",
+      "icon": ""
+    },
+    {
+      "id": "n1063",
+      "x": -594,
+      "y": -2155,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "+15 Intelligence while You have Staff Equipped",
+      "icon": ""
+    },
+    {
+      "id": "n1064",
+      "x": -594,
+      "y": -2063,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "+10 Intelligence",
+      "icon": ""
+    },
+    {
+      "id": "n1065",
+      "x": -517,
+      "y": -2110,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "+15 Intelligence while You have Staff Equipped",
+      "icon": ""
+    },
+    {
+      "id": "n1066",
+      "x": -518,
+      "y": -2017,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "Brilliance",
+      "desc": "1% increased AoE Radius per 10 Intelligence",
+      "icon": ""
+    },
+    {
+      "id": "n1067",
+      "x": -593,
+      "y": -1965,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "+15 Intelligence while You have Rod Equipped",
+      "icon": ""
+    },
+    {
+      "id": "n1068",
+      "x": -678,
+      "y": -2015,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "+15 Intelligence while You have Rod Equipped",
+      "icon": ""
+    },
+    {
+      "id": "n1069",
+      "x": -1749,
+      "y": -2010,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "Gain +5% of Damage as Extra Aether Damage",
+      "icon": ""
+    },
+    {
+      "id": "n1070",
+      "x": -1748,
+      "y": -2101,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "Gain +5% of Damage as Extra Aether Damage",
+      "icon": ""
+    },
+    {
+      "id": "n1071",
+      "x": -1824,
+      "y": -2143,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "Gain +5% of Damage as Extra Aether Damage",
+      "icon": ""
+    },
+    {
+      "id": "n1072",
+      "x": -1823,
+      "y": -2051,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "Light-Eater",
+      "desc": "Gain +5% of Damage as Extra Aether Damage\n10% increased Damage against Dazzled Enemies\n+1% of Damage leeched as Aether against Dazzled Enemies\nGain +10% of Aether Damage Taken as Aether",
+      "icon": ""
+    },
+    {
+      "id": "n1073",
+      "x": -1826,
+      "y": -1963,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "10% increased Dazzle Duration",
+      "icon": ""
+    },
+    {
+      "id": "n1074",
+      "x": -1901,
+      "y": -2006,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "5% increased Dazzle Duration",
+      "icon": ""
+    },
+    {
+      "id": "n1075",
+      "x": -1901,
+      "y": -2094,
+      "size": "m",
+      "r": 18,
+      "type": "major",
+      "cost": 1,
+      "title": "Covert Ops",
+      "desc": "25% increased Dazzle Chance\n25% increased Dazzle Duration\n10% increased Cast Speed against Dazzled Enemies",
+      "icon": ""
+    },
+    {
+      "id": "n175",
+      "x": -1035,
+      "y": -636,
+      "size": "l",
+      "r": 26,
+      "type": "keystone",
+      "cost": 1,
+      "title": "Alchemy",
+      "desc": "+100% of Aether Regeneration Converted to Life Regeneration\n+100% of Skill Resource Cost Converted from Aether to Life",
+      "icon": ""
+    },
+    {
+      "id": "n189",
+      "x": 2390,
+      "y": 147,
+      "size": "m",
+      "r": 18,
+      "type": "square",
+      "cost": 1,
+      "title": "",
+      "desc": "",
+      "icon": ""
+    },
+    {
+      "id": "n346",
+      "x": -675,
+      "y": -1298,
+      "size": "s",
+      "r": 12,
+      "type": "minor",
+      "cost": 1,
+      "title": "Minor Node",
+      "desc": "5% increased Maximum Life",
+      "icon": ""
     }
   ],
   "edges": [
@@ -11856,24 +13344,8 @@ window.SKILLTREE_DATA = {
       "n370"
     ],
     [
-      "n370",
-      "n369"
-    ],
-    [
-      "n369",
-      "n366"
-    ],
-    [
       "n366",
       "n367"
-    ],
-    [
-      "n367",
-      "n368"
-    ],
-    [
-      "n368",
-      "n372"
     ],
     [
       "n1",
@@ -11957,10 +13429,6 @@ window.SKILLTREE_DATA = {
     ],
     [
       "n672",
-      "n673"
-    ],
-    [
-      "n672",
       "n674"
     ],
     [
@@ -12024,40 +13492,12 @@ window.SKILLTREE_DATA = {
       "n658"
     ],
     [
-      "n657",
-      "n659"
-    ],
-    [
       "n659",
       "n660"
     ],
     [
-      "n660",
-      "n661"
-    ],
-    [
-      "n658",
-      "n662"
-    ],
-    [
-      "n662",
-      "n663"
-    ],
-    [
       "n675",
       "n680"
-    ],
-    [
-      "n680",
-      "n681"
-    ],
-    [
-      "n681",
-      "n682"
-    ],
-    [
-      "n812",
-      "n681"
     ],
     [
       "n654",
@@ -12205,39 +13645,11 @@ window.SKILLTREE_DATA = {
     ],
     [
       "n847",
-      "n848"
-    ],
-    [
-      "n847",
       "n666"
     ],
     [
       "n847",
       "n856"
-    ],
-    [
-      "n856",
-      "n857"
-    ],
-    [
-      "n857",
-      "n858"
-    ],
-    [
-      "n859",
-      "n858"
-    ],
-    [
-      "n856",
-      "n860"
-    ],
-    [
-      "n860",
-      "n861"
-    ],
-    [
-      "n861",
-      "n862"
     ],
     [
       "n856",
@@ -12252,40 +13664,12 @@ window.SKILLTREE_DATA = {
       "n920"
     ],
     [
-      "n863",
-      "n927"
-    ],
-    [
-      "n927",
-      "n928"
-    ],
-    [
-      "n927",
-      "n929"
-    ],
-    [
-      "n928",
-      "n925"
-    ],
-    [
       "n929",
       "n930"
     ],
     [
       "n930",
       "n931"
-    ],
-    [
-      "n925",
-      "n926"
-    ],
-    [
-      "n921",
-      "n922"
-    ],
-    [
-      "n922",
-      "n926"
     ],
     [
       "n926",
@@ -12465,10 +13849,6 @@ window.SKILLTREE_DATA = {
     ],
     [
       "n285",
-      "n286"
-    ],
-    [
-      "n285",
       "n295"
     ],
     [
@@ -12498,14 +13878,6 @@ window.SKILLTREE_DATA = {
     [
       "n292",
       "n294"
-    ],
-    [
-      "n285",
-      "n284"
-    ],
-    [
-      "n284",
-      "n283"
     ],
     [
       "n283",
@@ -12561,39 +13933,11 @@ window.SKILLTREE_DATA = {
     ],
     [
       "n315",
-      "n317"
-    ],
-    [
-      "n315",
       "n316"
     ],
     [
       "n315",
       "n319"
-    ],
-    [
-      "n319",
-      "n320"
-    ],
-    [
-      "n320",
-      "n321"
-    ],
-    [
-      "n321",
-      "n322"
-    ],
-    [
-      "n319",
-      "n323"
-    ],
-    [
-      "n323",
-      "n324"
-    ],
-    [
-      "n324",
-      "n325"
     ],
     [
       "n266",
@@ -12808,18 +14152,6 @@ window.SKILLTREE_DATA = {
       "n215"
     ],
     [
-      "n215",
-      "n216"
-    ],
-    [
-      "n216",
-      "n217"
-    ],
-    [
-      "n217",
-      "n218"
-    ],
-    [
       "n218",
       "n219"
     ],
@@ -12872,26 +14204,6 @@ window.SKILLTREE_DATA = {
       "n333"
     ],
     [
-      "n333",
-      "n332"
-    ],
-    [
-      "n332",
-      "n334"
-    ],
-    [
-      "n328",
-      "n329"
-    ],
-    [
-      "n329",
-      "n330"
-    ],
-    [
-      "n330",
-      "n331"
-    ],
-    [
       "n326",
       "n336"
     ],
@@ -12926,14 +14238,6 @@ window.SKILLTREE_DATA = {
     [
       "n314",
       "n312"
-    ],
-    [
-      "n312",
-      "n313"
-    ],
-    [
-      "n313",
-      "n315"
     ],
     [
       "n312",
@@ -12972,44 +14276,8 @@ window.SKILLTREE_DATA = {
       "n190"
     ],
     [
-      "n190",
-      "n346"
-    ],
-    [
-      "n346",
-      "n347"
-    ],
-    [
-      "n347",
-      "n348"
-    ],
-    [
-      "n348",
-      "n349"
-    ],
-    [
       "n349",
       "n352"
-    ],
-    [
-      "n349",
-      "n350"
-    ],
-    [
-      "n350",
-      "n351"
-    ],
-    [
-      "n351",
-      "n346"
-    ],
-    [
-      "n190",
-      "n189"
-    ],
-    [
-      "n189",
-      "n182"
     ],
     [
       "n182",
@@ -13042,14 +14310,6 @@ window.SKILLTREE_DATA = {
     [
       "n187",
       "n188"
-    ],
-    [
-      "n188",
-      "n175"
-    ],
-    [
-      "n175",
-      "n174"
     ],
     [
       "n174",
@@ -14701,10 +15961,6 @@ window.SKILLTREE_DATA = {
     ],
     [
       "n691",
-      "n692"
-    ],
-    [
-      "n691",
       "n721"
     ],
     [
@@ -14904,10 +16160,6 @@ window.SKILLTREE_DATA = {
       "n741"
     ],
     [
-      "n741",
-      "n742"
-    ],
-    [
       "n742",
       "n743"
     ],
@@ -15081,10 +16333,6 @@ window.SKILLTREE_DATA = {
     ],
     [
       "n791",
-      "n800"
-    ],
-    [
-      "n791",
       "n793"
     ],
     [
@@ -15172,10 +16420,6 @@ window.SKILLTREE_DATA = {
       "n822"
     ],
     [
-      "n791",
-      "n826"
-    ],
-    [
       "n792",
       "n801"
     ],
@@ -15212,14 +16456,6 @@ window.SKILLTREE_DATA = {
       "n809"
     ],
     [
-      "n809",
-      "n810"
-    ],
-    [
-      "n810",
-      "n811"
-    ],
-    [
       "n818",
       "n829"
     ],
@@ -15230,14 +16466,6 @@ window.SKILLTREE_DATA = {
     [
       "n828",
       "n827"
-    ],
-    [
-      "n827",
-      "n826"
-    ],
-    [
-      "n827",
-      "n834"
     ],
     [
       "n827",
@@ -15253,14 +16481,6 @@ window.SKILLTREE_DATA = {
     ],
     [
       "n831",
-      "n832"
-    ],
-    [
-      "n832",
-      "n833"
-    ],
-    [
-      "n831",
       "n847"
     ],
     [
@@ -15270,10 +16490,6 @@ window.SKILLTREE_DATA = {
     [
       "n845",
       "n827"
-    ],
-    [
-      "n845",
-      "n846"
     ],
     [
       "n846",
@@ -15322,14 +16538,6 @@ window.SKILLTREE_DATA = {
     [
       "n864",
       "n872"
-    ],
-    [
-      "n872",
-      "n873"
-    ],
-    [
-      "n872",
-      "n879"
     ],
     [
       "n872",
@@ -15586,6 +16794,878 @@ window.SKILLTREE_DATA = {
     [
       "n15",
       "n13"
+    ],
+    [
+      "n371",
+      "n372"
+    ],
+    [
+      "n470",
+      "n952"
+    ],
+    [
+      "n662",
+      "n654"
+    ],
+    [
+      "n662",
+      "n661"
+    ],
+    [
+      "n661",
+      "n663"
+    ],
+    [
+      "n663",
+      "n659"
+    ],
+    [
+      "n658",
+      "n663"
+    ],
+    [
+      "n673",
+      "n721"
+    ],
+    [
+      "n680",
+      "n660"
+    ],
+    [
+      "n680",
+      "n681"
+    ],
+    [
+      "n681",
+      "n682"
+    ],
+    [
+      "n682",
+      "n812"
+    ],
+    [
+      "n682",
+      "n692"
+    ],
+    [
+      "n692",
+      "n792"
+    ],
+    [
+      "n792",
+      "n956"
+    ],
+    [
+      "n692",
+      "n955"
+    ],
+    [
+      "n955",
+      "n953"
+    ],
+    [
+      "n953",
+      "n954"
+    ],
+    [
+      "n954",
+      "n681"
+    ],
+    [
+      "n953",
+      "n691"
+    ],
+    [
+      "n800",
+      "n788"
+    ],
+    [
+      "n800",
+      "n786"
+    ],
+    [
+      "n790",
+      "n957"
+    ],
+    [
+      "n957",
+      "n785"
+    ],
+    [
+      "n784",
+      "n958"
+    ],
+    [
+      "n958",
+      "n959"
+    ],
+    [
+      "n959",
+      "n960"
+    ],
+    [
+      "n960",
+      "n961"
+    ],
+    [
+      "n815",
+      "n826"
+    ],
+    [
+      "n826",
+      "n807"
+    ],
+    [
+      "n810",
+      "n811"
+    ],
+    [
+      "n811",
+      "n809"
+    ],
+    [
+      "n810",
+      "n791"
+    ],
+    [
+      "n962",
+      "n791"
+    ],
+    [
+      "n962",
+      "n872"
+    ],
+    [
+      "n963",
+      "n962"
+    ],
+    [
+      "n962",
+      "n879"
+    ],
+    [
+      "n847",
+      "n873"
+    ],
+    [
+      "n873",
+      "n848"
+    ],
+    [
+      "n859",
+      "n856"
+    ],
+    [
+      "n856",
+      "n862"
+    ],
+    [
+      "n862",
+      "n964"
+    ],
+    [
+      "n964",
+      "n965"
+    ],
+    [
+      "n965",
+      "n966"
+    ],
+    [
+      "n856",
+      "n857"
+    ],
+    [
+      "n857",
+      "n858"
+    ],
+    [
+      "n858",
+      "n860"
+    ],
+    [
+      "n860",
+      "n861"
+    ],
+    [
+      "n834",
+      "n831"
+    ],
+    [
+      "n829",
+      "n832"
+    ],
+    [
+      "n832",
+      "n833"
+    ],
+    [
+      "n846",
+      "n919"
+    ],
+    [
+      "n303",
+      "n974"
+    ],
+    [
+      "n919",
+      "n967"
+    ],
+    [
+      "n967",
+      "n968"
+    ],
+    [
+      "n968",
+      "n969"
+    ],
+    [
+      "n969",
+      "n970"
+    ],
+    [
+      "n967",
+      "n971"
+    ],
+    [
+      "n971",
+      "n972"
+    ],
+    [
+      "n972",
+      "n973"
+    ],
+    [
+      "n303",
+      "n976"
+    ],
+    [
+      "n920",
+      "n977"
+    ],
+    [
+      "n977",
+      "n978"
+    ],
+    [
+      "n978",
+      "n979"
+    ],
+    [
+      "n979",
+      "n981"
+    ],
+    [
+      "n979",
+      "n980"
+    ],
+    [
+      "n920",
+      "n975"
+    ],
+    [
+      "n975",
+      "n982"
+    ],
+    [
+      "n982",
+      "n983"
+    ],
+    [
+      "n983",
+      "n984"
+    ],
+    [
+      "n983",
+      "n985"
+    ],
+    [
+      "n297",
+      "n286"
+    ],
+    [
+      "n286",
+      "n987"
+    ],
+    [
+      "n987",
+      "n988"
+    ],
+    [
+      "n988",
+      "n986"
+    ],
+    [
+      "n986",
+      "n286"
+    ],
+    [
+      "n297",
+      "n989"
+    ],
+    [
+      "n989",
+      "n992"
+    ],
+    [
+      "n989",
+      "n990"
+    ],
+    [
+      "n990",
+      "n991"
+    ],
+    [
+      "n991",
+      "n992"
+    ],
+    [
+      "n297",
+      "n993"
+    ],
+    [
+      "n993",
+      "n998"
+    ],
+    [
+      "n998",
+      "n997"
+    ],
+    [
+      "n997",
+      "n996"
+    ],
+    [
+      "n996",
+      "n995"
+    ],
+    [
+      "n995",
+      "n994"
+    ],
+    [
+      "n994",
+      "n993"
+    ],
+    [
+      "n283",
+      "n284"
+    ],
+    [
+      "n285",
+      "n999"
+    ],
+    [
+      "n999",
+      "n1000"
+    ],
+    [
+      "n1000",
+      "n1001"
+    ],
+    [
+      "n999",
+      "n1003"
+    ],
+    [
+      "n1003",
+      "n1002"
+    ],
+    [
+      "n1002",
+      "n284"
+    ],
+    [
+      "n284",
+      "n1001"
+    ],
+    [
+      "n283",
+      "n1004"
+    ],
+    [
+      "n1004",
+      "n1005"
+    ],
+    [
+      "n1005",
+      "n1006"
+    ],
+    [
+      "n1006",
+      "n1007"
+    ],
+    [
+      "n1004",
+      "n1008"
+    ],
+    [
+      "n1008",
+      "n1009"
+    ],
+    [
+      "n1009",
+      "n1010"
+    ],
+    [
+      "n317",
+      "n921"
+    ],
+    [
+      "n317",
+      "n313"
+    ],
+    [
+      "n320",
+      "n313"
+    ],
+    [
+      "n320",
+      "n928"
+    ],
+    [
+      "n321",
+      "n367"
+    ],
+    [
+      "n322",
+      "n370"
+    ],
+    [
+      "n925",
+      "n344"
+    ],
+    [
+      "n925",
+      "n922"
+    ],
+    [
+      "n922",
+      "n369"
+    ],
+    [
+      "n369",
+      "n368"
+    ],
+    [
+      "n368",
+      "n325"
+    ],
+    [
+      "n325",
+      "n324"
+    ],
+    [
+      "n324",
+      "n323"
+    ],
+    [
+      "n323",
+      "n353"
+    ],
+    [
+      "n928",
+      "n929"
+    ],
+    [
+      "n863",
+      "n928"
+    ],
+    [
+      "n312",
+      "n927"
+    ],
+    [
+      "n927",
+      "n1011"
+    ],
+    [
+      "n1012",
+      "n1011"
+    ],
+    [
+      "n1012",
+      "n1013"
+    ],
+    [
+      "n1013",
+      "n1014"
+    ],
+    [
+      "n1013",
+      "n1015"
+    ],
+    [
+      "n1013",
+      "n1016"
+    ],
+    [
+      "n1018",
+      "n1017"
+    ],
+    [
+      "n1019",
+      "n1017"
+    ],
+    [
+      "n1017",
+      "n311"
+    ],
+    [
+      "n1020",
+      "n1017"
+    ],
+    [
+      "n1021",
+      "n1019"
+    ],
+    [
+      "n1021",
+      "n1022"
+    ],
+    [
+      "n1022",
+      "n1023"
+    ],
+    [
+      "n1023",
+      "n1024"
+    ],
+    [
+      "n1024",
+      "n1025"
+    ],
+    [
+      "n1025",
+      "n1018"
+    ],
+    [
+      "n1026",
+      "n1020"
+    ],
+    [
+      "n1026",
+      "n1023"
+    ],
+    [
+      "n1023",
+      "n315"
+    ],
+    [
+      "n1027",
+      "n315"
+    ],
+    [
+      "n1027",
+      "n1028"
+    ],
+    [
+      "n1029",
+      "n315"
+    ],
+    [
+      "n1029",
+      "n1030"
+    ],
+    [
+      "n329",
+      "n333"
+    ],
+    [
+      "n331",
+      "n330"
+    ],
+    [
+      "n332",
+      "n330"
+    ],
+    [
+      "n331",
+      "n328"
+    ],
+    [
+      "n331",
+      "n319"
+    ],
+    [
+      "n1034",
+      "n1035"
+    ],
+    [
+      "n1035",
+      "n1036"
+    ],
+    [
+      "n1036",
+      "n334"
+    ],
+    [
+      "n334",
+      "n1031"
+    ],
+    [
+      "n1031",
+      "n1032"
+    ],
+    [
+      "n1032",
+      "n1033"
+    ],
+    [
+      "n319",
+      "n1037"
+    ],
+    [
+      "n1037",
+      "n1038"
+    ],
+    [
+      "n1038",
+      "n1039"
+    ],
+    [
+      "n1039",
+      "n1040"
+    ],
+    [
+      "n1037",
+      "n1043"
+    ],
+    [
+      "n1043",
+      "n1042"
+    ],
+    [
+      "n1042",
+      "n1041"
+    ],
+    [
+      "n1044",
+      "n319"
+    ],
+    [
+      "n1049",
+      "n1048"
+    ],
+    [
+      "n1047",
+      "n1048"
+    ],
+    [
+      "n1047",
+      "n1046"
+    ],
+    [
+      "n1046",
+      "n1045"
+    ],
+    [
+      "n1045",
+      "n1044"
+    ],
+    [
+      "n1044",
+      "n1049"
+    ],
+    [
+      "n1050",
+      "n1051"
+    ],
+    [
+      "n1050",
+      "n319"
+    ],
+    [
+      "n1050",
+      "n1054"
+    ],
+    [
+      "n1054",
+      "n1053"
+    ],
+    [
+      "n1053",
+      "n1055"
+    ],
+    [
+      "n1055",
+      "n1052"
+    ],
+    [
+      "n1052",
+      "n1051"
+    ],
+    [
+      "n219",
+      "n215"
+    ],
+    [
+      "n218",
+      "n216"
+    ],
+    [
+      "n216",
+      "n214"
+    ],
+    [
+      "n1060",
+      "n1059"
+    ],
+    [
+      "n1060",
+      "n1061"
+    ],
+    [
+      "n1061",
+      "n217"
+    ],
+    [
+      "n217",
+      "n1056"
+    ],
+    [
+      "n1056",
+      "n1057"
+    ],
+    [
+      "n1057",
+      "n1058"
+    ],
+    [
+      "n217",
+      "n213"
+    ],
+    [
+      "n202",
+      "n1062"
+    ],
+    [
+      "n1062",
+      "n1063"
+    ],
+    [
+      "n1063",
+      "n1065"
+    ],
+    [
+      "n1065",
+      "n1066"
+    ],
+    [
+      "n1066",
+      "n1067"
+    ],
+    [
+      "n1067",
+      "n1068"
+    ],
+    [
+      "n1068",
+      "n1062"
+    ],
+    [
+      "n1062",
+      "n1064"
+    ],
+    [
+      "n1064",
+      "n1066"
+    ],
+    [
+      "n1075",
+      "n1074"
+    ],
+    [
+      "n1074",
+      "n1073"
+    ],
+    [
+      "n1073",
+      "n1069"
+    ],
+    [
+      "n1069",
+      "n1070"
+    ],
+    [
+      "n1070",
+      "n1071"
+    ],
+    [
+      "n1071",
+      "n1072"
+    ],
+    [
+      "n1069",
+      "n191"
+    ],
+    [
+      "n182",
+      "n190"
+    ],
+    [
+      "n179",
+      "n188"
+    ],
+    [
+      "n188",
+      "n184"
+    ],
+    [
+      "n188",
+      "n174"
+    ],
+    [
+      "n350",
+      "n343"
+    ],
+    [
+      "n351",
+      "n352"
+    ],
+    [
+      "n352",
+      "n350"
+    ],
+    [
+      "n352",
+      "n348"
+    ],
+    [
+      "n352",
+      "n347"
+    ],
+    [
+      "n375",
+      "n175"
+    ],
+    [
+      "n881",
+      "n189"
+    ],
+    [
+      "n346",
+      "n190"
+    ],
+    [
+      "n346",
+      "n352"
+    ],
+    [
+      "n319",
+      "n334"
+    ],
+    [
+      "n667",
+      "n830"
+    ],
+    [
+      "n746",
+      "n743"
+    ],
+    [
+      "n743",
+      "n740"
     ]
   ]
 };
