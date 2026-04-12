@@ -4155,7 +4155,7 @@ window.SKILLTREE_DATA = {
       "cost": 1,
       "title": "Minor Node",
       "desc": "5% increased Maximum Life",
-      "icon": "icon_talent_minor_life.png"
+      "icon": "/img/talent/icon_talent_minor_life.png"
     },
     {
       "id": "n367",
@@ -4167,7 +4167,7 @@ window.SKILLTREE_DATA = {
       "cost": 1,
       "title": "Minor Node",
       "desc": "5% increased Maximum Life",
-      "icon": "icon_talent_minor_life.png"
+      "icon": "/img/talent/icon_talent_minor_life.png"
     },
     {
       "id": "n370",
@@ -10923,7 +10923,7 @@ window.SKILLTREE_DATA = {
       "cost": 1,
       "title": "In the Flesh",
       "desc": "10% more Maximum Life\n10% more Physical Damage\n100% less Lightning Damage\n100% less Fire Damage\n100% less Cold Damage\n100% less Aether Damage",
-      "icon": ""
+      "icon": "/img/talent/icon_physical.png"
     },
     {
       "id": "n673",
@@ -11859,7 +11859,7 @@ window.SKILLTREE_DATA = {
       "cost": 1,
       "title": "Orbital Mechanics",
       "desc": "+15% Projectile Return Chance\nGain +1 Aether on Projectile Return",
-      "icon": ""
+      "icon": "/img/talent/icon_talent_minor_projectile_damage.png"
     },
     {
       "id": "n317",
@@ -11871,7 +11871,7 @@ window.SKILLTREE_DATA = {
       "cost": 1,
       "title": "Minor Node",
       "desc": "+5% Projectile Return Chance",
-      "icon": ""
+      "icon": "/img/talent/icon_talent_minor_projectile_damage.png"
     },
     {
       "id": "n320",
@@ -11883,7 +11883,7 @@ window.SKILLTREE_DATA = {
       "cost": 1,
       "title": "Minor Node",
       "desc": "+5% Projectile Return Chance",
-      "icon": ""
+      "icon": "/img/talent/icon_talent_minor_projectile_damage.png"
     },
     {
       "id": "n321",
@@ -12783,11 +12783,11 @@ window.SKILLTREE_DATA = {
       "cost": 1,
       "title": "Minor Node",
       "desc": "Gain +5% of Damage as Extra Aether Damage",
-      "icon": "icon_talent_minor_aether_damage.png"
+      "icon": "/img/talent/icon_talent_minor_aether_damage.png"
     },
     {
       "id": "n1070",
-      "x": -1748,
+      "x": -1746,
       "y": -2101,
       "size": "s",
       "r": 12,
@@ -12795,7 +12795,7 @@ window.SKILLTREE_DATA = {
       "cost": 1,
       "title": "Minor Node",
       "desc": "Gain +5% of Damage as Extra Aether Damage",
-      "icon": "icon_talent_minor_aether_damage.png"
+      "icon": "/img/talent/icon_talent_minor_aether_damage.png"
     },
     {
       "id": "n1071",
@@ -12807,7 +12807,7 @@ window.SKILLTREE_DATA = {
       "cost": 1,
       "title": "Minor Node",
       "desc": "Gain +5% of Damage as Extra Aether Damage",
-      "icon": "icon_talent_minor_aether_damage.png"
+      "icon": "/img/talent/icon_talent_minor_aether_damage.png"
     },
     {
       "id": "n1072",
@@ -12819,7 +12819,7 @@ window.SKILLTREE_DATA = {
       "cost": 1,
       "title": "Light-Eater",
       "desc": "Gain +5% of Damage as Extra Aether Damage\n10% increased Damage against Dazzled Enemies\n+1% of Damage leeched as Aether against Dazzled Enemies\nGain +10% of Aether Damage Taken as Aether",
-      "icon": "icon_talent_minor_aether_damage.png"
+      "icon": "/img/talent/icon_talent_minor_aether_damage.png"
     },
     {
       "id": "n1073",
@@ -12831,7 +12831,7 @@ window.SKILLTREE_DATA = {
       "cost": 1,
       "title": "Minor Node",
       "desc": "10% increased Dazzle Duration",
-      "icon": "icon_talent_minor_aether_damage.png"
+      "icon": "/img/talent/icon_talent_minor_aether_damage.png"
     },
     {
       "id": "n1074",
@@ -12843,7 +12843,7 @@ window.SKILLTREE_DATA = {
       "cost": 1,
       "title": "Minor Node",
       "desc": "5% increased Dazzle Duration",
-      "icon": "icon_talent_minor_aether_damage.png"
+      "icon": "/img/talent/icon_talent_minor_aether_damage.png"
     },
     {
       "id": "n1075",
@@ -12855,7 +12855,7 @@ window.SKILLTREE_DATA = {
       "cost": 1,
       "title": "Covert Ops",
       "desc": "25% increased Dazzle Chance\n25% increased Dazzle Duration\n10% increased Cast Speed against Dazzled Enemies",
-      "icon": "icon_talent_minor_aether_damage.png"
+      "icon": "/img/talent/icon_talent_minor_aether_damage.png"
     },
     {
       "id": "n175",
