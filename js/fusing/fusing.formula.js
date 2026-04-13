@@ -51,7 +51,7 @@
       ],
       recipe: [
 		{ id: "essential_element", count: 3 },
-		{ id: "shard", count: 270 }
+		{ id: "shard", count: 90 }
 		]
     },
 	    {
@@ -70,7 +70,7 @@
       ],
       recipe: [
 	  { id: "essential_element", count: 3 },
-		{ id: "shard", count: 270 }]
+		{ id: "shard", count: 90 }]
     },
 		    {
       id: "chipped_stormcore",
@@ -88,7 +88,7 @@
       ],
       recipe: [
 	  { id: "essential_element", count: 3 },
-		{ id: "shard", count: 270 }]
+		{ id: "shard", count: 90 }]
     },
 	
 	{
@@ -107,7 +107,7 @@
       ],
       recipe: [
 	  { id: "essential_element", count: 3 },
-		{ id: "shard", count: 270 }]
+		{ id: "shard", count: 90 }]
     },
 	{
       id: "chipped_flamecore",
@@ -125,7 +125,7 @@
       ],
       recipe: [
 	  { id: "essential_element", count: 3 },
-		{ id: "shard", count: 270 }]
+		{ id: "shard", count: 90 }]
     },
 	
 	
