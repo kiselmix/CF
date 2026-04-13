@@ -79,15 +79,19 @@
       widget.hidden = false;
 
       requestAnimationFrame(() => {
-        player = new Twitch.Player('twitchPlayerMount', {
-          width: '100%',
-          height: '100%',
-          channel,
-          parent: [parent],
-          muted: true,
-          autoplay: true
-        });
-      });
+		  player = new Twitch.Player('twitchPlayerMount', {
+			width: '100%',
+			height: '100%',
+			channel,
+			parent: [parent],
+			muted: true,
+			autoplay: true
+		  });
+
+		  player.addEventListener(Twitch.Player.READY, () => {
+			player.play();
+		  });
+		});
     } catch (e) {
       console.error('Twitch widget failed', e);
     }
