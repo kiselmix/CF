@@ -33,7 +33,7 @@
       ],
       recipe: [
 	  { id: "essential_element", count: 9 },
-		{ id: "shard", count: 3 }]
+		{ id: "shard", count: 9 }]
     },
     {
       id: "chipped_frostcore",
@@ -51,7 +51,7 @@
       ],
       recipe: [
 		{ id: "essential_element", count: 3 },
-		{ id: "shard", count: 30 }
+		{ id: "shard", count: 270 }
 		]
     },
 	    {
@@ -70,7 +70,7 @@
       ],
       recipe: [
 	  { id: "essential_element", count: 3 },
-		{ id: "shard", count: 30 }]
+		{ id: "shard", count: 270 }]
     },
 		    {
       id: "chipped_stormcore",
@@ -88,7 +88,7 @@
       ],
       recipe: [
 	  { id: "essential_element", count: 3 },
-		{ id: "shard", count: 30 }]
+		{ id: "shard", count: 270 }]
     },
 	
 	{
@@ -107,7 +107,7 @@
       ],
       recipe: [
 	  { id: "essential_element", count: 3 },
-		{ id: "shard", count: 30 }]
+		{ id: "shard", count: 270 }]
     },
 	{
       id: "chipped_flamecore",
@@ -125,7 +125,7 @@
       ],
       recipe: [
 	  { id: "essential_element", count: 3 },
-		{ id: "shard", count: 30 }]
+		{ id: "shard", count: 270 }]
     },
 	
 	
@@ -152,7 +152,7 @@
       ],
       recipe: [
         { id: "chipped_frostcore", count: 3 },
-		{ id: "shard", count: 45 }
+		{ id: "shard", count: 135 }
       ]
     },
 	
@@ -172,7 +172,7 @@
       ],
       recipe: [
         { id: "chipped_ironcore", count: 3 },
-		{ id: "shard", count: 45 }
+		{ id: "shard", count: 135 }
       ]
     },
 	
@@ -193,7 +193,7 @@
       ],
       recipe: [
         { id: "chipped_stormcore", count: 3 },
-		{ id: "shard", count: 45 }
+		{ id: "shard", count: 135 }
       ]
     },
 	
@@ -213,7 +213,7 @@
       ],
       recipe: [
         { id: "chipped_skycore", count: 3 },
-		{ id: "shard", count: 45 }
+		{ id: "shard", count: 135 }
       ]
     },
 	
@@ -233,7 +233,7 @@
       ],
       recipe: [
         { id: "chipped_flamecore", count: 3 },
-		{ id: "shard", count: 45 }
+		{ id: "shard", count: 135 }
       ]
     },
 	
@@ -256,7 +256,7 @@
       ],
       recipe: [
         { id: "flawed_frostcore", count: 3 },
-		{ id: "shard", count: 60 }
+		{ id: "shard", count: 180 }
       ]
     },
 	
@@ -276,7 +276,7 @@
       ],
       recipe: [
         { id: "flawed_ironcore", count: 3 },
-		{ id: "shard", count: 60 }
+		{ id: "shard", count: 180 }
       ]
     },
 	
@@ -296,7 +296,7 @@
       ],
       recipe: [
         { id: "flawed_stormcore", count: 3 },
-		{ id: "shard", count: 60 }
+		{ id: "shard", count: 180 }
       ]
     },
 	
@@ -316,7 +316,7 @@
       ],
       recipe: [
         { id: "flawed_skycore", count: 3 },
-		{ id: "shard", count: 60 }
+		{ id: "shard", count: 180 }
       ]
     },
 	
@@ -336,7 +336,7 @@
       ],
       recipe: [
         { id: "flawed_flamecore", count: 3 },
-		{ id: "shard", count: 60 }
+		{ id: "shard", count: 180 }
       ]
     },
 	
@@ -359,7 +359,7 @@
       ],
       recipe: [
         { id: "frostcore", count: 3 },
-		{ id: "shard", count: 75 }
+		{ id: "shard", count: 225 }
       ]
     },
 	
@@ -379,7 +379,7 @@
       ],
       recipe: [
         { id: "ironcore", count: 3 },
-		{ id: "shard", count: 75 }
+		{ id: "shard", count: 225 }
       ]
     },
 	
@@ -400,7 +400,7 @@
       ],
       recipe: [
         { id: "stormcore", count: 3 },
-		{ id: "shard", count: 75 }
+		{ id: "shard", count: 225 }
       ]
     },
 	
@@ -420,7 +420,7 @@
       ],
       recipe: [
         { id: "skycore", count: 3 },
-		{ id: "shard", count: 75 }
+		{ id: "shard", count: 225 }
       ]
     },
 	
@@ -440,7 +440,7 @@
       ],
       recipe: [
         { id: "flamecore", count: 3 },
-		{ id: "shard", count: 75 }
+		{ id: "shard", count: 225 }
       ]
     },
 	
@@ -463,7 +463,7 @@
       ],
       recipe: [
         { id: "flawless_frostcore", count: 3 },
-		{ id: "shard", count: 90 }
+		{ id: "shard", count: 270 }
       ]
     },
 	{
@@ -482,7 +482,7 @@
       ],
       recipe: [
         { id: "flawless_ironcore", count: 3 },
-		{ id: "shard", count: 90 }
+		{ id: "shard", count: 270 }
       ]
     },
 	{
@@ -501,7 +501,7 @@
       ],
       recipe: [
         { id: "flawless_stormcore", count: 3 },
-		{ id: "shard", count: 90 }
+		{ id: "shard", count: 270 }
       ]
     },
 	{
@@ -520,7 +520,7 @@
       ],
       recipe: [
         { id: "flawless_skycore", count: 3 },
-		{ id: "shard", count: 90 }
+		{ id: "shard", count: 270 }
       ]
     },
 		{
@@ -539,7 +539,7 @@
       ],
       recipe: [
         { id: "flawless_flamecore", count: 3 },
-		{ id: "shard", count: 90 }
+		{ id: "shard", count: 270 }
       ]
     },
 	
@@ -574,7 +574,7 @@
       ],
       recipe: [
 		{ id: "Alchemist_Lesser_Module", count: 5 },
-		{ id: "shard", count: 39 }
+		{ id: "shard", count: 117 }
       ]
     },
 	
@@ -590,7 +590,7 @@
       ],
       recipe: [
 		{ id: "Alchemist_Module", count: 5 },
-		{ id: "shard", count: 54 }
+		{ id: "shard", count: 162 }
       ]
     },
 	
