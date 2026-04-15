@@ -499,10 +499,22 @@
 }
 
 .actsLayout{
-  display:grid;
-  grid-template-columns: 2fr 1fr;
+  display:flex;
+  flex-direction:column;
   gap:22px;
   margin-top:20px;
+}
+
+.actsRowTop{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:22px;
+}
+
+.actsRowBottom{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:22px;
 }
 
 .actsSide{
@@ -511,6 +523,14 @@
 }
 
 @media (max-width: 900px){
+
+  .actsRowTop{
+    grid-template-columns: 1fr;
+  }
+
+  .actsRowBottom{
+    grid-template-columns: 1fr;
+  }
 
   .actsLayout{
     grid-template-columns: 1fr;
@@ -673,19 +693,18 @@
   </div>
 </section>
 
+
 <section class="actsLayout">
 
-	<article class="card act-flow-card">
+  <div class="actsRowTop">
+<article class="card act-flow-card">
       <div class="act1-top">
         <div class="act1-top-copy">
           <div class="cardTitle">
             <h2>Act 1</h2>
             <span class="badge">Interactive flow</span>
           </div>
-          <p>
-            Starter regions and early dungeon layouts. Click any dungeon name in the scheme to open
-            <b>Act 1</b> with the corresponding map.
-          </p>
+
         </div>
 
         <a class="btn act-btn" href="./maps/maps-act-1">
@@ -703,44 +722,52 @@
         Click a node to open the corresponding dungeon map.
       </div>
     </article>
+<article class="card act-flow-card">
+      <div class="act1-top">
+        <div class="act1-top-copy">
+          <div class="cardTitle">
+            <h2>Act 2</h2>
+            <span class="badge">Interactive flow</span>
+          </div>
+          
+        </div>
 
-  <div class="actsSide">
-
-    <article class="card">
-      <div class="cardTitle">
-        <h2>Act 2</h2>
-        <span class="badge">Coming soon</span>
+        <a class="btn act-btn" href="./maps/maps-act-2">
+          Open Act 2
+        </a>
       </div>
+
+      <div class="flowchartWrap">
+        <div class="flowchartInner">
+          <svg id="act2Flowchart" class="flowchartSvg" viewBox="0 -40 530 320" preserveAspectRatio="xMidYMid meet" aria-label="Act 2 map flowchart"></svg>
+        </div>
+      </div>
+
+      <div class="flowchartHint">
+        Click a node to open the corresponding dungeon map.
+      </div>
+    </article>
+  </div>
+
+  <div class="actsRowBottom">
+    <article class="card">
+      <div class="cardTitle"><h2>Act 3</h2><span class="badge">Coming soon</span></div>
       <p>This act will be added later.</p>
     </article>
 
     <article class="card">
-      <div class="cardTitle">
-        <h2>Act 3</h2>
-        <span class="badge">Coming soon</span>
-      </div>
+      <div class="cardTitle"><h2>Act 4</h2><span class="badge">Coming soon</span></div>
       <p>This act will be added later.</p>
     </article>
 
     <article class="card">
-      <div class="cardTitle">
-        <h2>Act 4</h2>
-        <span class="badge">Coming soon</span>
-      </div>
+      <div class="cardTitle"><h2>Act 5</h2><span class="badge">Coming soon</span></div>
       <p>This act will be added later.</p>
     </article>
-
-    <article class="card">
-      <div class="cardTitle">
-        <h2>Act 5</h2>
-        <span class="badge">Coming soon</span>
-      </div>
-      <p>This act will be added later.</p>
-    </article>
-
   </div>
 
 </section>
+
 
 	
 	   
@@ -949,6 +976,167 @@ const nodeHeight = 42;
 
       const link = makeSvgEl('a', {
         href: `./maps/maps-act-1?map=${encodeURIComponent(mapKey)}`,
+        class: 'flow-node-link'
+      });
+
+      const rect = makeSvgEl('rect', {
+        x: pos.x,
+        y: pos.y,
+        width: nodeWidth,
+        height: nodeHeight,
+        rx: 14,
+        ry: 14,
+        class: 'flow-node-box'
+      });
+
+      const text = makeSvgEl('text', {
+        x: pos.x + nodeWidth / 2,
+        y: pos.y + nodeHeight / 2,
+        class: 'flow-node-text'
+      });
+
+      const label = mapData.title;
+      const words = label.split(' ');
+
+      if (label.length > 18 && words.length > 1) {
+        const line1 = [];
+        const line2 = [];
+        let count = 0;
+
+        words.forEach((word) => {
+          if (count < Math.ceil(words.length / 2)) {
+            line1.push(word);
+          } else {
+            line2.push(word);
+          }
+          count += 1;
+        });
+
+        const tspan1 = makeSvgEl('tspan', {
+          x: pos.x + nodeWidth / 2,
+          dy: '-0.35em'
+        });
+        tspan1.textContent = line1.join(' ');
+
+        const tspan2 = makeSvgEl('tspan', {
+          x: pos.x + nodeWidth / 2,
+          dy: '1.2em'
+        });
+        tspan2.textContent = line2.join(' ');
+
+        text.appendChild(tspan1);
+        text.appendChild(tspan2);
+      } else {
+        text.textContent = label;
+      }
+
+      link.appendChild(rect);
+      link.appendChild(text);
+      svg.appendChild(link);
+    }
+  }
+
+  renderEdges();
+  renderNodes();
+})();
+</script>
+
+<script>
+(() => {
+  const svg = document.getElementById('act2Flowchart');
+  if (!svg || typeof GAME_MAPS === 'undefined') return;
+
+  const SVG_NS = 'http://www.w3.org/2000/svg';
+
+  const positions = {
+    arcadia:    { x: 40,  y: 90 },
+    outervault: { x: 205, y: 90 },
+    innervault: { x: 370, y: 90 }
+  };
+
+  const nodeWidth = 120;
+  const nodeHeight = 42;
+
+  function getDungeonEdges() {
+    const edges = [];
+    const seen = new Set();
+    const act2Maps = new Set(Object.keys(positions));
+
+    for (const [mapKey, mapData] of Object.entries(GAME_MAPS)) {
+      if (!act2Maps.has(mapKey)) continue;
+      const points = Array.isArray(mapData.points) ? mapData.points : [];
+
+      points.forEach((p) => {
+        if (p.type !== 'dungeon' || !p.targetMap || !act2Maps.has(p.targetMap)) return;
+
+        const pairKey = [mapKey, p.targetMap].sort().join('::');
+        if (seen.has(pairKey)) return;
+        seen.add(pairKey);
+
+        edges.push({
+          from: mapKey,
+          to: p.targetMap
+        });
+      });
+    }
+
+    return edges;
+  }
+
+  function makeSvgEl(tag, attrs = {}) {
+    const el = document.createElementNS(SVG_NS, tag);
+    for (const [key, value] of Object.entries(attrs)) {
+      el.setAttribute(key, value);
+    }
+    return el;
+  }
+
+  function centerRight(pos) {
+    return {
+      x: pos.x + nodeWidth,
+      y: pos.y + nodeHeight / 2
+    };
+  }
+
+  function centerLeft(pos) {
+    return {
+      x: pos.x,
+      y: pos.y + nodeHeight / 2
+    };
+  }
+
+  function buildPath(fromKey, toKey) {
+    const from = positions[fromKey];
+    const to = positions[toKey];
+
+    if (!from || !to) return '';
+
+    const start = centerRight(from);
+    const end = centerLeft(to);
+    const midX = (start.x + end.x) / 2;
+
+    return `M ${start.x} ${start.y} L ${midX} ${start.y} L ${midX} ${end.y} L ${end.x} ${end.y}`;
+  }
+
+  function renderEdges() {
+    const edges = getDungeonEdges();
+
+    edges.forEach((edge) => {
+      const path = makeSvgEl('path', {
+        d: buildPath(edge.from, edge.to),
+        class: 'flow-line'
+      });
+      svg.appendChild(path);
+    });
+  }
+
+  function renderNodes() {
+    for (const [mapKey, pos] of Object.entries(positions)) {
+      const mapData = GAME_MAPS[mapKey];
+      if (!mapData) continue;
+
+      const link = makeSvgEl('a', {
+        href: `./maps/maps-act-2?map=${encodeURIComponent(mapKey)}`,
         class: 'flow-node-link'
       });
 
