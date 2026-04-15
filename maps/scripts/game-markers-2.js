@@ -34,7 +34,7 @@ const MARKER_TYPES = {
     icon: '../maps/icon/stash.png',
     clickable: false
   },
-  stash: {
+  terminal: {
     label: 'terminal',
     icon: '../maps/icon/terminal.png',
     clickable: false
