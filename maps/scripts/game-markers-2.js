@@ -34,6 +34,11 @@ const MARKER_TYPES = {
     icon: '../maps/icon/stash.png',
     clickable: false
   },
+  stash: {
+    label: 'terminal',
+    icon: '../maps/icon/terminal.png',
+    clickable: false
+  },
 };
 
 
@@ -43,11 +48,13 @@ arcadia: {
     svg: '../maps/act-2/Arcadia.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
-		{ type: 'dungeon', y: 613, x: 475, title: 'The Cache', targetMap: 'cache', showLabel: true},
-		{ type: 'well',  y: 577, x: 606, title: 'Well', desc: 'Refilling flasks', showLabel: true},
-		{ type: 'portal',  y: 216, x: 530, title: 'Portal', desc: 'Fast travel' },
-		{ type: 'stash',  y: 239, x: 633, title: 'Stash', desc: 'Storage', showLabel: true },
-		{ type: 'merchant',  y: 407, x: 460, title: 'Merchant', desc: 'Repair/disassembly of items', showLabel: true },
+		{ type: 'dungeon', y: 723, x: 260, title: 'Outer Vault', targetMap: 'outervault', showLabel: true},
+		{ type: 'well',  y: 524, x: 564, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'portal',  y: 548, x: 442, title: 'Portal', desc: 'Fast travel' },
+		{ type: 'stash',  y: 532, x: 553, title: 'Stash', desc: 'Storage', showLabel: true },
+		{ type: 'stash',  y: 721, x: 162, title: 'Stash', desc: 'Storage', showLabel: true },
+		{ type: 'merchant',  y: 602, x: 564, title: 'Merchant', desc: 'Repair/disassembly of items', showLabel: true },
+		{ type: 'terminal',  y: 268, x: 470, title: 'Terminal', desc: 'Moving around the world', showLabel: true },
     ],
   },
   
@@ -56,10 +63,10 @@ arcadia: {
     svg: "../maps/act-2/Outer Vault.svg",
     bounds: [[0, 0], [1000, 1000]],
     points: [
-      { type: 'dungeon', y: 289, x: 175, title: 'Dumping Grounds', targetMap: 'dumping', showLabel: true },
-      { type: 'dungeon', y: 790, x: 475, title: 'Blackwater Creek', targetMap: 'blackwater', showLabel: true },
-	  { type: 'well',  y: 403, x: 567, title: 'Well', desc: 'Refilling flasks', showLabel: true}, 
-	  { type: 'shrine',   y: 342, x: 494, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+      { type: 'dungeon', y: 103, x: 418, title: 'Arcadia', targetMap: 'arcadia', showLabel: true },
+      { type: 'dungeon', y: 915, x: 446, title: 'Inner Vault', targetMap: 'innervault', showLabel: true },
+	  { type: 'well',  y: 128, x: 388, title: 'Well', desc: 'Refilling flasks', showLabel: true}, 
+	  { type: 'shrine',   y: 530, x: 473, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
     ],
   },
   
@@ -69,10 +76,13 @@ arcadia: {
     svg: '../maps/act-2/Inner Vault.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
-      { type: 'well',  y: 590, x: 130, title: 'Well', desc: 'Refilling flasks', showLabel: true},
-		{ type: 'dungeon', y: 233, x: 931, title: 'Experimentation Ward', targetMap: 'experimentation', showLabel: true },
-		{ type: 'dungeon', y: 670, x: 58, title: 'Outer Court', targetMap: 'outercourt', showLabel: true },
-		{ type: 'boss',  y: 624, x: 103, title: 'Boss', desc: 'Boss', showLabel: true},
+		{ type: 'well',  y: 125, x: 344, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'well',  y: 768, x: 484, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'dungeon', y: 113, x: 368, title: 'Outer Vault', targetMap: 'outervault', showLabel: true },
+		{ type: 'dungeon', y: 918, x: 319, title: 'Arcadia', targetMap: 'arcadia', showLabel: true },
+		{ type: 'boss',  y: 833, x: 402, title: 'Boss', desc: 'Boss', showLabel: true},
+		{ type: 'shrine',   y: 267, x: 483, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+		{ type: 'portal',  y: 84, x: 343, title: 'Portal', desc: 'Fast travel' },
     ],
   },
 
