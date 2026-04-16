@@ -645,7 +645,7 @@ function createMarkerSystem({ map, points, onPortalClick, sidebarRoot }) {
   // Sidebar checkboxes (reset + render)
   if (sidebarRoot) {
     sidebarRoot.innerHTML = '';
-    const HIDDEN_TYPES = ['boss', 'merchant', 'stash'];
+    const HIDDEN_TYPES = ['terminal', 'boss', 'merchant', 'stash'];
 
 	for (const [typeKey, meta] of Object.entries(MARKER_TYPES)) {
 	  if (HIDDEN_TYPES.includes(typeKey)) continue;
