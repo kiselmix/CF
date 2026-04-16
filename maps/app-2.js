@@ -1,102 +1,94 @@
-// Main app logic extracted from the former inline <script> tag.
 window.addEventListener('DOMContentLoaded', () => {
   const map = L.map('map', { crs: L.CRS.Simple, minZoom: -1, maxZoom: 3 });
-
-  	map.on('click', (e) => {
+  
+  map.on('click', (e) => {
 		  console.log(`x: ${Math.round(e.latlng.lng)}, y: ${Math.round(e.latlng.lat)}`);
 		  console.log({ x: e.latlng.lng, y: e.latlng.lat });
 		}); 
 
+  let currentOverlay = null;
+  let currentMapKey = null;
+  let markerState = null;
 
-      let currentOverlay = null;
-  	let currentMapKey = null;
-      let markerState = null;
+  function setMap(mapKey) {
+    const cfg = GAME_MAPS[mapKey];
+    if (!cfg) return;
 
-      function setMap(mapKey) {
-        const cfg = GAME_MAPS[mapKey];
-        if (!cfg) return;
+    currentMapKey = mapKey;
+    history.replaceState(null, '', '?map=' + encodeURIComponent(mapKey));
+    document.getElementById('currentMapTitle').textContent = cfg.title;
+    renderMapSelect();
 
-        currentMapKey = mapKey;
-        history.replaceState(null, '', '?map=' + encodeURIComponent(mapKey));
-  		document.getElementById('currentMapTitle').textContent = cfg.title;
-  		renderMapSelect(); 
-        // overlay
-        if (currentOverlay) map.removeLayer(currentOverlay);
-        currentOverlay = L.imageOverlay(cfg.svg, cfg.bounds).addTo(map);
+    if (currentOverlay) map.removeLayer(currentOverlay);
+    currentOverlay = L.imageOverlay(cfg.svg, cfg.bounds).addTo(map);
 
-        // markers
-        if (markerState?.destroy) markerState.destroy();
-        markerState = createMarkerSystem({
-          map,
-          points: cfg.points,
-          onPortalClick: (targetMapKey) => setMap(targetMapKey),
-          sidebarRoot: document.getElementById('markerToggles')
-        });
+    if (markerState?.destroy) markerState.destroy();
+    markerState = createMarkerSystem({
+      map,
+      points: cfg.points,
+      onPortalClick: (targetMapKey) => setMap(targetMapKey),
+      sidebarRoot: document.getElementById('markerToggles')
+    });
 
-        map.fitBounds(cfg.bounds);
-      }
-	
-	
-  	const mapSelectEl = document.getElementById('mapSelect');
-  	const mapSelectBtn = document.getElementById('mapSelectBtn');
-  	const mapSelectList = document.getElementById('mapSelectList');
+    map.fitBounds(cfg.bounds);
+  }
 
-  	function renderMapSelect() {
+  const mapSelectEl = document.getElementById('mapSelect');
+  const mapSelectBtn = document.getElementById('mapSelectBtn');
+  const mapSelectList = document.getElementById('mapSelectList');
 
-  	  const entries = Object.entries(GAME_MAPS);
+  function renderMapSelect() {
+    const entries = Object.entries(GAME_MAPS)
+      .filter(([, cfg]) => cfg.svg.includes('/act-2/'));
 
+    entries.sort((a, b) => a[1].title.localeCompare(b[1].title));
 
-  	  entries.sort((a, b) => a[1].title.localeCompare(b[1].title));
+    mapSelectList.innerHTML = '';
 
-  	  mapSelectList.innerHTML = '';
+    for (const [key, cfg] of entries) {
+      const item = document.createElement('div');
+      item.className = 'map-select-item' + (key === currentMapKey ? ' active' : '');
+      item.textContent = cfg.title;
 
-  	  for (const [key, cfg] of entries) {
-  		const item = document.createElement('div');
-  		item.className = 'map-select-item' + (key === currentMapKey ? ' active' : '');
-  		item.textContent = cfg.title;
+      item.addEventListener('click', () => {
+        closeMapSelect();
+        setMap(key);
+      });
 
-  		item.addEventListener('click', () => {
-  		  closeMapSelect();
-  		  setMap(key);
-  		});
+      mapSelectList.appendChild(item);
+    }
+  }
 
-  		mapSelectList.appendChild(item);
-  	  }
-  	}
+  function openMapSelect() {
+    mapSelectEl.classList.add('open');
+  }
 
-  	function openMapSelect() {
-  	  mapSelectEl.classList.add('open');
-  	}
+  function closeMapSelect() {
+    mapSelectEl.classList.remove('open');
+  }
 
-  	function closeMapSelect() {
-  	  mapSelectEl.classList.remove('open');
-  	}
+  function toggleMapSelect() {
+    mapSelectEl.classList.toggle('open');
+  }
 
-  	function toggleMapSelect() {
-  	  mapSelectEl.classList.toggle('open');
-  	}
+  mapSelectBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleMapSelect();
+  });
 
-  	mapSelectBtn.addEventListener('click', (e) => {
-  	  e.stopPropagation();
-  	  toggleMapSelect();
-  	});
+  document.addEventListener('click', () => closeMapSelect());
+  mapSelectList.addEventListener('click', (e) => e.stopPropagation());
 
+  function getMapFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('map');
+  }
 
-  	document.addEventListener('click', () => closeMapSelect());
+  const urlMap = getMapFromUrl();
 
-
-  	mapSelectList.addEventListener('click', (e) => e.stopPropagation());
-
-      function getMapFromUrl() {
-        const params = new URLSearchParams(window.location.search);
-        return params.get('map');
-      }
-
-      const urlMap = getMapFromUrl();
-
-      if (urlMap && GAME_MAPS[urlMap]) {
-        setMap(urlMap);
-      } else {
-        setMap('arcadia');
-      }
+  if (urlMap && GAME_MAPS[urlMap]) {
+    setMap(urlMap);
+  } else {
+    setMap('arcadia');
+  }
 });
