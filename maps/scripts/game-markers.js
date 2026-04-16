@@ -627,6 +627,7 @@ const GAME_MAPS = {
 		{ type: 'well',  y: 574, x: 181, title: 'Well', desc: 'Refilling flasks', showLabel: true},
 		{ type: 'shrine',   y: 636, x: 578, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
 		{ type: 'portal',  y: 652, x: 893, title: 'Portal', desc: 'Fast travel' },
+		{ type: 'boss',  y: 640, x: 261, title: 'Boss', desc: 'Boss', showLabel: true},
     ],
   },
   
