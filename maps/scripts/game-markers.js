@@ -432,7 +432,6 @@ const GAME_MAPS = {
 		{ type: 'well',  y: 744, x: 562, title: 'Well', desc: 'Refilling flasks', showLabel: true},
 		{ type: 'shrine',   y: 205, x: 642, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
 		{ type: 'shrine',   y: 343, x: 351, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
-		{ type: 'shrine',   y: 267, x: 483, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
 		{ type: 'shrine',   y: 508, x: 319, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
 		{ type: 'shrine',   y: 737, x: 541, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
 		{ type: 'portal',  y: 171, x: 651, title: 'Portal', desc: 'Fast travel' },
