@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Crystalfall Maps Guide – All Dungeon Maps Act 3 | Crystalfall.fun</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="/maps/styles.css" />
+  <meta name="description" content="Interactive Crystalfall maps for Act 3. Explore dungeon layouts, find exits, chests, bosses and quest locations with our interactive map guide.">
+  <meta name="keywords" content="Crystalfall maps, Crystalfall dungeon maps, Crystalfall Act 3 map, Crystalfall guide, Crystalfall dungeon guide">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://crystalfall.fun/maps-act-3">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Crystalfall Maps – Act 3 Dungeon Guide">
+  <meta property="og:description" content="Interactive Crystalfall dungeon maps for Act 3. Find exits, bosses, chests and quest objectives.">
+  <meta property="og:url" content="https://crystalfall.fun/maps-act-3">
+  <meta property="og:image" content="https://crystalfall.fun/img/maps-guide-banner.png">
+  <meta property="og:site_name" content="Crystalfall.fun">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Crystalfall Maps – Act 3 Dungeon Guide">
+  <meta name="twitter:description" content="Interactive maps for Crystalfall dungeons. Explore Act 3 locations with markers and navigation.">
+  <meta name="twitter:image" content="https://crystalfall.fun/img/maps-guide-banner.png">
+  <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=107727914', 'ym');
+
+    ym(107727914, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/107727914" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<link rel="stylesheet" href="/css/twitch.css">
+
+  <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "WebPage",
+   "name": "Crystalfall Maps Act 3",
+   "description": "Interactive dungeon maps for Crystalfall Act 3 with markers for bosses, chests and quest objectives.",
+   "url": "https://crystalfall.fun/maps-act-3",
+   "inLanguage": "en",
+   "isPartOf": {
+     "@type": "WebSite",
+     "name": "Crystalfall.fun",
+     "url": "https://crystalfall.fun/"
+   }
+  }
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="/">
+        <img src="/img/logo.png" alt="CrystalFall logo" class="logo">
+        CrystalFall.fun
+      </a>
+
+      <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="/talent-tree">Talent Tree</a>
+        <a href="/skills">Skills</a>
+        <a href="/skill-leveling">Skill leveling</a>
+        <a href="/maps" class="is-active">Maps</a>
+        <a href="/quests">Quests</a>
+        <a href="/fusing">Fusing</a>
+		<a href="/glossary">Glossary</a>
+        <a href="/build-and-guide">Build &amp; Guide</a>
+      </nav>
+
+      <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+        <a href="/talent-tree">Talent Tree</a>
+        <a href="/skills">Skills</a>
+        <a href="/skill-leveling">Skill leveling</a>
+        <a href="/maps" class="is-active">Maps</a>
+        <a href="/quests">Quests</a>
+        <a href="/fusing">Fusing</a>
+		<a href="/glossary">Glossary</a>
+        <a href="/build-and-guide">Build &amp; Guide</a>
+      </nav>
+
+      <div class="mobile-overlay" id="mobileOverlay" hidden></div>
+    </div>
+  </header>
+
+  <main class="wrap page-shell">
+    <section class="hero-card">
+      <div class="hero-grid">
+        <header class="pageHeader">
+          <div>
+            <div class="eyebrow">Maps • Act 3 navigation</div>
+            <h1>Crystalfall Maps – Act 3 Dungeon Guide</h1>
+            <div class="sub">
+              Explore interactive dungeon maps, switch locations instantly, and toggle markers for exits, bosses, chests and quest objectives.
+            </div>
+          </div>
+        </header>
+
+
+      </div>
+    </section>
+
+    <div id="app">
+      <aside id="sidebar">
+        <h2 class="title">Crystalfall Maps – Act 3</h2>
+        <p class="subtitle">Select a dungeon.</p>
+
+        <div class="group">
+          <div class="map-select" id="mapSelect">
+            <div class="map-select-btn" id="mapSelectBtn">
+              <span id="currentMapTitle">—</span>
+              <span class="chev">▼</span>
+            </div>
+            <div class="map-select-list" id="mapSelectList"></div>
+          </div>
+        </div>
+
+        <h2 class="title">Markers</h2>
+        <p class="subtitle">Turn marker groups on or off. Dungeon let you navigate between maps.</p>
+
+        <div class="group" id="markerToggles"></div>
+      </aside>
+
+      <section id="mapWrap" aria-label="Interactive map">
+        <div id="map"></div>
+      </section>
+    </div>
+  </main>
+
+  <script src="/maps/scripts/leaflet.js"></script>
+  <script src="/maps/scripts/game-markers.js"></script>
+  <script src="/maps/app-3.js" defer></script>
+  <script>
+  (() => {
+    const burger = document.getElementById('burgerBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    const overlay = document.getElementById('mobileOverlay');
+
+    if (!burger || !mobileNav || !overlay) return;
+
+    const openMenu = () => {
+      mobileNav.classList.add('open');
+      burger.classList.add('is-open');
+      overlay.hidden = false;
+      document.body.classList.add('nav-open');
+      burger.setAttribute('aria-expanded', 'true');
+    };
+
+    const closeMenu = () => {
+      mobileNav.classList.remove('open');
+      burger.classList.remove('is-open');
+      overlay.hidden = true;
+      document.body.classList.remove('nav-open');
+      burger.setAttribute('aria-expanded', 'false');
+    };
+
+    burger.addEventListener('click', () => {
+      if (mobileNav.classList.contains('open')) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    overlay.addEventListener('click', closeMenu);
+
+    mobileNav.addEventListener('click', (e) => {
+      const link = e.target.closest('a');
+      if (link) closeMenu();
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileNav.classList.contains('open')) closeMenu();
+    });
+  })();
+  </script>
+  
+  <div id="twitchWidget" class="twitch-widget" hidden>
+  <button id="twitchCloseBtn" class="twitch-widget__close" type="button" aria-label="Close stream">×</button>
+  <div id="twitchPlayerMount" class="twitch-widget__player"></div>
+</div>
+
+<script src="https://player.twitch.tv/js/embed/v1.js"></script>
+<script src="/js/twitch.js" defer></script>
+  
+</body>
+</html>
