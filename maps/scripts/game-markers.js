@@ -399,7 +399,7 @@ const GAME_MAPS = {
     svg: '../maps/act-3/Bore Hole.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
-		{ type: 'dungeon', y: 723, x: 260, title: 'Badlands', targetMap: 'badlands', showLabel: true},
+		{ type: 'dungeon', y: 809, x: 763, title: 'Badlands', targetMap: 'badlands', showLabel: true},
     ],
   },
   
@@ -408,7 +408,7 @@ const GAME_MAPS = {
     svg: '../maps/act-3/Abandoned Mine.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
-		{ type: 'dungeon', y: 723, x: 260, title: 'Badlands', targetMap: 'badlands', showLabel: true},
+		{ type: 'dungeon', y: 703, x: 819, title: 'Badlands', targetMap: 'badlands', showLabel: true},
     ],
   },
   
@@ -442,12 +442,12 @@ const GAME_MAPS = {
     svg: '../maps/act-3/Crystal Mine Level 1.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
-		{ type: 'dungeon', y: 723, x: 260, title: 'Crystal Charm', targetMap: 'crystalcharm', showLabel: true},
-		{ type: 'dungeon', y: 723, x: 260, title: 'Crystal Mine Level 2', targetMap: 'crystalminelevel2', showLabel: true},
-		{ type: 'well',  y: 524, x: 564, title: 'Well', desc: 'Refilling flasks', showLabel: true},
-		{ type: 'shrine',   y: 267, x: 483, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
-		{ type: 'shrine',   y: 267, x: 483, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
-		{ type: 'shrine',   y: 267, x: 483, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+		{ type: 'dungeon', y: 475, x: 763, title: 'Crystal Charm', targetMap: 'crystalcharm', showLabel: true},
+		{ type: 'dungeon', y: 836, x: 369, title: 'Crystal Mine Level 2', targetMap: 'crystalminelevel2', showLabel: true},
+		{ type: 'well',  y: 590, x: 179, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'shrine',   y: 448, x: 848, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+		{ type: 'shrine',   y: 111, x: 601, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+		{ type: 'shrine',   y: 382, x: 419, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
     ],
   },
   
@@ -456,11 +456,11 @@ const GAME_MAPS = {
     svg: '../maps/act-3/Crystal Mine Level 2.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
-		{ type: 'dungeon', y: 723, x: 260, title: 'Crystal Mine Level 1', targetMap: 'crystalminelevel1', showLabel: true},
-		{ type: 'dungeon', y: 723, x: 260, title: 'Crystal Mine Level 3', targetMap: 'crystalminelevel3', showLabel: true},
-		{ type: 'well',  y: 524, x: 564, title: 'Well', desc: 'Refilling flasks', showLabel: true},
-		{ type: 'shrine',   y: 267, x: 483, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
-		{ type: 'shrine',   y: 267, x: 483, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+		{ type: 'dungeon', y: 882, x: 418, title: 'Crystal Mine Level 1', targetMap: 'crystalminelevel1', showLabel: true},
+		{ type: 'dungeon', y: 315, x: 224, title: 'Crystal Mine Level 3', targetMap: 'crystalminelevel3', showLabel: true},
+		{ type: 'well',  y: 262, x: 224, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'shrine',   y: 672, x: 638, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+		{ type: 'shrine',   y: 301, x: 641, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
     ],
   },
   
@@ -469,11 +469,11 @@ const GAME_MAPS = {
     svg: '../maps/act-3/Crystal Mine Level 3.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
-		{ type: 'dungeon', y: 723, x: 260, title: 'Crystal Mine Level 2', targetMap: 'crystalminelevel2', showLabel: true},
-		{ type: 'dungeon', y: 723, x: 260, title: 'Crystal Charm', targetMap: 'crystalcharm', showLabel: true},
-		{ type: 'well',  y: 524, x: 564, title: 'Well', desc: 'Refilling flasks', showLabel: true},
-		{ type: 'shrine',   y: 267, x: 483, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
-		{ type: 'shrine',   y: 267, x: 483, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+		{ type: 'dungeon', y: 587, x: 63, title: 'Crystal Mine Level 2', targetMap: 'crystalminelevel2', showLabel: true},
+		{ type: 'dungeon', y: 615, x: 916, title: 'Crystal Charm', targetMap: 'crystalcharm', showLabel: true},
+		{ type: 'well',  y: 690, x: 768, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'shrine',   y: 291, x: 384, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+		{ type: 'shrine',   y: 555, x: 932, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
     ],
   },
   
@@ -482,20 +482,20 @@ const GAME_MAPS = {
     svg: '../maps/act-3/The Junkyard.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
-		{ type: 'dungeon', y: 723, x: 260, title: 'Crystal Charm', targetMap: 'crystalcharm', showLabel: true},
-		{ type: 'dungeon', y: 723, x: 260, title: 'Salvagers Trove', targetMap: 'salvagerstrove', showLabel: true},
-		{ type: 'dungeon', y: 723, x: 260, title: 'Giants Maw', targetMap: 'giantsmaw', showLabel: true},
-		{ type: 'dungeon', y: 723, x: 260, title: 'Windy Canyon', targetMap: 'windycanyon', showLabel: true},
-		{ type: 'well',  y: 524, x: 564, title: 'Well', desc: 'Refilling flasks', showLabel: true},
-		{ type: 'well',  y: 524, x: 564, title: 'Well', desc: 'Refilling flasks', showLabel: true},
-		{ type: 'well',  y: 524, x: 564, title: 'Well', desc: 'Refilling flasks', showLabel: true},
-		{ type: 'well',  y: 524, x: 564, title: 'Well', desc: 'Refilling flasks', showLabel: true},
-		{ type: 'well',  y: 524, x: 564, title: 'Well', desc: 'Refilling flasks', showLabel: true},
-		{ type: 'well',  y: 524, x: 564, title: 'Well', desc: 'Refilling flasks', showLabel: true},
-		{ type: 'shrine',   y: 267, x: 483, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
-		{ type: 'shrine',   y: 267, x: 483, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
-		{ type: 'shrine',   y: 267, x: 483, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
-		{ type: 'portal',  y: 548, x: 442, title: 'Portal', desc: 'Fast travel' },
+		{ type: 'dungeon', y: 112, x: 637, title: 'Crystal Charm', targetMap: 'crystalcharm', showLabel: true},
+		{ type: 'dungeon', y: 98, x: 415, title: 'Salvagers Trove', targetMap: 'salvagerstrove', showLabel: true},
+		{ type: 'dungeon', y: 737, x: 458, title: 'Giants Maw', targetMap: 'giantsmaw', showLabel: true},
+		{ type: 'dungeon', y: 969, x: 592, title: 'Windy Canyon', targetMap: 'windycanyon', showLabel: true},
+		{ type: 'well',  y: 199, x: 489, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'well',  y: 72, x: 333, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'well',  y: 297, x: 253, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'well',  y: 476, x: 269, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'well',  y: 711, x: 504, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'well',  y: 834, x: 634, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'shrine',   y: 317, x: 325, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+		{ type: 'shrine',   y: 601, x: 437, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+		{ type: 'shrine',   y: 578, x: 546, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+		{ type: 'portal',  y: 81, x: 588, title: 'Portal', desc: 'Fast travel' },
     ],
   },
   
@@ -504,7 +504,7 @@ const GAME_MAPS = {
     svg: '../maps/act-3/Salvagers Trove.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
-		{ type: 'dungeon', y: 723, x: 260, title: 'The Junkyard', targetMap: 'thejunkyard', showLabel: true},
+		{ type: 'dungeon', y: 469, x: 271, title: 'The Junkyard', targetMap: 'thejunkyard', showLabel: true},
     ],
   },
   
@@ -514,7 +514,7 @@ const GAME_MAPS = {
     svg: '../maps/act-3/Giants Maw.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
-		{ type: 'dungeon', y: 723, x: 260, title: 'The Junkyard', targetMap: 'thejunkyard', showLabel: true},
+		{ type: 'dungeon', y: 871, x: 567, title: 'The Junkyard', targetMap: 'thejunkyard', showLabel: true},
     ],
   },
   
@@ -523,8 +523,8 @@ const GAME_MAPS = {
     svg: '../maps/act-3/Windy Canyon.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
-		{ type: 'dungeon', y: 723, x: 260, title: 'The Junkyard', targetMap: 'thejunkyard', showLabel: true},
-		{ type: 'dungeon', y: 723, x: 260, title: 'Windy Canyon 2', targetMap: 'windycanyon2', showLabel: true},
+		{ type: 'dungeon', y: 770, x: 496, title: 'The Junkyard', targetMap: 'thejunkyard', showLabel: true},
+		{ type: 'dungeon', y: 402, x: 773, title: 'Windy Canyon 2', targetMap: 'windycanyon2', showLabel: true},
     ],
   },
   
@@ -534,9 +534,9 @@ const GAME_MAPS = {
     svg: '../maps/act-3/Windy Canyon-2.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
-		{ type: 'dungeon', y: 723, x: 260, title: 'Windy Canyon', targetMap: 'windycanyon', showLabel: true},
-		{ type: 'dungeon', y: 723, x: 260, title: 'Windy Canyon 3', targetMap: 'windycanyon3', showLabel: true},
-		{ type: 'dungeon', y: 723, x: 260, title: 'Plundered Tomb', targetMap: 'plunderedtomb', showLabel: true},
+		{ type: 'dungeon', y: 715, x: 224, title: 'Windy Canyon', targetMap: 'windycanyon', showLabel: true},
+		{ type: 'dungeon', y: 232, x: 785, title: 'Windy Canyon 3', targetMap: 'windycanyon3', showLabel: true},
+		{ type: 'dungeon', y: 894, x: 482, title: 'Plundered Tomb', targetMap: 'plunderedtomb', showLabel: true},
     ],
   },
   
@@ -545,7 +545,7 @@ const GAME_MAPS = {
     svg: '../maps/act-3/Plundered Tomb.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
-		{ type: 'dungeon', y: 723, x: 260, title: 'Windy Canyon 2', targetMap: 'windycanyon2', showLabel: true},
+		{ type: 'dungeon', y: 633, x: 679, title: 'Windy Canyon 2', targetMap: 'windycanyon2', showLabel: true},
     ],
   },
   
@@ -554,8 +554,8 @@ const GAME_MAPS = {
     svg: '../maps/act-3/Windy Canyon-3.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
-		{ type: 'dungeon', y: 723, x: 260, title: 'Windy Canyon 2', targetMap: 'windycanyon2', showLabel: true},
-		{ type: 'dungeon', y: 723, x: 260, title: 'The Summit', targetMap: 'thesummit', showLabel: true},
+		{ type: 'dungeon', y: 907, x: 248, title: 'Windy Canyon 2', targetMap: 'windycanyon2', showLabel: true},
+		{ type: 'dungeon', y: 293, x: 738, title: 'The Summit', targetMap: 'thesummit', showLabel: true},
     ],
   },
   
@@ -564,18 +564,17 @@ const GAME_MAPS = {
     svg: '../maps/act-3/The Summit.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
-		{ type: 'dungeon', y: 723, x: 260, title: 'Windy Canyon 3', targetMap: 'windycanyon3', showLabel: true},
-		{ type: 'dungeon', y: 723, x: 260, title: 'Seekers Sanctuary', targetMap: 'seekerssanctuary', showLabel: true},
-		{ type: 'dungeon', y: 723, x: 260, title: 'Forsaken Sanctuary', targetMap: 'forsakensanctuary', showLabel: true},
-		{ type: 'dungeon', y: 723, x: 260, title: 'Halls of the Withered', targetMap: 'hallsofthewithered', showLabel: true},
-		{ type: 'well',  y: 524, x: 564, title: 'Well', desc: 'Refilling flasks', showLabel: true},
-		{ type: 'well',  y: 524, x: 564, title: 'Well', desc: 'Refilling flasks', showLabel: true},
-		{ type: 'well',  y: 524, x: 564, title: 'Well', desc: 'Refilling flasks', showLabel: true},
-		{ type: 'well',  y: 524, x: 564, title: 'Well', desc: 'Refilling flasks', showLabel: true},
-		{ type: 'shrine',   y: 267, x: 483, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
-		{ type: 'shrine',   y: 267, x: 483, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
-		{ type: 'shrine',   y: 267, x: 483, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
-		{ type: 'portal',  y: 548, x: 442, title: 'Portal', desc: 'Fast travel' },
+		{ type: 'dungeon', y: 249, x: 198, title: 'Windy Canyon 3', targetMap: 'windycanyon3', showLabel: true},
+		{ type: 'dungeon', y: 655, x: 179, title: 'Seekers Sanctuary', targetMap: 'seekerssanctuary', showLabel: true},
+		{ type: 'dungeon', y: 682, x: 782, title: 'Forsaken Sanctuary', targetMap: 'forsakensanctuary', showLabel: true},
+		{ type: 'dungeon', y: 681, x: 940, title: 'Halls of the Withered', targetMap: 'hallsofthewithered', showLabel: true},
+		{ type: 'well',  y: 438, x: 244, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'well',  y: 526, x: 93, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'well',  y: 765, x: 554, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'well',  y: 629, x: 729, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'shrine',   y: 414, x: 97, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+		{ type: 'shrine',   y: 723, x: 385, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+		{ type: 'portal',  y: 274, x: 150, title: 'Portal', desc: 'Fast travel' },
     ],
   },
   
@@ -584,7 +583,7 @@ const GAME_MAPS = {
     svg: '../maps/act-3/Seekers Sanctuary.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
-		{ type: 'dungeon', y: 723, x: 260, title: 'The Summit', targetMap: 'thesummit', showLabel: true},
+		{ type: 'dungeon', y: 772, x: 206, title: 'The Summit', targetMap: 'thesummit', showLabel: true},
     ],
   },
   
@@ -593,7 +592,7 @@ const GAME_MAPS = {
     svg: '../maps/act-3/Forsaken Sanctuary.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
-		{ type: 'dungeon', y: 723, x: 260, title: 'The Summit', targetMap: 'thesummit', showLabel: true},
+		{ type: 'dungeon', y: 772, x: 206, title: 'The Summit', targetMap: 'thesummit', showLabel: true},
     ],
   },
   
@@ -602,9 +601,9 @@ const GAME_MAPS = {
     svg: '../maps/act-3/Halls of the Withered.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
-		{ type: 'dungeon', y: 723, x: 260, title: 'The Summit', targetMap: 'thesummit', showLabel: true},
-		{ type: 'dungeon', y: 723, x: 260, title: 'Drifters Sanctuary', targetMap: 'drifterssanctuary', showLabel: true},
-		{ type: 'well',  y: 524, x: 564, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'dungeon', y: 97, x: 470, title: 'The Summit', targetMap: 'thesummit', showLabel: true},
+		{ type: 'dungeon', y: 833, x: 618, title: 'Drifters Sanctuary', targetMap: 'drifterssanctuary', showLabel: true},
+		{ type: 'well',  y: 100, x: 497, title: 'Well', desc: 'Refilling flasks', showLabel: true},
     ],
   },
   
@@ -613,13 +612,13 @@ const GAME_MAPS = {
     svg: '../maps/act-3/Drifters Sanctuary.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
-		{ type: 'dungeon', y: 723, x: 260, title: 'Halls of the Withered', targetMap: 'hallsofthewithered', showLabel: true},
-		{ type: 'dungeon', y: 723, x: 260, title: 'The Summit', targetMap: 'thesummit', showLabel: true},
-		{ type: 'well',  y: 524, x: 564, title: 'Well', desc: 'Refilling flasks', showLabel: true},
-		{ type: 'well',  y: 524, x: 564, title: 'Well', desc: 'Refilling flasks', showLabel: true},
-		{ type: 'well',  y: 524, x: 564, title: 'Well', desc: 'Refilling flasks', showLabel: true},
-		{ type: 'shrine',   y: 267, x: 483, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
-		{ type: 'portal',  y: 548, x: 442, title: 'Portal', desc: 'Fast travel' },
+		{ type: 'dungeon', y: 685, x: 852, title: 'Halls of the Withered', targetMap: 'hallsofthewithered', showLabel: true},
+		{ type: 'dungeon', y: 691, x: 318, title: 'The Summit', targetMap: 'thesummit', showLabel: true},
+		{ type: 'well',  y: 632, x: 844, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'well',  y: 284, x: 272, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'well',  y: 574, x: 181, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'shrine',   y: 636, x: 578, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+		{ type: 'portal',  y: 652, x: 893, title: 'Portal', desc: 'Fast travel' },
     ],
   },
   
