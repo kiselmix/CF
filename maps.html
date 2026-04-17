@@ -405,6 +405,18 @@
   display: block;
 }
 
+.flowchartWrapCompact {
+  padding: 16px;
+}
+
+.flowchartInnerCompact {
+  min-width: 0;
+}
+
+.flowchartSvgCompact {
+  width: 100%;
+}
+
     .flow-line {
       stroke: rgba(159, 176, 200, 0.72);
       stroke-width: 2.2;
@@ -513,8 +525,14 @@
 
 .actsRowBottom{
   display:grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap:22px;
+}
+
+.actsRowSingle{
+  display:grid;
+  grid-template-columns: 1fr;
+  max-width: calc((100% - 22px) / 2);
 }
 
 .actsSide{
@@ -530,6 +548,10 @@
 
   .actsRowBottom{
     grid-template-columns: 1fr;
+  }
+
+  .actsRowSingle{
+    max-width: 100%;
   }
 
   .actsLayout{
@@ -577,6 +599,14 @@
       .flowchartSvg {
         width: 980px;
         max-width: none;
+      }
+
+      .flowchartInnerCompact {
+        min-width: 860px;
+      }
+
+      .flowchartSvgCompact {
+        width: 860px;
       }
 	  
 		.heroCardLayout{
@@ -750,16 +780,58 @@
   </div>
 
   <div class="actsRowBottom">
-    <article class="card">
-      <div class="cardTitle"><h2>Act 3</h2><span class="badge">Coming soon</span></div>
-      <p>This act will be added later.</p>
+    <article class="card act-flow-card">
+      <div class="act1-top">
+        <div class="act1-top-copy">
+          <div class="cardTitle">
+            <h2>Act 3</h2>
+            <span class="badge">Interactive flow</span>
+          </div>
+        </div>
+
+        <a class="btn act-btn" href="./maps/maps-act-3">
+          Open Act 3
+        </a>
+      </div>
+
+      <div class="flowchartWrap">
+        <div class="flowchartInner">
+          <svg id="act3Flowchart" class="flowchartSvg" viewBox="-80 -40 1060 900" preserveAspectRatio="xMidYMid meet" aria-label="Act 3 map flowchart"></svg>
+        </div>
+      </div>
+
+      <div class="flowchartHint">
+        Click a node to open the corresponding dungeon map.
+      </div>
     </article>
 
-    <article class="card">
-      <div class="cardTitle"><h2>Act 4</h2><span class="badge">Coming soon</span></div>
-      <p>This act will be added later.</p>
-    </article>
+    <article class="card act-flow-card">
+      <div class="act1-top">
+        <div class="act1-top-copy">
+          <div class="cardTitle">
+            <h2>Act 4</h2>
+            <span class="badge">Interactive flow</span>
+          </div>
+        </div>
 
+        <a class="btn act-btn" href="./maps/maps-act-4">
+          Open Act 4
+        </a>
+      </div>
+
+      <div class="flowchartWrap">
+        <div class="flowchartInner">
+          <svg id="act4Flowchart" class="flowchartSvg" viewBox="-100 120 1060 900" preserveAspectRatio="xMidYMid meet" aria-label="Act 4 map flowchart"></svg>
+        </div>
+      </div>
+
+      <div class="flowchartHint">
+        Click a node to open the corresponding dungeon map.
+      </div>
+    </article>
+  </div>
+
+  <div class="actsRowSingle">
     <article class="card">
       <div class="cardTitle"><h2>Act 5</h2><span class="badge">Coming soon</span></div>
       <p>This act will be added later.</p>
@@ -1185,6 +1257,294 @@ const nodeHeight = 42;
         });
         tspan2.textContent = line2.join(' ');
 
+        text.appendChild(tspan1);
+        text.appendChild(tspan2);
+      } else {
+        text.textContent = label;
+      }
+
+      link.appendChild(rect);
+      link.appendChild(text);
+      svg.appendChild(link);
+    }
+  }
+
+  renderEdges();
+  renderNodes();
+})();
+</script>
+
+<script>
+(() => {
+  const svg = document.getElementById('act3Flowchart');
+  if (!svg || typeof GAME_MAPS === 'undefined') return;
+
+  const SVG_NS = 'http://www.w3.org/2000/svg';
+  const positions = {
+    miningcamp:         { x: 30,  y: 220 },
+    badlands:           { x: 180, y: 220 },
+    borehole:           { x: 330, y: 120 },
+    abandonedmine:      { x: 330, y: 220 },
+    crystalcharm:       { x: 330, y: 320 },
+    crystalminelevel1:  { x: 500, y: 160 },
+    crystalminelevel2:  { x: 650, y: 160 },
+    crystalminelevel3:  { x: 650, y: 60  },
+    thejunkyard:        { x: 500, y: 320 },
+    salvagerstrove:     { x: 650, y: 280 },
+    giantsmaw:          { x: 650, y: 360 },
+    windycanyon:        { x: 500, y: 460 },
+    windycanyon2:       { x: 650, y: 460 },
+    plunderedtomb:      { x: 650, y: 560 },
+    windycanyon3:       { x: 650, y: 640 },
+    thesummit:          { x: 500, y: 620 },
+    seekerssanctuary:   { x: 330, y: 560 },
+    forsakensanctuary:  { x: 330, y: 640 },
+    hallsofthewithered: { x: 330, y: 720 },
+    drifterssanctuary:  { x: 500, y: 720 }
+  };
+
+  const nodeWidth = 126;
+  const nodeHeight = 44;
+
+  function makeSvgEl(tag, attrs = {}) {
+    const el = document.createElementNS(SVG_NS, tag);
+    for (const [key, value] of Object.entries(attrs)) el.setAttribute(key, value);
+    return el;
+  }
+
+  function centerRight(pos) { return { x: pos.x + nodeWidth, y: pos.y + nodeHeight / 2 }; }
+  function centerLeft(pos) { return { x: pos.x, y: pos.y + nodeHeight / 2 }; }
+  function centerTop(pos) { return { x: pos.x + nodeWidth / 2, y: pos.y }; }
+  function centerBottom(pos) { return { x: pos.x + nodeWidth / 2, y: pos.y + nodeHeight }; }
+
+  function getDungeonEdges() {
+    const edges = [];
+    const seen = new Set();
+    const actMaps = new Set(Object.keys(positions));
+
+    for (const [mapKey, mapData] of Object.entries(GAME_MAPS)) {
+      if (!actMaps.has(mapKey)) continue;
+      const points = Array.isArray(mapData.points) ? mapData.points : [];
+
+      points.forEach((p) => {
+        if (p.type !== 'dungeon' || !p.targetMap || !actMaps.has(p.targetMap)) return;
+        const pairKey = [mapKey, p.targetMap].sort().join('::');
+        if (seen.has(pairKey)) return;
+        seen.add(pairKey);
+        edges.push({ from: mapKey, to: p.targetMap });
+      });
+    }
+
+    return edges;
+  }
+
+  function buildPath(fromKey, toKey) {
+    const from = positions[fromKey];
+    const to = positions[toKey];
+    if (!from || !to) return '';
+
+    const dx = to.x - from.x;
+    const dy = to.y - from.y;
+    let start;
+    let end;
+
+    if (Math.abs(dx) >= Math.abs(dy)) {
+      if (dx >= 0) {
+        start = centerRight(from);
+        end = centerLeft(to);
+      } else {
+        start = centerLeft(from);
+        end = centerRight(to);
+      }
+    } else {
+      if (dy >= 0) {
+        start = centerBottom(from);
+        end = centerTop(to);
+      } else {
+        start = centerTop(from);
+        end = centerBottom(to);
+      }
+    }
+
+    const midX = (start.x + end.x) / 2;
+    const midY = (start.y + end.y) / 2;
+    if (Math.abs(start.x - end.x) > Math.abs(start.y - end.y)) {
+      return `M ${start.x} ${start.y} L ${midX} ${start.y} L ${midX} ${end.y} L ${end.x} ${end.y}`;
+    }
+    return `M ${start.x} ${start.y} L ${start.x} ${midY} L ${end.x} ${midY} L ${end.x} ${end.y}`;
+  }
+
+  function renderEdges() {
+    getDungeonEdges().forEach((edge) => {
+      svg.appendChild(makeSvgEl('path', { d: buildPath(edge.from, edge.to), class: 'flow-line' }));
+    });
+  }
+
+  function renderNodes() {
+    for (const [mapKey, pos] of Object.entries(positions)) {
+      const mapData = GAME_MAPS[mapKey];
+      if (!mapData) continue;
+
+      const link = makeSvgEl('a', { href: `./maps/maps-act-3?map=${encodeURIComponent(mapKey)}`, class: 'flow-node-link' });
+      const rect = makeSvgEl('rect', { x: pos.x, y: pos.y, width: nodeWidth, height: nodeHeight, rx: 14, ry: 14, class: 'flow-node-box' });
+      const text = makeSvgEl('text', { x: pos.x + nodeWidth / 2, y: pos.y + nodeHeight / 2, class: 'flow-node-text' });
+      const label = mapData.title;
+      const words = label.split(' ');
+
+      if (label.length > 16 && words.length > 1) {
+        const line1 = [];
+        const line2 = [];
+        words.forEach((word, index) => {
+          if (index < Math.ceil(words.length / 2)) line1.push(word);
+          else line2.push(word);
+        });
+        const tspan1 = makeSvgEl('tspan', { x: pos.x + nodeWidth / 2, dy: '-0.35em' });
+        tspan1.textContent = line1.join(' ');
+        const tspan2 = makeSvgEl('tspan', { x: pos.x + nodeWidth / 2, dy: '1.2em' });
+        tspan2.textContent = line2.join(' ');
+        text.appendChild(tspan1);
+        text.appendChild(tspan2);
+      } else {
+        text.textContent = label;
+      }
+
+      link.appendChild(rect);
+      link.appendChild(text);
+      svg.appendChild(link);
+    }
+  }
+
+  renderEdges();
+  renderNodes();
+})();
+</script>
+
+<script>
+(() => {
+  const svg = document.getElementById('act4Flowchart');
+  if (!svg || typeof GAME_MAPS === 'undefined') return;
+
+  const SVG_NS = 'http://www.w3.org/2000/svg';
+  const positions = {
+    shantytown:       { x: 30,  y: 300 },
+    theerodingstream: { x: 180, y: 300 },
+    blightedplains:   { x: 330, y: 300 },
+    depletedmine:     { x: 500, y: 220 },
+    losthighway:      { x: 500, y: 380 },
+    mountaintunnel:   { x: 650, y: 380 },
+    drainagetunnel:   { x: 650, y: 220 },
+    ghosttown:        { x: 650, y: 540 },
+    hauntedmetro:     { x: 500, y: 620 },
+    brokenbridge:     { x: 500, y: 760 },
+    ghosttownsewers:  { x: 500, y: 460 },
+    thecitycore:      { x: 330, y: 760 },
+    abandonedmetro1:  { x: 180, y: 620 },
+    abandonedmetro2:  { x: 180, y: 700 },
+    abandonedmetro3:  { x: 180, y: 780 },
+    abandonedmetro4:  { x: 330, y: 900 },
+    centralstation:   { x: 500, y: 900 },
+    theunderground:   { x: 650, y: 900 }
+  };
+
+  const nodeWidth = 126;
+  const nodeHeight = 44;
+
+  function makeSvgEl(tag, attrs = {}) {
+    const el = document.createElementNS(SVG_NS, tag);
+    for (const [key, value] of Object.entries(attrs)) el.setAttribute(key, value);
+    return el;
+  }
+
+  function centerRight(pos) { return { x: pos.x + nodeWidth, y: pos.y + nodeHeight / 2 }; }
+  function centerLeft(pos) { return { x: pos.x, y: pos.y + nodeHeight / 2 }; }
+  function centerTop(pos) { return { x: pos.x + nodeWidth / 2, y: pos.y }; }
+  function centerBottom(pos) { return { x: pos.x + nodeWidth / 2, y: pos.y + nodeHeight }; }
+
+  function getDungeonEdges() {
+    const edges = [];
+    const seen = new Set();
+    const actMaps = new Set(Object.keys(positions));
+
+    for (const [mapKey, mapData] of Object.entries(GAME_MAPS)) {
+      if (!actMaps.has(mapKey)) continue;
+      const points = Array.isArray(mapData.points) ? mapData.points : [];
+
+      points.forEach((p) => {
+        if (p.type !== 'dungeon' || !p.targetMap || !actMaps.has(p.targetMap)) return;
+        const pairKey = [mapKey, p.targetMap].sort().join('::');
+        if (seen.has(pairKey)) return;
+        seen.add(pairKey);
+        edges.push({ from: mapKey, to: p.targetMap });
+      });
+    }
+
+    return edges;
+  }
+
+  function buildPath(fromKey, toKey) {
+    const from = positions[fromKey];
+    const to = positions[toKey];
+    if (!from || !to) return '';
+
+    const dx = to.x - from.x;
+    const dy = to.y - from.y;
+    let start;
+    let end;
+
+    if (Math.abs(dx) >= Math.abs(dy)) {
+      if (dx >= 0) {
+        start = centerRight(from);
+        end = centerLeft(to);
+      } else {
+        start = centerLeft(from);
+        end = centerRight(to);
+      }
+    } else {
+      if (dy >= 0) {
+        start = centerBottom(from);
+        end = centerTop(to);
+      } else {
+        start = centerTop(from);
+        end = centerBottom(to);
+      }
+    }
+
+    const midX = (start.x + end.x) / 2;
+    const midY = (start.y + end.y) / 2;
+    if (Math.abs(start.x - end.x) > Math.abs(start.y - end.y)) {
+      return `M ${start.x} ${start.y} L ${midX} ${start.y} L ${midX} ${end.y} L ${end.x} ${end.y}`;
+    }
+    return `M ${start.x} ${start.y} L ${start.x} ${midY} L ${end.x} ${midY} L ${end.x} ${end.y}`;
+  }
+
+  function renderEdges() {
+    getDungeonEdges().forEach((edge) => {
+      svg.appendChild(makeSvgEl('path', { d: buildPath(edge.from, edge.to), class: 'flow-line' }));
+    });
+  }
+
+  function renderNodes() {
+    for (const [mapKey, pos] of Object.entries(positions)) {
+      const mapData = GAME_MAPS[mapKey];
+      if (!mapData) continue;
+
+      const link = makeSvgEl('a', { href: `./maps/maps-act-4?map=${encodeURIComponent(mapKey)}`, class: 'flow-node-link' });
+      const rect = makeSvgEl('rect', { x: pos.x, y: pos.y, width: nodeWidth, height: nodeHeight, rx: 14, ry: 14, class: 'flow-node-box' });
+      const text = makeSvgEl('text', { x: pos.x + nodeWidth / 2, y: pos.y + nodeHeight / 2, class: 'flow-node-text' });
+      const label = mapData.title;
+      const words = label.split(' ');
+
+      if (label.length > 16 && words.length > 1) {
+        const line1 = [];
+        const line2 = [];
+        words.forEach((word, index) => {
+          if (index < Math.ceil(words.length / 2)) line1.push(word);
+          else line2.push(word);
+        });
+        const tspan1 = makeSvgEl('tspan', { x: pos.x + nodeWidth / 2, dy: '-0.35em' });
+        tspan1.textContent = line1.join(' ');
+        const tspan2 = makeSvgEl('tspan', { x: pos.x + nodeWidth / 2, dy: '1.2em' });
+        tspan2.textContent = line2.join(' ');
         text.appendChild(tspan1);
         text.appendChild(tspan2);
       } else {
