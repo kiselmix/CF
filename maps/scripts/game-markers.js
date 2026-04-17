@@ -411,11 +411,7 @@ const GAME_MAPS = {
 		{ type: 'dungeon', y: 703, x: 819, title: 'Badlands', targetMap: 'badlands', showLabel: true},
     ],
   },
-  
-  
-  
-  
-  
+
   	crystalcharm: {
     title: 'Crystal Charm',
     svg: '../maps/act-3/Crystal Charm.svg',
@@ -437,13 +433,6 @@ const GAME_MAPS = {
 		{ type: 'portal',  y: 171, x: 651, title: 'Portal', desc: 'Fast travel' },
     ],
   },
-  
-  
-  
-  
-  
-  
-
   
 	crystalminelevel1: {
     title: 'Crystal Mine Level 1',
@@ -631,6 +620,240 @@ const GAME_MAPS = {
     ],
   },
   
+  /*ACT-4*/
+  
+  	shantytown: {
+    title: 'Shanty Town',
+    svg: '../maps/act-4/Shanty Town.svg',
+    bounds: [[0, 0], [1000, 1000]],
+    points: [
+		{ type: 'dungeon', y: 656, x: 153, title: 'The Eroding Stream', targetMap: 'theerodingstream', showLabel: true},
+		{ type: 'well',  y: 513, x: 347, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'portal',  y: 546, x: 171, title: 'Portal', desc: 'Fast travel' },
+		{ type: 'stash',  y: 556, x: 340, title: 'Stash', desc: 'Storage', showLabel: true },
+		{ type: 'merchant',  y: 550, x: 368, title: 'Merchant', desc: 'Repair/disassembly of items', showLabel: true },
+		{ type: 'terminal',  y: 508, x: 829, title: 'Terminal', desc: 'Moving around the world', showLabel: true },
+    ],
+  },
+  
+    theerodingstream: {
+    title: 'The Eroding Stream',
+    svg: '../maps/act-4/The Eroding Stream.svg',
+    bounds: [[0, 0], [1000, 1000]],
+    points: [
+		{ type: 'dungeon', y: 656, x: 153, title: 'Shanty Town', targetMap: 'shantytown', showLabel: true},
+		{ type: 'dungeon', y: 656, x: 153, title: 'Dead Woods', targetMap: '', showLabel: true},
+		{ type: 'dungeon', y: 656, x: 153, title: 'Blighted Plains', targetMap: 'blightedplains', showLabel: true},
+		{ type: 'well',  y: 513, x: 347, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'well',  y: 513, x: 347, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'well',  y: 513, x: 347, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'shrine',   y: 636, x: 578, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+		{ type: 'shrine',   y: 636, x: 578, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+    ],
+  },
+  
+	blightedplains: {
+    title: 'Blighted Plains',
+    svg: '../maps/act-4/Blighted Plains.svg',
+    bounds: [[0, 0], [1000, 1000]],
+    points: [
+		{ type: 'dungeon', y: 656, x: 153, title: 'The Eroding Stream', targetMap: 'theerodingstream', showLabel: true},
+		{ type: 'dungeon', y: 656, x: 153, title: 'Depleted Mine', targetMap: 'depletedmine', showLabel: true},
+		{ type: 'dungeon', y: 656, x: 153, title: 'Lost Highway', targetMap: 'losthighway', showLabel: true},
+		{ type: 'well',  y: 513, x: 347, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'well',  y: 513, x: 347, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'well',  y: 513, x: 347, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'well',  y: 513, x: 347, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'well',  y: 513, x: 347, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'shrine',   y: 636, x: 578, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+		{ type: 'shrine',   y: 636, x: 578, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+		{ type: 'shrine',   y: 636, x: 578, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+		{ type: 'shrine',   y: 636, x: 578, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+		{ type: 'shrine',   y: 636, x: 578, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+		{ type: 'portal',  y: 546, x: 171, title: 'Portal', desc: 'Fast travel' },
+    ],
+  },
+  
+  depletedmine: {
+    title: 'Depleted Mine',
+    svg: '../maps/act-4/Depleted Mine.svg',
+    bounds: [[0, 0], [1000, 1000]],
+    points: [
+		{ type: 'dungeon', y: 656, x: 153, title: 'Blighted Plains', targetMap: 'blightedplains', showLabel: true},
+    ],
+  },
+  
+  losthighway: {
+    title: 'Lost Highway',
+    svg: '../maps/act-4/Lost Highway.svg',
+    bounds: [[0, 0], [1000, 1000]],
+    points: [
+		{ type: 'dungeon', y: 656, x: 153, title: 'Blighted Plains', targetMap: 'blightedplains', showLabel: true},
+		{ type: 'dungeon', y: 656, x: 153, title: 'Mountain Tunnel', targetMap: 'mountaintunnel', showLabel: true},
+		{ type: 'well',  y: 513, x: 347, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'well',  y: 513, x: 347, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'well',  y: 513, x: 347, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'well',  y: 513, x: 347, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'well',  y: 513, x: 347, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'well',  y: 513, x: 347, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'shrine',   y: 636, x: 578, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+		{ type: 'shrine',   y: 636, x: 578, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+		{ type: 'shrine',   y: 636, x: 578, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+		{ type: 'shrine',   y: 636, x: 578, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+		{ type: 'shrine',   y: 636, x: 578, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+		{ type: 'portal',  y: 546, x: 171, title: 'Portal', desc: 'Fast travel' },
+    ],
+  },
+  
+	mountaintunnel: {
+    title: 'Mountain Tunnel',
+    svg: '../maps/act-4/Mountain Tunnel.svg',
+    bounds: [[0, 0], [1000, 1000]],
+    points: [
+		{ type: 'dungeon', y: 656, x: 153, title: 'Lost Highway', targetMap: 'losthighway', showLabel: true},
+		{ type: 'dungeon', y: 656, x: 153, title: 'Drainage Tunnel', targetMap: 'drainagetunnel', showLabel: true},
+		{ type: 'dungeon', y: 656, x: 153, title: 'Ghost Town', targetMap: 'ghosttown', showLabel: true},
+		{ type: 'shrine',   y: 636, x: 578, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+    ],
+  },
+  
+	drainagetunnel: {
+    title: 'Drainage Tunnel',
+    svg: '../maps/act-4/Drainage Tunnel.svg',
+    bounds: [[0, 0], [1000, 1000]],
+    points: [
+		{ type: 'dungeon', y: 656, x: 153, title: 'Mountain Tunnel', targetMap: 'mountaintunnel', showLabel: true},
+		{ type: 'well',  y: 513, x: 347, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'shrine',   y: 636, x: 578, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+    ],
+  },
+  
+	ghosttown: {
+    title: 'Ghost Town',
+    svg: '../maps/act-4/Ghost Town.svg',
+    bounds: [[0, 0], [1000, 1000]],
+    points: [
+		{ type: 'dungeon', y: 656, x: 153, title: 'Mountain Tunnel', targetMap: 'mountaintunnel', showLabel: true},
+		{ type: 'dungeon', y: 656, x: 153, title: 'Haunted Metro', targetMap: 'hauntedmetro', showLabel: true},
+		{ type: 'dungeon', y: 656, x: 153, title: 'Broken Bridge', targetMap: 'brokenbridge', showLabel: true},
+		{ type: 'well',  y: 513, x: 347, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'well',  y: 513, x: 347, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'well',  y: 513, x: 347, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'shrine',   y: 636, x: 578, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+		{ type: 'shrine',   y: 636, x: 578, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+		{ type: 'shrine',   y: 636, x: 578, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+    ],
+  },
+  
+	hauntedmetro: {
+    title: 'Haunted Metro',
+    svg: '../maps/act-4/Haunted Metro.svg',
+    bounds: [[0, 0], [1000, 1000]],
+    points: [
+		{ type: 'dungeon', y: 656, x: 153, title: 'Ghost Town', targetMap: 'ghosttown', showLabel: true},
+		{ type: 'dungeon', y: 656, x: 153, title: 'Ghost Town', targetMap: 'ghosttown', showLabel: true},
+    ],
+  },
+  
+	brokenbridge: {
+    title: 'Broken Bridge',
+    svg: '../maps/act-4/Broken Bridge.svg',
+    bounds: [[0, 0], [1000, 1000]],
+    points: [
+		{ type: 'dungeon', y: 656, x: 153, title: 'Ghost Town', targetMap: 'ghosttown', showLabel: true},
+		{ type: 'dungeon', y: 656, x: 153, title: 'The City Core', targetMap: 'thecitycore', showLabel: true},
+		{ type: 'well',  y: 513, x: 347, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'well',  y: 513, x: 347, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'well',  y: 513, x: 347, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'well',  y: 513, x: 347, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'shrine',   y: 636, x: 578, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+		{ type: 'shrine',   y: 636, x: 578, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+		{ type: 'shrine',   y: 636, x: 578, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+    ],
+  },
+  
+	thecitycore: {
+    title: 'The City Core',
+    svg: '../maps/act-4/The City Core.svg',
+    bounds: [[0, 0], [1000, 1000]],
+    points: [
+		{ type: 'dungeon', y: 656, x: 153, title: 'Broken Bridge', targetMap: 'brokenbridge', showLabel: true},
+		{ type: 'dungeon', y: 656, x: 153, title: 'Abandoned Metro 1', targetMap: 'abandonedmetro1', showLabel: true},
+		{ type: 'dungeon', y: 656, x: 153, title: 'Abandoned Metro 2', targetMap: 'abandonedmetro2', showLabel: true},
+		{ type: 'dungeon', y: 656, x: 153, title: 'Abandoned Metro 3', targetMap: 'abandonedmetro3', showLabel: true},
+		{ type: 'dungeon', y: 656, x: 153, title: 'Abandoned Metro 4', targetMap: 'abandonedmetro4', showLabel: true},
+		{ type: 'dungeon', y: 656, x: 153, title: 'Central Station', targetMap: 'centralstation', showLabel: true},
+		{ type: 'well',  y: 513, x: 347, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'well',  y: 513, x: 347, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'well',  y: 513, x: 347, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'well',  y: 513, x: 347, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'well',  y: 513, x: 347, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'shrine',   y: 636, x: 578, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+		{ type: 'shrine',   y: 636, x: 578, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+		{ type: 'shrine',   y: 636, x: 578, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+		{ type: 'shrine',   y: 636, x: 578, title: 'Shrine', desc: 'Provides a temporary character boost', showLabel: true },
+    ],
+  },
+  
+	abandonedmetro1: {
+    title: 'Abandoned Metro 1',
+    svg: '../maps/act-4/Abandoned Metro-1.svg',
+    bounds: [[0, 0], [1000, 1000]],
+    points: [
+		{ type: 'dungeon', y: 656, x: 153, title: 'The City Core', targetMap: 'thecitycore', showLabel: true},
+    ],
+  },
+  
+  abandonedmetro2: {
+    title: 'Abandoned Metro 2',
+    svg: '../maps/act-4/Abandoned Metro-2.svg',
+    bounds: [[0, 0], [1000, 1000]],
+    points: [
+		{ type: 'dungeon', y: 656, x: 153, title: 'The City Core', targetMap: 'thecitycore', showLabel: true},
+    ],
+  },
+  
+  abandonedmetro3: {
+    title: 'Abandoned Metro 3',
+    svg: '../maps/act-4/Abandoned Metro-3.svg',
+    bounds: [[0, 0], [1000, 1000]],
+    points: [
+		{ type: 'dungeon', y: 656, x: 153, title: 'The City Core', targetMap: 'thecitycore', showLabel: true},
+    ],
+  },
+  
+  abandonedmetro4: {
+    title: 'Abandoned Metro 4',
+    svg: '../maps/act-4/Abandoned Metro-4.svg',
+    bounds: [[0, 0], [1000, 1000]],
+    points: [
+		{ type: 'dungeon', y: 656, x: 153, title: 'The City Core', targetMap: 'thecitycore', showLabel: true},
+    ],
+  },
+  
+	centralstation: {
+    title: 'Central Station',
+    svg: '../maps/act-4/Central Station.svg',
+    bounds: [[0, 0], [1000, 1000]],
+    points: [
+		{ type: 'dungeon', y: 656, x: 153, title: 'The City Core', targetMap: 'thecitycore', showLabel: true},
+		{ type: 'dungeon', y: 656, x: 153, title: 'The Underground', targetMap: 'theunderground', showLabel: true},
+		{ type: 'well',  y: 513, x: 347, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+    ],
+  },
+  
+	theunderground: {
+    title: 'The Underground',
+    svg: '../maps/act-4/The Underground.svg',
+    bounds: [[0, 0], [1000, 1000]],
+    points: [
+		{ type: 'dungeon', y: 685, x: 852, title: 'Central Station', targetMap: 'centralstation', showLabel: true},
+		{ type: 'dungeon', y: 656, x: 153, title: 'The City Core', targetMap: 'thecitycore', showLabel: true},
+		{ type: 'well',  y: 574, x: 181, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'portal',  y: 652, x: 893, title: 'Portal', desc: 'Fast travel' },
+		{ type: 'boss',  y: 640, x: 261, title: 'Boss', desc: 'Boss', showLabel: true},
+    ],
+  },
   
   
 };
