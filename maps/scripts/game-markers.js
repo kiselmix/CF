@@ -813,7 +813,7 @@ const GAME_MAPS = {
     svg: '../maps/act-4/Abandoned Metro-1.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
-		{ type: 'dungeon', y: 656, x: 153, title: 'The City Core', targetMap: 'thecitycore', showLabel: true},
+		{ type: 'dungeon', y: 689, x: 361, title: 'The City Core', targetMap: 'thecitycore', showLabel: true},
     ],
   },
   
@@ -822,7 +822,7 @@ const GAME_MAPS = {
     svg: '../maps/act-4/Abandoned Metro-2.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
-		{ type: 'dungeon', y: 656, x: 153, title: 'The City Core', targetMap: 'thecitycore', showLabel: true},
+		{ type: 'dungeon', y: 519, x: 817, title: 'The City Core', targetMap: 'thecitycore', showLabel: true},
     ],
   },
   
@@ -831,7 +831,7 @@ const GAME_MAPS = {
     svg: '../maps/act-4/Abandoned Metro-3.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
-		{ type: 'dungeon', y: 656, x: 153, title: 'The City Core', targetMap: 'thecitycore', showLabel: true},
+		{ type: 'dungeon', y: 689, x: 361, title: 'The City Core', targetMap: 'thecitycore', showLabel: true},
     ],
   },
   
@@ -840,7 +840,7 @@ const GAME_MAPS = {
     svg: '../maps/act-4/Abandoned Metro-4.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
-		{ type: 'dungeon', y: 656, x: 153, title: 'The City Core', targetMap: 'thecitycore', showLabel: true},
+		{ type: 'dungeon', y: 697, x: 291, title: 'The City Core', targetMap: 'thecitycore', showLabel: true},
     ],
   },
   
@@ -849,9 +849,9 @@ const GAME_MAPS = {
     svg: '../maps/act-4/Central Station.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
-		{ type: 'dungeon', y: 656, x: 153, title: 'The City Core', targetMap: 'thecitycore', showLabel: true},
-		{ type: 'dungeon', y: 656, x: 153, title: 'The Underground', targetMap: 'theunderground', showLabel: true},
-		{ type: 'well',  y: 513, x: 347, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'dungeon', y: 496, x: 66, title: 'The City Core', targetMap: 'thecitycore', showLabel: true},
+		{ type: 'dungeon', y: 164, x: 910, title: 'The Underground', targetMap: 'theunderground', showLabel: true},
+		{ type: 'well',  y: 162, x: 877, title: 'Well', desc: 'Refilling flasks', showLabel: true},
     ],
   },
   
@@ -860,11 +860,11 @@ const GAME_MAPS = {
     svg: '../maps/act-4/The Underground.svg',
     bounds: [[0, 0], [1000, 1000]],
     points: [
-		{ type: 'dungeon', y: 685, x: 852, title: 'Central Station', targetMap: 'centralstation', showLabel: true},
-		{ type: 'dungeon', y: 656, x: 153, title: 'The City Core', targetMap: 'thecitycore', showLabel: true},
-		{ type: 'well',  y: 574, x: 181, title: 'Well', desc: 'Refilling flasks', showLabel: true},
-		{ type: 'portal',  y: 652, x: 893, title: 'Portal', desc: 'Fast travel' },
-		{ type: 'boss',  y: 640, x: 261, title: 'Boss', desc: 'Boss', showLabel: true},
+		{ type: 'dungeon', y: 701, x: 708, title: 'Central Station', targetMap: 'centralstation', showLabel: true},
+		{ type: 'dungeon', y: 707, x: 37, title: 'The City Core', targetMap: 'thecitycore', showLabel: true},
+		{ type: 'well',  y: 603, x: 146, title: 'Well', desc: 'Refilling flasks', showLabel: true},
+		{ type: 'portal',  y: 654, x: 753, title: 'Portal', desc: 'Fast travel' },
+		{ type: 'boss',  y: 678, x: 65, title: 'Boss', desc: 'Boss', showLabel: true},
     ],
   },
   
