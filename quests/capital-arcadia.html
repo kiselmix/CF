@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/quest/quest.detail.css" />
+  <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=107727914', 'ym');
+
+    ym(107727914, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/107727914" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<link rel="stylesheet" href="/css/twitch.css">
+
+</head>
+<body>
+  <header class="siteHeader">
+    <div class="wrap">
+      <a class="brand" href="../">
+        <img src="../img/logo.png" alt="CrystalFall logo" class="brandLogo">
+        <span class="brandText">CrystalFall.fun</span>
+      </a>
+
+      <button class="burgerBtn" id="burgerBtn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobileNav">
+        <span class="burgerIcon"></span>
+      </button>
+
+      <nav class="siteNav" aria-label="Main navigation">
+        <a href="../talent-tree">Talent Tree</a>
+        <a href="../skills">Skills</a>
+        <a href="../skill-leveling">Skill leveling</a>
+        <a href="../maps">Maps</a>
+        <a href="../quests" class="is-active">Quests</a>
+        <a href="../fusing">Fusing</a>
+		<a href="../glossary">Glossary</a>
+        <a href="../build-and-guide">Build &amp; Guide</a>
+      </nav>
+
+      <nav class="navOverlay" id="mobileNav" aria-label="Mobile navigation" hidden>
+        <div class="navPanel navMobile">
+          <a href="../talent-tree">Talent Tree</a>
+          <a href="../skills">Skills</a>
+          <a href="../skill-leveling">Skill leveling</a>
+          <a href="../maps">Maps</a>
+          <a href="../quests" class="is-active">Quests</a>
+          <a href="../fusing">Fusing</a>
+		  <a href="../glossary">Glossary</a>
+          <a href="../build-and-guide">Build &amp; Guide</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="wrap pageShell">
+    <main id="questRoot" class="skillRoot" aria-live="polite">
+      <article class="cardFrame">
+        <div class="cardInner">
+          <div class="topTitle">
+            <div>
+              <h1 class="skillName">Capital Arcadia</h1>
+              <div class="tagsLine"><span class="tag">Act 1</span></div>
+            </div>
+          </div>
+
+          <div class="grid">
+            <div>
+              <div class="flavor">Reward: -
+              </div>
+              <div class="desc" style="margin-top:10px; font-size:15px; color:#e8e0d4">We're bound for Capital Arcadia. I have a small matter to settle with the Commissioner there.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="videoWrap">
+          <div class="videoTitle">How to complete</div>
+
+          <div style="margin:0 0 14px">
+            <div style="color:#4bd6ff; font-weight:700; font-size:18px; margin:0 0 6px">1. Step 1 — Talk to Alden and head to Arcadia</div>
+            <div class="responsive" style="margin-top:10px">
+              <img src="../img/quest/Act-1/Capital-Arcadia/1.png" alt="Capital Arcadia Step 1 — Talk to Alden and head to Arcadia" style="width:100%; height:100%; object-fit:cover; display:block;">
+            </div>
+          </div>
+
+          <div class="hr"></div>
+          <div id="questNavBlock"></div>
+        </div>
+      </article>
+    </main>
+  </div>
+
+  <script src="../js/quest/quests-data.js"></script>
+  <script src="../js/quest/quest-nav.js"></script>
+  <script>
+  (() => {
+    const burger = document.getElementById('burgerBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    if (!burger || !mobileNav) return;
+
+    function closeMenu() {
+      mobileNav.classList.remove('is-open');
+      mobileNav.hidden = true;
+      document.body.classList.remove('nav-open');
+      burger.setAttribute('aria-expanded', 'false');
+    }
+
+    function openMenu() {
+      mobileNav.hidden = false;
+      mobileNav.classList.add('is-open');
+      document.body.classList.add('nav-open');
+      burger.setAttribute('aria-expanded', 'true');
+    }
+
+    burger.addEventListener('click', () => {
+      const opened = mobileNav.classList.contains('is-open') && !mobileNav.hidden;
+      opened ? closeMenu() : openMenu();
+    });
+
+    mobileNav.addEventListener('click', (e) => {
+      const link = e.target.closest('a');
+      if (link) closeMenu();
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMenu();
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 820) closeMenu();
+    });
+  })();
+  </script>
+  
+  <div id="twitchWidget" class="twitch-widget" hidden>
+  <button id="twitchCloseBtn" class="twitch-widget__close" type="button" aria-label="Close stream">×</button>
+  <div id="twitchPlayerMount" class="twitch-widget__player"></div>
+</div>
+
+<script src="https://player.twitch.tv/js/embed/v1.js"></script>
+<script src="/js/twitch.js" defer></script>
+  
+</body>
+</html>
