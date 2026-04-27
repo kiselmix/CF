@@ -179,5 +179,135 @@ steps: [
         images: ["img/quest/Act-1/Free-Alden/7.png"]
       }
     ]
-  }
+  },
+{
+  id: "Capital-Arcadia",
+  name: "Capital Arcadia",
+  tags: ["Act 1"],
+  description: "We're bound for Capital Arcadia. I have a small matter to settle with the Commissioner there.",
+  flavor: "Reward: -",
+  steps: [
+    {
+      title: "Step 1 — Talk to Alden and head to Arcadia",
+      images: ["img/quest/Act-1/Capital-Arcadia/1.png"]
+    }
+  ]
+},
+
+{
+  id: "Commissioner",
+  name: "Commissioner",
+  tags: ["Act 2"],
+  description: "Talk to the Commissioner. If you do something for him, he might clear your name.",
+  flavor: "Reward: -",
+  steps: [
+    {
+      title: "Step 1 — Talk to Alden in Arcadia",
+      images: ["img/quest/Act-2/Commissioner/1.png"]
+    },
+    {
+      title: "Step 2 — Talk to Commissioner in the Police building",
+      images: ["img/quest/Act-2/Commissioner/2.png"]
+    }
+  ]
+},
+
+{
+  id: "Forceful-Withdrawal",
+  name: "Forceful Withdrawal",
+  tags: ["Act 2"],
+  description: "Ratgar the mob boss has broken into the Bank Vault, wreaking havoc and stealing the treasury.",
+  flavor: `Reward:
+  <a href="https://crystalfall.fun/skills/vigor">Vigor</a> /
+  <a href="https://crystalfall.fun/skills/fervor">Fervor</a>`,
+  steps: [
+    {
+      title: "Step 1 — Talk to The Commissioner in Arcadia",
+      images: ["img/quest/Act-2/Forceful-Withdrawal/1.png"]
+    },
+    {
+      title: "Step 2 — Enter the bank",
+      text: "Go to Outer Vault",
+      images: [
+        "img/quest/Act-2/Forceful-Withdrawal/2.png",
+        "img/quest/Act-2/Forceful-Withdrawal/3.png"
+      ]
+    },
+    {
+      title: "Step 3 — Find Ratgar",
+      text: "Go through Outer Vault → Inner Vault",
+      images: [
+        "img/quest/Act-2/Forceful-Withdrawal/4.png",
+        "img/quest/Act-2/Forceful-Withdrawal/5.png"
+      ]
+    },
+    {
+      title: "Step 4 — Defeat Ratgar",
+      images: ["img/quest/Act-2/Forceful-Withdrawal/6.png"]
+    },
+    {
+      title: "Step 5 — Talk to The Commissioner in Arcadia",
+      images: ["img/quest/Act-2/Forceful-Withdrawal/7.png"]
+    }
+  ]
+},
+
+{
+  id: "Tools-of-the-Trade",
+  name: "Tools of the Trade",
+  tags: ["Act 2"],
+  description: "Come to learn a thing about weapons? Knowing how to maintain your gear can mean the difference between life or death. Let's begin with teaching you how to repair and salvage your gear.",
+  flavor: `Reward:
+  5 x Alchemist's Lesser Module,
+  5 x Alchemist's Module,
+  5 x Alchemist's Greater Module`,
+  steps: [
+    {
+      title: "Step 1 — Talk to Kira in Arcadia",
+      images: ["img/quest/Act-2/Tools-of-the-Trade/1.png"]
+    },
+    {
+      title: "Step 2 — Salvage a weapon or armor item",
+      text: "Use the hammer at the merchant",
+      images: ["img/quest/Act-2/Tools-of-the-Trade/2.png"]
+    },
+    {
+      title: "Step 3 — Repair item",
+      text: "Use repair menu or repair all",
+      images: ["img/quest/Act-2/Tools-of-the-Trade/3.png"]
+    },
+    {
+      title: "Step 4 — Upgrade item quality",
+      images: ["img/quest/Act-2/Tools-of-the-Trade/4.png"]
+    },
+    {
+      title: "Step 5 — Talk to Kira",
+      images: ["img/quest/Act-2/Tools-of-the-Trade/5.png"]
+    }
+  ]
+},
+
+{
+  id: "Tumbleweed-Express",
+  name: "Tumbleweed Express",
+  tags: ["Act 2"],
+  description: "You better lay low for a while. The Red Plains is a good place to hide...",
+  flavor: "Reward: 10 x Skill Key",
+  steps: [
+    {
+      title: "Step 1 — Talk to The Commissioner in Arcadia",
+      images: ["img/quest/Act-2/Tumbleweed-Express/1.png"]
+    },
+    {
+      title: "Step 2 — Use terminal to travel to Red Plains",
+      text: "Select Act 3 → Ship",
+      images: ["img/quest/Act-2/Tumbleweed-Express/2.png"]
+    },
+    {
+      title: "Step 3 — Talk to Alden Sage in Mining Camp",
+      images: ["img/quest/Act-2/Tumbleweed-Express/3.png"]
+    }
+  ]
+}
+  
 ];
