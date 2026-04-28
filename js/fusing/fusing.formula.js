@@ -35,6 +35,19 @@
 	  { id: "essential_element", count: 9 },
 		{ id: "shard", count: 9 }]
     },
+	{
+      id: "portal_key",
+      name: "Portal Key",
+      img: "img/fusing/portal-key.png",
+      qty: 1,
+      description:
+        "Spawn a portal by right-clicking this item.",
+      stats: [
+      ],
+      recipe: [
+	  { id: "essential_element", count: 9 },
+		{ id: "shard", count: 27 }]
+    },
     {
       id: "chipped_frostcore",
       name: "Chipped Frostcore",
@@ -45,7 +58,7 @@
         "Can be socketed into items. Can be used to upgrade the quality of items. Multiples of the same type and grade can be fused into a higher grade.",
       stats: [
         { slot: "Weapon", text: "Adds 2 to 3 Cold Damage" },
-        { slot: "Armor", text: "+3 Dexterity" },
+        { slot: "Armor", text: "+2 Dexterity" },
         { slot: "Off-hand", text: "+5% Cold Resistance" },
         { slot: "Flask", text: "You gain +10% Chance to Negate Chills during Flask Effect" }
       ],
@@ -82,7 +95,7 @@
         "Can be socketed into items. Can be used to upgrade the quality of items. Multiples of the same type and grade can be fused into a higher grade.",
       stats: [
         { slot: "Weapon", text: "Adds 1 to 4 Lightning Damage" },
-        { slot: "Armor", text: "+3 Intelligence" },
+        { slot: "Armor", text: "+2 Intelligence" },
         { slot: "Off-hand", text: "+5% Lightning Resistance" },
         { slot: "Flask", text: "You gain +10% Chance to Negate Shocks during Flask Effect" }
       ],
@@ -119,7 +132,7 @@
         "Can be socketed into items. Can be used to upgrade the quality of items. Multiples of the same type and grade can be fused into a higher grade.",
       stats: [
         { slot: "Weapon", text: "Adds 1 to 4 Fire Damage" },
-        { slot: "Armor", text: "+3 Strength" },
+        { slot: "Armor", text: "+2 Strength" },
         { slot: "Off-hand", text: "+5% Fire Resistance" },
         { slot: "Flask", text: "You gain +10% Chance to Negate Burns during Flask Effect" }
       ],
@@ -146,7 +159,7 @@
         "Can be socketed into items. Can be used to upgrade the quality of items. Multiples of the same type and grade can be fused into a higher grade.",
       stats: [
         { slot: "Weapon", text: "Adds 3 to 4 Cold Damage" },
-        { slot: "Armor", text: "+6 Dexterity" },
+        { slot: "Armor", text: "+4 Dexterity" },
         { slot: "Off-hand", text: "+10% Cold Resistance" },
         { slot: "Flask", text: "You gain +20% Chance to Negate Chills during Flask Effect" }
       ],
@@ -187,7 +200,7 @@
         "Can be socketed into items. Can be used to upgrade the quality of items. Multiples of the same type and grade can be fused into a higher grade.",
       stats: [
         { slot: "Weapon", text: "Adds 1 to 7 Lightning Damage" },
-        { slot: "Armor", text: "+6 Intelligence" },
+        { slot: "Armor", text: "+4 Intelligence" },
         { slot: "Off-hand", text: "+10% Lightning Resistance" },
         { slot: "Flask", text: "You gain +20% Chance to Negate Shocks during Flask Effect" }
       ],
@@ -227,7 +240,7 @@
         "Can be socketed into items. Can be used to upgrade the quality of items. Multiples of the same type and grade can be fused into a higher grade.",
       stats: [
         { slot: "Weapon", text: "Adds 2 to 5 Fire Damage" },
-        { slot: "Armor", text: "+10 to Maximum Life" },
+        { slot: "Armor", text: "+4 Strength" },
         { slot: "Off-hand", text: "+10% Fire Resistance" },
         { slot: "Flask", text: "You gain +20% Chance to Negate Burns during Flask Effect" }
       ],
@@ -250,7 +263,7 @@
         "Can be socketed into items. Can be used to upgrade the quality of items. Multiples of the same type and grade can be fused into a higher grade.",
       stats: [
         { slot: "Weapon", text: "Adds 4 to 6 Cold Damage" },
-        { slot: "Armor", text: "+9 Dexterity" },
+        { slot: "Armor", text: "+6 Dexterity" },
         { slot: "Off-hand", text: "+15% Cold Resistance" },
         { slot: "Flask", text: "You gain +30% Chance to Negate Chills during Flask Effect" }
       ],
@@ -269,10 +282,10 @@
       description:
         "Can be socketed into items. Can be used to upgrade the quality of items. Multiples of the same type and grade can be fused into a higher grade.",
       stats: [
-        { slot: "Weapon", text: "Adds 4 to 6 Cold Damage" },
-        { slot: "Armor", text: "+9 Dexterity" },
-        { slot: "Off-hand", text: "+15% Cold Resistance" },
-        { slot: "Flask", text: "You gain +30% Chance to Negate Chills during Flask Effect" }
+        { slot: "Weapon", text: "Adds 3 to 7 Physical Damage" },
+        { slot: "Armor", text: "+15 to Maximum Life" },
+        { slot: "Off-hand", text: "Reflect +15 Physical Damage" },
+        { slot: "Flask", text: "You gain +30% Chance to Negate Bleeding during Flask Effect" }
       ],
       recipe: [
         { id: "flawed_ironcore", count: 3 },
@@ -289,10 +302,10 @@
       description:
         "Can be socketed into items. Can be used to upgrade the quality of items. Multiples of the same type and grade can be fused into a higher grade.",
       stats: [
-        { slot: "Weapon", text: "Adds 4 to 6 Cold Damage" },
-        { slot: "Armor", text: "+9 Dexterity" },
-        { slot: "Off-hand", text: "+15% Cold Resistance" },
-        { slot: "Flask", text: "You gain +30% Chance to Negate Chills during Flask Effect" }
+        { slot: "Weapon", text: "Adds 1 to 11 Lightning Damage" },
+        { slot: "Armor", text: "+6 Intelligence" },
+        { slot: "Off-hand", text: "+15% Lightning Resistance" },
+        { slot: "Flask", text: "You gain +30% Chance to Negate Shocks during Flask Effect" }
       ],
       recipe: [
         { id: "flawed_stormcore", count: 3 },
@@ -309,10 +322,10 @@
       description:
         "Can be socketed into items. Can be used to upgrade the quality of items. Multiples of the same type and grade can be fused into a higher grade.",
       stats: [
-        { slot: "Weapon", text: "Adds 4 to 6 Cold Damage" },
-        { slot: "Armor", text: "+9 Dexterity" },
-        { slot: "Off-hand", text: "+15% Cold Resistance" },
-        { slot: "Flask", text: "You gain +30% Chance to Negate Chills during Flask Effect" }
+        { slot: "Weapon", text: "Adds 3 to 7 Aether Damage" },
+        { slot: "Armor", text: "+15 to Maximum Aether" },
+        { slot: "Off-hand", text: "+15% Aether Resistance" },
+        { slot: "Flask", text: "You gain +30% Chance to Negate Dazzling during Flask Effect" }
       ],
       recipe: [
         { id: "flawed_skycore", count: 3 },
@@ -329,10 +342,10 @@
       description:
         "Can be socketed into items. Can be used to upgrade the quality of items. Multiples of the same type and grade can be fused into a higher grade.",
       stats: [
-        { slot: "Weapon", text: "Adds 4 to 6 Cold Damage" },
-        { slot: "Armor", text: "+9 Dexterity" },
-        { slot: "Off-hand", text: "+15% Cold Resistance" },
-        { slot: "Flask", text: "You gain +30% Chance to Negate Chills during Flask Effect" }
+        { slot: "Weapon", text: "Adds 3 to 7 Fire Damage" },
+        { slot: "Armor", text: "+6 Strength" },
+        { slot: "Off-hand", text: "+15% Fire Resistance" },
+        { slot: "Flask", text: "You gain +30% Chance to Negate Burns during Flask Effect" }
       ],
       recipe: [
         { id: "flawed_flamecore", count: 3 },
@@ -353,7 +366,7 @@
         "Can be socketed into items. Can be used to upgrade the quality of items. Multiples of the same type and grade can be fused into a higher grade.",
       stats: [
         { slot: "Weapon", text: "Adds 7 to 8 Cold Damage" },
-        { slot: "Armor", text: "+12 Dexterity" },
+        { slot: "Armor", text: "+8 Dexterity" },
         { slot: "Off-hand", text: "+20% Cold Resistance" },
         { slot: "Flask", text: "You gain +40% Chance to Negate Chills during Flask Effect" }
       ],
@@ -394,7 +407,7 @@
         "Can be socketed into items. Can be used to upgrade the quality of items. Multiples of the same type and grade can be fused into a higher grade.",
       stats: [
         { slot: "Weapon", text: "Adds 1 to 17 Lightning Damage" },
-        { slot: "Armor", text: "+12 Intelligence" },
+        { slot: "Armor", text: "+8 Intelligence" },
         { slot: "Off-hand", text: "+20% Lightning Resistance" },
         { slot: "Flask", text: "You gain +40% Chance to Negate Shocks during Flask Effect" }
       ],
@@ -434,7 +447,7 @@
         "Can be socketed into items. Can be used to upgrade the quality of items. Multiples of the same type and grade can be fused into a higher grade.",
       stats: [
         { slot: "Weapon", text: "Adds 4 to 11 Fire Damage" },
-        { slot: "Armor", text: "+12 Strength" },
+        { slot: "Armor", text: "+8 Strength" },
         { slot: "Off-hand", text: "+20% Fire Resistance" },
         { slot: "Flask", text: "You gain +40% Chance to Negate Burns during Flask Effect" }
       ],
@@ -456,10 +469,10 @@
       description:
         "Can be socketed into items. Can be used to upgrade the quality of items. Multiples of the same type and grade can be fused into a higher grade.",
       stats: [
-        { slot: "Weapon", text: "" },
-        { slot: "Armor", text: "" },
-        { slot: "Off-hand", text: "" },
-        { slot: "Flask", text: "" }
+        { slot: "Weapon", text: "Adds 11 to 14 Cold Damage" },
+        { slot: "Armor", text: "+10 Dexterity" },
+        { slot: "Off-hand", text: "+25% Cold Resistance" },
+        { slot: "Flask", text: "You gain +50% Chance to Negate Chills during Flask Effect" }
       ],
       recipe: [
         { id: "flawless_frostcore", count: 3 },
@@ -475,10 +488,10 @@
       description:
         "Can be socketed into items. Can be used to upgrade the quality of items. Multiples of the same type and grade can be fused into a higher grade.",
       stats: [
-        { slot: "Weapon", text: "" },
-        { slot: "Armor", text: "" },
-        { slot: "Off-hand", text: "" },
-        { slot: "Flask", text: "" }
+        { slot: "Weapon", text: "Adds 8 to 17 Physical Damage" },
+        { slot: "Armor", text: "+25 to Maximum Life" },
+        { slot: "Off-hand", text: "Reflect +25 Physical Damage" },
+        { slot: "Flask", text: "You gain +50% Chance to Negate Bleeding during Flask Effect" }
       ],
       recipe: [
         { id: "flawless_ironcore", count: 3 },
@@ -494,10 +507,10 @@
       description:
         "Can be socketed into items. Can be used to upgrade the quality of items. Multiples of the same type and grade can be fused into a higher grade.",
       stats: [
-        { slot: "Weapon", text: "" },
-        { slot: "Armor", text: "" },
-        { slot: "Off-hand", text: "" },
-        { slot: "Flask", text: "" }
+        { slot: "Weapon", text: "Adds 1 to 29 Lightning Damage" },
+        { slot: "Armor", text: "+10 Intelligence" },
+        { slot: "Off-hand", text: "+25% Lightning Resistance" },
+        { slot: "Flask", text: "You gain +50% Chance to Negate Shocks during Flask Effect" }
       ],
       recipe: [
         { id: "flawless_stormcore", count: 3 },
@@ -513,10 +526,10 @@
       description:
         "Can be socketed into items. Can be used to upgrade the quality of items. Multiples of the same type and grade can be fused into a higher grade.",
       stats: [
-        { slot: "Weapon", text: "" },
-        { slot: "Armor", text: "" },
-        { slot: "Off-hand", text: "" },
-        { slot: "Flask", text: "" }
+        { slot: "Weapon", text: "Adds 5 to 20 Aether Damage" },
+        { slot: "Armor", text: "+25 to Maximum Aether" },
+        { slot: "Off-hand", text: "+25% Aether Resistance" },
+        { slot: "Flask", text: "You gain +50% Chance to Negate Dazzling during Flask Effect" }
       ],
       recipe: [
         { id: "flawless_skycore", count: 3 },
@@ -532,10 +545,10 @@
       description:
         "Can be socketed into items. Can be used to upgrade the quality of items. Multiples of the same type and grade can be fused into a higher grade.",
       stats: [
-        { slot: "Weapon", text: "" },
-        { slot: "Armor", text: "" },
-        { slot: "Off-hand", text: "" },
-        { slot: "Flask", text: "" }
+        { slot: "Weapon", text: "Adds 6 to 19 Fire Damage" },
+        { slot: "Armor", text: "+10 Strength" },
+        { slot: "Off-hand", text: "+25% Fire Resistance" },
+        { slot: "Flask", text: "You gain +50% Chance to Negate Burns during Flask Effect" }
       ],
       recipe: [
         { id: "flawless_flamecore", count: 3 },
