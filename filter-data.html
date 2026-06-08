@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Crystalfall Filter Data – Bases, Classes & Tags | CrystalFall.fun</title>
+  <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+  <meta name="description" content="Filter Data page for CrystalFall.fun: searchable bases, classes, and item tags for Crystalfall." />
+  <link rel="canonical" href="https://crystalfall.fun/filter-data" />
+  <meta property="og:title" content="Crystalfall Filter Data – Bases, Classes & Tags">
+  <meta property="og:description" content="Searchable bases, classes, and item tags for Crystalfall.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://crystalfall.fun/filter-data">
+  <meta property="og:image" content="https://crystalfall.fun/img/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Crystalfall Filter Data – Bases, Classes & Tags">
+  <meta name="twitter:description" content="Searchable bases, classes, and item tags for Crystalfall.">
+  <meta name="twitter:image" content="https://crystalfall.fun/img/logo.png">
+  <link rel="stylesheet" href="/css/twitch.css">
+  <style>
+    :root {
+      --bg: #07111c;
+      --bg-soft: #0d1828;
+      --card: rgba(18, 29, 48, 0.95);
+      --card-2: rgba(12, 23, 39, 0.95);
+      --line: rgba(143, 173, 214, 0.22);
+      --line-strong: rgba(143, 173, 214, 0.38);
+      --text: #edf4ff;
+      --muted: #9fb0c8;
+      --accent: #62d0ff;
+      --accent-2: #7b8cff;
+      --good: #64d38a;
+      --warn: #ffcc66;
+      --danger: #ff7f7f;
+      --radius: 18px;
+      --shadow: 0 18px 42px rgba(0,0,0,.34);
+      --max: 1240px;
+      color-scheme: dark;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      scroll-behavior: smooth;
+      background:
+        url("./img/fox-class-fade.webp") right -140px bottom 100px / 720px no-repeat,
+        radial-gradient(circle at top, rgba(88,164,255,.18), transparent 34%),
+        linear-gradient(180deg, #08111c 0%, #09131f 50%, #06101a 100%);
+      color: var(--text);
+      min-height: 100%;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { max-width: 100%; display: block; }
+    button, input, select { font: inherit; color: inherit; }
+    .wrap { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
+    .topbar { position: sticky; top: 0; z-index: 20; backdrop-filter: blur(18px); background: rgba(6, 13, 23, 0.78); border-bottom: 1px solid rgba(143, 173, 214, 0.12); }
+    .topbar-inner { display: flex; align-items: center; gap: 18px; min-height: 68px; padding: 0 4px; position: relative; }
+    .brand, .brand:hover, .brand:focus, .brand:active { display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.02em; color:#fff; white-space:nowrap; text-decoration:none; }
+    .logo { height: 36px; width: auto; display:block; }
+    .nav { display:flex; flex-wrap:wrap; gap:10px; }
+    .nav a { padding: 10px 14px; border-radius: 999px; color: var(--muted); border: 1px solid transparent; }
+    .nav a:hover, .nav a.is-active { color:#fff; border-color: rgba(98,208,255,.28); background: rgba(98,208,255,.08); text-decoration:none; }
+    .burger { display:none; position:absolute; top:50%; right:4px; transform:translateY(-50%); z-index:41; width:44px; height:44px; padding:0; border:1px solid rgba(143,173,214,.18); border-radius:12px; background:rgba(255,255,255,.03); cursor:pointer; }
+    .burger:hover { background: rgba(98,208,255,.08); border-color: rgba(98,208,255,.4); }
+    .burger span { position:absolute; top:50%; left:50%; width:20px; height:2px; border-radius:999px; background:#fff; transform-origin:center; transition:transform .24s ease, opacity .2s ease; }
+    .burger span:nth-child(1) { transform: translate(-50%, -7px); }
+    .burger span:nth-child(2) { transform: translate(-50%, 0); }
+    .burger span:nth-child(3) { transform: translate(-50%, 7px); }
+    .burger.is-open span:nth-child(1) { transform: translate(-50%, 0) rotate(45deg); }
+    .burger.is-open span:nth-child(2) { opacity:0; }
+    .burger.is-open span:nth-child(3) { transform: translate(-50%, 0) rotate(-45deg); }
+    .mobile-nav { display:flex; flex-direction:column; gap:6px; position:absolute; top:68px; left:10px; right:10px; z-index:40; padding:10px; border:1px solid rgba(143,173,214,.16); border-radius:18px; background:rgba(6,13,23,.96); backdrop-filter:blur(16px); box-shadow:0 18px 42px rgba(0,0,0,.42); opacity:0; visibility:hidden; pointer-events:none; transform:translateY(-10px) scale(.985); transform-origin:top center; transition:opacity .24s ease, transform .24s ease, visibility .24s ease; }
+    .mobile-nav.open { opacity:1; visibility:visible; pointer-events:auto; transform:translateY(0) scale(1); }
+    .mobile-nav a { display:flex; align-items:center; min-height:46px; padding:0 14px; border-radius:12px; border:1px solid transparent; color:var(--text); }
+    .mobile-nav a:hover, .mobile-nav a.is-active { background:rgba(98,208,255,.08); border-color:rgba(98,208,255,.22); color:#fff; text-decoration:none; }
+    .mobile-overlay { position:fixed; inset:0; z-index:39; background:rgba(4,10,18,.72); backdrop-filter:blur(8px); }
+    body.nav-open { overflow:hidden; }
+
+    .pageWrap { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; padding: 34px 0; }
+    .hero { display:grid; grid-template-columns: 1.15fr .85fr; gap:22px; align-items:stretch; margin-bottom:22px; }
+    .heroCard, .sideCard, .panel { background: linear-gradient(180deg, rgba(15, 26, 42, .95), rgba(10, 18, 29, .96)); border:1px solid rgba(143,173,214,.16); border-radius:28px; box-shadow:var(--shadow); overflow:hidden; }
+    .heroCard { background: linear-gradient(135deg, rgba(14,27,43,.92), rgba(8,17,29,.96)); padding:30px; position:relative; }
+    .heroCard::before { content:""; position:absolute; inset:0; background: radial-gradient(circle at 20% 10%, rgba(98,208,255,.16), transparent 35%), radial-gradient(circle at 85% 20%, rgba(123,140,255,.14), transparent 28%); pointer-events:none; }
+    .heroCard > * { position:relative; z-index:1; }
+    .eyebrow { display:inline-flex; align-items:center; gap:8px; font-size:13px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:#c8e5ff; background:rgba(98,208,255,.08); border:1px solid rgba(98,208,255,.2); padding:8px 12px; border-radius:999px; margin-bottom:14px; }
+    h1 { margin:0 0 14px; font-size:clamp(30px, 4vw, 48px); line-height:1.04; }
+    h2, h3 { margin:0; }
+    .muted { color:#c7d5ea; font-size:16px; line-height:1.65; }
+    .sideCard { padding:22px; display:grid; align-content:center; gap:14px; background:rgba(255,255,255,.035); }
+    .statGrid { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:12px; }
+    .statBox { border:1px solid rgba(143,173,214,.16); background:rgba(255,255,255,.035); border-radius:18px; padding:16px; }
+    .statVal { font-size:24px; font-weight:900; }
+    .statLbl { font-size:12px; color:var(--muted); margin-top:4px; }
+    .toolbar { display:grid; grid-template-columns: 1fr 220px 220px auto; gap:12px; margin-bottom:22px; }
+    .control { min-height:48px; border:1px solid rgba(143,173,214,.18); background:rgba(6,13,23,.62); border-radius:14px; padding:0 14px; outline:none; }
+    .control:focus { border-color: rgba(98,208,255,.5); box-shadow:0 0 0 3px rgba(98,208,255,.1); }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:48px; padding:0 16px; border-radius:14px; border:1px solid rgba(143,173,214,.22); background:rgba(255,255,255,.02); color:var(--text); text-decoration:none; font-weight:700; cursor:pointer; transition:background .18s ease, border-color .18s ease, transform .12s ease; }
+    .btn:hover { background:rgba(98,208,255,.08); border-color:rgba(98,208,255,.28); text-decoration:none; transform:translateY(-1px); }
+    .dataLayout { display:grid; grid-template-columns: 1.35fr .65fr; gap:22px; align-items:start; }
+    .panel { padding:22px; }
+    .panelHead { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:16px; }
+    .badge { font-size:12px; padding:6px 10px; border-radius:999px; border:1px solid rgba(143,255,255,.12); background:rgba(255,255,255,.06); color:#dbe8fb; white-space:nowrap; }
+    .baseGrid { display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:14px; }
+    .baseGroup { border:1px solid rgba(143,173,214,.16); background:rgba(255,255,255,.035); border-radius:18px; padding:16px; }
+    .baseGroup h3 { font-size:17px; margin-bottom:12px; display:flex; justify-content:space-between; gap:10px; }
+    .itemList { list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:8px; }
+    .chip { display:inline-flex; align-items:center; min-height:30px; padding:5px 10px; border-radius:999px; border:1px solid rgba(143,173,214,.14); background:rgba(255,255,255,.045); color:#dbe8fb; font-size:13px; }
+    .chip { cursor:pointer; user-select:none; transition:color .15s ease, border-color .15s ease, background .15s ease, transform .12s ease; }
+    .chip:hover { color:#fff; border-color:rgba(98,208,255,.38); background:rgba(98,208,255,.09); transform:translateY(-1px); }
+    .chip.copied { color:var(--good); border-color:rgba(100,211,138,.45); background:rgba(100,211,138,.1); }
+    .chips { display:flex; flex-wrap:wrap; gap:8px; }
+    .sideStack { display:grid; gap:22px; }
+    .empty { display:none; padding:18px; border:1px dashed rgba(143,173,214,.26); border-radius:18px; color:var(--muted); text-align:center; }
+    .footer { color:var(--muted); font-size:12px; margin-top:22px; text-align:center; }
+    mark { background:rgba(98,208,255,.22); color:#fff; border-radius:6px; padding:0 2px; }
+    @media (max-width: 1080px) { .hero, .dataLayout { grid-template-columns:1fr; } .toolbar { grid-template-columns:1fr 1fr; } }
+    @media (max-width: 900px) { html, body { background: radial-gradient(circle at top, rgba(88,164,255,.18), transparent 34%), linear-gradient(180deg, #08111c 0%, #09131f 50%, #06101a 100%); } }
+    @media (max-width: 820px) { .wrap, .pageWrap { width:min(calc(100% - 20px), var(--max)); } .topbar-inner { padding-right:52px; } .nav { display:none; } .burger { display:block; } .heroCard, .sideCard, .panel { padding:18px; } .baseGrid, .toolbar { grid-template-columns:1fr; } }
+    @media (min-width: 821px) { .mobile-nav, .mobile-overlay { display:none !important; } }
+  </style>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="/" aria-label="Home"><img src="./img/logo.png" alt="CrystalFall logo" class="logo">CrystalFall.fun</a>
+    <button class="burger" id="burgerBtn" type="button" aria-label="Menu" aria-controls="mobileNav" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="/talent-tree">Talent Tree</a><a href="/skills">Skills</a><a href="/skill-leveling">Skill leveling</a><a href="/maps">Maps</a><a href="/quests">Quests</a><a href="/fusing">Fusing</a><a href="/glossary">Glossary</a>
+	  <a class="is-active" href="/filter-data">Filter Data</a>
+	  <a href="/build-and-guide">Build & Guide</a>
+	  
+    </nav>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+      <a href="/talent-tree">Talent Tree</a><a href="/skills">Skills</a><a href="/skill-leveling">Skill leveling</a>
+	  <a href="/maps">Maps</a><a href="/quests">Quests</a>
+	  <a href="/fusing">Fusing</a><a href="/glossary">Glossary</a>
+	  <a class="is-active" href="/filter-data">Filter Data</a>
+	  <a href="/build-and-guide">Build & Guide</a>
+	  
+    </nav>
+    <div class="mobile-overlay" id="mobileOverlay" hidden></div>
+  </div>
+</header>
+<main class="pageWrap">
+  <section class="hero">
+    <div class="heroCard">
+      <div class="eyebrow">Crystalfall • filter data</div>
+      <h1>Filter Data</h1>
+      <div class="muted">Search and browse Crystalfall base items, classes, and tags.</div>
+    </div>
+    <aside class="sideCard">
+      <h3>Data overview</h3>
+      <div class="statGrid">
+        <div class="statBox"><div class="statVal">20</div><div class="statLbl">base groups</div></div>
+        <div class="statBox"><div class="statVal">281</div><div class="statLbl">base items</div></div>
+        <div class="statBox"><div class="statVal">75</div><div class="statLbl">tags</div></div>
+      </div>
+    </aside>
+  </section>
+  <section class="toolbar" aria-label="Filter controls">
+    <input class="control" id="searchInput" type="search" placeholder="Search bases, classes, or tags..." autocomplete="off">
+    <select class="control" id="groupSelect"><option value="all">All base groups</option></select>
+    <select class="control" id="dataSelect"><option value="all">All data</option><option value="bases">Bases only</option><option value="classes">Classes only</option><option value="tags">Tags only</option></select>
+    <button class="btn" id="resetBtn" type="button">Reset</button>
+  </section>
+  <section class="dataLayout">
+    <div class="panel" id="basesPanel">
+      <div class="panelHead"><h2>Bases</h2><span class="badge" id="basesCount"></span></div>
+      <div class="baseGrid" id="basesGrid"></div>
+      <div class="empty" id="basesEmpty">No base items found.</div>
+    </div>
+    <aside class="sideStack">
+      <div class="panel" id="classesPanel"><div class="panelHead"><h2>Classes</h2><span class="badge" id="classesCount"></span></div><div class="chips" id="classesGrid"></div><div class="empty" id="classesEmpty">No classes found.</div></div>
+      <div class="panel" id="tagsPanel"><div class="panelHead"><h2>Tags</h2><span class="badge" id="tagsCount"></span></div><div class="chips" id="tagsGrid"></div><div class="empty" id="tagsEmpty">No tags found.</div></div>
+    </aside>
+  </section>
+  <div class="footer">CrystalFall.fun • filter data helper page • v0.1.3</div>
+</main>
+<script>
+  const BASE_GROUPS = [{"category": "One Hand Axes", "items": ["Hand Axe", "Axe", "Rigging Axe", "Broad Axe", "Meteorite Axe", "Hatchet", "Battle Axe", "Boarding Axe", "Chopper", "Outlander Axe", "Scalper", "War Axe", "Dreadnought Grapnel", "Cleaver", "Stellar Axe"]}, {"category": "Two Hand Axes", "items": ["Splitting Axe", "Hammerhead Axe", "Pickaxe", "Long Axe", "Greataxe", "Felling Axe", "Breach Axe", "Crowbill", "Reaver Axe", "Tyrant Axe", "Headsman Axe", "Siege Axe", "Warspike", "Berserker Axe", "Colossus Axe"]}, {"category": "One Hand Swords", "items": ["Saw Blade", "Highway Blade", "Cutlass", "Companion Sword", "Arming Sword", "Serrated Blade", "Pilgrim Sword", "Sabre", "Patron Blade", "Officer Blade", "Cogblade", "Frontier Steel", "War Razor", "Chaperone", "Commander Sword", "Ritual Blade", "Sacrament Blade", "Hierophant Blade"]}, {"category": "Two Hand Swords", "items": ["Shatterblade", "Two Hander", "Greatsword", "Antique Sword", "Backsword", "Ironhewer", "Battle Blade", "Magistrate Sword", "Heirloom Sword", "Ripper", "Warcutter", "Grand Falchion", "Judicator", "Dynasty Blade", "Executioner Sword"]}, {"category": "One Hand Maces", "items": ["Hammer", "Cudgel", "Mace", "Brazier Mace", "Pipe Wrench", "Bludgeon", "Flanged Mace", "Tyrant Mace", "Crucible Mace", "Torque Wrench", "Warhammer", "War Mace", "Overlord Mace", "Furnace Mace", "Vortex Wrench"]}, {"category": "Two Hand Maces", "items": ["Club", "Mallet", "Pounder", "Sledgehammer", "Ratchet Mace", "Swatter", "Flatter", "Slammer", "Maul", "Prong Mace", "Truncheon", "Machinist Mallet", "Ram Hammer", "War Maul", "Sprocket Mace"]}, {"category": "Body Armor", "items": ["Makeshift Armor", "Leather Jerkin", "Hinterland Armor", "Rustplate", "Tourney Vest", "Workshop Suit", "Skinner Jerkin", "Wasteland Armor", "Brass Plate", "Battle Harness", "Artisan Rig", "Flayer Jerkin", "Desolation Armor"]}, {"category": "Boots", "items": ["Rust-toe Boots", "Threadbare Boots", "Tin Boots", "Slag Clogs", "Hinterland Boots", "Steel-toe Boots", "Nomad Boots", "Brass Boots", "Smelter Boots", "Wasteland Boots", "Machinist Boots", "Wayfarer Boots", "Gilt Greaves"]}, {"category": "Capes", "items": ["Outcast Shawl", "Brigand Cloak", "Hinterland Cloak", "Vagabond Mantle", "Vassal Cape", "Outlander Shawl", "Raider Cloak", "Wasteland Cloak", "Traveler Mantle", "Cavalier Cape", "Wrecker Shawl", "Marauder Cloak", "Desolation Cloak"]}, {"category": "Gloves", "items": ["Half-gloves", "Boiler Mitts", "Armguards", "Hinterland Gloves", "Dross Gauntlets", "Trigger Gloves", "Smelter Mitts", "Bracers", "Wasteland Gloves", "Steel Gauntlets", "Marksman Gloves", "Furnace Mitts", "Vambraces"]}, {"category": "Helmets", "items": ["Castaway Coif", "Scrounger Helm", "Rigger Cap", "Patrol Casque", "Crash Helmet", "Dust Cowl", "Freebooter Bucket", "Bomber Hat", "Sentry Casque", "Assault Visor", "Weather Cap", "Dreadnought Helm", "Navigator Cap"]}, {"category": "Pistols", "items": ["Sky Scrap Slinger", "Bootleg Pistol", "Flintlock Pistol", "Duelist Pistol", "Gearlock Revolver", "Sky Solder Sidearm", "Syndicate Pistol", "Percussion Pistol", "Cavalier Pistol", "Peacekeeper Revolver", "Welkin Wrought Wheelgun", "Malefactor", "Persuader", "Equalizer", "Lawbringer Revolver", "Rover Handcannon", "Raider Handcannon", "Marauder Handcannon"]}, {"category": "Rifles", "items": ["Rustler Rifle", "Suppression Rifle", "Service Rifle", "Blackpowder Rifle", "Scoped Rifle", "Contraband Rifle", "Oppressor Rifle", "Brass Bolter", "Arquebus", "Sniper Rifle", "Racket Rifle", "Enforcer Rifle", "Commander Carbine", "Bombard", "Overwatch Rifle", "Rift Conductor", "Nether Conductor", "Abyss Conductor"]}, {"category": "Bracelets", "items": ["Iron Bracelet", "Steel Bracelet", "Timepiece Bracelet", "Dynamo Bracelet", "Crystal Bracelet"]}, {"category": "Amulets", "items": ["Iron Amulet", "Steel Amulet", "Brass Amulet", "Locket", "Crystal Amulet"]}, {"category": "Rings", "items": ["Iron Ring", "Steel Ring", "Spike Ring", "Resonator Ring", "Crystal Ring"]}, {"category": "Shields", "items": ["Scrapguard", "Crash Bumper", "Heater Shield", "Porthole Shield", "Plate Shield", "Buckler", "Battle Bouncer", "Tanker Shield", "Sentry Shield", "Boarding Shield", "War Buckler", "War Buffer", "Blast Shield", "Vanguard Shield", "Windbreaker", "Ward", "Protector", "Bulwark"]}, {"category": "Shotguns", "items": ["Pipe Gun", "Brigand Shotgun", "Patrol Shotgun", "Scattergun", "Pump Shotgun", "Blunderbuss", "Raider Shotgun", "Officer Shotgun", "Burst Shotgun", "Repeater Shotgun", "Trench Gun", "Marauder Shotgun", "Commander Shotgun", "Broadside Ordnance", "Gyration Shotgun", "Steamblaster", "Stormblaster", "Voidblaster"]}, {"category": "Rods", "items": ["Steel Rod", "Pneumatic Rod", "Conductor Rod", "Ember Rod", "Polar Rod", "Crystal Inlay Rod", "Coiled Rod", "Tempered Rod", "Precision Rod", "Surge Rod", "Smelting Rod", "Glacial Rod", "Crystalline Rod", "Twisted Rod", "Forged Rod", "Calibrated Rod", "Overcharged Rod", "Volcanic Rod", "Cryonic Rod", "Crystalfused Rod", "Aethercoil Rod"]}, {"category": "Staves", "items": ["Primitive Staff", "Riveted Staff", "Copperplate Staff", "Steamcoil Staff", "Circuitry Staff", "Aged Staff", "Reinforced Staff", "Bronzed Staff", "Pistoncore Staff", "Wirecoil Staff", "Antique Staff", "Hardened Staff", "Auric Staff", "Gearwrought Staff", "Flux Staff"]}];
+  const CLASSES = ["Amulet", "Axe", "BodyArmour", "Boots", "Bracelet", "Cape", "Gloves", "Helmet", "Mace", "Pistol", "Rifle", "Ring", "Rod", "Shield", "Shotgun", "Staff", "Sword", "Core", "LifeFlask", "AetherFlask", "Glyph", "SkillCrest", "Map", "Cargo", "Skill"];
+  const TAGS = ["Skill", "Material", "Crystal", "Armor", "Jewelry", "OffHand", "Weapon", "Amulet", "Axe", "Body", "Boots", "Bracelet", "Cape", "Dagger", "Gloves", "Helmet", "Mace", "Pistol", "Rifle", "Ring", "Shield", "Shotgun", "Sword", "Melee", "Ranged", "OneHand", "TwoHand", "Rod", "Staff", "Flask", "LifeFlask", "AetherFlask", "Map", "Arctic", "Plains", "Swamp", "Forest", "Desert", "Socketable", "Crest", "CrestRed", "CrestBlue", "CrestYellow", "CrestAether", "CrestCold", "CrestFire", "CrestLightning", "CrestPhysical", "CrestCooldown", "CrestDuration", "CrestDot", "CrestMelee", "CrestRanged", "CrestSpell", "CrestShout", "CrestMine", "CrestTrap", "CrestMovement", "CrestShield", "CrestProjectile", "CrestReservation", "CrestNonReservation", "CrestAoE", "CrestGrenade", "CrestAura", "Core", "Glyph", "GlyphRed", "GlyphBlue", "GlyphYellow", "Cargo", "CargoSmall", "CargoMedium", "CargoLarge", "Signature"];
+
+  const els = {
+    burger: document.getElementById('burgerBtn'), mobileNav: document.getElementById('mobileNav'), mobileOverlay: document.getElementById('mobileOverlay'),
+    search: document.getElementById('searchInput'), group: document.getElementById('groupSelect'), data: document.getElementById('dataSelect'), reset: document.getElementById('resetBtn'),
+    basesPanel: document.getElementById('basesPanel'), classesPanel: document.getElementById('classesPanel'), tagsPanel: document.getElementById('tagsPanel'),
+    basesGrid: document.getElementById('basesGrid'), classesGrid: document.getElementById('classesGrid'), tagsGrid: document.getElementById('tagsGrid'),
+    basesCount: document.getElementById('basesCount'), classesCount: document.getElementById('classesCount'), tagsCount: document.getElementById('tagsCount'),
+    basesEmpty: document.getElementById('basesEmpty'), classesEmpty: document.getElementById('classesEmpty'), tagsEmpty: document.getElementById('tagsEmpty')
+  };
+
+  const escapeHtml = (value) => String(value).replace(/[&<>'"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch]));
+  const normalize = (value) => String(value).toLowerCase().trim();
+  const highlight = (text, query) => {
+    if (!query) return escapeHtml(text);
+    const escaped = escapeHtml(text);
+    const safe = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return escaped.replace(new RegExp(`(${safe})`, 'ig'), '<mark>$1</mark>');
+  };
+
+  BASE_GROUPS.forEach(group => {
+    const option = document.createElement('option');
+    option.value = group.category;
+    option.textContent = group.category;
+    els.group.appendChild(option);
+  });
+
+  function renderChips(container, items, query) {
+    container.innerHTML = items.map(item => `<span class="chip" data-copy="${escapeHtml(item)}" title="Click to copy">${highlight(item, query)}</span>`).join('');
+  }
+
+  async function copyText(text, node) {
+    if (!text || !node) return;
+
+    const previousHtml = node.innerHTML;
+    const previousTitle = node.getAttribute('title') || '';
+
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(text);
+      } else {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.setAttribute('readonly', '');
+        textarea.style.position = 'fixed';
+        textarea.style.left = '-9999px';
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        textarea.remove();
+      }
+
+      node.classList.add('copied');
+      node.innerHTML = '✓ Copied';
+      node.setAttribute('title', text);
+
+      window.setTimeout(() => {
+        node.classList.remove('copied');
+        node.innerHTML = previousHtml;
+        node.setAttribute('title', previousTitle);
+      }, 900);
+    } catch (err) {
+      console.error('Copy failed:', err);
+      node.classList.add('copied');
+      node.innerHTML = 'Copy failed';
+      window.setTimeout(() => {
+        node.classList.remove('copied');
+        node.innerHTML = previousHtml;
+        node.setAttribute('title', previousTitle);
+      }, 900);
+    }
+  }
+
+  function render() {
+    const query = normalize(els.search.value);
+    const selectedGroup = els.group.value;
+    const selectedData = els.data.value;
+    const showBases = selectedData === 'all' || selectedData === 'bases';
+    const showClasses = selectedData === 'all' || selectedData === 'classes';
+    const showTags = selectedData === 'all' || selectedData === 'tags';
+
+    els.basesPanel.hidden = !showBases;
+    els.classesPanel.hidden = !showClasses;
+    els.tagsPanel.hidden = !showTags;
+
+    let visibleBaseItems = 0;
+    const baseHtml = BASE_GROUPS
+      .filter(group => selectedGroup === 'all' || group.category === selectedGroup)
+      .map(group => {
+        const items = group.items.filter(item => !query || normalize(item).includes(query) || normalize(group.category).includes(query));
+        visibleBaseItems += items.length;
+        if (!items.length) return '';
+        return `<article class="baseGroup"><h3><span>${highlight(group.category, query)}</span><span class="badge">${items.length}</span></h3><ul class="itemList">${items.map(item => `<li class="chip" data-copy="${escapeHtml(item)}" title="Click to copy">${highlight(item, query)}</li>`).join('')}</ul></article>`;
+      }).join('');
+    els.basesGrid.innerHTML = baseHtml;
+    els.basesCount.textContent = `${visibleBaseItems} items`;
+    els.basesEmpty.style.display = showBases && !visibleBaseItems ? 'block' : 'none';
+
+    const classItems = CLASSES.filter(item => !query || normalize(item).includes(query));
+    renderChips(els.classesGrid, classItems, query);
+    els.classesCount.textContent = `${classItems.length} classes`;
+    els.classesEmpty.style.display = showClasses && !classItems.length ? 'block' : 'none';
+
+    const tagItems = TAGS.filter(item => !query || normalize(item).includes(query));
+    renderChips(els.tagsGrid, tagItems, query);
+    els.tagsCount.textContent = `${tagItems.length} tags`;
+    els.tagsEmpty.style.display = showTags && !tagItems.length ? 'block' : 'none';
+  }
+
+  document.addEventListener('click', (event) => {
+    const chip = event.target.closest('.chip[data-copy]');
+    if (!chip) return;
+    copyText(chip.dataset.copy, chip);
+  });
+
+  [els.search, els.group, els.data].forEach(el => el.addEventListener('input', render));
+  els.reset.addEventListener('click', () => { els.search.value = ''; els.group.value = 'all'; els.data.value = 'all'; render(); els.search.focus(); });
+
+  (() => {
+    if (!els.burger || !els.mobileNav || !els.mobileOverlay) return;
+    const openMenu = () => { els.burger.classList.add('is-open'); els.burger.setAttribute('aria-expanded', 'true'); els.mobileNav.classList.add('open'); els.mobileOverlay.hidden = false; document.body.classList.add('nav-open'); };
+    const closeMenu = () => { els.burger.classList.remove('is-open'); els.burger.setAttribute('aria-expanded', 'false'); els.mobileNav.classList.remove('open'); els.mobileOverlay.hidden = true; document.body.classList.remove('nav-open'); };
+    els.burger.addEventListener('click', () => els.burger.getAttribute('aria-expanded') === 'true' ? closeMenu() : openMenu());
+    els.mobileOverlay.addEventListener('click', closeMenu);
+    window.addEventListener('keydown', (e) => { if (e.key === 'Escape' && els.mobileNav.classList.contains('open')) closeMenu(); });
+    els.mobileNav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+  })();
+
+  render();
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"Crystalfall Filter Data","url":"https://crystalfall.fun/filter-data","description":"Searchable bases, classes, and item tags for Crystalfall."}
+</script>
+<div id="twitchWidget" class="twitch-widget" hidden>
+  <button id="twitchCloseBtn" class="twitch-widget__close" type="button" aria-label="Close stream">×</button>
+  <div id="twitchPlayerMount" class="twitch-widget__player"></div>
+</div>
+<script src="https://player.twitch.tv/js/embed/v1.js"></script>
+<script src="/js/twitch.js" defer></script>
+</body>
+</html>
